@@ -1,5 +1,5 @@
 const Pool = require('../../../_db/sql/pool');
-const config = require('../../../_db/sql/config');
+const config = require('../../../_db/config');
 const read = require('../../../model/cpa/respondente/read');
 const banco = config.locaweb;
 

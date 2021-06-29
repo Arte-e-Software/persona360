@@ -18,6 +18,7 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
 // Views
+app.get('/', require('./server/routes/pages/index.js'));
 app.get('/adm', require('./server/routes/pages/adm/index.js'));
 
 app.use((req, res, next) => {
