@@ -1,0 +1,43 @@
+{
+    "questionario": "Corpo Docente",
+    "ano": 2018,
+    "semestre": 2,
+    "agente": "Docente",
+    "titulo": "Avalie o CURSO quanto:",
+    "pergunta": [{
+        "cod": "3.02.1.3.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de reuniões de colegiado de curso."
+    }, {
+        "cod": "3.02.1.3.02",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "ao incentivo para publicação de artigos / trabalhos científicos."
+    }, {
+        "cod": "3.09.1.3.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de eventos acadêmicos."
+    }, {
+        "cod": "4.05.1.3.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "ao relacionamento interpessoal e profissional."
+    }, {
+        "cod": "4.05.1.3.02",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à disponibilidade e interesse para o atendimento."
+    }, {
+        "cod": "4.05.1.3.03",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "ao apoio para o desenvolvimento das atividades."
+    },{
+        "cod": "9.01.1.3.01",
+        "tipo": "comentei",
+        "len": 500,
+        "id": "comentario"
+    }]
+}

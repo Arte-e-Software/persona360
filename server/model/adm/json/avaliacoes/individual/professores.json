@@ -1,0 +1,3320 @@
+{
+    "professorTurma": [
+        {
+            "turma": "2QA",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 203,
+                    "nome": "Dorival Bonora Júnior - Mestre"
+                },
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "1CE",
+            "codcurso": "50",
+            "curso": "Enfermagem",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1587,
+                    "nome": "Eric Boragan - Mestre"
+                },
+                {
+                    "id": 1549,
+                    "nome": "Arthur Bittes Júnior - Doutor"
+                },
+                {
+                    "id": 1590,
+                    "nome": "Antonio Marcolino Nascimento - Mestre"
+                },
+                {
+                    "id": 1585,
+                    "nome": "Estela Mara Nicolau - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "1FA",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 176,
+                    "nome": "Maria Helena de Carvalho - Mestre"
+                },
+                {
+                    "id": 326,
+                    "nome": "Celi de Paula Silva - Doutora"
+                },
+                {
+                    "id": 354,
+                    "nome": "Marcos José de Campos Verde - Mestre"
+                },
+                {
+                    "id": 345,
+                    "nome": "Joyce Maria de Araújo - Doutora"
+                },
+                {
+                    "id": 640,
+                    "nome": "Suelly Lima Natal - Especialista"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 1474,
+                    "nome": "Karen Barbosa Müller - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 2192,
+                    "nome": "Maria Rosana Evaristo da Silva - Doutora"
+                },
+                {
+                    "id": 340,
+                    "nome": "José Augusto Rodrigues Moreno - Especialista"
+                },
+                {
+                    "id": 360,
+                    "nome": "Mirta Gladis Mondino - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "1FB",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 176,
+                    "nome": "Maria Helena de Carvalho - Mestre"
+                },
+                {
+                    "id": 326,
+                    "nome": "Celi de Paula Silva - Doutora"
+                },
+                {
+                    "id": 354,
+                    "nome": "Marcos José de Campos Verde - Mestre"
+                },
+                {
+                    "id": 345,
+                    "nome": "Joyce Maria de Araújo - Doutora"
+                },
+                {
+                    "id": 640,
+                    "nome": "Suelly Lima Natal - Especialista"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 1474,
+                    "nome": "Karen Barbosa Müller - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 2192,
+                    "nome": "Maria Rosana Evaristo da Silva - Doutora"
+                },
+                {
+                    "id": 340,
+                    "nome": "José Augusto Rodrigues Moreno - Especialista"
+                },
+                {
+                    "id": 360,
+                    "nome": "Mirta Gladis Mondino - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "1FC",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 176,
+                    "nome": "Maria Helena de Carvalho - Mestre"
+                },
+                {
+                    "id": 326,
+                    "nome": "Celi de Paula Silva - Doutora"
+                },
+                {
+                    "id": 345,
+                    "nome": "Joyce Maria de Araújo - Doutora"
+                },
+                {
+                    "id": 916,
+                    "nome": "Nara Andrea de Oliveira - Doutora"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 1474,
+                    "nome": "Karen Barbosa Müller - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "1LX",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 106,
+                    "nome": "Sérgio Bars - Mestre"
+                },
+                {
+                    "id": 161,
+                    "nome": "Márcio Rogério Muller - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "1QA",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 161,
+                    "nome": "Márcio Rogério Muller - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "1QX",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 161,
+                    "nome": "Márcio Rogério Muller - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "1QY",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 161,
+                    "nome": "Márcio Rogério Muller - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "2CE",
+            "codcurso": "50",
+            "curso": "Enfermagem",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1590,
+                    "nome": "Antonio Marcolino Nascimento - Mestre"
+                },
+                {
+                    "id": 1587,
+                    "nome": "Eric Boragan - Mestre"
+                },
+                {
+                    "id": 1585,
+                    "nome": "Estela Mara Nicolau - Mestre"
+                },
+                {
+                    "id": 1963,
+                    "nome": "Antonio Grossi Filho -  Especialista"
+                },
+                {
+                    "id": 2177,
+                    "nome": "Erika Cardozo Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "2FA",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 638,
+                    "nome": "Ricardo Dagostino Garcia - Mestre"
+                },
+                {
+                    "id": 361,
+                    "nome": "Nilsa Sumie Yamashita Wadt - Doutora"
+                },
+                {
+                    "id": 35,
+                    "nome": "Tania Carmen Penaranda Govato - Mestre"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 1474,
+                    "nome": "Karen Barbosa Müller - Mestre"
+                },
+                {
+                    "id": 1825,
+                    "nome": "Maciel Santos Luz - Doutor"
+                },
+                {
+                    "id": 2099,
+                    "nome": "Jéssica Valença"
+                },
+                {
+                    "id": 1443,
+                    "nome": "Júlia Maria Martins de Souza - Doutora"
+                },
+                {
+                    "id": 368,
+                    "nome": "Rosa Palmira Jacobo Gonzales - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "2LX",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 203,
+                    "nome": "Dorival Bonora Júnior - Mestre"
+                },
+                {
+                    "id": 481,
+                    "nome": "Nori Beraldo - Doutor"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 588,
+                    "nome": "Gilson Alves Quinaglia - Doutor"
+                },
+                {
+                    "id": 696,
+                    "nome": "Lilian Suzuki - Especialista"
+                },
+                {
+                    "id": 885,
+                    "nome": "Alessandra de Souza Maia - Doutora"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "2QA",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 203,
+                    "nome": "Dorival Bonora Júnior - Mestre"
+                },
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "2QX",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 203,
+                    "nome": "Dorival Bonora Júnior - Mestre"
+                },
+                {
+                    "id": 481,
+                    "nome": "Nori Beraldo - Doutor"
+                },
+                {
+                    "id": 653,
+                    "nome": "Guintar Luciano Baugis - Doutor"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 588,
+                    "nome": "Gilson Alves Quinaglia - Doutor"
+                },
+                {
+                    "id": 885,
+                    "nome": "Alessandra de Souza Maia - Doutora"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "2QY",
+            "codcurso": "10",
+            "curso": "Ciclo Básico de Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 203,
+                    "nome": "Dorival Bonora Júnior - Mestre"
+                },
+                {
+                    "id": 481,
+                    "nome": "Nori Beraldo - Doutor"
+                },
+                {
+                    "id": 653,
+                    "nome": "Guintar Luciano Baugis - Doutor"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 588,
+                    "nome": "Gilson Alves Quinaglia - Doutor"
+                },
+                {
+                    "id": 885,
+                    "nome": "Alessandra de Souza Maia - Doutora"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "3AX",
+            "codcurso": "26",
+            "curso": "Engenharia Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 588,
+                    "nome": "Gilson Alves Quinaglia - Doutor"
+                },
+                {
+                    "id": 687,
+                    "nome": "Kleber Cavaça Campos - Mestre"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1735,
+                    "nome": "Hassan Mohamad Barakat - Especialista"
+                },
+                {
+                    "id": 1991,
+                    "nome": "Erly Caldas de Lima - Mestre"
+                },
+                {
+                    "id": 2002,
+                    "nome": "Alexandre de Sant Anna - Doutor"
+                },
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "3CE",
+            "codcurso": "50",
+            "curso": "Enfermagem",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1549,
+                    "nome": "Arthur Bittes Júnior - Doutor"
+                },
+                {
+                    "id": 1887,
+                    "nome": "Marcos Antonio Campoy - Doutor"
+                },
+                {
+                    "id": 1980,
+                    "nome": "Caio Luisi - Mestre"
+                },
+                {
+                    "id": 2177,
+                    "nome": "Erika Cardozo Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "3CX",
+            "codcurso": "28",
+            "curso": "Engenharia Civil",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 687,
+                    "nome": "Kleber Cavaça Campos - Mestre"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1735,
+                    "nome": "Hassan Mohamad Barakat - Especialista"
+                },
+                {
+                    "id": 1991,
+                    "nome": "Erly Caldas de Lima - Mestre"
+                },
+                {
+                    "id": 2002,
+                    "nome": "Alexandre de Sant Anna - Doutor"
+                },
+                {
+                    "id": 2024,
+                    "nome": "Eduardo Carreiro da Cruz - Especialista"
+                },
+                {
+                    "id": 2078,
+                    "nome": "Patricia Zifssak Souza"
+                },
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "3EA",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 160,
+                    "nome": "Leila Cristina Magalhães Silva - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 870,
+                    "nome": "Maria Adriana Fraiha Monteiro - Doutora"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1552,
+                    "nome": "Paulo Henrique Ribeiro - Doutor"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "3EX",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 160,
+                    "nome": "Leila Cristina Magalhães Silva - Mestre"
+                },
+                {
+                    "id": 870,
+                    "nome": "Maria Adriana Fraiha Monteiro - Doutora"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1552,
+                    "nome": "Paulo Henrique Ribeiro - Doutor"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "3EY",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 160,
+                    "nome": "Leila Cristina Magalhães Silva - Mestre"
+                },
+                {
+                    "id": 870,
+                    "nome": "Maria Adriana Fraiha Monteiro - Doutora"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1552,
+                    "nome": "Paulo Henrique Ribeiro - Doutor"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "3FA",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 176,
+                    "nome": "Maria Helena de Carvalho - Mestre"
+                },
+                {
+                    "id": 37,
+                    "nome": "Marisa Regina de Fátima Veiga - Mestre"
+                },
+                {
+                    "id": 1443,
+                    "nome": "Júlia Maria Martins de Souza - Doutora"
+                },
+                {
+                    "id": 1825,
+                    "nome": "Maciel Santos Luz - Doutor"
+                },
+                {
+                    "id": 2194,
+                    "nome": "Renata Antunes Estaiano de Rezende - Doutora"
+                },
+                {
+                    "id": 2197,
+                    "nome": "Maria Antonieta Leitão Zajac - Doutora"
+                },
+                {
+                    "id": 2216,
+                    "nome": "Fredson Torres Silva"
+                },
+                {
+                    "id": 2191,
+                    "nome": "José Roberto Fogaça de Almeida - Doutor"
+                },
+                {
+                    "id": 639,
+                    "nome": "Silvia Toledo Talarico - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "3FB",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 176,
+                    "nome": "Maria Helena de Carvalho - Mestre"
+                },
+                {
+                    "id": 1825,
+                    "nome": "Maciel Santos Luz - Doutor"
+                },
+                {
+                    "id": 2049,
+                    "nome": "Grasielle Pereira Jannuzzi"
+                },
+                {
+                    "id": 2194,
+                    "nome": "Renata Antunes Estaiano de Rezende - Doutora"
+                },
+                {
+                    "id": 2197,
+                    "nome": "Maria Antonieta Leitão Zajac - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "3HX",
+            "codcurso": "27",
+            "curso": "Engenharia de Produção",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1094,
+                    "nome": "Kazuyochi Tsurumaki - Mestre"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1552,
+                    "nome": "Paulo Henrique Ribeiro - Doutor"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                },
+                {
+                    "id": 2125,
+                    "nome": "Marcelino S. Carvalho - Mestre"
+                },
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 427,
+                    "nome": "Gilberto Francisco de Oliveira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "3IA",
+            "codcurso": "22",
+            "curso": "Química Industrial",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 54,
+                    "nome": "Lincoln Gonçalves Couto - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1591,
+                    "nome": "Elisabeth Brossi Sabia - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "3IX",
+            "codcurso": "22",
+            "curso": "Química Industrial",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1591,
+                    "nome": "Elisabeth Brossi Sabia - Doutora"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "3LX",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 696,
+                    "nome": "Lilian Suzuki - Especialista"
+                },
+                {
+                    "id": 1591,
+                    "nome": "Elisabeth Brossi Sabia - Doutora"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "3LY",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 696,
+                    "nome": "Lilian Suzuki - Especialista"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "3QA",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 54,
+                    "nome": "Lincoln Gonçalves Couto - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1591,
+                    "nome": "Elisabeth Brossi Sabia - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "3QX",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 54,
+                    "nome": "Lincoln Gonçalves Couto - Mestre"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1591,
+                    "nome": "Elisabeth Brossi Sabia - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "4AX",
+            "codcurso": "26",
+            "curso": "Engenharia Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 687,
+                    "nome": "Kleber Cavaça Campos - Mestre"
+                },
+                {
+                    "id": 1735,
+                    "nome": "Hassan Mohamad Barakat - Especialista"
+                },
+                {
+                    "id": 1845,
+                    "nome": "Valdir Aparecido Migliani - Especialista"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "4CX",
+            "codcurso": "28",
+            "curso": "Engenharia Civil",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2024,
+                    "nome": "Eduardo Carreiro da Cruz - Especialista"
+                },
+                {
+                    "id": 155,
+                    "nome": "Edson Elias Matar - Mestre"
+                },
+                {
+                    "id": 1735,
+                    "nome": "Hassan Mohamad Barakat - Especialista"
+                },
+                {
+                    "id": 1971,
+                    "nome": "Wagner Luiz Baratella - Mestre"
+                },
+                {
+                    "id": 1991,
+                    "nome": "Erly Caldas de Lima - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "4EX",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 409,
+                    "nome": "Reinaldo Antônio Cardoso - Mestre"
+                },
+                {
+                    "id": 1618,
+                    "nome": "Eduardo Calsan - Mestre"
+                },
+                {
+                    "id": 1918,
+                    "nome": "Ailton Renato Stefanelli - Mestre"
+                },
+                {
+                    "id": 2005,
+                    "nome": "Rubens Eliseu Nicula de Castro - Mestre"
+                },
+                {
+                    "id": 2022,
+                    "nome": "Paula Pinheiro Paganini - Doutora"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "4EY",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 409,
+                    "nome": "Reinaldo Antônio Cardoso - Mestre"
+                },
+                {
+                    "id": 1618,
+                    "nome": "Eduardo Calsan - Mestre"
+                },
+                {
+                    "id": 1918,
+                    "nome": "Ailton Renato Stefanelli - Mestre"
+                },
+                {
+                    "id": 2005,
+                    "nome": "Rubens Eliseu Nicula de Castro - Mestre"
+                },
+                {
+                    "id": 2022,
+                    "nome": "Paula Pinheiro Paganini - Doutora"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "4EZ",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 73,
+                    "nome": "Cleber Wanderlei Liria - Doutor"
+                },
+                {
+                    "id": 409,
+                    "nome": "Reinaldo Antônio Cardoso - Mestre"
+                },
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 1618,
+                    "nome": "Eduardo Calsan - Mestre"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "4FA",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 337,
+                    "nome": "Irene dos Santos Jacob Mori - Especialista"
+                },
+                {
+                    "id": 916,
+                    "nome": "Nara Andrea de Oliveira - Doutora"
+                },
+                {
+                    "id": 859,
+                    "nome": "José Marques Simões Júnior - Mestre"
+                },
+                {
+                    "id": 1479,
+                    "nome": "Walkyria Sigler - Doutora"
+                },
+                {
+                    "id": 1984,
+                    "nome": "Patricia Veríssimo Staine - Mestre"
+                },
+                {
+                    "id": 2090,
+                    "nome": "Ana Luiza Dias A Agamme"
+                },
+                {
+                    "id": 2195,
+                    "nome": "Thiago Rodrigo de Noronha - Doutor"
+                },
+                {
+                    "id": 2216,
+                    "nome": "Fredson Torres Silva"
+                },
+                {
+                    "id": 43,
+                    "nome": "Alice Aparecida da Matta Chasin - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "4HX",
+            "codcurso": "27",
+            "curso": "Engenharia de Produção",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 73,
+                    "nome": "Cleber Wanderlei Liria - Doutor"
+                },
+                {
+                    "id": 1094,
+                    "nome": "Kazuyochi Tsurumaki - Mestre"
+                },
+                {
+                    "id": 1286,
+                    "nome": "Sérgio de Souza  Leme - Especialista"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 1618,
+                    "nome": "Eduardo Calsan - Mestre"
+                },
+                {
+                    "id": 1943,
+                    "nome": "Daniel Fontanesi Rossi - Especialista"
+                },
+                {
+                    "id": 2125,
+                    "nome": "Marcelino S. Carvalho - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "4IX",
+            "codcurso": "22",
+            "curso": "Química Industrial",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 653,
+                    "nome": "Guintar Luciano Baugis - Doutor"
+                },
+                {
+                    "id": 1133,
+                    "nome": "Juliana de Carvalho Izidoro -  Doutora"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2104,
+                    "nome": "João de Araújo Junior - Doutor"
+                },
+                {
+                    "id": 2162,
+                    "nome": "Paulo José de Mendonça"
+                }
+            ]
+        },
+        {
+            "turma": "4LX",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 696,
+                    "nome": "Lilian Suzuki - Especialista"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "4LY",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 696,
+                    "nome": "Lilian Suzuki - Especialista"
+                },
+                {
+                    "id": 2105,
+                    "nome": "Paulo Henrique Lopes Aguiar - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "4QX",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 1858,
+                    "nome": "Fernanda Silva Costa - Especialista"
+                },
+                {
+                    "id": 653,
+                    "nome": "Guintar Luciano Baugis - Doutor"
+                },
+                {
+                    "id": 1133,
+                    "nome": "Juliana de Carvalho Izidoro -  Doutora"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 2008,
+                    "nome": "Roberto Hazenfratz Marks - Doutor"
+                },
+                {
+                    "id": 2171,
+                    "nome": "Marcelo Filonzi dos Santos - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "5AX",
+            "codcurso": "26",
+            "curso": "Engenharia Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                },
+                {
+                    "id": 687,
+                    "nome": "Kleber Cavaça Campos - Mestre"
+                },
+                {
+                    "id": 1086,
+                    "nome": "Adriana P. Coelho Cerantola - Mestre"
+                },
+                {
+                    "id": 146,
+                    "nome": "Gabriela Nenna Ferraresi - Mestre"
+                },
+                {
+                    "id": 1893,
+                    "nome": "Luis Fernando dos Reis Pereira - Doutor"
+                },
+                {
+                    "id": 2073,
+                    "nome": "Evandro Noro Fernandes"
+                },
+                {
+                    "id": 2141,
+                    "nome": "Marta Camila Mendes de Oliveira Carneiro"
+                }
+            ]
+        },
+        {
+            "turma": "5CE",
+            "codcurso": "50",
+            "curso": "Enfermagem",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2177,
+                    "nome": "Erika Cardozo Pereira - Mestre"
+                },
+                {
+                    "id": 1887,
+                    "nome": "Marcos Antonio Campoy - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "5cx",
+            "codcurso": "28",
+            "curso": "Engenharia Civil",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 155,
+                    "nome": "Edson Elias Matar - Mestre"
+                },
+                {
+                    "id": 1086,
+                    "nome": "Adriana P. Coelho Cerantola - Mestre"
+                },
+                {
+                    "id": 1845,
+                    "nome": "Valdir Aparecido Migliani - Especialista"
+                },
+                {
+                    "id": 1893,
+                    "nome": "Luis Fernando dos Reis Pereira - Doutor"
+                },
+                {
+                    "id": 1971,
+                    "nome": "Wagner Luiz Baratella - Mestre"
+                },
+                {
+                    "id": 2024,
+                    "nome": "Eduardo Carreiro da Cruz - Especialista"
+                },
+                {
+                    "id": 2074,
+                    "nome": "João Jorge Pereira da Silva"
+                },
+                {
+                    "id": 2078,
+                    "nome": "Patricia Zifssak Souza"
+                }
+            ]
+        },
+        {
+            "turma": "5ex",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 4,
+                    "nome": "Edson Roberto Tavolaro - Especialista"
+                },
+                {
+                    "id": 384,
+                    "nome": "Denoyer de Freitas Asenção - Especialista"
+                },
+                {
+                    "id": 396,
+                    "nome": "Jorge Manuel de Souza Rosa - Mestre"
+                },
+                {
+                    "id": 399,
+                    "nome": "José Mauro Diniz Oliveira - Doutor"
+                },
+                {
+                    "id": 1133,
+                    "nome": "Juliana de Carvalho Izidoro -  Doutora"
+                },
+                {
+                    "id": 1829,
+                    "nome": "Vanessa Silva Granadeiro Garcia - Mestre"
+                },
+                {
+                    "id": 1893,
+                    "nome": "Luis Fernando dos Reis Pereira - Doutor"
+                },
+                {
+                    "id": 716,
+                    "nome": "Glaciane Mendes Roland - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "5EY",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 4,
+                    "nome": "Edson Roberto Tavolaro - Especialista"
+                },
+                {
+                    "id": 384,
+                    "nome": "Denoyer de Freitas Asenção - Especialista"
+                },
+                {
+                    "id": 396,
+                    "nome": "Jorge Manuel de Souza Rosa - Mestre"
+                },
+                {
+                    "id": 399,
+                    "nome": "José Mauro Diniz Oliveira - Doutor"
+                },
+                {
+                    "id": 1133,
+                    "nome": "Juliana de Carvalho Izidoro -  Doutora"
+                },
+                {
+                    "id": 1829,
+                    "nome": "Vanessa Silva Granadeiro Garcia - Mestre"
+                },
+                {
+                    "id": 1893,
+                    "nome": "Luis Fernando dos Reis Pereira - Doutor"
+                },
+                {
+                    "id": 716,
+                    "nome": "Glaciane Mendes Roland - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "5EZ",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 73,
+                    "nome": "Cleber Wanderlei Liria - Doutor"
+                },
+                {
+                    "id": 4,
+                    "nome": "Edson Roberto Tavolaro - Especialista"
+                },
+                {
+                    "id": 396,
+                    "nome": "Jorge Manuel de Souza Rosa - Mestre"
+                },
+                {
+                    "id": 1086,
+                    "nome": "Adriana P. Coelho Cerantola - Mestre"
+                },
+                {
+                    "id": 399,
+                    "nome": "José Mauro Diniz Oliveira - Doutor"
+                },
+                {
+                    "id": 1133,
+                    "nome": "Juliana de Carvalho Izidoro -  Doutora"
+                },
+                {
+                    "id": 1829,
+                    "nome": "Vanessa Silva Granadeiro Garcia - Mestre"
+                },
+                {
+                    "id": 1893,
+                    "nome": "Luis Fernando dos Reis Pereira - Doutor"
+                },
+                {
+                    "id": 716,
+                    "nome": "Glaciane Mendes Roland - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "5FA",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 638,
+                    "nome": "Ricardo Dagostino Garcia - Mestre"
+                },
+                {
+                    "id": 331,
+                    "nome": "Elda Maria Cecílio Marcondes - Mestre"
+                },
+                {
+                    "id": 636,
+                    "nome": "José Muradian Filho - Mestre"
+                },
+                {
+                    "id": 960,
+                    "nome": "Maria Aparecida Lopes da Costa - Doutora"
+                },
+                {
+                    "id": 1231,
+                    "nome": "Ezequiel Paulo Viriato - Mestre"
+                },
+                {
+                    "id": 859,
+                    "nome": "José Marques Simões Júnior - Mestre"
+                },
+                {
+                    "id": 341,
+                    "nome": "José Claret Theodoro da Silva - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "5HX",
+            "codcurso": "27",
+            "curso": "Engenharia de Produção",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 997,
+                    "nome": "Fernanda Cristina Vianna - Doutora"
+                },
+                {
+                    "id": 1640,
+                    "nome": "Claudio Roberto Passatore - Mestre"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 1845,
+                    "nome": "Valdir Aparecido Migliani - Especialista"
+                },
+                {
+                    "id": 1943,
+                    "nome": "Daniel Fontanesi Rossi - Especialista"
+                },
+                {
+                    "id": 427,
+                    "nome": "Gilberto Francisco de Oliveira - Mestre"
+                },
+                {
+                    "id": 2073,
+                    "nome": "Evandro Noro Fernandes"
+                }
+            ]
+        },
+        {
+            "turma": "AAC",
+            "codcurso": "31",
+            "curso": "Administração de Empresas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 270,
+                    "nome": "Nelson Rodrigues Farias - Mestre"
+                },
+                {
+                    "id": 276,
+                    "nome": "Roberto Vieira Robert - Mestre"
+                },
+                {
+                    "id": 282,
+                    "nome": "Vanderlei Antonio Galdi - Especialista"
+                },
+                {
+                    "id": 2210,
+                    "nome": "Cleusa Fernandes Cassetti Pedotti"
+                },
+                {
+                    "id": 297,
+                    "nome": "Marco Antonio Santos Vicente - Mestre"
+                },
+                {
+                    "id": 2021,
+                    "nome": "Bruno Toledo Fernandes"
+                },
+                {
+                    "id": 1970,
+                    "nome": "Simone Della Torre - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "AC1",
+            "codcurso": "71",
+            "curso": "Alimentos (Industrializados)",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1176,
+                    "nome": "Taís Aparecida de Assis Garcia Moreira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "AC2",
+            "codcurso": "72",
+            "curso": "Cosméticos",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 339,
+                    "nome": "Jadir Nunes - Doutor"
+                },
+                {
+                    "id": 926,
+                    "nome": "Catherine Tolomei Fabbron - Mestre"
+                },
+                {
+                    "id": 2033,
+                    "nome": "Patrícia Botignol - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "AC3",
+            "codcurso": "73",
+            "curso": "Gestão Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                },
+                {
+                    "id": 1905,
+                    "nome": "Robson Leocádio Franklin - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "AC5",
+            "codcurso": "75",
+            "curso": "Análise e Desenvolvimento de Sistemas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1690,
+                    "nome": "Nilton Carlos de Mattos - Especialista"
+                },
+                {
+                    "id": 2131,
+                    "nome": "Bruno Sanchez de Araujo"
+                }
+            ]
+        },
+        {
+            "turma": "ADE",
+            "codcurso": "91",
+            "curso": "Design",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1143,
+                    "nome": "Guilherme Viera Rodrigues Maciel - Mestre"
+                },
+                {
+                    "id": 1890,
+                    "nome": "Agnelo de Souza Fedel - Mestre"
+                },
+                {
+                    "id": 2196,
+                    "nome": "Marcia Sandoval Gregori - Doutora"
+                },
+                {
+                    "id": 1345,
+                    "nome": "Murilo Orefice"
+                },
+                {
+                    "id": 2218,
+                    "nome": "Liandro da Cruz Lindner"
+                }
+            ]
+        },
+        {
+            "turma": "APP",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1143,
+                    "nome": "Guilherme Viera Rodrigues Maciel - Mestre"
+                },
+                {
+                    "id": 1890,
+                    "nome": "Agnelo de Souza Fedel - Mestre"
+                },
+                {
+                    "id": 2139,
+                    "nome": "Livio Lima de Oliveira"
+                },
+                {
+                    "id": 2196,
+                    "nome": "Marcia Sandoval Gregori - Doutora"
+                },
+                {
+                    "id": 1345,
+                    "nome": "Murilo Orefice"
+                },
+                {
+                    "id": 2218,
+                    "nome": "Liandro da Cruz Lindner"
+                }
+            ]
+        },
+        {
+            "turma": "ASM",
+            "codcurso": "71",
+            "curso": "Alimentos (Industrializados)",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                },
+                {
+                    "id": 1176,
+                    "nome": "Taís Aparecida de Assis Garcia Moreira - Mestre"
+                },
+                {
+                    "id": 2033,
+                    "nome": "Patrícia Botignol - Especialista"
+                },
+                {
+                    "id": 2071,
+                    "nome": "Alexandre Indriunas - Mestre"
+                },
+                {
+                    "id": 716,
+                    "nome": "Glaciane Mendes Roland - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "B01",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 1941,
+                    "nome": "Rafaela Machado Gengo - Mestre"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "B02",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "B03",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "CAC",
+            "codcurso": "32",
+            "curso": "Contabilidade",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 287,
+                    "nome": "Carlos Alberto Rodrigues -  Especialista"
+                },
+                {
+                    "id": 297,
+                    "nome": "Marco Antonio Santos Vicente - Mestre"
+                },
+                {
+                    "id": 2021,
+                    "nome": "Bruno Toledo Fernandes"
+                }
+            ]
+        },
+        {
+            "turma": "CQ1",
+            "codcurso": "72",
+            "curso": "Cosméticos",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 175,
+                    "nome": "Pedro Carlos de Oliveira - Doutor"
+                },
+                {
+                    "id": 926,
+                    "nome": "Catherine Tolomei Fabbron - Mestre"
+                },
+                {
+                    "id": 2033,
+                    "nome": "Patrícia Botignol - Especialista"
+                },
+                {
+                    "id": 2071,
+                    "nome": "Alexandre Indriunas - Mestre"
+                },
+                {
+                    "id": 100,
+                    "nome": "Maria Olivia Argueso Mengod - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "CQ2",
+            "codcurso": "72",
+            "curso": "Cosméticos",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 175,
+                    "nome": "Pedro Carlos de Oliveira - Doutor"
+                },
+                {
+                    "id": 926,
+                    "nome": "Catherine Tolomei Fabbron - Mestre"
+                },
+                {
+                    "id": 2033,
+                    "nome": "Patrícia Botignol - Especialista"
+                },
+                {
+                    "id": 2071,
+                    "nome": "Alexandre Indriunas - Mestre"
+                },
+                {
+                    "id": 100,
+                    "nome": "Maria Olivia Argueso Mengod - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "DAC",
+            "codcurso": "50",
+            "curso": "Enfermagem",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1585,
+                    "nome": "Estela Mara Nicolau - Mestre"
+                },
+                {
+                    "id": 1980,
+                    "nome": "Caio Luisi - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "DAC",
+            "codcurso": "91",
+            "curso": "Design",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2149,
+                    "nome": "Irabel de Araujo Dias Cordeiro"
+                }
+            ]
+        },
+        {
+            "turma": "DPP",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 975,
+                    "nome": "Edson Favero Junior - Especialista"
+                },
+                {
+                    "id": 1706,
+                    "nome": "Francisco José Vercelli - Especialista"
+                },
+                {
+                    "id": 1889,
+                    "nome": "Carlos Casanova Junior - Mestre"
+                },
+                {
+                    "id": 2184,
+                    "nome": "Isis Gomes Souza Silva"
+                },
+                {
+                    "id": 1345,
+                    "nome": "Murilo Orefice"
+                }
+            ]
+        },
+        {
+            "turma": "EAC",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 163,
+                    "nome": "Maria Elizabeth Brotto  -  Doutora"
+                },
+                {
+                    "id": 73,
+                    "nome": "Cleber Wanderlei Liria - Doutor"
+                },
+                {
+                    "id": 409,
+                    "nome": "Reinaldo Antônio Cardoso - Mestre"
+                },
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 160,
+                    "nome": "Leila Cristina Magalhães Silva - Mestre"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 870,
+                    "nome": "Maria Adriana Fraiha Monteiro - Doutora"
+                },
+                {
+                    "id": 72,
+                    "nome": "Nivaldo Jesus dos Santos Freire -Especialista"
+                },
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 1552,
+                    "nome": "Paulo Henrique Ribeiro - Doutor"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 1918,
+                    "nome": "Ailton Renato Stefanelli - Mestre"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2005,
+                    "nome": "Rubens Eliseu Nicula de Castro - Mestre"
+                },
+                {
+                    "id": 2022,
+                    "nome": "Paula Pinheiro Paganini - Doutora"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "EAC",
+            "codcurso": "26",
+            "curso": "Engenharia Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1735,
+                    "nome": "Hassan Mohamad Barakat - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "EAC",
+            "codcurso": "27",
+            "curso": "Engenharia de Produção",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 73,
+                    "nome": "Cleber Wanderlei Liria - Doutor"
+                },
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 870,
+                    "nome": "Maria Adriana Fraiha Monteiro - Doutora"
+                },
+                {
+                    "id": 1450,
+                    "nome": "Paulo Cesar Alves - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 1701,
+                    "nome": "Luciana Serra Soeira - Doutora"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 2039,
+                    "nome": "Marcelo Carvalho Ferreira - Especialista"
+                },
+                {
+                    "id": 2125,
+                    "nome": "Marcelino S. Carvalho - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "EAC",
+            "codcurso": "28",
+            "curso": "Engenharia Civil",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 142,
+                    "nome": "Antônio Del Priore Filho - Especialista"
+                },
+                {
+                    "id": 155,
+                    "nome": "Edson Elias Matar - Mestre"
+                },
+                {
+                    "id": 2024,
+                    "nome": "Eduardo Carreiro da Cruz - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "ES1",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "ES2",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "ES3",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 376,
+                    "nome": "Ailton Camargo - Mestre"
+                },
+                {
+                    "id": 387,
+                    "nome": "Elisabete Maria Ronconi Miranda - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "ES4",
+            "codcurso": "24",
+            "curso": "Engenharia Química",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "ESC",
+            "codcurso": "27",
+            "curso": "Engenharia de Produção",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1286,
+                    "nome": "Sérgio de Souza  Leme - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "ETP",
+            "codcurso": "74",
+            "curso": "Polímeros (Tecnologia em Plásticos)",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1860,
+                    "nome": "Wanderley da Costa - Doutor"
+                },
+                {
+                    "id": 399,
+                    "nome": "José Mauro Diniz Oliveira - Doutor"
+                },
+                {
+                    "id": 422,
+                    "nome": "Marcos Rogério Ziliani - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "FAC",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 368,
+                    "nome": "Rosa Palmira Jacobo Gonzales - Mestre"
+                },
+                {
+                    "id": 37,
+                    "nome": "Marisa Regina de Fátima Veiga - Mestre"
+                },
+                {
+                    "id": 35,
+                    "nome": "Tania Carmen Penaranda Govato - Mestre"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 2090,
+                    "nome": "Ana Luiza Dias A Agamme"
+                }
+            ]
+        },
+        {
+            "turma": "FC1",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 2099,
+                    "nome": "Jéssica Valença"
+                }
+            ]
+        },
+        {
+            "turma": "FC2",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 360,
+                    "nome": "Mirta Gladis Mondino - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "FC3",
+            "codcurso": "40",
+            "curso": "Básico Farmácia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "FDE",
+            "codcurso": "91",
+            "curso": "Design",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2045,
+                    "nome": "Camila Baldo Caneiro - Especialista"
+                },
+                {
+                    "id": 2149,
+                    "nome": "Irabel de Araujo Dias Cordeiro"
+                },
+                {
+                    "id": 2139,
+                    "nome": "Livio Lima de Oliveira"
+                },
+                {
+                    "id": 2196,
+                    "nome": "Marcia Sandoval Gregori - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "FPP",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 454,
+                    "nome": "Julio Marcionilio da Silva - Especialista"
+                },
+                {
+                    "id": 975,
+                    "nome": "Edson Favero Junior - Especialista"
+                },
+                {
+                    "id": 1706,
+                    "nome": "Francisco José Vercelli - Especialista"
+                },
+                {
+                    "id": 2184,
+                    "nome": "Isis Gomes Souza Silva"
+                },
+                {
+                    "id": 2045,
+                    "nome": "Camila Baldo Caneiro - Especialista"
+                },
+                {
+                    "id": 2196,
+                    "nome": "Marcia Sandoval Gregori - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "GAQ",
+            "codcurso": "73",
+            "curso": "Gestão Ambiental",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                },
+                {
+                    "id": 1176,
+                    "nome": "Taís Aparecida de Assis Garcia Moreira - Mestre"
+                },
+                {
+                    "id": 1905,
+                    "nome": "Robson Leocádio Franklin - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "MAC",
+            "codcurso": "33",
+            "curso": "Economia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 302,
+                    "nome": "Clóvis de Freitas Costa - Especialista"
+                },
+                {
+                    "id": 272,
+                    "nome": "Odilon Guedes Pinto Júnior"
+                },
+                {
+                    "id": 205,
+                    "nome": "Eduardo K. Tonooka - Doutor"
+                },
+                {
+                    "id": 1421,
+                    "nome": "Sandro Cano - Mestre"
+                },
+                {
+                    "id": 2027,
+                    "nome": "Andre Jacob Mori - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "MAQ",
+            "codcurso": "31",
+            "curso": "Administração de Empresas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 298,
+                    "nome": "Marisa Batista - Especialista"
+                },
+                {
+                    "id": 284,
+                    "nome": "Waldir Dainezi - Mestre"
+                },
+                {
+                    "id": 282,
+                    "nome": "Vanderlei Antonio Galdi - Especialista"
+                },
+                {
+                    "id": 1970,
+                    "nome": "Simone Della Torre - Especialista"
+                },
+                {
+                    "id": 2027,
+                    "nome": "Andre Jacob Mori - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "MG1",
+            "codcurso": "31",
+            "curso": "Administração de Empresas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 287,
+                    "nome": "Carlos Alberto Rodrigues -  Especialista"
+                },
+                {
+                    "id": 205,
+                    "nome": "Eduardo K. Tonooka - Doutor"
+                },
+                {
+                    "id": 276,
+                    "nome": "Roberto Vieira Robert - Mestre"
+                },
+                {
+                    "id": 297,
+                    "nome": "Marco Antonio Santos Vicente - Mestre"
+                },
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 2210,
+                    "nome": "Cleusa Fernandes Cassetti Pedotti"
+                }
+            ]
+        },
+        {
+            "turma": "MG2",
+            "codcurso": "32",
+            "curso": "Contabilidade",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 287,
+                    "nome": "Carlos Alberto Rodrigues -  Especialista"
+                },
+                {
+                    "id": 277,
+                    "nome": "Sérgio da Silva Duque - Especialista"
+                },
+                {
+                    "id": 205,
+                    "nome": "Eduardo K. Tonooka - Doutor"
+                },
+                {
+                    "id": 276,
+                    "nome": "Roberto Vieira Robert - Mestre"
+                },
+                {
+                    "id": 297,
+                    "nome": "Marco Antonio Santos Vicente - Mestre"
+                },
+                {
+                    "id": 2193,
+                    "nome": "Maria Regina Muniz Guedes Matta Machado - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "MGA",
+            "codcurso": "31",
+            "curso": "Administração de Empresas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 20,
+                    "nome": "Diro Nishida - Mestre"
+                },
+                {
+                    "id": 288,
+                    "nome": "Carlos Antonio de Oliveira - Especialista"
+                },
+                {
+                    "id": 298,
+                    "nome": "Marisa Batista - Especialista"
+                },
+                {
+                    "id": 280,
+                    "nome": "Silvia Helena R Hernandes - Mestre"
+                },
+                {
+                    "id": 2210,
+                    "nome": "Cleusa Fernandes Cassetti Pedotti"
+                }
+            ]
+        },
+        {
+            "turma": "MGC",
+            "codcurso": "32",
+            "curso": "Contabilidade",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 287,
+                    "nome": "Carlos Alberto Rodrigues -  Especialista"
+                },
+                {
+                    "id": 1267,
+                    "nome": "Paulo César Raimundo Peppe - Especialista"
+                },
+                {
+                    "id": 297,
+                    "nome": "Marco Antonio Santos Vicente - Mestre"
+                },
+                {
+                    "id": 2190,
+                    "nome": "Marco Antonio Vaccari - Especialista"
+                },
+                {
+                    "id": 2217,
+                    "nome": "Sandra da Rocha Ribeiro"
+                }
+            ]
+        },
+        {
+            "turma": "MON",
+            "codcurso": "33",
+            "curso": "Economia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 302,
+                    "nome": "Clóvis de Freitas Costa - Especialista"
+                },
+                {
+                    "id": 205,
+                    "nome": "Eduardo K. Tonooka - Doutor"
+                },
+                {
+                    "id": 1421,
+                    "nome": "Sandro Cano - Mestre"
+                },
+                {
+                    "id": 2027,
+                    "nome": "Andre Jacob Mori - Mestre"
+                },
+                {
+                    "id": 2025,
+                    "nome": "Wilson Lira Cardoso - Mestre"
+                },
+                {
+                    "id": 2092,
+                    "nome": "Gilmar Jonas Deghi - Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "MPE",
+            "codcurso": "31",
+            "curso": "Administração de Empresas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 20,
+                    "nome": "Diro Nishida - Mestre"
+                },
+                {
+                    "id": 277,
+                    "nome": "Sérgio da Silva Duque - Especialista"
+                },
+                {
+                    "id": 270,
+                    "nome": "Nelson Rodrigues Farias - Mestre"
+                },
+                {
+                    "id": 261,
+                    "nome": "Maria Angélica Cristino Lencione Pedreti - Mestre"
+                },
+                {
+                    "id": 2210,
+                    "nome": "Cleusa Fernandes Cassetti Pedotti"
+                }
+            ]
+        },
+        {
+            "turma": "OP1",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2045,
+                    "nome": "Camila Baldo Caneiro - Especialista"
+                }
+            ]
+        },
+        {
+            "turma": "OP2",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2184,
+                    "nome": "Isis Gomes Souza Silva"
+                }
+            ]
+        },
+        {
+            "turma": "OP3",
+            "codcurso": "81",
+            "curso": "Publicidade e Propaganda",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2139,
+                    "nome": "Livio Lima de Oliveira"
+                }
+            ]
+        },
+        {
+            "turma": "OP3",
+            "codcurso": "91",
+            "curso": "Design",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 2139,
+                    "nome": "Livio Lima de Oliveira"
+                }
+            ]
+        },
+        {
+            "turma": "QAC",
+            "codcurso": "15",
+            "curso": "Química Bacharelado",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 481,
+                    "nome": "Nori Beraldo - Doutor"
+                },
+                {
+                    "id": 653,
+                    "nome": "Guintar Luciano Baugis - Doutor"
+                },
+                {
+                    "id": 652,
+                    "nome": "Sandro de Oliveira - Mestre"
+                },
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1942,
+                    "nome": "Flávia Daniela Motta - Doutora"
+                },
+                {
+                    "id": 2003,
+                    "nome": "Roberta Alvarenga Isidoro - Doutora"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "QAC",
+            "codcurso": "16",
+            "curso": "Química Licenciatura",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                },
+                {
+                    "id": 1941,
+                    "nome": "Rafaela Machado Gengo - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "QAC",
+            "codcurso": "22",
+            "curso": "Química Industrial",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1485,
+                    "nome": "Éder Gonçalves - Mestre"
+                },
+                {
+                    "id": 1729,
+                    "nome": "Hilda Machado da Silva Leite - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "T11",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 1386,
+                    "nome": "Cristina Midori Rocha Ei"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T12",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 1386,
+                    "nome": "Cristina Midori Rocha Ei"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                },
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T13",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2173,
+                    "nome": "Natalia Nappi Perrella - Doutora"
+                },
+                {
+                    "id": 139,
+                    "nome": "Maria Cristina Ricci Queiroz - Mestre"
+                },
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "T14",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 2173,
+                    "nome": "Natalia Nappi Perrella - Doutora"
+                },
+                {
+                    "id": 1701,
+                    "nome": "Luciana Serra Soeira - Doutora"
+                },
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                }
+            ]
+        },
+        {
+            "turma": "T1A",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 407,
+                    "nome": "Paulo Roberto Cesar - Especialista"
+                },
+                {
+                    "id": 143,
+                    "nome": "Eugênio César Silveira - Mestre"
+                },
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                },
+                {
+                    "id": 997,
+                    "nome": "Fernanda Cristina Vianna - Doutora"
+                },
+                {
+                    "id": 412,
+                    "nome": "Suely Alipio Costa Lopes - Mestre"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T1B",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                },
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                },
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 412,
+                    "nome": "Suely Alipio Costa Lopes - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T1C",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 148,
+                    "nome": "Ricardo de Gouveia - Doutor"
+                },
+                {
+                    "id": 649,
+                    "nome": "Valdeci Carneiro Junior - Mestre"
+                },
+                {
+                    "id": 997,
+                    "nome": "Fernanda Cristina Vianna - Doutora"
+                },
+                {
+                    "id": 1341,
+                    "nome": "Mário Cesar Daniel da Fonseca - Doutor"
+                },
+                {
+                    "id": 1995,
+                    "nome": "Sidinei Tadeu Almeida dos Santos Guarda - Mestre"
+                },
+                {
+                    "id": 161,
+                    "nome": "Márcio Rogério Muller - Mestre"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T21",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 143,
+                    "nome": "Eugênio César Silveira - Mestre"
+                },
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 1450,
+                    "nome": "Paulo Cesar Alves - Mestre"
+                },
+                {
+                    "id": 100,
+                    "nome": "Maria Olivia Argueso Mengod - Doutora"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T22",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 416,
+                    "nome": "Wellington Caetano Gennari - Especialista"
+                },
+                {
+                    "id": 143,
+                    "nome": "Eugênio César Silveira - Mestre"
+                },
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 1450,
+                    "nome": "Paulo Cesar Alves - Mestre"
+                },
+                {
+                    "id": 100,
+                    "nome": "Maria Olivia Argueso Mengod - Doutora"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T23",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1493,
+                    "nome": "João Rodrigo Escalari Quintiliano - Mestre"
+                },
+                {
+                    "id": 143,
+                    "nome": "Eugênio César Silveira - Mestre"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                },
+                {
+                    "id": 1826,
+                    "nome": "Carlos Willians Paschoal - Mestre"
+                }
+            ]
+        },
+        {
+            "turma": "T2A",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 1139,
+                    "nome": "Regiane Carnavarolo Scalissi - Especialista"
+                },
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 1450,
+                    "nome": "Paulo Cesar Alves - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 2047,
+                    "nome": "Ricardo Aluisio Pereira - Mestre"
+                },
+                {
+                    "id": 1272,
+                    "nome": "Omara Cussigh - Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "T2B",
+            "codcurso": "20",
+            "curso": "Ciclo Básico de Engenharia",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 595,
+                    "nome": "Márcia Freire dos Reis Gorny - Doutora"
+                },
+                {
+                    "id": 1450,
+                    "nome": "Paulo Cesar Alves - Mestre"
+                },
+                {
+                    "id": 1571,
+                    "nome": "Fábio Luís Fonseca - Mestre"
+                },
+                {
+                    "id": 1756,
+                    "nome": "Luciano  Marcelo de Medeiros Mello - Mestre"
+                },
+                {
+                    "id": 1802,
+                    "nome": "Eduardo Toshio D. Matsushita – Doutor"
+                },
+                {
+                    "id": 163,
+                    "nome": "Maria Elizabeth Brotto  -  Doutora"
+                }
+            ]
+        },
+        {
+            "turma": "WEB",
+            "codcurso": "75",
+            "curso": "Análise e Desenvolvimento de Sistemas",
+            "label": "seu(s) professore(a)s",
+            "professor": [
+                {
+                    "id": 187,
+                    "nome": "José Fernando Marques Teixeira - Especialista"
+                },
+                {
+                    "id": 1690,
+                    "nome": "Nilton Carlos de Mattos - Especialista"
+                },
+                {
+                    "id": 2131,
+                    "nome": "Bruno Sanchez de Araujo"
+                },
+                {
+                    "id": 2153,
+                    "nome": "Valdir Morales - Mestre"
+                }
+            ]
+        }
+    ]
+}

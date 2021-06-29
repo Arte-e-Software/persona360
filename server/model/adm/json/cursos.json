@@ -1,0 +1,110 @@
+[
+ {
+   "id_curso": 2,
+   "nome_curso": "Administração"
+ },
+ {
+   "id_curso": 3,
+   "nome_curso": "Contabilidade"
+ },
+ {
+   "id_curso": 15,
+   "nome_curso": "Desenho Industrial"
+ },
+ {
+   "id_curso": 4,
+   "nome_curso": "Economia"
+ },
+ {
+   "id_curso": 31,
+   "nome_curso": "Engenharia Ambiental"
+ },
+ {
+   "id_curso": 7,
+   "nome_curso": "Engenharia de Produção Química"
+ },
+ {
+   "id_curso": 8,
+   "nome_curso": "Engenharia Química"
+ },
+ {
+   "id_curso": 87,
+   "nome_curso": "Ens. Médio"
+ },
+ {
+   "id_curso": 5,
+   "nome_curso": "Farmácia"
+ },
+ {
+   "id_curso": 88,
+   "nome_curso": "Física"
+ },
+ {
+   "id_curso": 9,
+   "nome_curso": "Letras"
+ },
+ {
+   "id_curso": 74,
+   "nome_curso": "Matemática"
+ },
+ {
+   "id_curso": 10,
+   "nome_curso": "Pedagogia"
+ },
+ {
+   "id_curso": 13,
+   "nome_curso": "Publicidade e Propaganda"
+ },
+ {
+   "id_curso": 1,
+   "nome_curso": "Química (Bacharelado)"
+ },
+ {
+   "id_curso": 11,
+   "nome_curso": "Química Industrial"
+ },
+ {
+   "id_curso": 66,
+   "nome_curso": "Química Licenciatura"
+ },
+ {
+   "id_curso": 14,
+   "nome_curso": "Rádio e Televisão"
+ },
+ {
+   "id_curso": 102,
+   "nome_curso": "Técnico em Edificações"
+ },
+ {
+   "id_curso": 33,
+   "nome_curso": "Técnico em Eletrônica"
+ },
+ {
+   "id_curso": 38,
+   "nome_curso": "Técnico em Patologia Clínica"
+ },
+ {
+   "id_curso": 43,
+   "nome_curso": "Técnico em Química"
+ },
+ {
+   "id_curso": 18,
+   "nome_curso": "Tecnologia em Alimentos"
+ },
+ {
+   "id_curso": 27,
+   "nome_curso": "Tecnologia em Análise e Desenvolvimento de Sistemas"
+ },
+ {
+   "id_curso": 56,
+   "nome_curso": "Tecnologia em Cosméticos"
+ },
+ {
+   "id_curso": 20,
+   "nome_curso": "Tecnologia em Gestão Ambiental"
+ },
+ {
+   "id_curso": 25,
+   "nome_curso": "Tecnologia em Polímeros"
+ }
+]

@@ -1,0 +1,45 @@
+const Pool    = require('../../_db/sql/pool');
+const config  = require('../../_db/sql/config');
+const model   = require('../../model/bolsaenem/agendamento.create');
+const banco   = config.psonline;
+
+function controller(req, res){
+
+    let erro = false;
+    let nome, celular, email, mediaEnem, bolsaEnem;
+
+    if(req){
+        
+        nome = req.params.nome;
+        celular = req.params.celular;
+        email = req.params.email;
+        mediaEnem = req.params.mediaEnem;
+        bolsaEnem = req.params.bolsaEnem;
+        ano = req.params.ano;
+        semestre = req.params.semestre;
+
+        if(!nome || !celular || !email || !mediaEnem || !bolsaEnem){
+
+            erro = true;
+
+        }
+   
+    } else {
+
+        erro = true;
+
+    }
+    
+    if(erro) {
+
+        return res.status(500).send({ erro: 'Parâmetros obrigatórios omitidos ou em formato incorreto.' });
+
+    } else {
+
+        Pool(banco, model(nome, celular, email, mediaEnem, bolsaEnem), res);
+
+    }
+        
+}
+
+module.exports = controller;

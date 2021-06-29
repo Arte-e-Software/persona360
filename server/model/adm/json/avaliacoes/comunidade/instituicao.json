@@ -1,0 +1,33 @@
+{
+    "questionario": "Comunidade Externa",
+    "ano": 2018,
+    "semestre": 2,
+    "agente": "Comunidade",
+    "titulo": "Avalie a INSTITUIÇÃO quanto:",
+    "pergunta": [{
+        "cod": "2.03.4.1.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de ações socioambientais."
+    },{
+        "cod": "2.03.4.1.02",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de eventos científicos e culturais."
+    },{
+        "cod": "3.04.4.1.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à imagem pública vinculada a formação profissional."
+    },{
+        "cod": "3.04.4.1.02",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à divulgação nas mídias/meios de comunicação."
+    },{
+        "cod": "9.01.4.1.01",
+        "tipo": "comentei",
+        "len": 500,
+        "id": "comentario"
+    }]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="48.728 181.56 451.272 181.476" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" style="isolation: isolate; fill: rgb(49, 112, 84);"/>
+  <rect width="500" height="500" style="isolation: isolate; fill: rgb(8, 97, 149); visibility: hidden;"/>
+  <rect width="500" height="500" style="isolation: isolate; fill: rgb(224, 106, 9); visibility: hidden;"/>
+  <path d="M 6.456 306.35 C 38.38 321.321 81.206 382.444 243.424 334.484 C 468.29 268.001 382.322 398.319 557.689 294.167 C 580.707 280.497 552.47 372.522 552.47 372.522 L 15.057 372.522 C 15.057 372.522 -12.028 297.683 6.456 306.35 Z" style="fill: rgb(255, 255, 255);"/>
+</svg>

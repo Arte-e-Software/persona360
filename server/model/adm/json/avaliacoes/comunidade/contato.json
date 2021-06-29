@@ -1,0 +1,43 @@
+{
+    "questionario": "Comunidade Externa",
+    "ano": 2018,
+    "semestre": 2,
+    "agente": "Comunidade",
+    "titulo": "Dados de Contato:",
+    "pergunta": [{
+        "tipo": "texto",
+        "len": 300,
+        "id": "empresa",
+        "enunciado": "Empresa"
+    },{
+        "tipo": "texto",
+        "len": 300,
+        "id": "ramo",
+        "enunciado": "Ramo"
+    },{
+        "tipo": "texto",
+        "len": 300,
+        "id": "nome",
+        "enunciado": "Nome"
+    },{
+        "tipo": "texto",
+        "len": 100,
+        "id": "cargo",
+        "enunciado": "Cargo"
+    },{
+        "tipo": "texto",
+        "len": 20,
+        "id": "telefone",
+        "enunciado": "Telefone"
+    },{
+        "tipo": "texto",
+        "len": 300,
+        "id": "email",
+        "enunciado": "E-mail"
+    },{
+        "tipo": "texto",
+        "len": 300,
+        "id": "curso",
+        "enunciado": "Curso"
+    }]
+}

@@ -1,0 +1,130 @@
+{
+    "questionario": "Egressos",
+    "ano": 2018,
+    "semestre": 2,
+    "agente": "Egressos",
+    "titulo": "Multipla Escolha",
+    "pergunta": [
+        {
+            "cod": "3.09.5.2.01",
+        "tipo": "alternativas",
+        "enunciado": "Consequências advindas da conclusão do curso (poderá ser assinalada mais de uma alternativa):",
+            "escala": [
+                "Aprimoramento do conhecimento profissional.",
+                "Melhora do desempenho profissional.",
+                "Aumento da remuneração recebida.",
+                "Mudança para um emprego melhor.",
+                "Promoção profissional no trabalho.",
+                "Mudança de área profissional.",
+                "Manutenção da mesma situação.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.02",
+        "tipo": "alternativas",
+        "enunciado": "Maiores dificuldades encontradas depois de formado(a) (poderá ser assinalada mais de uma alternativa):",
+            "escala": [
+                "Falta de conhecimento teórico.",
+                "Falta de experiência prática.",
+                "Formação recebida desatualizada.",
+                "Falta de identificação com a área.",
+                "Existência de alta concorrência.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.03",
+        "tipo": "alternativas",
+        "enunciado": "Aspectos  favoráveis decorrentes do Estágio (poderá ser assinalada mais de uma alternativa):",
+            "escala": [
+                "Não se aplica.",
+                "Fonte de receita financeira.",
+                "Escolha da área de atuação profissional.",
+                "Aplicação dos conhecimentos adquiridos.",
+                "Aquisição de experiência profissional.",
+                "Desenvolvimento do relacionamento interpessoal.",
+                "Entendimento do ambiente organizacional.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.04",
+        "tipo": "alternativas",
+        "enunciado": "Consequências do Trabalho de Conclusão de Curso/Módulo (poderá ser assinalada mais de uma alternativa):",
+            "escala": [
+                "Não se aplica.",
+                "Aprofundamento do conhecimento.",
+                "Interesse pela leitura científica/acadêmica.",
+                "Desenvolvimento do senso crítico.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.05",
+        "tipo": "alternativas",
+        "enunciado": "Características profissionais exigidas pelo mercado de trabalho (poderá ser assinalada mais de uma alternativa):",
+            "escala": [
+                "Conduta e valores éticos.",
+                "Postura empreendedora e inovadora.",
+                "Facilidade de trabalhar em equipe.",
+                "Capacidade para o exercício da liderança.",
+                "Motivação voltada para o aprendizado.",
+                "Sólida formação profissional.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.06",
+        "tipo": "alternativas",
+        "enunciado": "Ramo de atuação da empresa em que atua:",
+            "escala": [
+                "Farmacêutico.",
+                "Químico.",
+                "Financeiro.",
+                "Varejo.",
+                "Metalúrgico.",
+                "Educação.",
+                "Serviços.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.07",
+        "tipo": "alternativas",
+        "enunciado": "Tempo de entrada no mercado de trabalho, após a conclusão do curso:",
+            "escala": [
+                "já atuava na área.",
+                "menos de 6 meses.",
+                "entre 7 e 12 meses.",
+                "entre 13 meses e 18 meses.",
+                "acima de 19 meses.",
+                "nunca atuei na área, justifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.08",
+        "tipo": "alternativas",
+        "enunciado": "Nível de atuação profissional na empresa em que atua:",
+            "escala": [
+                "Não estou trabalhando.",
+                "Diretoria.",
+                "Gerência.",
+                "Chefia de Área/Departamento.",
+                "Supervisão/Coordenação.",
+                "Assessoria/Assistência.",
+                "Outras, especifique: "
+            ]
+        },{
+            "cod": "3.09.5.2.09",
+        "tipo": "alternativas",
+        "enunciado": "Motivo que impossibilitou exercer a profissão:",
+            "escala": [
+                "Não se aplica.",
+                "Ascensão profissional.",
+                "Atuação em negócio próprio.",
+                "Decepção com a profissão.",
+                "Falta de oportunidades na área.",
+                "Opção por outra profissão.",
+                "Outras, especifique: "
+            ]
+        },{
+        "cod": "9.01.5.2.01",
+        "tipo": "comentei",
+        "len": 500,
+        "id": "comentario"
+    }]
+    }

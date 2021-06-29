@@ -1,0 +1,28 @@
+{
+    "questionario": "Corpo Discente",
+    "ano": 2018,
+    "semestre": 2,
+    "agente": "Discente",
+    "titulo": "Avalie a COORDENAÇÃO quanto:",
+    "pergunta": [{
+        "cod": "3.09.2.3.01",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de reuniões com representantes de salas."
+    }, {
+        "cod": "3.09.2.3.02",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à promoção de eventos(palestras, painéis etc.) acadêmicos."
+    }, {
+        "cod": "3.09.2.3.03",
+        "tipo": "conceito",
+        "escala": [5,4,3,2,1,0],
+        "enunciado": "à disponibilidade e interesse para o atendimento."
+    },{
+        "cod": "9.01.2.3.01",
+        "tipo": "comentei",
+        "len": 500,
+        "id": "comentario"
+    }]
+}
