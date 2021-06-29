@@ -3,7 +3,13 @@ const router = express.Router();
 
 router.get('/adm', function(req, res) {
   
-  res.render('template/adm/index');
+  res.render('adm/index',
+  {
+    tenant: {
+      tenantId: 1,
+      title: 'Persona360/adm'
+    }
+  });
 
 });
 
