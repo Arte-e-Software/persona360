@@ -1,3 +1,5 @@
+![Image of persons360](https://escola.pro.br/img/Persona360LogoTexto.svg)
+
 # persona360
 
 Persona360.com.br
