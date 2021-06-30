@@ -1,0 +1,34 @@
+{
+    "$comment": "replace ESCAPE por barra invertida quando for usar a regEx",
+    "user": {
+        "detail": [
+            {
+                "label": [
+                    {
+                        "lang": "pt-br",
+                        "text": "CEP"
+                    }
+                ],
+                "inputId": "person_cep",
+                "dataType": "number",
+                "maxlenght": 9,
+                "isRequired": 0,
+                "regEx": "/[0-9]{5}-[0-9]{3}$/"
+            },
+            {
+                "label": [
+                    {
+                        "lang": "pt-br",
+                        "text": "CPF"
+                    }
+                ],
+                "inputId": "person_cpf",
+                "dataType": "number",
+                "maxlenght": 20,
+                "isRequired": 0,
+                "regEx": "/(ESCAPEd{3})(ESCAPEd{3})(ESCAPEd{3})(ESCAPEd{2})/" 
+            }
+        ]
+
+    }
+}

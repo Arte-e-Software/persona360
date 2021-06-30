@@ -2,7 +2,7 @@
 
 Persona360.com.br
 
-Sistema integrado de gestão de relacionamento baseado em POLÍTICAS e PIPELINES.
+Sistema integrado de gestão de relacionamento baseado TAGGING, POLÍTICAS e PIPELINES.
 
 Pipeline Candidato
 Processo de Contato (módulo pessoa)
