@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
   
-  res.render('home/index',
+  res.render('adm/index',
   {
     tenant: {
       tenantId: 1,
-      title: 'Persona360/adm'
+      title: req.query.tenant
     }
   });
 
