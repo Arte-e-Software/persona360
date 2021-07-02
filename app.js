@@ -8,6 +8,10 @@ const createError = require('http-errors')
   , passport = require('passport')
   ;
 
+  require('dotenv').config({
+    path: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env'
+  });
+
 var MicrosoftStrategy = require('passport-microsoft').Strategy;
   passport.use(new MicrosoftStrategy({
       clientID: 'dfe50209-0856-4610-a4fd-f51b0bcf6765',

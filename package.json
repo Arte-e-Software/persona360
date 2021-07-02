@@ -7,12 +7,15 @@
     "url": "https://github.com/Arte-e-Software/persona360.git"
   },
   "scripts": {
-    "start": "nodemon ./persona360.js"
+    "teste": "nodemon ./persona360.js",
+    "prod": "pm2 start ./persona360.js",
+    "dev": "NODE_ENV=dev nodemon ./persona360.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "ejs": "^2.7.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
