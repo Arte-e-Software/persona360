@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/adm', function(req, res) {
+router.get('/adm', (req, res) => {
   
-  res.render('adm/index',
+  res.render('adm',
   {
     tenant: {
       tenantId: 1,

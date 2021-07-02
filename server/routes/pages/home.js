@@ -3,11 +3,11 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   
-  res.render('adm/index',
+  res.render('home',
   {
     tenant: {
       tenantId: 1,
-      title: req.query.tenant
+      title: 'Persona360/adm'
     }
   });
 

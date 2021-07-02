@@ -22,7 +22,6 @@ var MicrosoftStrategy = require('passport-microsoft').Strategy;
     }
   ));
 
-
 // Config middlewares
 app.use(logger('dev'));
 app.use(express.json());
@@ -35,10 +34,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Views
-app.get('/', require('./server/routes/pages/home/'));
-app.get('/adm', require('./server/routes/pages/adm/'));
-app.get('/login', require('./server/routes/pages/login/'));
-
+app.get('/', require('./server/routes/pages/home.js'));
+app.get('/adm', require('./server/routes/pages/adm.js'));
+app.get('/login', require('./server/routes/pages/login.js'));
 
 // Errors
 app.use((req, res, next) => {
@@ -49,7 +47,7 @@ app.use((err, req, res, next) => {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   res.status(err.status || 500);
-  res.render('error/error');
+  res.render('error');
 });
 
 module.exports = app;
