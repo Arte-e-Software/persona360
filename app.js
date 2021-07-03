@@ -9,22 +9,8 @@ const createError = require('http-errors')
   ;
 
   require('dotenv').config({
-    path: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env'
+    path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env'
   });
-
-var MicrosoftStrategy = require('passport-microsoft').Strategy;
-  passport.use(new MicrosoftStrategy({
-      clientID: 'dfe50209-0856-4610-a4fd-f51b0bcf6765',
-      clientSecret: 'e8f1c71f-0608-44cc-bc42-3112cef7b3e9',
-      callbackURL: "http://localhost:3000/auth/microsoft/callback",
-      scope: ['user.read']
-    },
-    function(accessToken, refreshToken, profile, done) {
-      User.findOrCreate({ userId: profile.id }, function (err, user) {
-        return done(err, user);
-      });
-    }
-  ));
 
 // Config middlewares
 app.use(logger('dev'));
@@ -48,7 +34,7 @@ app.use((req, res, next) => {
 });
 app.use((err, req, res, next) => {
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get('env') === 'dev' ? err : {};
 
   res.status(err.status || 500);
   res.render('error');
