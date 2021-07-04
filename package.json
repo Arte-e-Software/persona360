@@ -8,8 +8,7 @@
   },
   "scripts": {
     "teste": "nodemon ./persona360.js",
-    "prod": "pm2 start ./persona360.js",
-    "dev": "NODE_ENV=dev nodemon ./persona360.js"
+    "prod": "pm2 start ./persona360.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

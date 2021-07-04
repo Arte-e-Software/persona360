@@ -25,10 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// Views
-app.get('/', require('./server/routes/pages/home.js'));
-app.get('/adm', require('./server/routes/pages/adm.js'));
-app.get('/login', require('./server/routes/pages/login.js'));
+// Proxy
+app.get('/', require('./server/routes/proxy/proxy')); 
 
 // Errors
 app.use((req, res, next) => {

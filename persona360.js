@@ -5,7 +5,7 @@
  */
 
 var app = require('./app');
-var debug = require('debug')('apipsonline:server');
+var debug = require('debug')('persona360:server');
 var http = require('http');
 
 /**
