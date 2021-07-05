@@ -8,13 +8,18 @@ const createError = require('http-errors')
   , cors = require('cors')
   , app = express()
   , passport = require('passport')
-  ;
+  , helmet = require('helmet')
+  , mustacheExpress = require('mustache-express');
+;
 
-  require('dotenv').config({
-    path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env'
-  });
+require('dotenv').config({
+  path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env'
+});
+
+const templateDir = path.join(__dirname, '.', 'views');
 
 // Config middlewares
+app.use(helmet())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,11 +27,12 @@ app.use(cookieParser());
 
 // Config client side
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.engine('mustache', mustacheExpress());
+app.set('view engine', 'mustache');
+app.set('views', templateDir);
 
 // Proxy
-app.get('/', require('./server/routes/proxy/proxy')); 
+app.get('/', require('./server/routes/concierge/concierge'));
 
 // Errors
 app.use((req, res, next) => {

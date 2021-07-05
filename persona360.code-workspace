@@ -1,7 +1,12 @@
 {
 	"folders": [
 		{
+			"name": "persona360",
 			"path": "."
+		},
+		{
+			"name": "sip3",
+			"path": "../anteriores/FOC/sip3"
 		}
 	]
 }

@@ -8,23 +8,30 @@
   },
   "scripts": {
     "teste": "nodemon ./persona360.js",
-    "prod": "pm2 start ./persona360.js"
+    "prod": "pm2 start ./persona360.js",
+    "dev": "NODE_ENV=dev nodemon ./persona360.js"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.5.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^10.0.0",
     "ejs": "^2.7.1",
     "express": "~4.16.1",
+    "helmet": "^4.6.0",
     "http-errors": "~1.6.3",
     "ip": "^1.1.5",
     "jquery": "^3.6.0",
+    "js-cookie": "^2.2.1",
     "morgan": "~1.9.1",
     "mssql": "^5.1.0",
+    "mustache": "^4.2.0",
+    "mustache-express": "^1.3.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-microsoft": "^0.1.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "sqllite": "^1.1.2"
   }
 }
