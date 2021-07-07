@@ -6,17 +6,15 @@ const createError = require('http-errors')
   , cookieParser = require('cookie-parser')
   , logger = require('morgan')
   , cors = require('cors')
-  , app = express()
   , passport = require('passport')
   , helmet = require('helmet')
-  , mustacheExpress = require('mustache-express');
+  , mustacheExpress = require('mustache-express')
+  , app = express()
 ;
 
 require('dotenv').config({
   path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env'
 });
-
-const templateDir = path.join(__dirname, '.', 'views');
 
 // Config middlewares
 app.use(helmet())
@@ -29,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('mustache', mustacheExpress());
 app.set('view engine', 'mustache');
-app.set('views', templateDir);
+app.set('views', path.join(__dirname, '.', 'views'));
 
 // Proxy
 app.get('/', require('./server/routes/concierge/concierge'));

@@ -1,4 +1,5 @@
 const ip = require("ip").address()
+    , db = require('../../_db/conn/sqlite3/sqlite.conn');
     ;
 
 module.exports = (req, res) => {
@@ -11,7 +12,6 @@ module.exports = (req, res) => {
         cookie: {
             sessionId: req.rawHeaders[31]
         }
-
     } || req.cookie('tenant');
 
     res.cookie('tenant', tenant, {
@@ -22,7 +22,7 @@ module.exports = (req, res) => {
         httpOnly: process.env.COOKIE_HTTPONLY,
         samesite: process.env.COOKIE_SAMESITE
     })
-
-    res.render('home', {tenant: tenant});
+    
+    res.render('home', {tenant: tenant, db: db(tenant) });
 
 };
