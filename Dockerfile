@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10.5.0
 
 WORKDIR /usr/src/app
 
@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 21094
+EXPOSE 80
 
-CMD [ "node", "persona360.js"]
+CMD [ "nodemon", "persona360.js"]
 

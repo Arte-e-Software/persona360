@@ -8,7 +8,6 @@ const createError = require('http-errors')
   , cors = require('cors')
   , passport = require('passport')
   , helmet = require('helmet')
-  , mustacheExpress = require('mustache-express')
   , app = express()
 ;
 
@@ -25,12 +24,20 @@ app.use(cookieParser());
 
 // Config client side
 app.use(express.static(path.join(__dirname, 'public')));
-app.engine('mustache', mustacheExpress());
-app.set('view engine', 'mustache');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
+
+app.get
 
 // Proxy
 app.get('/', require('./server/routes/concierge/concierge'));
+
+// Teste post Tiny Editor
+app.get('/tiny', 
+
+  require('./server/routes/api/tiny')
+
+);
 
 // Errors
 app.use((req, res, next) => {
