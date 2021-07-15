@@ -2,24 +2,16 @@
 
 const createError = require('http-errors')
   , express = require('express')
-  , router = express.Router()
   , path = require('path')
   , helmet = require('helmet')
   , app = express()
   , cookieParser = require('cookie-parser')
   , logger = require('morgan')
-  ;
-
-// Rotas init
-let routes = require('./server/routes/')
-  , route = '/'
-  , controller = () => { }
+  , route = require('./back_end/routes/')
   ;
 
 // Dotenv file
-require('dotenv').config({
-  path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env'
-});
+require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env' });
 
 // Config middlewares
 app.use(helmet())
@@ -29,30 +21,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Config client side
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'front_end')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
 
-// Rotas get
-for (let i in routes) {
+// Rotas GET das Páginas
+let page = route.page;
+app.get(page.home.path, page.home.router);
+app.get(page.adm.path, page.adm.router);
 
-  route = routes[i].route;
-  controller = routes[i].controller;
-  app.get(route, router.get(route, (req, res) => { controller(req, res); }));
-
-};
+// Rotas da API (CREATE, READ, LIST, UPDATE, DELETE)
+let api = route.api;
 
 // Errors
-app.use((req, res, next) => {
-  next(createError(404));
-});
-
+app.use((req, res, next) => { next(createError(404)); });
 app.use((err, req, res) => {
+  
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'dev' ? err : {};
-
   res.status(err.status || 500);
   res.render('error');
+
 });
 
 module.exports = app;
