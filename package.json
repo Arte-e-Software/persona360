@@ -9,11 +9,11 @@
   "scripts": {
     "teste": "nodemon ./persona360.js",
     "prod": "pm2 start ./persona360.js",
-    "dev": "NODE_ENV=dev nodemon ./persona360.js"
+    "dev": "NODE_ENV=dev nodemon ./persona360.js",
+    "npm": "npm install"
   },
   "dependencies": {
     "@google-cloud/language": "^4.2.7",
-    "better-sqlite3": "^7.4.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
@@ -31,6 +31,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-microsoft": "^0.1.0",
+    "pm2": "^5.1.0",
     "request": "^2.88.0"
   }
 }

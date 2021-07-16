@@ -1,4 +1,4 @@
-FROM node:10.5.0
+FROM node:7.1.2
 
 WORKDIR /usr/src/app
 
@@ -11,4 +11,3 @@ COPY . .
 EXPOSE 80
 
 CMD [ "nodemon", "persona360.js"]
-
