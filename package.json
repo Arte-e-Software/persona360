@@ -23,15 +23,9 @@
     "googleapis": "^81.0.0",
     "helmet": "^4.6.0",
     "http-errors": "~1.6.3",
-    "install": "^0.13.0",
     "ip": "^1.1.5",
-    "js-cookie": "^2.2.1",
     "morgan": "~1.9.1",
-    "npm": "^7.19.1",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "passport-microsoft": "^0.1.0",
-    "pm2": "^5.1.0",
-    "request": "^2.88.0"
+    "passport-local": "^1.0.0"
   }
 }
