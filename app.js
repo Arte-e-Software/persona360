@@ -15,6 +15,15 @@ require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '
 
 // Config middlewares
 app.use(helmet())
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "script-src": ["'self'", "https://persona-360-d7p78.ondigitalocean.app/"],
+      "style-src": null,
+    },
+  })
+);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
