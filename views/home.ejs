@@ -1,74 +1,105 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Starter Template · Bootstrap v5.0</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.84.0">
-  <title>Persona360</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    
 
-  <!-- Bootstrap core CSS -->
-  <link href="/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+<link href="/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
 
-  <!-- Custom styles for this template -->
-  <link href="css/cover.css" rel="stylesheet">
-</head>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-<body class="d-flex h-100 text-center text-white">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <img src="img/Persona360Logo.svg" height="100">
+    </a>
+  </header>
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main>
+    <h1>Muito prazer, <strong>Persona360</strong>.</h1>
+    <p class="fs-5 col-md-8">Educação não é um produto. Quando um estudante e uma escola estabelecem um relacionamento, ele dura a vida inteira. Captação de alunos não é venda. É CONQUISTA. Quem sua escola está conquistando?</p>
 
-    <header class="mb-auto">
-      <div>
-        <h5 class="float-md-start mb-0 text-info">
-         Arte-e-Software
-        </h5>
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" href="#">
-            Suporte
-          </a>
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen" href="#">
-            Painel
-          </a>
-        </nav>
+    <div class="mb-5">
+      <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
+        Conheça o Persona360
+      </button>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>Comece sem custo.</h2>
+        <p>O Persona360 é um SaaS, software como serviço. Sem instalação. Você cadastra seus cursos e conteúdos na nuvem e os utiliza em seu site por meio da nossa api. Com alguns cliques sua landing page está pronta e recebendo inscrições.</p>
+        <ul class="icon-list">
+          <li><a href="#" rel="noopener" target="_blank">Persona360 Starter Page</a></li>
+          <li><a href="#" rel="noopener" target="_blank">Persona360 ao vivo</a></li>
+          <li><a href="#" rel="noopener" target="_blank">Painel de Controle</a></li>
+          <li class="text-muted">Persona360 Estágios (em breve)</li>
+        </ul>
       </div>
-    </header>
 
-    <main class="px-3">
-      <img src="img/Persona360Logo.svg">
-      <p class="lead">Conheça o Persona360, sistema integrado de prospecção orientado a eventos e centrado em pessoas. Sua escola com tecnologia de ponta, sem dor de cabeça.</p>
-      <p class="lead">
-        <button type="button" class="btn btn-lg btn-outline-info m-5" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
-          Teste Grátis
-        </button>
-      </p>
-    </main>
-
-    <footer class="mt-auto text-white-50">
-      <p>Persona360 é um produto da <a href="https://aes.tec.br" class="text-white">aes.tec.br</a></p>
-    </footer>
-  </div>
-
-</body>
-
+      <div class="col-md-6">
+        <h2>Viva a experiência.</h2>
+        <p>Toda e qualquer relação passa por três momentos: <strong>CONHECER</strong>, <strong>CONQUISTAR</strong> e <strong>CONVIVER</strong>. Simples, o Persona360 entrega todos os benefícios da automação de marketing numa abordagem baseada em convivência.</p>
+        <ul class="icon-list">
+          <li><a href="#">Qual o propósito da sua escola?</a></li>
+          <li><a href="#">Sistema semântico: o que isso quer dizer?</a></li>
+          <li><a href="#">Todo verbo é um evento. Será?</a></li>
+          <li><a href="#">Vamos debater?</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Desenvolvido por Arte-e-Software &middot; &copy; 2021
+  </footer>
+</div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="img/Persona360Logo.svg" height="60">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
