@@ -15,32 +15,26 @@ require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '
 
 // Config middlewares
 app.use(helmet())
-app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      "script-src": ["'self'", "https://cdn.tiny.cloud/1/invalid-origin/tinymce/5.8.2-114/tinymce.min.js"],
-      "style-src": null,
-    },
-  })
-);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Config client side
-app.use(express.static(path.join(__dirname, 'front_end')));
+app.use(express.static(path.join(__dirname, '/front_end/')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
 
-// Rotas GET das Páginas
-let page = route.page;
-app.get(page.home.path, page.home.router);
-app.get(page.adm.path, page.adm.router);
+// Rotas GET das Views
+let view = route.view;
+app.get(view.home.path, view.home.router);
+app.get(view.register.path, view.register.router);
+app.get(view.adm.path, view.adm.router);
 
-// Rotas da API (CREATE, READ, LIST, UPDATE, DELETE)
+// Rotas da API (PROXY orquestra CREATE, READ, LIST, UPDATE, DELETE)
 let api = route.api;
+app.get(api.tenant.proxy.path, api.tenant.proxy.router);
+app.get(api.persona.proxy.path, api.persona.proxy.router);
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });
