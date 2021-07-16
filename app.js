@@ -19,7 +19,7 @@ app.use(
   helmet.contentSecurityPolicy({
     useDefaults: true,
     directives: {
-      "script-src": ["'self'", "https://persona-360-d7p78.ondigitalocean.app/"],
+      "script-src": ["'self'", "https://cdn.tiny.cloud/1/invalid-origin/tinymce/5.8.2-114/tinymce.min.js"],
       "style-src": null,
     },
   })
