@@ -1,7 +1,11 @@
-const Router = require('express').Router;
+const express = require('express')
+    ,router = express.Router();
+    ;
 
-module.exports = (req, res) => {
+router.get('/adm', (req, res) => {
+  
+  res.render('adm', {});
 
-    Router.get('/adm', res.render('adm'));
+});
 
-};
+module.exports = router;

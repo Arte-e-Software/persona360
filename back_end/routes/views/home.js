@@ -1,7 +1,11 @@
-const Router = require('express').Router;
+const express = require('express')
+    ,router = express.Router();
+    ;
 
-module.exports = (req, res) => {
+router.get('/', (req, res) => {
+  
+  res.render('home', { });
 
-    Router.get('/', res.render('home') );
+});
 
-};
+module.exports = router;
