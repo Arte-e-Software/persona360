@@ -34,10 +34,10 @@
   </head>
   <body>
     
-<div class="col-lg-8 mx-auto p-3 py-md-5">
-  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+<div class="col-lg-8 mx-auto p-3 py-md-2">
+  <header class="d-flex align-items-center p-2 mb-5 border-bottom">
     <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-      <img src="img/persona360.svg" height="123">
+      <img src="img/Persona360Logo.svg" height="120">
     </a>
   </header>
 
@@ -76,12 +76,30 @@
         </ul>
       </div>
     </div>
+
+    <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
     Desenvolvido por <img src="img/aesLogoBranco.svg" height="50" > &copy; 2021
   </footer>
 </div>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-<%-include ./parts/modal.conheca.home.ejs %>
+
   </body>
 </html>
