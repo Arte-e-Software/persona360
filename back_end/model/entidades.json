@@ -1,0 +1,10 @@
+{
+    "entidades": [
+        "tenant",
+        "pessoa",
+        "escola",
+        "curso",
+        "disciplina",
+        "conteudo"
+    ]
+}

@@ -30,11 +30,11 @@ let view = route.view;
 app.get(view.home.path, view.home.router);
 app.get(view.register.path, view.register.router);
 app.get(view.adm.path, view.adm.router);
+app.get(view.conhecer.path, view.conhecer.router);
 
-// Rotas da API (PROXY orquestra CREATE, READ, LIST, UPDATE, DELETE)
+// Rotas da API (PROXY orquestra TENANT, VERB => CREATE, READ, LIST, UPDATE, DELETE)
 let api = route.api;
 app.get(api.tenant.proxy.path, api.tenant.proxy.router);
-app.get(api.persona.proxy.path, api.persona.proxy.router);
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });

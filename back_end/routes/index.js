@@ -9,7 +9,7 @@ const api = {
 };
 
 // Módulo de configuração das rotas, dependência do app.js
-module.exports = { 
+module.exports = {
 
   view: {
 
@@ -36,6 +36,12 @@ module.exports = {
       path: '/adm',
       router: require('../routes/views/adm'),
       restricted: false
+    },
+
+    conhecer: {
+      path: '/conhecer',
+      router: require('../routes/views/conhecer'),
+      restricted: false
     }
 
   },
@@ -53,19 +59,11 @@ module.exports = {
 
     tenant: {
       proxy: {
-        path: `/api/${api.version}/tenant/proxy`,
-        router: (req, res) => { res.send(req.rawHeaders), console.log(req); },
-        restricted: true
-      }
-    },
-
-    persona: {
-      proxy: {
-        path: `/api/${api.version}/persona/proxy`,
-        router: (req, res) => { res.send(req.rawHeaders), console.log(req); },
+        path: `/api/${api.version}/tenant/proxy/:payload`,
+        router: require('../routes/api/proxy'),
         restricted: true
       }
     }
-
   }
+
 };
