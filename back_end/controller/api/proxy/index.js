@@ -18,7 +18,9 @@ let proxy = (tenant, res) => {
      * >> tenant.query.cruld === tenants.tenant.cruld = []
      */
 
-    let _tenant = tenants.tenant.find(tenant => tenant.hostname === tenant.hostname)
+    const thisHostname = tenant.hostname;
+
+    let _tenant = tenants.tenant.find(tenant => tenant.hostname === thisHostname)
     , allowed = [
         _tenant.hostname === tenant.hostname,
         _tenant.apikey === tenant.params.apikey,
