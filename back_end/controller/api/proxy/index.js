@@ -33,7 +33,9 @@ let proxy = (tenant, res) => {
     , allow = allowed.every((i)=>{return i === true}, allowed)
     ;
 
-    allow ? res.send(allow) : res.status(500).json({ error: error });
+    console.log(tenant.hostname);
+
+    true ? res.send(tenant) : res.status(500).json({ error: error });
 
 };
 
