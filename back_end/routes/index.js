@@ -27,8 +27,8 @@ module.exports = {
     },
 
     register: {
-      path: '/register',
-      router: require('../routes/views/register'),
+      path: '/registrar',
+      router: require('../routes/views/registrar'),
       restricted: false
     },
 
@@ -59,7 +59,7 @@ module.exports = {
 
     tenant: {
       proxy: {
-        path: `/api/${api.version}/tenant/proxy/:payload`,
+        path: `/api/${api.version}/tenant/proxy/:apikey`,
         router: require('../routes/api/proxy'),
         restricted: true
       }

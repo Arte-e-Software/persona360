@@ -6,6 +6,8 @@ const createError = require('http-errors')
   , helmet = require('helmet')
   , app = express()
   , cookieParser = require('cookie-parser')
+  , bodyParser = require('body-parser')
+  , multer = require('multer')
   , logger = require('morgan')
   , route = require('./back_end/routes/')
   ;

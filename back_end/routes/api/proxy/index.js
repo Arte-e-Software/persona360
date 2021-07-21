@@ -16,7 +16,7 @@ const express = require('express')
  * o payload será usado para autenticar a rota
  */
 
-router.all('/api/v1/tenant/proxy/:payload', (req, res) => {
+router.all('/api/v1/tenant/proxy/:apikey', (req, res) => {
   
     let tenant = {
         baseUrl: req.baseUrl,
