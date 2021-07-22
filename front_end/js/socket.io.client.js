@@ -1,3 +1,7 @@
 const socket = io();
 
-console.log('Conectado com Persona360');
+ socket.on("connect", () => {
+
+    console.log(socket.id); 
+  
+});
