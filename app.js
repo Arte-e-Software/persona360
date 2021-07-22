@@ -1,5 +1,8 @@
 "use strict";
 
+// Dotenv file
+require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env' });
+
 const createError = require('http-errors')
   , express = require('express')
   , path = require('path')
@@ -12,11 +15,8 @@ const createError = require('http-errors')
   , route = require('./back_end/routes/')
   ;
 
-// Dotenv file
-require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env' });
-
 // Config middlewares
-app.use(helmet())
+app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
