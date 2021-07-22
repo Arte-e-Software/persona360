@@ -1,7 +1,7 @@
 {
     "tenant": [
         {
-            "tenantID": 0,
+            "tenantId": 0,
             "hash": "",
             "name": "AES Dev",
             "hostname": "localhost",
@@ -27,7 +27,7 @@
             ]
         },
         {
-            "tenantID": 1,
+            "tenantId": 1,
             "hash": "",
             "name": "AES Prod",
             "hostname": "persona360.com.br",

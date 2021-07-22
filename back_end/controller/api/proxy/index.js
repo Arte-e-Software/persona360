@@ -1,7 +1,7 @@
 const tenants = require('../../../model/tenants.json')
     ;
 
-let proxy = (tenant, res) => {
+let proxy = (tenant, res) => { // altero o nome do req para tenant a fim de facilitar o entendimento do módulo
 
     /**
      * A requisição precisa ter origem num hostname credenciado
@@ -18,24 +18,32 @@ let proxy = (tenant, res) => {
      * >> tenant.query.cruld === tenants.tenant.cruld = []
      */
 
-    const thisHostname = tenant.hostname;
 
-    let _tenant = tenants.tenant.find(tenant => tenant.hostname === thisHostname)
-    , allowed = [
-        _tenant.hostname === tenant.hostname,
-        _tenant.apikey === tenant.params.apikey,
-        tenants.method.indexOf(tenant.method) >= 0,
-        _tenant.entity.indexOf(tenant.query.entity) >= 0,
-        _tenant.cruld.indexOf(tenant.query.cruld) >= 0,
-    ]
-    , error = {
-        cod: tenants.error[0][allowed.indexOf(false)],
-        message: tenants.error[1][allowed.indexOf(false)]
-    }
-    , allow = allowed.every((i)=>{return i === true}, allowed)
-    ;
+    // _tenant é a configuração desse tenant
+    let _tenant = tenants.tenant.find(tenant => tenant.hostname === tenant.hostname) // busco hostname nos hostnames permitidos 
 
-    true ? res.send({ tenant: tenant, _tenant: _tenant, allowed: allowed, error: error, allow: allow }) : res.status(500).json({ error: error });
+        , allowed = [ // array filtro de permissõess
+            _tenant.hostname === tenant.hostname, // checa hostname
+            _tenant.apikey === tenant.params.apikey, // checa apikey
+            tenants.method.indexOf(tenant.method) >= 0, // checa os métodos permitidos
+            _tenant.entity.indexOf(tenant.query.entity) >= 0, // checa as entidades permitidas
+            _tenant.cruld.indexOf(tenant.query.cruld) >= 0, // checa as ações de cruld permitidas
+        ]
+
+        , error = { // monto o objeto erro de acordo com o primeiro erro encontrado no filtro allowed
+            cod: tenants.error[0][allowed.indexOf(false)],
+            message: tenants.error[1][allowed.indexOf(false)]
+        }
+
+        , allow = allowed.every((i) => { return i === true }, allowed) // comparo todos os elementos da matriz allowed, se um falhar, retorna false
+
+        , controller = require(`../entidades/${ tenant.query.entity }`) // controller da entidade
+
+        , req = tenant // vamos voltar ao padrão do ExpressJs
+
+        ;
+
+    allow ? controller(_tenant, req, res) : res.status(500).json({ error: error });
 
 };
 
