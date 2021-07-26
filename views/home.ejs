@@ -28,8 +28,8 @@
         }
       }
     </style>
-˜
-    <!-- Custom styles for this template -->
+
+<!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
   </head>
   
@@ -81,39 +81,7 @@
         </ul>
       </div>
     </div>
-
-    <div class="modal fade" id="modalChat" tabindex="-1" aria-labelledby="modalChatLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title h4" id="modalChatLabel">Full screen modal</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <script src="jquery-1.10.2/jquery.min.js"></script>
-          <script src="js/chat.js"></script>
-          <div class="modal-body">
-            <ul class="pages">
-              <li class="chat page">
-                <div class="chatArea">
-                  <ul class="messages"></ul>
-                </div>
-                <input class="inputMessage" placeholder="Type here..."/>
-              </li>
-              <li class="login page">
-                <div class="form">
-                  <h3 class="title">What's your nickname?</h3>
-                  <input class="usernameInput" type="text" maxlength="14" />
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <%-include ./parts/chat.ejs %>
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
     Desenvolvido por <img src="img/aesLogoBranco.svg" height="50" > &copy; 2021

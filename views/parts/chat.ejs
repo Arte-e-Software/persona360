@@ -1,0 +1,31 @@
+<div class="modal fade" id="modalChat" tabindex="-1" aria-labelledby="modalChatLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="modalChatLabel">Chat: <input class="usernameInput form-control border-0 bg-light" type="text" maxlength="14"  placeholder="nos diga seu nome" /></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <script src="jquery-1.10.2/jquery.min.js"></script>
+      <script src="js/chat.js"></script>
+      <div class="modal-body">
+        <ul class="pages list-group list-group-flush">
+          <li class="chat page list-group-item">
+            <div class="chatArea container mt-4">
+              <ul class="messages"></ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <div class="row align-items-left">
+          <div class="col">
+            <input class="inputMessage" placeholder="Escreva sua mensagem e tecle Enter" />
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

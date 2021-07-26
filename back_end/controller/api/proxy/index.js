@@ -1,50 +1,61 @@
-const tenants = require('../../../model/tenants.json')
-    ;
-
-let proxy = (tenant, res) => { // altero o nome do req para tenant a fim de facilitar o entendimento do módulo
+module.exports = (req, res) => {
 
     /**
      * A requisição precisa ter origem num hostname credenciado
-     * >> tenant.hostname === tenants.tenant.hostname = []
+     * >> req.hostname === tenants.tenant.hostname = []
      * 
      * A requisição tem que ter sido feita por um dos métodos válidos
-     * >> tenant.method === tenants.method = []
+     * >> req.method === tenants.method = []
      * 
      * A requisição tem que trazer a apikey do tenant
-     * >> tenant.params.apikey === tenants.tenant.apikey
+     * >> req.params.apikey === tenants.tenant.apikey
      * 
      * A requisição tem que trazer na query: entity e cruld (método)
-     * >> tenant.query.entity === tenants.tenant.entity = []
-     * >> tenant.query.cruld === tenants.tenant.cruld = []
+     * >> req.query.entity === tenants.tenant.entity = []
+     * >> req.query.cruld === tenants.tenant.cruld = []
      */
 
+    // tenant é a configuração dos tenants
+    const tenants = require('../../../model/entity/tenant/tenants.json')
 
-    // _tenant é a configuração desse tenant
-    let _tenant = tenants.tenant.find(tenant => tenant.hostname === tenant.hostname) // busco hostname nos hostnames permitidos 
+        // busco este tenant nos hostnames permitidos 
+        , tenant = tenants.tenant.find(tenant => tenant.hostname === req.hostname)
 
-        , allowed = [ // array filtro de permissõess
-            _tenant.hostname === tenant.hostname, // checa hostname
-            _tenant.apikey === tenant.params.apikey, // checa apikey
-            tenants.method.indexOf(tenant.method) >= 0, // checa os métodos permitidos
-            _tenant.entity.indexOf(tenant.query.entity) >= 0, // checa as entidades permitidas
-            _tenant.cruld.indexOf(tenant.query.cruld) >= 0, // checa as ações de cruld permitidas
+        // array filtro de permissõess
+        , filter = [
+
+            // checa hostname
+            tenant.hostname === req.hostname, // POS 0
+
+            // checa apikey
+            tenant.apikey === req.params.apikey, // POS 1
+
+            // checa os métodos permitidos
+            tenants.method.indexOf(req.method) >= 0, // POS 2
+
+            // checa as entidades permitidas
+            tenant.entity.indexOf(req.query.entity) >= 0, // POS 3
+
+            // checa as ações de cruld permitidas
+            tenant.cruld.indexOf(req.query.cruld) >= 0 // POS 4
+
         ]
 
-        , error = { // monto o objeto erro de acordo com o primeiro erro encontrado no filtro allowed
-            cod: tenants.error[0][allowed.indexOf(false)],
-            message: tenants.error[1][allowed.indexOf(false)]
+        // monto o objeto erro de acordo com o primeiro erro encontrado no filtro
+        , error = {
+            cod: tenants.error[0][filter.indexOf(false)],
+            message: tenants.error[1][filter.indexOf(false)]
         }
 
-        , allow = allowed.every((i) => { return i === true }, allowed) // comparo todos os elementos da matriz allowed, se um falhar, retorna false
+        // comparo todos os elementos da matriz filter, se um falhar, retorna false
+        , allow = filter.every((i) => { return i === true }, filter)
 
-        , controller = require(`../entidades/${ tenant.query.entity }`) // controller da entidade
-
-        , req = tenant // vamos voltar ao padrão do ExpressJs
+        // controller do END POINT
+        , controller = require(`../entity/${req.query.entity}/${req.query.cruld}`)
 
         ;
-
-    allow ? controller(_tenant, req, res) : res.status(500).json({ error: error });
+        
+    // Se passar nos filtros, segue para o controller, caso contrário retorna 500 com error
+    allow ? controller(tenant, req, res) : res.status(500).json({ error: error });
 
 };
-
-module.exports = proxy;

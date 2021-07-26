@@ -28,9 +28,9 @@ $(function() {
     const addParticipantsMessage = (data) => {
       let message = '';
       if (data.numUsers === 1) {
-        message += `there's 1 participant`;
+        message += `Uma pessoa online`;
       } else {
-        message += `there are ${data.numUsers} participants`;
+        message += `${data.numUsers} pessoas`;
       }
       log(message);
     }
@@ -225,7 +225,7 @@ $(function() {
     socket.on('login', (data) => {
       connected = true;
       // Display the welcome message
-      const message = 'Welcome to Socket.IO Chat – ';
+      const message = 'Olá, você está no chat do Persona360 – ';
       log(message, {
         prepend: true
       });
