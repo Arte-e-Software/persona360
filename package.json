@@ -9,7 +9,7 @@
   "scripts": {
     "teste": "nodemon ./index.js",
     "dev": "NODE_ENV=dev nodemon ./index.js"
-    },
+  },
   "dependencies": {
     "audit": "^0.0.6",
     "body-parser": "^1.18.3",
