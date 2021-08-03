@@ -1,0 +1,346 @@
+{
+    "entity": [
+        {
+            "name": "pessoa",
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "varchar",
+                    "lenght": "300",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu nome"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "varchar",
+                    "lenght": "300",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "E-mail",
+                        "type": "email",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu melhor e-mail"
+                    }
+                },
+                {
+                    "name": "Senha",
+                    "type": "char",
+                    "lenght": "62",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Senha",
+                        "type": "password",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Crie uma senha forte"
+                    }
+                },
+                {
+                    "name": "DataCad",
+                    "type": "datetime",
+                    "lenght": "",
+                    "null": false,
+                    "default": "GETDATE()",
+                    "form": false
+                },
+                {
+                    "name": "IsActive",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": "1",
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "escola",
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "varchar",
+                    "lenght": "300",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe o nome da sua Escola"
+                    }
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "int",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "datetime",
+                    "lenght": "",
+                    "null": false,
+                    "default": "GETDATE()",
+                    "form": false
+                },
+                {
+                    "name": "IsActive",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": "1",
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "curso",
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "varchar",
+                    "lenght": "300",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe o nome do Curso"
+                    }
+                },
+                {
+                    "name": "IdEscola",
+                    "type": "int",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "int",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "datetime",
+                    "lenght": "",
+                    "null": false,
+                    "default": "GETDATE()",
+                    "form": false
+                },
+                {
+                    "name": "IsActive",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": "1",
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "conteudo",
+            "fields": [
+                {
+                    "name": "tag",
+                    "type": "varchar",
+                    "lenght": "1000",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Tag",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Escreva as tags no formato #noticia #home #cursos"
+                    }
+                },
+                {
+                    "name": "titulo",
+                    "type": "varchar",
+                    "lenght": "300",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Título",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Digite o título do seu conteúdo (máximo 300 caracteres)"
+                    }
+                },
+                {
+                    "name": "subTitulo",
+                    "type": "varchar",
+                    "lenght": "1200",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Subtítulo",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Digite um subtítulo para o seu conteúdo (máximo 1200 caracteres)"
+                    }
+                },
+                {
+                    "name": "imagem",
+                    "type": "varchar",
+                    "lenght": "1000",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Endereço da Imagem Principal",
+                        "type": "url",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Exemplo: https://persona360.com.br/img/logopersona.png"
+                    }
+                },
+                {
+                    "name": "texto",
+                    "type": "varchar",
+                    "lenght": "5000",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Digite o texto do seu conteúdo",
+                        "type": "text-area",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Digite seu conteúdo. Máximo de 5000 caracteres"
+                    }
+                },
+                {
+                    "name": "comentarios",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Ativar comentários",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "publicar",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Ativar publicação",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "privado",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Privado (somente usuários autenticados podem ler)",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "dataInicioPublicacao",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Data início da publicação (dia que entra no ar a partir das 00:00)",
+                        "type": "date",
+                        "value": "",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "dataFinalPublicacao",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": true,
+                    "default": false,
+                    "form": {
+                        "label": "Data final da publicação (dia que sai no ar a partir das 00:00) - Vazio deixa a publicação eterna",
+                        "type": "check-box",
+                        "value": "",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "int",
+                    "lenght": "",
+                    "null": false,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "IdEscola",
+                    "type": "int",
+                    "lenght": "",
+                    "null": true,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "idCurso",
+                    "type": "int",
+                    "lenght": "",
+                    "null": true,
+                    "default": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "datetime",
+                    "lenght": "",
+                    "null": false,
+                    "default": "GETDATE()",
+                    "form": false
+                },
+                {
+                    "name": "IsActive",
+                    "type": "bit",
+                    "lenght": "",
+                    "null": false,
+                    "default": "1",
+                    "form": false
+                }
+            ]
+        }
+    ]
+}
