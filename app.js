@@ -32,7 +32,6 @@ app.set('views', path.join(__dirname, '.', 'views'));
 // Rotas GET das Views
 let view = route.view;
 app.get(view.home.path, view.home.router);
-app.get(view.register.path, view.register.router);
 app.get(view.adm.path, view.adm.router);
 app.get(view.conhecer.path, view.conhecer.router);
 
