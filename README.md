@@ -1,4 +1,4 @@
-![Image of persons360](https://persona360.com.br/img/Persona360Logo.svg)
+![Image of persons360](https://escola.pro.br/img/Persona360LogoTexto.svg)
 
 # persona360
 

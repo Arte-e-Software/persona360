@@ -10,9 +10,9 @@ module.exports = (req, res) => {
      * A requisição tem que trazer a apikey do tenant
      * >> req.params.apikey === tenants.tenant.apikey
      * 
-     * A requisição tem que trazer na query: entity e cruds (método)
+     * A requisição tem que trazer na query: entity e cruld (método)
      * >> req.query.entity === tenants.tenant.entity = []
-     * >> req.query.cruds === tenants.tenant.cruds = []
+     * >> req.query.cruld === tenants.tenant.cruld = []
      */
 
     // tenant é a configuração dos tenants
@@ -36,8 +36,8 @@ module.exports = (req, res) => {
             // checa as entidades permitidas
             tenant.entity.indexOf(req.query.entity) >= 0, // POS 3
 
-            // checa as ações de cruds permitidas
-            tenant.cruds.indexOf(req.query.cruds) >= 0 // POS 4
+            // checa as ações de cruld permitidas
+            tenant.cruld.indexOf(req.query.cruld) >= 0 // POS 4
 
         ]
 
@@ -51,7 +51,7 @@ module.exports = (req, res) => {
         , allow = filter.every((i) => { return i === true }, filter)
 
         // controller do END POINT
-        , controller = require(`../entity/${req.query.entity}/${req.query.cruds}`)
+        , controller = require(`../entity/${req.query.entity}/${req.query.cruld}`)
 
         ;
         
