@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "build",
+			"path": "../lab/build"
+		},
+		{
 			"name": "persona360",
 			"path": "."
 		}
