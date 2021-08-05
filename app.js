@@ -15,8 +15,6 @@ const createError = require('http-errors')
   , route = require('./back_end/routes/')
   ;
 
-var teste = 'TESTE DE VARIAVEL GLOBAL'; 
-
 // Config middlewares
 app.use(helmet());
 app.use(logger('dev'));
