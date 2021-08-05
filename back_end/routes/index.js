@@ -1,40 +1,27 @@
 module.exports = {
 
-  view: {
+  home: {
+    path: '/',
+    router: require('./home'),
+    restricted: false
+  },
 
-    home: {
-      path: '/',
-      router: require('../routes/views/home'),
-      restricted: false
-    },
+  quemsomos: {
+    path: '/quemsomos',
+    router: require('./quemsomos')
 
-    adm: {
-      path: '/adm',
-      router: require('../routes/views/adm'),
-      restricted: false
-    },
+  },
 
-    conhecer: {
-      path: '/conhecer',
-      router: require('../routes/views/conhecer'),
-      restricted: false
-    },
-    //NEW_viewRoute
-
+  adm: {
+    path: '/adm',
+    router: require('./adm'),
+    restricted: true
   },
 
   api: {
+    path: '/api/v1',
+    router: require('./api'),
+    restricted: true
+  }
 
-    tenant: {
-      proxy: {
-        path: '/api/v1/tenant/proxy/:apikey',
-        router: require('../routes/api/proxy'),
-        restricted: true
-      }
-    },
-    //NEW_apiRoute
-
-  },
-  //NEW_typeRoute
-  
 };

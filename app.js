@@ -27,15 +27,11 @@ app.use(express.static(path.join(__dirname, '/front_end/')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
 
-// Rotas GET das Views
-let view = route.view;
-app.get(view.home.path, view.home.router);
-app.get(view.adm.path, view.adm.router);
-app.get(view.conhecer.path, view.conhecer.router);
-
-// Rotas da API (PROXY orquestra TENANT, VERB => CREATE, READ, LIST, UPDATE, DELETE)
-let api = route.api;
-app.get(api.tenant.proxy.path, api.tenant.proxy.router);
+// ROTAS
+app.get(route.home.path, route.home.router);
+app.get(route.adm.path, route.adm.router);
+app.get(route.quemsomos.path, route.quemsomos.router);
+app.all(route.api.path, route.api.router);
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });

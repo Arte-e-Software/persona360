@@ -2,9 +2,9 @@ const express = require('express')
     ,router = express.Router();
     ;
 
-router.get('/registrar', (req, res) => {
+router.get('/quemsomos', (req, res) => {
   
-  res.render('registrar', {});
+  res.render('quemsomos', {});
 
 });
 
