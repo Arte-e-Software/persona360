@@ -3,6 +3,9 @@
 		{
 			"name": "persona360",
 			"path": "."
+		},
+		{
+			"path": "../../lab/aes-build/aes.build/aes.build"
 		}
 	]
 }
