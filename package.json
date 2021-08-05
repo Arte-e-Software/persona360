@@ -9,7 +9,7 @@
   "scripts": {
     "teste": "nodemon ./index.js",
     "dev": "NODE_ENV=dev nodemon ./index.js",
-    "build": "DB_PROFILE=mssql node ./aes-build/build.js"
+    "build": "NODE_ENV=dev DB_PROFILE=mssql node ./aes_build/"
 
   },
   "dependencies": {
