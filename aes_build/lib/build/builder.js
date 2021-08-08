@@ -2,7 +2,8 @@ const build = {
     dirs: require('./build.dirs'),
     layers: require('./build.layers'),
     tables: require('./build.tables')
-};
+}
+    ;
 
 module.exports = (entity, success, error) => {
 

@@ -1,7 +1,7 @@
 module.exports = data => {
 
-    let params = [`id${data.entity}: req.params.id${data.entity}`,`idPessoa: req.params.idPessoa`]
-    , erro = [`!params.id${data.entity}`,`!params.idPessoa`]
+    let params = [`id${data.entity.name}: req.params.id${data.entity.name}`,`idPessoa: req.params.idPessoa`]
+    , erro = [`!params.id${data.entity.name}`,`!params.idPessoa`]
     ;
 
     return `
@@ -15,9 +15,9 @@ module.exports = data => {
     // methos: POST ou GET apenas
     // No momento acho que poderia ser importante mas não sei exatamente porque ainda
     
-    let db = require('../../../data-source/${data.db.profile}/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
-    ,Pool = require('../../../data-source/${data.db.profile}/pool')
-    ,Model_${data.module} = require('../../../entity/${data.entity}/model/${data.module}')
+    let db = require('../../../data-source/${data.entity.db.profile}/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
+    ,Pool = require('../../../data-source/${data.entity.db.profile}/pool')
+    ,Model_${data.module} = require('../../../entity/${data.entity.name}/model/${data.module}')
     ,params = {\n ${params}}
     ,erro = true
     ;

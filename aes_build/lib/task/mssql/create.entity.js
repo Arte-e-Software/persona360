@@ -1,16 +1,10 @@
-const makeDir = require('../make.dir')
+const makeDir = require('../fs.make-dir')
     , createTable = require('./create.table')
     ;
 
 module.exports = (entity, success, error) => {
 
-    let table = {
-        dir: `${entity.db.dir}/${entity.name}/.${entity.db.profile}`,
-        name: entity.name,
-        fields: entity.fields
-    };
-
-    makeDir(table.dir, success, error);
-    createTable(table, success, error);
+    makeDir(entity.db.dir, success, error);
+    createTable(entity, success, error);
 
 };

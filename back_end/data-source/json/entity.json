@@ -1,5 +1,5 @@
 {
-    "entity": [
+    "config": [
         {
             "name": "Tenant",
             "namespace": [
@@ -11,6 +11,15 @@
                 "DataCad", 
                 "isActive"
             
+            ],
+            "buildvalues": [
+
+                "Persona360",
+                "adm.build@persona360.com.br",
+                "28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b",
+                "GETDATE()",
+                1
+
             ],
             "fields": [
                 {
@@ -90,6 +99,16 @@
                 "isActive"
             
             ],
+            "buildvalues": [
+
+                1,
+                "Administrador do Persona360",
+                "adm.build@persona360.com.br",
+                "28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b",
+                "GETDATE()",
+                1
+
+            ],
             "fields": [
                 {
                     "name": "nome",
@@ -105,6 +124,15 @@
                         "required": true,
                         "placeholder": "Informe seu nome"
                     }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
                 },
                 {
                     "name": "email",
@@ -160,12 +188,22 @@
             "namespace": [
                 
                 "idEscola", 
-                "idTenant",
                 "nome", 
+                "idTenant",
                 "idPessoa", 
                 "DataCad", 
                 "isActive"
             
+            ],
+            "buildvalues": [
+
+                "Escola Persona360",
+                1,
+                "adm.build@persona360.com.br",
+                1,
+                "GETDATE()",
+                true
+
             ],
             "fields": [
                 {
@@ -182,6 +220,15 @@
                         "required": true,
                         "placeholder": "Informe o nome da sua Escola"
                     }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
                 },
                 {
                     "name": "idPessoa",
@@ -217,13 +264,23 @@
             "namespace": [
                 
                 "idCurso", 
-                "idTenant",
                 "nome", 
+                "idTenant",
                 "idEscola", 
                 "idPessoa", 
                 "DataCad", 
                 "isActive"
             
+            ],
+            "buildvalues": [
+
+                "Curso Persona360",
+                1,
+                1,
+                1,
+                "GETDATE()",
+                1
+
             ],
             "fields": [
                 {
@@ -240,6 +297,15 @@
                         "required": true,
                         "placeholder": "Informe o nome do Curso"
                     }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
                 },
                 {
                     "name": "idEscola",
@@ -284,13 +350,13 @@
             "namespace": [
 
                 "idConteudo", 
-                "idTenant",
                 "nome", 
-                "titulo", 
+                "idTenant",
+                "tag",
                 "subtitulo", 
                 "imagem", 
                 "conteudo", 
-                "comentar", 
+                "permitircomentarios", 
                 "publicar", 
                 "privado", 
                 "dataInicioPublicacao", 
@@ -302,9 +368,29 @@
                 "isActive"
 
             ],
+            "buildvalues": [
+
+                "Curso Persona360. Escola Persona360 lança novo curso, confira.",
+                1,
+                "#Institucional #Persona360 #Lançamento #Primeiro #Home #Heroe",
+                "O primeiro curso lançado pela Escola Persona360 é inovador por que é colaborativo. ",
+                "https://persona360.com.br/img/Persona360Logo.svg",
+                "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ligula mauris. Proin turpis quam, placerat sit amet posuere in, vestibulum a neque. Morbi sit amet hendrerit velit. Nam id diam sit amet libero gravida varius ut in mauris. Nullam consectetur leo quis lectus finibus, vel scelerisque nunc faucibus. Donec rhoncus diam vel orci interdum tristique. Curabitur tempus pharetra convallis. Donec id efficitur urna. Etiam ornare urna ut purus interdum sollicitudin.</p><p>Nulla sit amet augue magna. Morbi vehicula, dui imperdiet iaculis pellentesque, augue enim suscipit quam, vel tempor sem risus vel diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris imperdiet elit euismod malesuada lacinia. Nulla vel tortor in risus porta congue. Quisque a nisi ac libero accumsan auctor. Morbi sed hendrerit sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p><p><h4>Lorem Ipsum</ha><br>Suspendisse tristique metus purus, ut sollicitudin libero pellentesque in. Maecenas pretium ante arcu, vel vestibulum urna consequat eu. Curabitur quis gravida neque. Pellentesque vehicula ante eu est tristique pellentesque. Integer in libero ut ante vehicula pharetra. Donec nec libero ligula. Suspendisse gravida molestie urna nec molestie. In malesuada justo finibus mauris pretium, eget congue dui sodales. Etiam finibus eros ac venenatis rhoncus. Praesent eget sagittis nibh. Integer iaculis consequat nibh, et cursus sem venenatis at. Fusce malesuada sem id nulla scelerisque, et bibendum erat euismod.</p>",
+                1,
+                1,
+                "GETDATE()",
+                "GETDATE()+30",
+                1,
+                1,
+                1,
+                "GETDATE()",
+                1
+
+            ],
             "fields": [
                 {
-                    "name": "tag",
+                    "comment": "name é um apelido para TÍTULO, por padrão toda entidade tem que ter um nome. Não encontrei outra solução por enquanto",
+                    "name": "name",
                     "type": "String",
                     "length": "1000",
                     "null": false,
@@ -319,18 +405,27 @@
                     }
                 },
                 {
-                    "name": "titulo",
-                    "searchable": true,
-                    "type": "String",
-                    "length": "300",
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
                     "null": false,
                     "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "tag",
+                    "type": "String",
+                    "length": "1000",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
                     "form": {
-                        "label": "Título",
+                        "label": "Tag",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Digite o título do seu conteúdo (máximo 300 caracteres)"
+                        "placeholder": "Escreva as tags no formato #noticia #home #cursos"
                     }
                 },
                 {
@@ -378,13 +473,13 @@
                     }
                 },
                 {
-                    "name": "comentar",
+                    "name": "permitircomentarios",
                     "type": "Boolean",
                     "length": "",
                     "null": false,
                     "default": false,
                     "form": {
-                        "label": "Ativar comentários",
+                        "label": "Permitir comentários",
                         "type": "check-box",
                         "value": "1",
                         "required": true,

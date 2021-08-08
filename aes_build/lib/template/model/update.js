@@ -1,42 +1,15 @@
 module.exports = data => {
 
-    let fields = data.fields
+    let   fields = require('./_convertFieldsToReqParams')(data.entity.fields)
         , model = data.comment + '\n'
-        , where = '    id'+ data.entity +' = ${params.id'+ data.entity +'}'
+        , where = '    id'+ data.entity.name +' = ${params.id'+ data.entity.name +'}'
         ;
-
-    fields = fields.map((field) => {
-
-        switch (field.type) {
-
-            case 'String':
-                return field.name+ " = '${params." + field.name + "}'\n";
-                break;
-
-            case 'Date':
-                return field.name+ " = '${params." + field.name + "}'\n";
-                break;
-
-            case 'Boolean':
-                return field.name+ ' = ${params.' + field.name + '}\n';
-                break;
-                
-            case 'Number':
-                    return field.name+ ' = ${params.' + field.name + '}\n';
-                    break;
-
-            default: 'DATATYPE ERROR'
-            break;
-
-        };
-
-    }, fields);
 
     model += 'module.exports = params => {\n\nreturn `';
     model += `
     
 BEGIN TRAN
-UPDATE ${data.entity} SET
+UPDATE ${data.entity.name} SET
  ${fields}WHERE
 ${where}
 

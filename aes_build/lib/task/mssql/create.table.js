@@ -1,9 +1,8 @@
-const createFile = require('../create.file');
+const createFile = require('../fs.create-file');
 
-module.exports = (table, success, error) => {
+module.exports = (entity, success, error) => {
 
-    let file = `${table.dir}/create.table.${table.name}.sql`
-        , fields = table.fields
+    let   fields = entity.fields
         , translate = {
             js: ['String', 'Date', 'Boolean', 'Number'],
             sql: ['VARCHAR', 'DATETIME', 'BIT', 'Float']
@@ -26,28 +25,36 @@ module.exports = (table, success, error) => {
             return `${field.name} [${type}]${length} ${nullable}\n`;
 
         })
-        , template = `
+        , values = entity.buildvalues.map((value)=>{ return `'${value}'\n` })
+        //, buildvalues = bv.pop()
+        , template = {
+            create: `
     
--- Cria uma tabela chamada '${table.name}'
+-- Cria uma tabela chamada '${entity.name}'
 
--- Se existir, DROP na tabela (perde todos os dados)
-IF OBJECT_ID('${table.name}', 'U') IS NOT NULL
-SELECT * INTO ${table.name}_aes_build_backup FROM ${table.name}
-
-IF OBJECT_ID('${table.name}', 'U') IS NOT NULL
-DROP TABLE ${table.name}
+IF OBJECT_ID('${entity.name}', 'U') IS NOT NULL
+DROP TABLE ${entity.name}
 GO
 
 -- Cria a tabela
-CREATE TABLE ${table.name}
+CREATE TABLE ${entity.name}
 (
- id${table.name} INT IDENTITY(1,1) NOT NULL PRIMARY KEY
-,idTenant INT NOT NULL
+ id${entity.name} INT IDENTITY(1,1) NOT NULL PRIMARY KEY
 ,${columns}
 );
 GO
-`;
+`
+, insert: `
+-- Insere dados iniciais na tabela ${entity.name}
+INSERT INTO ${entity.name} VALUES 
+(
+${values}
+);
+`
+}
+;
 
-    createFile(file, template, success, error);
+    createFile(`${entity.db.dir}/create.entities.sql`, template.create, success, error);
+    createFile(`${entity.db.dir}/populate.entities.sql`, template.insert, success, error);
 
 };

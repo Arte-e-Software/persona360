@@ -1,14 +1,14 @@
 module.exports = data => {
 
     let model = data.comment + '\n//idPessoa chega em params.idPessoa, mas ainda não estou usando** desconsidere esse comentário para Entity = Pessoa\n' + '\n'
-        , where = 'id'+ data.entity +' = ${params.id'+ data.entity +'}'
+        , where = 'id'+ data.entity.name +' = ${params.id'+ data.entity.name +'}'
         ;
 
     model += 'module.exports = params => {\n\nreturn `';
     model += `
     
 BEGIN TRAN
-UPDATE ${data.entity} SET
+UPDATE ${data.entity.name} SET
 isActive=0 
 WHERE ${where};
 

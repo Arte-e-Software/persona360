@@ -11,16 +11,18 @@ function success(msg) { };
 
 // ---------------------------------------- //
 
-const config = require('./config')
-    , build = require('./lib/build/builder')
+require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env' });
+
+const entity = require('./entity')
+    , builder = require('./lib/build/builder')
     ;
 
-((entity) => {
+((config) => {
 
-        for (let i in entity) {
+        for (let i in config) {
     
-            build(config(entity[i]), success, error);
+            builder(entity(config[i]), success, error);
     
         };
 
-})(require('../back_end/data-source/json/entity.json').entity);
+})(require('../back_end/data-source/json/entity.json').config);

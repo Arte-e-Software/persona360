@@ -1,9 +1,9 @@
-const makeFiles = require('../task/make.files');
+const task = require('../task/build.create-file');
 
 module.exports = (entity, success, error) => {
 
-    makeFiles(entity.layer.model, entity.namespace, success, error);
-    makeFiles(entity.layer.view, entity.namespace, success, error);
-    makeFiles(entity.layer.controller, entity.namespace, success, error);
+    task(entity.layer.model, entity, success, error);
+    task(entity.layer.view, entity, success, error);
+    task(entity.layer.controller, entity, success, error);
     
 };

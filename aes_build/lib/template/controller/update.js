@@ -3,16 +3,16 @@ module.exports = data => {
     let fields = []
         , erro
         , password = ''
-        , params = `id${data.entity}: req.params.id${data.entity},\n`
+        , params = `id${data.entity.name}: req.params.id${data.entity.name},\n`
         ;
 
-    for (let i in data.fields) {
+    for (let i in data.entity.fields) {
 
-        fields.push({ name: data.fields[i].name, required: !data.fields[i].null, default: data.fields[i].default });
+        fields.push({ name: data.entity.fields[i].name, required: !data.entity.fields[i].null, default: data.entity.fields[i].default });
 
-        if (data.fields[i].form.type === 'password') {
+        if (data.entity.fields[i].form.type === 'password') {
 
-            password = `${data.fields[i].name} = require('crypto-js/sha256')(${data.fields[i].name});`
+            password = `${data.entity.fields[i].name} = require('crypto-js/sha256')(${data.entity.fields[i].name});`
 
         };
 
@@ -45,9 +45,9 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/${data.db.profile}/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/${data.db.profile}/pool')
-,Model_${data.module} = require('../../../entity/${data.entity}/model/${data.module}')
+let db = require('../../../data-source/${data.entity.db.profile}/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../data-source/${data.entity.db.profile}/pool')
+,Model_${data.module} = require('../../../entity/${data.entity.name}/model/${data.module}')
 ,params = {\n ${params}}
 ,erro = true
 ;

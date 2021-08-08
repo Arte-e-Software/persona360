@@ -1,6 +1,6 @@
 module.exports = data => {
 
-    let params = [`id${data.entity}: req.params.id${data.entity}`]
+    let params = [`id${data.entity.name}: req.params.id${data.entity.name}`]
         ;
 
     return `
@@ -14,14 +14,14 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/${data.db.profile}/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/${data.db.profile}/pool')
-,Model_${data.module} = require('../../../entity/${data.entity}/model/${data.module}')
+let db = require('../../../data-source/${data.entity.db.profile}/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../data-source/${data.entity.db.profile}/pool')
+,Model_${data.module} = require('../../../entity/${data.entity.name}/model/${data.module}')
 ,params = {\n ${params}}
 ,erro = true
 ;
 
-erro = !params.id${data.entity};
+erro = !params.id${data.entity.name};
 
 if (erro) {
 

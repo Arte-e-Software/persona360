@@ -1,9 +1,9 @@
-const makeDir = require('../task/make.dir');
+const task = require('../task/fs.make-dir');
 
 module.exports = (entity, success, error) => {
 
-    makeDir(entity.layer.model.dir, success, error);
-    makeDir(entity.layer.view.dir, success, error);
-    makeDir(entity.layer.controller.dir, success, error);
+    task(`${entity.dir}/model/`, success, error);
+    task(`${entity.dir}/view/`, success, error);
+    task(`${entity.dir}/controller/`, success, error);
 
 };

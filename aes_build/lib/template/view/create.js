@@ -54,13 +54,13 @@ module.exports = data => {
 </html>
 <!--
 
-    Entity: ${ data.entity }
+    Entity: ${ data.entity.name }
     <br>
     Layer: ${ data.layer }
     <br>
     Module: ${ data.module }
     <br>
-    Fields: ${ JSON.stringify(data.fields) }
+    Fields: ${ JSON.stringify(data.entity.fields) }
 
 -->
     `;

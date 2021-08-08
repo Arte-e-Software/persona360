@@ -1,7 +1,7 @@
 module.exports = data => {
 
     let model = data.comment + '\n//idPessoa chega em params.idPessoa, mas ainda não estou usando\m//** desconsidere esse comentário para Entity = Pessoa\n' + '\n'
-        , fields =  data.fields
+        , fields =  data.entity.fields
         , where
         , searchable = fields.map((field)=>{
 
@@ -20,9 +20,9 @@ module.exports = data => {
     model += `
 
 SELECT
- id${data.entity}
+ id${data.entity.name}
 ,${fields}FROM
-${data.entity}
+${data.entity.name}
 WHERE 
   ${where};
 `;
