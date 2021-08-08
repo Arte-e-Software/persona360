@@ -13,8 +13,8 @@ INSERT INTO Tenant VALUES
 -- Insere dados iniciais na tabela Pessoa
 INSERT INTO Pessoa VALUES 
 (
-'1'
-,'Administrador do Persona360'
+'Administrador do Persona360'
+,'1'
 ,'adm.build@persona360.com.br'
 ,'28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b'
 ,'GETDATE()'
