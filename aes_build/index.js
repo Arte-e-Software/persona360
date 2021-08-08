@@ -17,12 +17,10 @@ const config = require('./config')
 
 ((entity) => {
 
-    console.log('\nBuilding @ ˜/' + process.env.USER + '_' + Date() + '\n\n');
+        for (let i in entity) {
+    
+            build(config(entity[i]), success, error);
+    
+        };
 
-    for (let i in entity) {
-
-        build(config(entity[i]), success, error);
-
-    }
-
-})(require('./entity.json').entity);
+})(require('../back_end/data-source/json/entity.json').entity);

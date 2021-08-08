@@ -12,7 +12,6 @@ const createError = require('http-errors')
   , bodyParser = require('body-parser')
   , multer = require('multer')
   , logger = require('morgan')
-  , route = require('./back_end/routes/')
   ;
 
 // Config middlewares
@@ -28,10 +27,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
 
 // ROTAS
-app.get(route.home.path, route.home.router);
-app.get(route.adm.path, route.adm.router);
-app.get(route.quemsomos.path, route.quemsomos.router);
-app.all(route.api.path, route.api.router);
+app.get('/', require('./back_end/routes/home'));
+app.get('/adm', require('./back_end/routes/adm'));
+app.get('/api/:tenant/:entity/:method', require('./back_end/routes/api'));
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });

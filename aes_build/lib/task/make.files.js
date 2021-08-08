@@ -16,6 +16,7 @@ module.exports = (layer, namespace, success, error) => {
             namespace: namespace,
             layer: layer.name,
             module: layer.file[i].split('.')[0],
+            db: layer.db,
             fields: layer.fields,
             comment: `
 /*

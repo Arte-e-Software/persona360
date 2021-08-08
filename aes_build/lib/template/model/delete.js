@@ -1,10 +1,10 @@
 module.exports = data => {
 
     let model = data.comment + '\n//idPessoa chega em params.idPessoa, mas ainda não estou usando** desconsidere esse comentário para Entity = Pessoa\n' + '\n'
-        , where = 'idTenant = ${idTenant} AND id'+ data.entity +' = ${params.id'+ data.entity +'}'
+        , where = 'id'+ data.entity +' = ${params.id'+ data.entity +'}'
         ;
 
-    model += 'module.exports = (idTenant, params) => {\n\nreturn `';
+    model += 'module.exports = params => {\n\nreturn `';
     model += `
     
 BEGIN TRAN

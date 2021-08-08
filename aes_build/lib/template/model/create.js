@@ -18,21 +18,20 @@ module.exports = data => {
 
             case 'Boolean':
                 return '${params.' + field.name + '}\n';
-                break
+                break;
                 
                 case 'Number':
                     return '${params.' + field.name + '}\n';
-                    break
+                    break;
 
             default: 'DATATYPE ERROR'
+            break;
 
         };
 
     }, fields);
 
-    fields = '${idTenant}\n,' + fields;
-
-    model += 'module.exports = (idTenant, params) => {\n\nreturn `';
+    model += 'module.exports = params => {\n\nreturn `';
     model += `
     
 BEGIN TRAN

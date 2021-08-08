@@ -6,9 +6,9 @@ module.exports = data => {
         ;
 
     fields = fields.map((field)=>{ return field.name+'\n' });
-    where = `    id${data.entity} = `+ '${params.id'+ data.entity +'}\nAND idTenant = ${idTenant}';
+    where = `    id${data.entity} = `+ '${params.id'+ data.entity +'}\n';
 
-    model += 'module.exports = (idTenant, params) => {\n\nreturn `';
+    model += 'module.exports = params => {\n\nreturn `';
     model += `
 
 SELECT

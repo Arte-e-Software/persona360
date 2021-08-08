@@ -5,7 +5,7 @@ const makeDir = require('../make.dir')
 module.exports = (entity, success, error) => {
 
     let table = {
-        dir: `${entity.db.dir}`,
+        dir: `${entity.db.dir}/${entity.name}/.${entity.db.profile}`,
         name: entity.name,
         fields: entity.fields
     };

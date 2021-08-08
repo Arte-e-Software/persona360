@@ -14,9 +14,9 @@ module.exports = data => {
 
     fields = fields.map((field)=>{ return field.name +'\n' })
     where = searchable.map((field)=>{return field +' like '+ "'%${params.pesq}%'" });
-    where = '('+ where.join('\nOR ') + ')\nAND idTenant = ${idTenant}';
+    where = '('+ where.join('\nOR ') + ')\n';
 
-    model += 'module.exports = (idTenant, params) => {\n\nreturn `';
+    model += 'module.exports = params => {\n\nreturn `';
     model += `
 
 SELECT

@@ -2,7 +2,7 @@ module.exports = data => {
 
     let fields = data.fields
         , model = data.comment + '\n'
-        , where = '    idTenant = ${idTenant}\nAND id'+ data.entity +' = ${params.id'+ data.entity +'}'
+        , where = '    id'+ data.entity +' = ${params.id'+ data.entity +'}'
         ;
 
     fields = fields.map((field) => {
@@ -19,19 +19,20 @@ module.exports = data => {
 
             case 'Boolean':
                 return field.name+ ' = ${params.' + field.name + '}\n';
-                break
+                break;
                 
             case 'Number':
                     return field.name+ ' = ${params.' + field.name + '}\n';
-                    break
+                    break;
 
             default: 'DATATYPE ERROR'
+            break;
 
         };
 
     }, fields);
 
-    model += 'module.exports = (idTenant, params) => {\n\nreturn `';
+    model += 'module.exports = params => {\n\nreturn `';
     model += `
     
 BEGIN TRAN
