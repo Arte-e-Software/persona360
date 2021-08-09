@@ -1,0 +1,605 @@
+{
+    "entity": [
+        {
+            "name": "Tenant",
+            "namespace": [
+                
+                "idTenant",
+                "nome", 
+                "email", 
+                "senha", 
+                "DataCad", 
+                "isActive"
+            
+            ],
+            "values": [
+                [
+                "Persona360",
+                "adm.build@persona360.com.br",
+                "28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b",
+                "GETDATE()",
+                1
+                ]
+            ],
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu nome"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "E-mail",
+                        "type": "email",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu melhor e-mail"
+                    }
+                },
+                {
+                    "name": "senha",
+                    "type": "String",
+                    "length": "62",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Senha",
+                        "type": "password",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Crie uma senha forte"
+                    }
+                },
+                {
+                    "name": "DataCad",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "isActive",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": "1",
+                    "searchable": false,
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "Pessoa",
+            "namespace": [
+                
+                "idPessoa", 
+                "idTenant",
+                "nome", 
+                "email", 
+                "senha", 
+                "DataCad", 
+                "isActive"
+            
+            ],
+            "values": [
+                [
+                "Administrador do Persona360",
+                1,
+                "adm@persona360.com.br",
+                "28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b",
+                "GETDATE()",
+                1
+                ],
+                [
+                "Usuário do Persona360",
+                1,
+                "user@persona360.com.br",
+                "62e6fac579e25e48db0a8a8cf2f2e4050f79ee811a62b8b7a5fab007c8b0ee02",
+                "GETDATE()",
+                1
+                ]
+            ],
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu nome"
+                    }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "email",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "E-mail",
+                        "type": "email",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe seu melhor e-mail"
+                    }
+                },
+                {
+                    "name": "senha",
+                    "type": "String",
+                    "length": "62",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Senha",
+                        "type": "password",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Crie uma senha forte"
+                    }
+                },
+                {
+                    "name": "DataCad",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "isActive",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": "1",
+                    "searchable": false,
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "Escola",
+            "namespace": [
+                
+                "idEscola", 
+                "nome", 
+                "idTenant",
+                "idPessoa", 
+                "DataCad", 
+                "isActive"
+            
+            ],
+            "values": [
+                [
+                "Escola Persona360",
+                1,
+                "adm.build@persona360.com.br",
+                1,
+                "GETDATE()",
+                true
+                ]
+            ],
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe o nome da sua Escola"
+                    }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "Number",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "isActive",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": "1",
+                    "searchable": true,
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "Curso",
+            "namespace": [
+                
+                "idCurso", 
+                "nome", 
+                "idTenant",
+                "idEscola", 
+                "idPessoa", 
+                "DataCad", 
+                "isActive"
+            
+            ],
+            "values": [
+                [
+                "Curso Persona360",
+                1,
+                1,
+                1,
+                "GETDATE()",
+                1
+                ]
+            ],
+            "fields": [
+                {
+                    "name": "nome",
+                    "type": "String",
+                    "length": "300",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Nome",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Informe o nome do Curso"
+                    }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "idEscola",
+                    "type": "Number",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "Number",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "isActive",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": "1",
+                    "searchable": true,
+                    "form": false
+                }
+            ]
+        },
+        {
+            "name": "Conteudo",
+            "namespace": [
+
+                "idConteudo", 
+                "nome", 
+                "idTenant",
+                "tag",
+                "subtitulo", 
+                "imagem", 
+                "conteudo", 
+                "permitircomentarios", 
+                "publicar", 
+                "privado", 
+                "dataInicioPublicacao", 
+                "dataFinalPublicacao",
+                "idPessoa", 
+                "idEscola", 
+                "idCurso", 
+                "DataCad", 
+                "isActive"
+
+            ],
+            "values": [
+                [
+                "Curso Persona360. Escola Persona360 lança novo curso, confira.",
+                1,
+                "#Institucional #Persona360 #Lançamento #Primeiro #Home #Heroe",
+                "O primeiro curso lançado pela Escola Persona360 é inovador por que é colaborativo. ",
+                "https://persona360.com.br/img/Persona360Logo.svg",
+                "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ligula mauris. Proin turpis quam, placerat sit amet posuere in, vestibulum a neque. Morbi sit amet hendrerit velit. Nam id diam sit amet libero gravida varius ut in mauris. Nullam consectetur leo quis lectus finibus, vel scelerisque nunc faucibus. Donec rhoncus diam vel orci interdum tristique. Curabitur tempus pharetra convallis. Donec id efficitur urna. Etiam ornare urna ut purus interdum sollicitudin.</p><p>Nulla sit amet augue magna. Morbi vehicula, dui imperdiet iaculis pellentesque, augue enim suscipit quam, vel tempor sem risus vel diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris imperdiet elit euismod malesuada lacinia. Nulla vel tortor in risus porta congue. Quisque a nisi ac libero accumsan auctor. Morbi sed hendrerit sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p><p><h4>Lorem Ipsum</ha><br>Suspendisse tristique metus purus, ut sollicitudin libero pellentesque in. Maecenas pretium ante arcu, vel vestibulum urna consequat eu. Curabitur quis gravida neque. Pellentesque vehicula ante eu est tristique pellentesque. Integer in libero ut ante vehicula pharetra. Donec nec libero ligula. Suspendisse gravida molestie urna nec molestie. In malesuada justo finibus mauris pretium, eget congue dui sodales. Etiam finibus eros ac venenatis rhoncus. Praesent eget sagittis nibh. Integer iaculis consequat nibh, et cursus sem venenatis at. Fusce malesuada sem id nulla scelerisque, et bibendum erat euismod.</p>",
+                1,
+                1,
+                "GETDATE()",
+                "GETDATE()+30",
+                1,
+                1,
+                1,
+                "GETDATE()",
+                1
+                ]
+            ],
+            "fields": [
+                {
+                    "comment": "name é um apelido para TÍTULO, por padrão toda entidade tem que ter um nome. Não encontrei outra solução por enquanto",
+                    "name": "name",
+                    "type": "String",
+                    "length": "1000",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Tag",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Escreva as tags no formato #noticia #home #cursos"
+                    }
+                },
+                {
+                    "name": "idTenant",
+                    "type": "Number",
+                    "length": false,
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "tag",
+                    "type": "String",
+                    "length": "1000",
+                    "null": false,
+                    "default": false,
+                    "searchable": true,
+                    "form": {
+                        "label": "Tag",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Escreva as tags no formato #noticia #home #cursos"
+                    }
+                },
+                {
+                    "name": "subTitulo",
+                    "searchable": true,
+                    "type": "String",
+                    "length": "1200",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Subtítulo",
+                        "type": "text",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Digite um subtítulo para o seu conteúdo (máximo 1200 caracteres)"
+                    }
+                },
+                {
+                    "name": "imagem",
+                    "type": "String",
+                    "length": "1000",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Endereço da Imagem Principal",
+                        "type": "url",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Exemplo: https://persona360.com.br/img/logopersona.png"
+                    }
+                },
+                {
+                    "name": "conteudo",
+                    "searchable": true,
+                    "type": "String",
+                    "length": "5000",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Digite o conteudo do seu conteúdo",
+                        "type": "text-area",
+                        "value": "",
+                        "required": true,
+                        "placeholder": "Digite seu conteúdo. Máximo de 5000 caracteres"
+                    }
+                },
+                {
+                    "name": "permitircomentarios",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "form": {
+                        "label": "Permitir comentários",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "publicar",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": {
+                        "label": "Ativar publicação",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "privado",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": {
+                        "label": "Privado (somente usuários autenticados podem ler)",
+                        "type": "check-box",
+                        "value": "1",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "dataInicioPublicacao",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": {
+                        "label": "Data início da publicação (dia que entra no ar a partir das 00:00)",
+                        "type": "Date",
+                        "value": "",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "dataFinalPublicacao",
+                    "type": "Date",
+                    "length": "",
+                    "null": true,
+                    "default": false,
+                    "searchable": false,
+                    "form": {
+                        "label": "Data final da publicação (dia que sai no ar a partir das 00:00) - Vazio deixa a publicação eterna",
+                        "type": "Date",
+                        "value": "",
+                        "required": true,
+                        "placeholder": false
+                    }
+                },
+                {
+                    "name": "idPessoa",
+                    "type": "Number",
+                    "length": "",
+                    "null": false,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "idEscola",
+                    "type": "Number",
+                    "length": "",
+                    "null": true,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "idCurso",
+                    "type": "Number",
+                    "length": "",
+                    "null": true,
+                    "default": false,
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "DataCad",
+                    "type": "Date",
+                    "length": "",
+                    "null": false,
+                    "default": "Date()",
+                    "searchable": false,
+                    "form": false
+                },
+                {
+                    "name": "isActive",
+                    "type": "Boolean",
+                    "length": "",
+                    "null": false,
+                    "default": "1",
+                    "searchable": false,
+                    "form": false
+                }
+            ]
+        }
+    ]
+}

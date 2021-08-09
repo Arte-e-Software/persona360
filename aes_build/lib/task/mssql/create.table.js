@@ -2,11 +2,13 @@ const createFile = require('../fs.create-file');
 
 module.exports = (entity, success, error) => {
 
-    let   fields = entity.fields
+    let fields = entity.fields
+
         , translate = {
             js: ['String', 'Date', 'Boolean', 'Number'],
             sql: ['VARCHAR', 'DATETIME', 'BIT', 'Float']
         }
+
         , columns = fields.map((field) => {
 
             let name = field.name
@@ -16,7 +18,7 @@ module.exports = (entity, success, error) => {
                 , isForeingKey = name.substring(0, 2) === 'id'
                 ;
 
-            if (isForeingKey) { type = 'INT'; } 
+            if (isForeingKey) { type = 'INT'; }
 
             if (length) { length = `(${length})`; } else { length = ''; };
 
@@ -25,36 +27,38 @@ module.exports = (entity, success, error) => {
             return `${field.name} [${type}]${length} ${nullable}\n`;
 
         })
-        , values = entity.buildvalues.map((value)=>{ return `'${value}'\n` })
-        //, buildvalues = bv.pop()
-        , template = {
-            create: `
-    
--- Cria uma tabela chamada '${entity.name}'
 
-IF OBJECT_ID('${entity.name}', 'U') IS NOT NULL
-DROP TABLE ${entity.name}
-GO
+        , insert = entity.values.map((row) => {
 
--- Cria a tabela
-CREATE TABLE ${entity.name}
-(
- id${entity.name} INT IDENTITY(1,1) NOT NULL PRIMARY KEY
-,${columns}
-);
-GO
-`
-, insert: `
--- Insere dados iniciais na tabela ${entity.name}
-INSERT INTO ${entity.name} VALUES 
-(
-${values}
-);
-`
-}
-;
+           return `\nINSERT INTO ${entity.name} VALUES\n(\n`+ row.map((value) => {
 
-    createFile(`${entity.db.dir}/create.entities.sql`, template.create, success, error);
-    createFile(`${entity.db.dir}/populate.entities.sql`, template.insert, success, error);
+                let v = new String(value)
+                    , n = new Number(value)
+                    ;
+
+                if (v.substring(0, 8) === 'GETDATE()' || !isNaN(n)) {
+
+                    return `${value}\n`;
+
+                } else {
+
+                    return `'${value}'\n`;
+
+                }
+
+            })+ `);`
+            
+        }), 
+        
+        template = {
+
+            create: require('./template-create')(entity, columns),
+            insert: require('./template-insert')(entity, insert)
+
+        };
+
+    createFile(`${entity.db.dir}/create.js`, template.create, success, error);
+
+    createFile(`${entity.db.dir}/insert.js`, template.insert, success, error);
 
 };

@@ -25,4 +25,4 @@ const entity = require('./entity')
     
         };
 
-})(require('../back_end/data-source/json/entity.json').config);
+})(require('../config.json').entity);

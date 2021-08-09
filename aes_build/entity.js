@@ -2,7 +2,8 @@ const env = require('dotenv');
 
 module.exports = config => {
 
-    let root = './back_end/build'
+    let   root = './back_end/entities'
+    
         , db = {
             profile: process.env.DB_PROFILE,
             dir: `${root}/.${process.env.DB_PROFILE}`
@@ -27,7 +28,7 @@ module.exports = config => {
 
         fields: config.fields,
         
-        buildvalues: config.buildvalues,
+        values: config.values,
         
         template: require('./lib/template/template'),
 
