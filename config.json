@@ -1,4 +1,11 @@
 {
+    "readme": {
+        "comments": [
+            "Para popular uma tabela criada logo no build, informar os valores iniciais na chave 'values'. Cada posição no array principal é um registro e cada campos é uma posição nesse registro.",
+            "Os valores 'dafault' deve estar na tipagem de Javascript e são aceitos: String, Number, Boolean e Date."
+        ],
+        "entity": "{name: String, namespace: [String], values: [[Any]], fields: {name: String, type: String, length: Number, null: Boolean, default: Any, searchable: Boolean, form: {label: String, type: String, value: Any, required: Boolean, placeholder: String}}"
+    },
     "entity": [
         {
             "name": "Tenant",

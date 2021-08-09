@@ -34,9 +34,9 @@ Path: ./back_end/entities/Escola/search.js
     // methos: POST ou GET apenas
     // No momento acho que poderia ser importante mas não sei exatamente porque ainda
     
-    let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-    ,Pool = require('../../../data-source/mssql/pool')
-    ,Model_search = require('../../../entity/Escola/model/search')
+    let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+    ,Pool = require('../../../database/mssql/pool')
+    ,Model_search = require('../../../entities/Escola/model/search')
     ,params = {pesq: req.params.pesq}
     ,erro = true
     ;

@@ -31,39 +31,6 @@ ROLLBACK TRAN
 END
 `;
 
-exports.Pessoa = ` 
-    
--- Cria uma tabela chamada 'Pessoa'
-
-BEGIN TRAN
-IF OBJECT_ID('Pessoa', 'U') IS NOT NULL
-DROP TABLE Pessoa
-GO
-
--- Cria a tabela
-CREATE TABLE Pessoa
-(
-idPessoa INT IDENTITY(1,1) NOT NULL PRIMARY KEY
-,nome [VARCHAR](300) NOT NULL
-,idTenant [INT] NOT NULL
-,email [VARCHAR](300) NOT NULL
-,senha [VARCHAR](62) NOT NULL
-,DataCad [DATETIME] NOT NULL
-,isActive [BIT] NOT NULL
-);
-
-IF @@ERROR == 0
-BEGIN
-SELECT 0 AS err
-COMMIT TRAN
-END
-ELSE
-BEGIN
-SELECT @@ERROR AS err
-ROLLBACK TRAN
-END
-`;
-
 exports.Escola = ` 
     
 -- Cria uma tabela chamada 'Escola'
@@ -156,6 +123,39 @@ idConteudo INT IDENTITY(1,1) NOT NULL PRIMARY KEY
 ,idPessoa [INT] NOT NULL
 ,idEscola [INT] NULL
 ,idCurso [INT] NULL
+,DataCad [DATETIME] NOT NULL
+,isActive [BIT] NOT NULL
+);
+
+IF @@ERROR == 0
+BEGIN
+SELECT 0 AS err
+COMMIT TRAN
+END
+ELSE
+BEGIN
+SELECT @@ERROR AS err
+ROLLBACK TRAN
+END
+`;
+
+exports.Pessoa = ` 
+    
+-- Cria uma tabela chamada 'Pessoa'
+
+BEGIN TRAN
+IF OBJECT_ID('Pessoa', 'U') IS NOT NULL
+DROP TABLE Pessoa
+GO
+
+-- Cria a tabela
+CREATE TABLE Pessoa
+(
+idPessoa INT IDENTITY(1,1) NOT NULL PRIMARY KEY
+,nome [VARCHAR](300) NOT NULL
+,idTenant [INT] NOT NULL
+,email [VARCHAR](300) NOT NULL
+,senha [VARCHAR](62) NOT NULL
 ,DataCad [DATETIME] NOT NULL
 ,isActive [BIT] NOT NULL
 );
