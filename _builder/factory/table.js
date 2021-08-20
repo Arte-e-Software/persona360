@@ -56,8 +56,10 @@ module.exports = entity => {
 
         template = {
 
-            create: require('../template/.mssql/template-create')(entity, columns),
-            insert: require('../template/.mssql/template-insert')(entity, insert),
+            model: {
+                create: require('../template/.mssql/template-create')(entity, columns),
+                insert: require('../template/.mssql/template-insert')(entity, insert),
+            },
             controller: {
                 create: require('../template/.mssql/template-controller-create')(entity),
                 insert: require('../template/.mssql/template-controller.insert')(entity)
@@ -65,8 +67,8 @@ module.exports = entity => {
 
         };
 
-    fsCreateFile(`${entity.db.dir}/model/create.js`, template.create);
-    fsCreateFile(`${entity.db.dir}/model/insert.js`, template.insert);
+    fsCreateFile(`${entity.db.dir}/model/create.js`, template.model.create);
+    fsCreateFile(`${entity.db.dir}/model/insert.js`, template.model.insert);
     fsCreateFile(`${entity.db.dir}/controller/table-create.js`, template.controller.create);
     fsCreateFile(`${entity.db.dir}/controller/table-insert.js`, template.controller.insert);
 
