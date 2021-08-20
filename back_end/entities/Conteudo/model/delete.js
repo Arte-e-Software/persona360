@@ -7,13 +7,13 @@ Module: delete.js
 
 Namespace:
 idConteudo
-nome
+name
 idTenant
 tag
 subtitulo
 imagem
 conteudo
-permitircomentarios
+permitirComentarios
 publicar
 privado
 dataInicioPublicacao
@@ -34,7 +34,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Conteudo/delete.js
 
 */
-    
+
 //idPessoa chega em params.idPessoa, mas ainda não estou usando** desconsidere esse comentário para Entity = Pessoa
 
 module.exports = params => {

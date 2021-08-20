@@ -7,7 +7,7 @@ Module: update.js
 
 Namespace:
 idEscola
-nome
+name
 idTenant
 idPessoa
 DataCad
@@ -23,14 +23,14 @@ Building with aes.build v1
 Path: ./back_end/entities/Escola/update.js
 
 */
-    
+
 module.exports = params => {
 
 return `
     
 BEGIN TRAN
 UPDATE Escola SET
- '${params.nome}'
+ '${params.name}'
 ,${params.idTenant}
 ,${params.idPessoa}
 ,'${params.DataCad}'

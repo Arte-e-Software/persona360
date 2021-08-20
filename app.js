@@ -29,7 +29,9 @@ app.set('views', path.join(__dirname, '.', 'views'));
 // ROTAS
 app.get('/', require('./back_end/routes/home'));
 app.get('/adm', require('./back_end/routes/adm'));
-app.get('/api/:tenant/:entity/:method', require('./back_end/routes/api'));
+app.get('/build', require('./back_end/routes/build'));
+app.get('/build/run', require('./back_end/routes/build-run'));
+app.get('/api/:tenant/:entity/:method/', require('./back_end/routes/api'));
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });

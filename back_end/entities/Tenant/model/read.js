@@ -7,7 +7,7 @@ Module: read.js
 
 Namespace:
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -23,7 +23,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Tenant/read.js
 
 */
-    
+
 //idPessoa chega em params.idPessoa, mas ainda não estou usandom//** desconsidere esse comentário para Entity = Pessoa
 
 module.exports = params => {
@@ -32,9 +32,9 @@ return `
 
 SELECT
  idTenant
-,nome
+,name
 ,email
-,senha
+,password
 ,DataCad
 ,isActive
 FROM

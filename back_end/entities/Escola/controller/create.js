@@ -8,7 +8,7 @@ Module: create.js
 
 Namespace:
 idEscola
-nome
+name
 idTenant
 idPessoa
 DataCad
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Escola/create.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -34,11 +34,11 @@ module.exports = (call, req, res) => {
 // methods: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_create = require('../../../entity/Escola/model/create')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_create = require('../../../entities/Escola/model/create')
 ,params = {
- nome: req.params.nome
+ name: req.params.name
 ,idTenant: req.params.idTenant
 ,idPessoa: req.params.idPessoa
 ,DataCad: Date()
@@ -49,7 +49,7 @@ let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no 
 
 
 
-erro = !nome===!idTenant===!idPessoa===!DataCad===!isActive;
+erro = !name===!idTenant===!idPessoa===!DataCad===!isActive;
 
 if (erro) {
 

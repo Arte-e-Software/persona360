@@ -8,7 +8,7 @@ Module: update.js
 Namespace:
 idPessoa
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -24,17 +24,17 @@ Building with aes.build v1
 Path: ./back_end/entities/Pessoa/update.js
 
 */
-    
+
 module.exports = params => {
 
 return `
     
 BEGIN TRAN
 UPDATE Pessoa SET
- '${params.nome}'
+ '${params.name}'
 ,${params.idTenant}
 ,'${params.email}'
-,'${params.senha}'
+,'${params.password}'
 ,'${params.DataCad}'
 ,${params.isActive}
 WHERE

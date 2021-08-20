@@ -8,7 +8,7 @@ Module: create.js
 
 Namespace:
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Tenant/create.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -34,22 +34,22 @@ module.exports = (call, req, res) => {
 // methods: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_create = require('../../../entity/Tenant/model/create')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_create = require('../../../entities/Tenant/model/create')
 ,params = {
- nome: req.params.nome
+ name: req.params.name
 ,email: req.params.email
-,senha: req.params.senha
+,password: req.params.password
 ,DataCad: Date()
 ,isActive: 1
 }
 ,erro = true
 ;
 
-senha = require('crypto-js/sha256')(senha);
+password = require('crypto-js/sha256')(password);
 
-erro = !nome===!email===!senha===!DataCad===!isActive;
+erro = !name===!email===!password===!DataCad===!isActive;
 
 if (erro) {
 

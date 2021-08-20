@@ -7,7 +7,7 @@ Module: delete.js
 
 Namespace:
 idEscola
-nome
+name
 idTenant
 idPessoa
 DataCad
@@ -23,7 +23,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Escola/delete.js
 
 */
-    
+
 //idPessoa chega em params.idPessoa, mas ainda não estou usando** desconsidere esse comentário para Entity = Pessoa
 
 module.exports = params => {

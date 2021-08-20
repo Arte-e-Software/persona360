@@ -8,13 +8,13 @@ Module: create.js
 
 Namespace:
 idConteudo
-nome
+name
 idTenant
 tag
 subtitulo
 imagem
 conteudo
-permitircomentarios
+permitirComentarios
 publicar
 privado
 dataInicioPublicacao
@@ -35,7 +35,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Conteudo/create.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -45,17 +45,17 @@ module.exports = (call, req, res) => {
 // methods: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_create = require('../../../entity/Conteudo/model/create')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_create = require('../../../entities/Conteudo/model/create')
 ,params = {
  name: req.params.name
 ,idTenant: req.params.idTenant
-,tag: req.params.tag
+,tags: req.params.tags
 ,subTitulo: req.params.subTitulo
 ,imagem: req.params.imagem
 ,conteudo: req.params.conteudo
-,permitircomentarios: req.params.permitircomentarios
+,permitirComentarios: req.params.permitirComentarios
 ,publicar: req.params.publicar
 ,privado: req.params.privado
 ,dataInicioPublicacao: Date()
@@ -71,7 +71,7 @@ let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no 
 
 
 
-erro = !name===!idTenant===!tag===!subTitulo===!imagem===!conteudo===!permitircomentarios===!publicar===!privado===!dataInicioPublicacao===false===!idPessoa===false===false===!DataCad===!isActive;
+erro = !name===!idTenant===!tags===!subTitulo===!imagem===!conteudo===!permitirComentarios===!publicar===!privado===!dataInicioPublicacao===false===!idPessoa===false===false===!DataCad===!isActive;
 
 if (erro) {
 

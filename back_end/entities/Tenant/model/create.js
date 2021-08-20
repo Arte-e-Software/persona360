@@ -7,7 +7,7 @@ Module: create.js
 
 Namespace:
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -23,7 +23,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Tenant/create.js
 
 */
-    
+
 module.exports = params => {
 
 return `
@@ -31,9 +31,9 @@ return `
 BEGIN TRAN
 INSERT INTO Tenant VALUES
 (
-'${params.nome}'
+'${params.name}'
 ,'${params.email}'
-,'${params.senha}'
+,'${params.password}'
 ,'${params.DataCad}'
 ,${params.isActive}
 );

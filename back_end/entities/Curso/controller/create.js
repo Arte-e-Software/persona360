@@ -8,7 +8,7 @@ Module: create.js
 
 Namespace:
 idCurso
-nome
+name
 idTenant
 idEscola
 idPessoa
@@ -25,7 +25,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Curso/create.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -35,11 +35,11 @@ module.exports = (call, req, res) => {
 // methods: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_create = require('../../../entity/Curso/model/create')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_create = require('../../../entities/Curso/model/create')
 ,params = {
- nome: req.params.nome
+ name: req.params.name
 ,idTenant: req.params.idTenant
 ,idEscola: req.params.idEscola
 ,idPessoa: req.params.idPessoa
@@ -51,7 +51,7 @@ let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no 
 
 
 
-erro = !nome===!idTenant===!idEscola===!idPessoa===!DataCad===!isActive;
+erro = !name===!idTenant===!idEscola===!idPessoa===!DataCad===!isActive;
 
 if (erro) {
 

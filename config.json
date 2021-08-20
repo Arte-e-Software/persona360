@@ -5,7 +5,7 @@
             "namespace": [
                 
                 "idTenant",
-                "nome", 
+                "name", 
                 "email", 
                 "senha", 
                 "DataCad", 
@@ -23,18 +23,18 @@
             ],
             "fields": [
                 {
-                    "name": "nome",
+                    "name": "name",
                     "type": "String",
                     "length": "300",
                     "null": false,
                     "default": false,
                     "searchable": true,
                     "form": {
-                        "label": "Nome",
+                        "label": "name",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Informe seu nome"
+                        "placeholder": "Informe seu name"
                     }
                 },
                 {
@@ -53,7 +53,7 @@
                     }
                 },
                 {
-                    "name": "senha",
+                    "name": "password",
                     "type": "String",
                     "length": "62",
                     "null": false,
@@ -92,7 +92,7 @@
                 
                 "idPessoa", 
                 "idTenant",
-                "nome", 
+                "name", 
                 "email", 
                 "senha", 
                 "DataCad", 
@@ -119,18 +119,18 @@
             ],
             "fields": [
                 {
-                    "name": "nome",
+                    "name": "name",
                     "type": "String",
                     "length": "300",
                     "null": false,
                     "default": false,
                     "searchable": true,
                     "form": {
-                        "label": "Nome",
+                        "label": "name",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Informe seu nome"
+                        "placeholder": "Informe seu name"
                     }
                 },
                 {
@@ -158,7 +158,7 @@
                     }
                 },
                 {
-                    "name": "senha",
+                    "name": "password",
                     "type": "String",
                     "length": "62",
                     "null": false,
@@ -196,7 +196,7 @@
             "namespace": [
                 
                 "idEscola", 
-                "nome", 
+                "name", 
                 "idTenant",
                 "idPessoa", 
                 "DataCad", 
@@ -215,18 +215,18 @@
             ],
             "fields": [
                 {
-                    "name": "nome",
+                    "name": "name",
                     "type": "String",
                     "length": "300",
                     "null": false,
                     "default": false,
                     "searchable": true,
                     "form": {
-                        "label": "Nome",
+                        "label": "name",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Informe o nome da sua Escola"
+                        "placeholder": "Informe o name da sua Escola"
                     }
                 },
                 {
@@ -272,7 +272,7 @@
             "namespace": [
                 
                 "idCurso", 
-                "nome", 
+                "name", 
                 "idTenant",
                 "idEscola", 
                 "idPessoa", 
@@ -292,18 +292,18 @@
             ],
             "fields": [
                 {
-                    "name": "nome",
+                    "name": "name",
                     "type": "String",
                     "length": "300",
                     "null": false,
                     "default": false,
                     "searchable": true,
                     "form": {
-                        "label": "Nome",
+                        "label": "name",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Informe o nome do Curso"
+                        "placeholder": "Informe o name do Curso"
                     }
                 },
                 {
@@ -358,13 +358,13 @@
             "namespace": [
 
                 "idConteudo", 
-                "nome", 
+                "name", 
                 "idTenant",
                 "tag",
                 "subtitulo", 
                 "imagem", 
                 "conteudo", 
-                "permitircomentarios", 
+                "permitirComentarios", 
                 "publicar", 
                 "privado", 
                 "dataInicioPublicacao", 
@@ -397,7 +397,6 @@
             ],
             "fields": [
                 {
-                    "comment": "name é um apelido para TÍTULO, por padrão toda entidade tem que ter um nome. Não encontrei outra solução por enquanto",
                     "name": "name",
                     "type": "String",
                     "length": "1000",
@@ -405,11 +404,11 @@
                     "default": false,
                     "searchable": true,
                     "form": {
-                        "label": "Tag",
+                        "label": "Título",
                         "type": "text",
                         "value": "",
                         "required": true,
-                        "placeholder": "Escreva as tags no formato #noticia #home #cursos"
+                        "placeholder": "Escreva o título do conteúdo"
                     }
                 },
                 {
@@ -422,7 +421,7 @@
                     "form": false
                 },
                 {
-                    "name": "tag",
+                    "name": "tags",
                     "type": "String",
                     "length": "1000",
                     "null": false,
@@ -481,7 +480,7 @@
                     }
                 },
                 {
-                    "name": "permitircomentarios",
+                    "name": "permitirComentarios",
                     "type": "Boolean",
                     "length": "",
                     "null": false,

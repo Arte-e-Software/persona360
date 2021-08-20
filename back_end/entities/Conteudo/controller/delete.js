@@ -8,13 +8,13 @@ Module: delete.js
 
 Namespace:
 idConteudo
-nome
+name
 idTenant
 tag
 subtitulo
 imagem
 conteudo
-permitircomentarios
+permitirComentarios
 publicar
 privado
 dataInicioPublicacao
@@ -35,7 +35,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Conteudo/delete.js
 
 */
-    
+
     
     module.exports = (call, req, res) => {
     
@@ -45,9 +45,9 @@ Path: ./back_end/entities/Conteudo/delete.js
     // methos: POST ou GET apenas
     // No momento acho que poderia ser importante mas não sei exatamente porque ainda
     
-    let db = require('../../../data-source/mssql/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
-    ,Pool = require('../../../data-source/mssql/pool')
-    ,Model_delete = require('../../../entity/Conteudo/model/delete')
+    let db = require('../../../database/mssql/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
+    ,Pool = require('../../../database/mssql/pool')
+    ,Model_delete = require('../../../entities/Conteudo/model/delete')
     ,params = {
  idConteudo: req.params.idConteudo,idPessoa: req.params.idPessoa}
     ,erro = true

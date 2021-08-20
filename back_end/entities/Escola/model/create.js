@@ -7,7 +7,7 @@ Module: create.js
 
 Namespace:
 idEscola
-nome
+name
 idTenant
 idPessoa
 DataCad
@@ -23,7 +23,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Escola/create.js
 
 */
-    
+
 module.exports = params => {
 
 return `
@@ -31,7 +31,7 @@ return `
 BEGIN TRAN
 INSERT INTO Escola VALUES
 (
-'${params.nome}'
+'${params.name}'
 ,${params.idTenant}
 ,${params.idPessoa}
 ,'${params.DataCad}'

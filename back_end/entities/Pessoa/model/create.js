@@ -8,7 +8,7 @@ Module: create.js
 Namespace:
 idPessoa
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Pessoa/create.js
 
 */
-    
+
 module.exports = params => {
 
 return `
@@ -32,10 +32,10 @@ return `
 BEGIN TRAN
 INSERT INTO Pessoa VALUES
 (
-'${params.nome}'
+'${params.name}'
 ,${params.idTenant}
 ,'${params.email}'
-,'${params.senha}'
+,'${params.password}'
 ,'${params.DataCad}'
 ,${params.isActive}
 );

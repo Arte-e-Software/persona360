@@ -8,7 +8,7 @@ Module: update.js
 
 Namespace:
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Tenant/update.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -34,21 +34,21 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_update = require('../../../entity/Tenant/model/update')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_update = require('../../../entities/Tenant/model/update')
 ,params = {
  idTenant: req.params.idTenant,
- nome: req.params.nome
+ name: req.params.name
 , email: req.params.email
-, senha: req.params.senha
+, password: req.params.password
 , DataCad: req.params.DataCad
 , isActive: req.params.isActive
 }
 ,erro = true
 ;
 
-erro = !nome===!email===!senha===!DataCad===!isActive;
+erro = !name===!email===!password===!DataCad===!isActive;
 
 if (erro) {
 

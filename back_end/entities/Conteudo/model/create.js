@@ -7,13 +7,13 @@ Module: create.js
 
 Namespace:
 idConteudo
-nome
+name
 idTenant
 tag
 subtitulo
 imagem
 conteudo
-permitircomentarios
+permitirComentarios
 publicar
 privado
 dataInicioPublicacao
@@ -34,7 +34,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Conteudo/create.js
 
 */
-    
+
 module.exports = params => {
 
 return `
@@ -44,11 +44,11 @@ INSERT INTO Conteudo VALUES
 (
 '${params.name}'
 ,${params.idTenant}
-,'${params.tag}'
+,'${params.tags}'
 ,'${params.subTitulo}'
 ,'${params.imagem}'
 ,'${params.conteudo}'
-,${params.permitircomentarios}
+,${params.permitirComentarios}
 ,${params.publicar}
 ,${params.privado}
 ,'${params.dataInicioPublicacao}'

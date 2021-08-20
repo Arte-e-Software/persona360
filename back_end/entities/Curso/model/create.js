@@ -7,7 +7,7 @@ Module: create.js
 
 Namespace:
 idCurso
-nome
+name
 idTenant
 idEscola
 idPessoa
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Curso/create.js
 
 */
-    
+
 module.exports = params => {
 
 return `
@@ -32,7 +32,7 @@ return `
 BEGIN TRAN
 INSERT INTO Curso VALUES
 (
-'${params.nome}'
+'${params.name}'
 ,${params.idTenant}
 ,${params.idEscola}
 ,${params.idPessoa}

@@ -7,7 +7,7 @@ Module: update.js
 
 Namespace:
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -23,16 +23,16 @@ Building with aes.build v1
 Path: ./back_end/entities/Tenant/update.js
 
 */
-    
+
 module.exports = params => {
 
 return `
     
 BEGIN TRAN
 UPDATE Tenant SET
- '${params.nome}'
+ '${params.name}'
 ,'${params.email}'
-,'${params.senha}'
+,'${params.password}'
 ,'${params.DataCad}'
 ,${params.isActive}
 WHERE

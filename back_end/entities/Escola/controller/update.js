@@ -8,7 +8,7 @@ Module: update.js
 
 Namespace:
 idEscola
-nome
+name
 idTenant
 idPessoa
 DataCad
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Escola/update.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -34,12 +34,12 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_update = require('../../../entity/Escola/model/update')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_update = require('../../../entities/Escola/model/update')
 ,params = {
  idEscola: req.params.idEscola,
- nome: req.params.nome
+ name: req.params.name
 , idTenant: req.params.idTenant
 , idPessoa: req.params.idPessoa
 , DataCad: req.params.DataCad
@@ -48,7 +48,7 @@ let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no 
 ,erro = true
 ;
 
-erro = !nome===!idTenant===!idPessoa===!DataCad===!isActive;
+erro = !name===!idTenant===!idPessoa===!DataCad===!isActive;
 
 if (erro) {
 

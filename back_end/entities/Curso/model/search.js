@@ -7,7 +7,7 @@ Module: search.js
 
 Namespace:
 idCurso
-nome
+name
 idTenant
 idEscola
 idPessoa
@@ -24,7 +24,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Curso/search.js
 
 */
-    
+
 //idPessoa chega em params.idPessoa, mas ainda não estou usandom//** desconsidere esse comentário para Entity = Pessoa
 
 module.exports = params => {
@@ -33,7 +33,7 @@ return `
 
 SELECT
  idCurso
-,nome
+,name
 ,idTenant
 ,idEscola
 ,idPessoa
@@ -42,7 +42,7 @@ SELECT
 FROM
 Curso
 WHERE 
-  (nome like '%${params.pesq}%'
+  (name like '%${params.pesq}%'
 OR isActive like '%${params.pesq}%')
 ;
 

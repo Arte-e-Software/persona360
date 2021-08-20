@@ -9,7 +9,7 @@ Module: read.js
 Namespace:
 idPessoa
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -25,7 +25,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Pessoa/read.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -35,9 +35,9 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_read = require('../../../entity/Pessoa/model/read')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_read = require('../../../entities/Pessoa/model/read')
 ,params = {
  idPessoa: req.params.idPessoa}
 ,erro = true

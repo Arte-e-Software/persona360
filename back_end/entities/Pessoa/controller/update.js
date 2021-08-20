@@ -9,7 +9,7 @@ Module: update.js
 Namespace:
 idPessoa
 idTenant
-nome
+name
 email
 senha
 DataCad
@@ -25,7 +25,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Pessoa/update.js
 
 */
-    
+
 
 module.exports = (call, req, res) => {
 
@@ -35,22 +35,22 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../data-source/mssql/pool')
-,Model_update = require('../../../entity/Pessoa/model/update')
+let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../database/mssql/pool')
+,Model_update = require('../../../entities/Pessoa/model/update')
 ,params = {
  idPessoa: req.params.idPessoa,
- nome: req.params.nome
+ name: req.params.name
 , idTenant: req.params.idTenant
 , email: req.params.email
-, senha: req.params.senha
+, password: req.params.password
 , DataCad: req.params.DataCad
 , isActive: req.params.isActive
 }
 ,erro = true
 ;
 
-erro = !nome===!idTenant===!email===!senha===!DataCad===!isActive;
+erro = !name===!idTenant===!email===!password===!DataCad===!isActive;
 
 if (erro) {
 

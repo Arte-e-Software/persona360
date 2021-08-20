@@ -7,13 +7,13 @@ Module: read.js
 
 Namespace:
 idConteudo
-nome
+name
 idTenant
 tag
 subtitulo
 imagem
 conteudo
-permitircomentarios
+permitirComentarios
 publicar
 privado
 dataInicioPublicacao
@@ -34,7 +34,7 @@ Building with aes.build v1
 Path: ./back_end/entities/Conteudo/read.js
 
 */
-    
+
 //idPessoa chega em params.idPessoa, mas ainda não estou usandom//** desconsidere esse comentário para Entity = Pessoa
 
 module.exports = params => {
@@ -45,11 +45,11 @@ SELECT
  idConteudo
 ,name
 ,idTenant
-,tag
+,tags
 ,subTitulo
 ,imagem
 ,conteudo
-,permitircomentarios
+,permitirComentarios
 ,publicar
 ,privado
 ,dataInicioPublicacao
