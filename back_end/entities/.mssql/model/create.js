@@ -64,6 +64,39 @@ ROLLBACK TRAN
 END
 `;
 
+exports.Curso = ` 
+    
+-- Cria uma tabela chamada 'Curso'
+
+BEGIN TRAN
+IF OBJECT_ID('Curso', 'U') IS NOT NULL
+DROP TABLE Curso
+GO
+
+-- Cria a tabela
+CREATE TABLE Curso
+(
+idCurso INT IDENTITY(1,1) NOT NULL PRIMARY KEY
+,name [VARCHAR](300) NOT NULL
+,idTenant [INT] NOT NULL
+,idEscola [INT] NOT NULL
+,idPessoa [INT] NOT NULL
+,DataCad [DATETIME] NOT NULL
+,isActive [BIT] NOT NULL
+);
+
+IF @@ERROR == 0
+BEGIN
+SELECT 0 AS err
+COMMIT TRAN
+END
+ELSE
+BEGIN
+SELECT @@ERROR AS err
+ROLLBACK TRAN
+END
+`;
+
 exports.Escola = ` 
     
 -- Cria uma tabela chamada 'Escola'
@@ -123,39 +156,6 @@ idConteudo INT IDENTITY(1,1) NOT NULL PRIMARY KEY
 ,idPessoa [INT] NOT NULL
 ,idEscola [INT] NULL
 ,idCurso [INT] NULL
-,DataCad [DATETIME] NOT NULL
-,isActive [BIT] NOT NULL
-);
-
-IF @@ERROR == 0
-BEGIN
-SELECT 0 AS err
-COMMIT TRAN
-END
-ELSE
-BEGIN
-SELECT @@ERROR AS err
-ROLLBACK TRAN
-END
-`;
-
-exports.Curso = ` 
-    
--- Cria uma tabela chamada 'Curso'
-
-BEGIN TRAN
-IF OBJECT_ID('Curso', 'U') IS NOT NULL
-DROP TABLE Curso
-GO
-
--- Cria a tabela
-CREATE TABLE Curso
-(
-idCurso INT IDENTITY(1,1) NOT NULL PRIMARY KEY
-,name [VARCHAR](300) NOT NULL
-,idTenant [INT] NOT NULL
-,idEscola [INT] NOT NULL
-,idPessoa [INT] NOT NULL
 ,DataCad [DATETIME] NOT NULL
 ,isActive [BIT] NOT NULL
 );
