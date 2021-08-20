@@ -69,8 +69,8 @@ module.exports = entity => {
 
     fsCreateFile(`${entity.db.dir}/model/create.js`, template.model.create);
     fsCreateFile(`${entity.db.dir}/model/insert.js`, template.model.insert);
-    fsCreateFile(`${entity.db.dir}/controller/table-create.js`, template.controller.create);
-    fsCreateFile(`${entity.db.dir}/controller/table-insert.js`, template.controller.insert);
+    fsCreateFile(`${entity.db.dir}/controller/create.js`, template.controller.create);
+    fsCreateFile(`${entity.db.dir}/controller/insert.js`, template.controller.insert);
 
     factory.log(`table: ${entity.name}, fields: ${entity.fields}`);
 
