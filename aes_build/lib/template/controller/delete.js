@@ -15,9 +15,9 @@ module.exports = data => {
     // methos: POST ou GET apenas
     // No momento acho que poderia ser importante mas não sei exatamente porque ainda
     
-    let db = require('../../../database/${data.entity.db.profile}/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
-    ,Pool = require('../../../database/${data.entity.db.profile}/pool')
-    ,Model_${data.module} = require('../../../entities/${data.entity.name}/model/${data.module}')
+    let db = require('../../../data-source/${data.entity.db.profile}/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
+    ,Pool = require('../../../data-source/${data.entity.db.profile}/pool')
+    ,Model_${data.module} = require('../../../entity/${data.entity.name}/model/${data.module}')
     ,params = {\n ${params}}
     ,erro = true
     ;

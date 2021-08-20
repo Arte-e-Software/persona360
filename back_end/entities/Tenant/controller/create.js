@@ -34,9 +34,9 @@ module.exports = (call, req, res) => {
 // methods: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../database/mssql/pool')
-,Model_create = require('../../../entities/Tenant/model/create')
+let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../data-source/mssql/pool')
+,Model_create = require('../../../entity/Tenant/model/create')
 ,params = {
  nome: req.params.nome
 ,email: req.params.email

@@ -35,9 +35,9 @@ Path: ./back_end/entities/Curso/delete.js
     // methos: POST ou GET apenas
     // No momento acho que poderia ser importante mas não sei exatamente porque ainda
     
-    let db = require('../../../database/mssql/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
-    ,Pool = require('../../../database/mssql/pool')
-    ,Model_delete = require('../../../entities/Curso/model/delete')
+    let db = require('../../../data-source/mssql/conn').db // Pegar esse carinha a partir do tenant na versão 2.0!
+    ,Pool = require('../../../data-source/mssql/pool')
+    ,Model_delete = require('../../../entity/Curso/model/delete')
     ,params = {
  idCurso: req.params.idCurso,idPessoa: req.params.idPessoa}
     ,erro = true

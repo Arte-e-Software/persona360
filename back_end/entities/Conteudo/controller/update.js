@@ -45,9 +45,9 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../database/mssql/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../database/mssql/pool')
-,Model_update = require('../../../entities/Conteudo/model/update')
+let db = require('../../../data-source/mssql/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../data-source/mssql/pool')
+,Model_update = require('../../../entity/Conteudo/model/update')
 ,params = {
  idConteudo: req.params.idConteudo,
  name: req.params.name

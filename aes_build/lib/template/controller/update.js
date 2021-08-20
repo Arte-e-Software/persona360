@@ -45,9 +45,9 @@ module.exports = (call, req, res) => {
 // methos: POST ou GET apenas
 // No momento acho que poderia ser importante mas não sei exatamente porque ainda
 
-let db = require('../../../database/${data.entity.db.profile}/conn').db // Esse cara pode vir no call!
-,Pool = require('../../../database/${data.entity.db.profile}/pool')
-,Model_${data.module} = require('../../../entities/${data.entity.name}/model/${data.module}')
+let db = require('../../../data-source/${data.entity.db.profile}/conn').db // Esse cara pode vir no call!
+,Pool = require('../../../data-source/${data.entity.db.profile}/pool')
+,Model_${data.module} = require('../../../entity/${data.entity.name}/model/${data.module}')
 ,params = {\n ${params}}
 ,erro = true
 ;
