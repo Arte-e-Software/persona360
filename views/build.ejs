@@ -1,65 +1,11 @@
 <!doctype html>
 <html lang="pt-br">
-<%-include ./parts/head.ejs %>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="img/Persona360LogoTexto.svg" height="55rem"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navul"></ul>
-                    <div class="d-flex" id="navavatar"></div>
-                </div>
-            </div>
-        </nav>
-        <main class="flex">
-            <div class="container my-3" id="adm">
-                <% if(config){ %>
-                    <div class="container mb-4">
-                        <h4><strong>
-                                <%=config.entity.length%> entities
-                            </strong> encontradas no <b>config.json</b> disponível:</h4>
-                        <div class="container bg-light p-3 border rounded">
-                            <code class="code">
-                                    <%
-                                    let entity = config.entity;
-                                        for(let i in entity){
-                                            %>
-                                            <%=`entity[${i}]{ name: ${entity[i].name}, fields: [${entity[i].namespace.map((name)=>{ return ` ${name}` })} ]} [${entity[i].fields.length+1}]`%><br>
-                                            <%
-                                        }
-                                    %>
-                            </code>
-                        </div>
-                    </div>
-                    <div class="mb-3" id="div-btns">
-                        <div class="container d-grid gap-2" id="div-btnBuild">
-                            <button class="btn btn-lg btn-primary" id="btnBuild">Rodar build do arquivo <strong>config.json</strong> disponível</button>
-                        </div>
-                    </div>
-                    <div class="container mb-4 p-2" style="opacity: 0.5;" id="version-config">
-                        <h5>Versão: <%=readme.version%>
-                        </h5>
-                        <p>
-                            <%=readme.comments.join(' ')%></p>
-                         <h5>Estrutura padrão de uma <strong>entity</strong> no <b>config.json</b>:</h6>
-                    <div class="container bg-light p-3 border rounded"><code class="code"><%=readme.entity%></code></div>
-                    </h4>
-                </div>
-                <%
-                } else {
-                %>
-                <div class="container mt-4">
-                    <p>Nenhum arquivo <strong>config.json</strong> foi encontrado. Monte um seguindo as orientações acima e o suba para a raiz do projeto.</p>
-                </div>
-                <%
-                }
-                %>
-            </div>
-        </main>
-        <%-include ./parts/js.ejs %>
-    </body>
+<%-include ./blocks/head.ejs %>
+<body>
+    <%-include ./blocks/nav.ejs %>
+    <main class="flex">
+    <%-include ./blocks/model.ejs %>
+    </main>
+    <%-include ./blocks/javascript.ejs %>
+</body>
 </html>

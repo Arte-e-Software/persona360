@@ -1,38 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Persona360">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="author" content="Pedro Silva - Arte-e-Software">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Persona360</title>
-    <link rel="canonical" href="https://Persona360.com.br">
-
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-<!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet">
-  </head>
-  
+  <%-include ./blocks/head.ejs %>
   <body>
     
 <div class="col-lg-8 mx-auto p-3 py-md-2">
@@ -81,12 +49,12 @@
         </ul>
       </div>
     </div>
-    <%-include ./parts/chat.ejs %>
+    <%-include ./blocks/chat.ejs %>
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
     Desenvolvido por <img src="img/arte-e-software.png" height="50" > &copy; 2021
   </footer>
 </div>
-   <%-include ./parts/js.ejs %>
+   <%-include ./blocks/javascript.ejs %>
   </body>
 </html>

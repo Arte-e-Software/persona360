@@ -27,11 +27,12 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '.', 'views'));
 
 // ROTAS
-app.get('/', require('./back_end/routes/home'));
-app.get('/adm', require('./back_end/routes/adm'));
-app.get('/build', require('./back_end/routes/build'));
-app.get('/build/run', require('./back_end/routes/build-run'));
-app.get('/api/:tenant/:entity/:method/', require('./back_end/routes/api'));
+app.get('/', require('./back-end/routes/home'));
+app.get('/adm', require('./back-end/routes/adm'));
+app.get('/build', require('./back-end/routes/.build/build'));
+app.get('/build/run', require('./back-end/routes/build-run'));
+app.get('/build/run/table/:action', require('./back-end/routes/build-run-table'));
+app.get('/api/:tenant/:entity/:method/', require('./back-end/routes/api'));
 
 // Errors
 app.use((req, res, next) => { next(createError(404)); });

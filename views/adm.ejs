@@ -1,35 +1,11 @@
 <!doctype html>
 <html lang="pt-br">
-<%-include ./parts/head.ejs %>
+<%-include ./blocks/head.ejs %>
 <body>
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="img/Persona360LogoTexto.svg" height="55rem"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navul">
-      </ul>
-      <div class="d-flex" id="navavatar">
-      </div>
-    </div>
-  </div>
-</nav>
-<main class="flex">
-  <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="img/Persona360.svg" alt="" width="200" height="200">
-    <h1 class="display-5 fw-bold">Que bom que veio.</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Seu Persona360 ainda não está configurado. Para fazer o build inicial, clique no botão abaixo e siga as instruções</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="/"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Voltar</button></a>
-        <a href="/build"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Iniciar</button></a>
-      </div>
-    </div>
-  </div>
-</main>
-<%-include ./parts/js.ejs %>
+    <%-include ./blocks/nav.ejs %>
+    <main class="flex">
+    <%-include ./blocks/model.ejs %>
+    </main>
+    <%-include ./blocks/javascript.ejs %>
 </body>
 </html>
-
