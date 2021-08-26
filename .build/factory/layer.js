@@ -1,6 +1,6 @@
 const factory = require('./index');
 
-module.exports = entity => {
+module.exports = (layer, entity) => {
 
     switch (layer) {
 
@@ -56,7 +56,7 @@ Path: ${entity.dir}/${layer.file[i]}
 error: `Erro em Entity: ${entity.name} Layer: ${layer.name} Module: ${layer.file[i]}`
         };
 
-        file(data);
+        factory.file(data);
         
     };
 };

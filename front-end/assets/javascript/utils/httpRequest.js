@@ -1,41 +1,22 @@
-async function httpRequest(method, api, payload, callback, error) {
+function httpRequest(config) {
 
-    if (!error) { error = (err) => feedBack(err, 'Ocorreu um erro', 'danger') }
-
-    switch (method) {
+    switch (config.method) {
 
         case 'GET':
-
-            axios.get(api)
-                .then((response) => {
-
-                    callback(response);
-
-                })
-                .catch((err) => {
-
-                    error(err);
-
-                })
+            axios.get(config.api)
+                .then(response => config.resolve(response))
+                .catch(err => config.reject(err))
             break;
 
         case 'POST':
 
-            axios.post(api, payload)
-                .then((response) => {
-
-                    callback(response);
-
-                })
-                .catch((err) => {
-
-                    error(err);
-
-                })
+            axios.post(config.api, config.payload)
+                .then(response => config.resolve(response))
+                .catch(err => config.reject(err))
             break;
 
         default:
-            return { error: 'Método não aceito' };
-    };
+            return alert('Ocorreu um erro', `${config.method}: verbo http recusado`, 'danger')
+    }
 
 };

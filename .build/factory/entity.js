@@ -1,6 +1,6 @@
 module.exports = entity => {
 
-    let   root = './back_end/entities'
+    let   root = './back-end/entities'
         , file = {
             js: ['create.js', 'read.js', 'update.js', 'delete.js', 'search.js'],
             ejs: ['create.ejs', 'read.ejs', 'update.ejs', 'delete.ejs', 'search.ejs']

@@ -1,7 +1,5 @@
-const fsCreateFile = require('../../back_end/utils/fs.create-file')
-    , factory = {
-        log: require('./log')
-    }
+const fsCreateFile = require('../../back-end/utils/fs.create-file')
+    , factory = require('./index')
     ;
 
 module.exports = entity => {

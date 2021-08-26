@@ -1,15 +1,17 @@
-exports = {
+function factory(){
 
-        entity: require('./entity'),
-
-        file: require('./file'),
-
-        layer: require('./layer'),
-
-        log: require('./log'),
-
-        table: require('./table'),
+let index = {
         
-        template: require('./template')
+        entity: require('./entity'),
+        file: require('./file'),
+        layer: require('./layer'),
+        table: require('./table'),
+        template: require('./template'),
+        log: require('./log')
+}
+
+return index;
 
 };
+
+module.exports = factory;

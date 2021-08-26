@@ -1,11 +1,14 @@
-const fsCreateFile = require('../../back_end/utils/fs.create-file');
+const fsCreateFile = require('../../back-end/utils/fs.create-file');
 
-module.exports = log => {
+function log(log){
 
     let  agora = new Date()
         , instante = `${agora.getHours()}:${agora.getMinutes()}:${agora.getSeconds()}:${agora.getMilliseconds()}`
+        , buildDate = agora.getFullYear() + agora.getMonth() + agora.getDate() + agora.getHours() + agora.getMinutes()
         ;
 
-   fsCreateFile(`./_builder/.log/build.log`, `\n${instante}: ${log}`);
+   return fsCreateFile(`../../../.doc/${buildDate}/build.log`, `\n${instante}: ${log}`);
 
 };
+
+module.exports = log;

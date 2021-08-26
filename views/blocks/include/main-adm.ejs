@@ -1,0 +1,148 @@
+<% // include server return 
+if(error) { 
+    // server return 
+    %>
+    <section class="section my-3">
+    <h5>
+        <%=error%>
+    </h5>
+    </section>
+    <% // end server return 
+} else { 
+    // server return 
+    %>
+    <section class="section mt-3 mb-3">
+        <h4>Revise as <%=entities.length%> tabelas </h4>
+        <p>Eventuais alterações deverão ser feitas diretamente no arquivo
+        <strong>back-end/config/entities.json</strong>
+        </p>
+        <hr>
+    </section>
+    <section class="section mb-5">
+        <% // end server return 
+        let thisEntityName = 'No Entity'
+            , fieldsMap = field => {
+                return `
+                {
+                name: '${field.name}',
+                type: '${field.type}',
+                length: '${field.length}',
+                null: '${field.null}',
+                searchable: '${field.searchable}',
+                form: false
+                }`
+            }
+        for(let i in entities) {
+
+            thisEntityName = entities[i].name
+
+            // insiro a pk no iniício da array de filds
+            //entities[i].fields.push(pk)
+            entities[i].fields.map((field) => { return fieldsMap(field) }, entities[i].fields)
+            arrayEntities.push( `
+                {
+                name: '${thisEntityName}', 
+                namespace: [${entities[i].namespace.map((name) => { return `'${name}'` }).join(', ')}],
+                values: [${entities[i].values.map((row) => { return row.map((value) => { return `'${value}'` }).join(', ') })}],
+                fields: [${entities[i].fields}]
+                }`
+                )
+        // server return
+        %>
+        <div class="accordion mb-3" id="accordion<%=thisEntityName%>">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading<%=thisEntityName%>">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%=thisEntityName%>"
+                        aria-expanded="true" aria-controls="collapse<%=thisEntityName%>">
+                        <h4>
+                            <%=thisEntityName%>
+                        </h4>
+                    </button>
+                </h2>
+                <div id="collapse<%=thisEntityName%>" class="accordion-collapse collapse show" aria-labelledby="heading<%=thisEntityName%>" data-bs-parent="#accordion<%=thisEntityName%>">
+                    <div class="accordion-body">
+                            <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <th>Coluna</th>
+                                <th>Tipo</th>
+                                <th>Tamanho</th>
+                                <th>Obrigatório</th>
+                                <th>Pesquisar</th>
+                                <th>Valor Padrão</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Id<%=thisEntityName%>
+                                        </td>
+                                        <td>
+                                            Number
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <%=true%>
+                                        </td>
+                                        <td>
+                                            <%=true%>
+                                        </td>
+                                        <td>
+                                            <%=false%>
+                                        </td>
+                                 </tr>
+                                <% // end server return 
+                                
+                                let fields = entities[i].fields
+
+                                for(let ii in fields)
+                                { 
+                                    // server return 
+                                    %>
+                                    <tr>
+                                    <td>
+                                        <%=fields[ii].name%>
+                                    </td>
+                                    <td>
+                                        <%=fields[ii].type%>
+                                    </td>
+                                    <td>
+                                        <%=fields[ii].length%>
+                                    </td>
+                                    <td>
+                                        <%=!fields[ii].null%>
+                                    </td>
+                                    <td>
+                                        <%=fields[ii].searchable%>
+                                    </td>
+                                    <td>
+                                        <%=fields[ii].default%>
+                                    </td>
+                                    </tr>
+                                <% // end server return 
+                                } 
+                                // server return 
+                                %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% // end server return 
+        } // end for(let i in entities) 
+        // server return 
+        %>
+        </section>
+        <div class="d-grid gap-2 mb-5">
+        <button class="btn btn-success btn-lg" id="btnBuild" onclick="build()">
+            Rodar Build
+        </button>
+        </div>
+<% // end server return 
+} // end if(error) 
+// server return
+%>
+<section class="section my-3"></section>
+<% // end include server return %>

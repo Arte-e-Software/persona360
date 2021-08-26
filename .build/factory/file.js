@@ -1,4 +1,4 @@
-const fsCreateFile = require('../../back_end/utils/fs.create-file')
+const fsCreateFile = require('../../back-end/utils/fs.create-file')
     , factory = {
         log: require('./log')
     }
@@ -11,7 +11,7 @@ module.exports = data => {
         , file = `${dir}/${data.file}`
         ;
 
-        factory.log(`// _builder/factory/file.js //  ${data.entity.name}: ${data.layer}({${data}}) `);
+        factory.log(`.builder/factory/file.js ${data.json()}`);
         return fsCreateFile(file, template);
 
 };

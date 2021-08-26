@@ -1,11 +1,17 @@
-<!doctype html>
-<html lang="pt-br">
-<%-include ./blocks/head.ejs %>
-<body>
-    <%-include ./blocks/nav.ejs %>
-    <main class="flex">
-    <%-include ./blocks/model.ejs %>
-    </main>
-    <%-include ./blocks/javascript.ejs %>
-</body>
-</html>
+<% // server return %>
+  <!doctype html>
+  <html lang="pt-br">
+  <%-include ./blocks/head.ejs %>
+
+    <body>
+      <%-include ./blocks/nav.ejs %>
+        <main class="flex">
+          <div class="container" id="main-adm">
+            <%-include ./blocks/include/main-adm.ejs %>
+          </div>
+        </main>
+        <%-include ./blocks/javascript.ejs %>
+    </body>
+
+  </html>
+  <% // end server return %>

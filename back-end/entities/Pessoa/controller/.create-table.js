@@ -1,9 +1,0 @@
-
-    
-    /*
-
-    {"name":"Pessoa","dir":"./back_end/entities/Pessoa","db":{"profile":"mssql","dir":"./back_end/entities/.mssql"},"namespace":["idPessoa","idTenant","name","email","senha","DataCad","isActive"],"fields":[{"name":"name","type":"String","length":"300","null":false,"default":false,"searchable":true,"form":{"label":"name","type":"text","value":"","required":true,"placeholder":"Informe seu name"}},{"name":"idTenant","type":"Number","length":false,"null":false,"default":false,"searchable":false,"form":false},{"name":"email","type":"String","length":"300","null":false,"default":false,"searchable":true,"form":{"label":"E-mail","type":"email","value":"","required":true,"placeholder":"Informe seu melhor e-mail"}},{"name":"password","type":"String","length":"62","null":false,"default":false,"form":{"label":"Senha","type":"password","value":"","required":true,"placeholder":"Crie uma senha forte"}},{"name":"DataCad","type":"Date","length":"","null":false,"default":"Date()","searchable":false,"form":false},{"name":"isActive","type":"Boolean","length":"","null":false,"default":"1","searchable":false,"form":false}],"values":[["Administrador do Persona360",1,"adm@persona360.com.br","28d268b387886c7831c3090db44e01c76e211b477fec942e75ff8cdcf2a7308b","GETDATE()",1],["Usuário do Persona360",1,"user@persona360.com.br","62e6fac579e25e48db0a8a8cf2f2e4050f79ee811a62b8b7a5fab007c8b0ee02","GETDATE()",1]],"layer":{"model":{"name":"model","file":["create.js","read.js","update.js","delete.js","search.js"]},"view":{"name":"view","file":["create.ejs","read.ejs","update.ejs","delete.ejs","search.ejs"]},"controller":{"name":"controller","file":["create.js","read.js","update.js","delete.js","search.js"]}}}
-
-    */
-    
-    

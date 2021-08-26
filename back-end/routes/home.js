@@ -4,7 +4,7 @@ const express = require('express')
 
 router.get('/', (req, res) => {
   
-  res.render('home', { });
+  res.render('home', { title: 'Persona360 :)' });
 
 });
 

@@ -1,88 +1,63 @@
-let btn = id => { return document.getElementById(id) }
+function build() {
 
-btn('btnBuild') ? btn('btnBuild').addEventListener('click', build, false) : () => { };
+    // Aqui começa o bate-papo via socket.io
+    // Emito uma mensagem dizendo que o botão foi clicado
+    // O listner precisa controlar todo o fluxo de build
+    // Dando feedback a cada evento relevante:
+    /**
+     * Nome da entity que está trabalhando
+     * Em qual factory está e em qual etapa do processo
+     * Feedback de tudo concluido com reltório de erros
+     * Se tudo bem, altera botão Build para /adm
+     * Em /adm renderiza a tela de login
+     * O dasboard abre com alert( N novas tabelas foram criadas)
+     * abrir a view Update de Pessoa para o administrador editar seus dados
+     * Voltando ao dashboard, dica sobre inserir dados nas outras tabelas
+     * deixar notificação na aba Entidades até que todas as tabelas sejam populadas
+     */
 
-async function build() {
+    // Abro a conexão com o servidor
+    const socket = io()
+    let date = new Date()
+        ,agora = ''
+         agora  = date.getFullYear + '-'
+         agora += date.getMonth + '-'
+         agora += date.getDay + ':'
+         agora += date.getHours + ':'
+         agora += date.getMinutes + ':'
+         agora += date.getSeconds + '.'
+         agora += date.getMilliseconds
 
-    btn('btnBuild').disabled = true;
-    btn('btnBuild').innerHTML = 'Aguarde';
+    socket.emit('star build',);
 
-    let callback = response => {
+    // when the client emits 'add user', this listens and executes
+    socket.on('add user', (username) => {
+        if (addedUser) return;
 
-        if (!response.data.error) {
+        // we store the username in the socket session for this client
+        socket.username = username;
+        ++numUsers;
+        addedUser = true;
+        socket.emit('login', {
+            numUsers: numUsers
+        });
+        // echo globally (all clients) that a person has connected
+        socket.broadcast.emit('user joined', {
+            username: socket.username,
+            numUsers: numUsers
+        });
+    });
 
-            create();
+}
 
-        } else {
+function resolve(response) {
 
-            handlerError(response.data.error, 'Erro no build');
+    alert('Sucesso', response, 'success')
 
-        };
+}
 
-    };
+function reject(err) {
 
-   await httpRequest('GET', '/build/run', false, callback, false);
+    alert('Erro', err, 'danger')
 
-};
-
-async function create() {
-
-    let callback = response => {
-
-        console.log(response);
-
-        if (!response.data.error) {
-
-            insert();
-
-        } else {
-
-            handlerError(response.data.error, 'Erro no Create Tables');
-
-        };
-
-    };
-
-    await httpRequest('GET', '/build/run/table/create', false, callback, false);
-
-};
-
-async function insert() {
-
-    let callback = response => {
-
-        if (!response.data.error) {
-
-           
-                btn('div-btns').innerHTML = '';
-                btn('div-btns').innerHTML = `
-
-                    <div class="container d-grid gap-2" id="div-btnAdm">
-                        <p>
-                            <h4>Parabéns! Seu ADM está pronto.</h4>
-                            <h5><strong>Usuário: adm@persona360.com.br | senha: adm@Persona360</strong></h5>
-                        </p>
-                        <a href="/adm"><button class="btn btn-lg btn-primary" id="btnAdm">Ir para o ADM</button></a>
-                    </div>
-           
-           `;
-
-        } else {
-
-            handlerError(response.data.error, 'Erro no Insert Tables');
-            
-        };
-
-    };
-
-    await httpRequest('GET', '/build/run/table/insert', false, callback, false);
-
-};
-
-function handlerError(error, where){
-
-    feedBack(error, where, 'danger');
-    btn('btnBuild').disabled = false;
-    btn('btnBuild').innerHTML = 'Reiniciar construção do MVC';
-
-};
+}
