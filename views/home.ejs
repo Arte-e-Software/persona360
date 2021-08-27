@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
-  (:-include ./blocks/head.ejs :)
+  <%-include ./blocks/head.ejs %>
   <body>
     
 <div class="col-lg-8 mx-auto p-3 py-md-2">
@@ -49,12 +49,12 @@
         </ul>
       </div>
     </div>
-    (:-include ./blocks/chat.ejs :)
+    <%-include ./blocks/chat.ejs %>
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
     Desenvolvido por <img src="assets/images/arte-e-software.png" height="50" > &copy; 2021
   </footer>
 </div>
-   (:-include ./blocks/javascript.ejs :)
+   <%-include ./blocks/javascript.ejs %>
   </body>
 </html>

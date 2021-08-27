@@ -7,6 +7,7 @@ module.exports = server => {
     /**
      * Inicio os módulos que usam o socket
      */
-     require('./chat')(io);
+    require('./chat')(io);
+    require('./httpCall')(io);
 
 };
