@@ -8,7 +8,7 @@ module.exports = io => {
         socket.on('call', data => {
             
             // Nesse ponto do código eu faço um proxy de chamadas
-           if (data.req === 'build' && data.payload.caller === "http://localhost/adm") {
+           if (data.payload.caller === "http://localhost/adm") {
 
                 let entity = require('../back-end/config/config.json').entity
                 res = 'Pedido enviado para o controller'
