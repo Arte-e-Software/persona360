@@ -1,4 +1,4 @@
-function httpCall(req, payload, conductor) {
+function call(req, payload, conductor) {
 
     // Abro a conexão com o servidor
     const socket = io()

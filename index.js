@@ -21,9 +21,6 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
-var socketIO = require('./socket.io/socket.io.server')
-    socketIO(server);
-
 /**
  * Listen on provided port, on all network interfaces.
  */
@@ -93,3 +90,5 @@ function onListening() {
 }
 
 console.log(`Servidor em localhost:`+ port);
+require('./socket.io')(server);
+console.log('Socket.io ouvindo em localhost:'+ port +' (clientes em /socket.io/index.js)');
