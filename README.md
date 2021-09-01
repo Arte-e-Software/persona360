@@ -1,5 +1,22 @@
 ![Image of persons360](https://persona360.com.br/img/Persona360Logo.svg)
 
+How I think:
+
+> Pedro Silva, 2021-08-31 17:25 
+> Listening: Bach, Keybord Partita No.4 em Dó Maior
+![Nelson Freire from Cinamarden](https://cinemarden.files.wordpress.com/2012/01/97747-122-nelsonfreire.jpg)
+Format: ![Nelson Freire](url)
+> Pianista: O Brasileiro Nelson Freire
+> Piano: BMW 828
+
+> Romanos 8.28 'E sabemos que todas as coisas contribuem
+>               juntamente para o bem daqueles que amam a Deus, 
+>               daqueles que são chamados segundo o seu propósito.'
+
+> PARE e ouça
+
+> e programe com essa alegria
+
 # persona360
 
 Persona360.com.br
