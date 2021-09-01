@@ -89,6 +89,6 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-console.log(`Servidor em localhost:`+ port);
+console.log(`Express ouvindo em localhost:`+ port);
 require('./socket.io')(server);
 console.log('Socket.io ouvindo em localhost:'+ port +' (clientes em /socket.io/index.js)');

@@ -1,27 +1,28 @@
 const sql = require('mssql');
 
-module.exports = (banco, consulta, success, error) => {
-
-     new sql.ConnectionPool(banco).connect().then(pool => {
-
-          return pool.request().query(consulta)
-        
-          }).then(result => {
-        
-            let rows = result.recordset
-            /*
-            res.setHeader('Access-Control-Allow-Origin', '*')
-            res.status(200).json(rows);
-            */
-            success(rows)
-            sql.close()
-        
-          }).catch(err => {
-        
-            //res.status(500).send({ message: `${err}`})
-            error(err)
-            sql.close()
-        
-          })
+module.exports = async (db, query, res) => {
   
-};
+  sql.connect(db).then(() => {
+
+    return sql.query(query)
+
+  }).then(result => {
+
+    sql.close()  
+    typeof(res) === 'object' ? res.status(200).send(result) : res(result);
+
+  }).catch(err => {
+    
+    sql.close()
+    res.status(500).send(err)
+
+  })
+
+  sql.on('error', err => {
+   
+    sql.close()
+    res.status(500).send(err)
+
+  })
+
+}

@@ -28,11 +28,12 @@ app.set('views', path.join(__dirname, '.', 'views'))
 // ROTAS - res.render
 app.get('/', require('./back-end/routes/home'))
 app.get('/adm', require('./back-end/routes/adm'))
+app.get('/aes', require('./back-end/routes/aes'))
 
 // ROTAS - res.send
 app.all('/build/run', require('./back-end/routes/build-run'))
 app.all('/build/run/table/:action', require('./back-end/routes/build-run-table'))
-app.all('/api/:tenant/:entity/:method/', require('./back-end/routes/api'))
+app.all('/api', require('./back-end/routes/api'))
 
 // Errors
 app.use((req, res, next) => { next(createError(404)) })

@@ -1,5 +1,3 @@
-const conductor = require('./conductor');
-
 module.exports = io => {
 
     io.on('connection', socket => {
@@ -9,10 +7,12 @@ module.exports = io => {
 
         socket.on('call', data => {
 
-            // Nesse ponto do código eu faço um conductor de chamadas
+            // Nesse ponto do código eu faço um controller de chamadas
             if (data.payload.caller === "http://localhost/adm") {
 
-                res = 'Pedido enviado para o conductor'
+                const controller = require('./controller');
+
+                res = 'Pedido enviado para o controller'
                 error = false
 
                 socket.emit('call', {
@@ -25,7 +25,7 @@ module.exports = io => {
 
                 })
 
-                conductor(socket, data)
+                controller(socket, data)
 
             } else {
 

@@ -37,7 +37,7 @@ module.exports = data => {
     return `
 ${data.comment}
 
-module.exports = (call, req, res) => {
+module.exports = data => {
 
 // Call é o objeto de chamada da api. call = {tenant: {idTenant: String, name: String, apikey: String, domain: String}, entity: String, method: String} 
 // tenant: objeto com os dados do tenant (ainda não está 100% definido)

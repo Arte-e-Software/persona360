@@ -1,19 +1,39 @@
 const express = require('express')
   , router = express.Router()
+  , handlerDataError = require('../utils/handlerDataError')
   ;
 
-module.exports = router.all('/api/:version/:entity/:method/', (req, res) => {
+module.exports = router.all('/api', (req, res) => {
 
-  let call = {
+  let error = handlerDataError(req.method, req.body);
 
-    version: req.params.version, // pensar em como fazer na versão multitenant
-    entity: req.params.entity,
-    method: req.params.method
+  if (error) {
+
+    res.status(500).send(error)
+
+  } else {
+
+    let payload = req.body
+      , entity = payload.entity
+      , module = payload.module
+      , file = `../entities/${entity}/controllers/${module}`
+      , status
+      , controller
+      ;
+
+    try {
+
+      controller = require(file)
+      status = 200
+      controller(payload, res)
+
+    } catch {
+
+      status = 500
+      return res.status(status).send(`Erro de <strong>API</strong> em api/${file.split('../')[1]}`)
+
+    }
 
   }
-    , controller = require(`../entity/${call.entity}/controller/${call.method}`);
-  ;
 
-  controller(call, req, res);
-
-});
+})

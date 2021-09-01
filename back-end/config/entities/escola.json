@@ -1,0 +1,64 @@
+{
+    "name": "Escola",
+    "namespace": [
+        "idEscola",
+        "name",
+        "idPessoa",
+        "DataCad",
+        "isActive"
+    ],
+    "values": [
+        [
+            "Escola Persona360",
+            1,
+            "adm.build@persona360.com.br",
+            1,
+            "GETDATE()",
+            true
+        ]
+    ],
+    "fields": [
+        {
+            "name": "name",
+            "type": "String",
+            "length": "300",
+            "null": false,
+            "default": false,
+            "searchable": true,
+            "form": {
+                "label": "name",
+                "type": "text",
+                "value": "",
+                "required": true,
+                "placeholder": "Informe o name da sua Escola"
+            }
+        },
+        {
+            "name": "idPessoa",
+            "type": "Number",
+            "length": "",
+            "null": false,
+            "default": false,
+            "searchable": false,
+            "form": false
+        },
+        {
+            "name": "DataCad",
+            "type": "Date",
+            "length": "",
+            "null": false,
+            "default": "Date()",
+            "searchable": false,
+            "form": false
+        },
+        {
+            "name": "isActive",
+            "type": "Boolean",
+            "length": "",
+            "null": false,
+            "default": "1",
+            "searchable": true,
+            "form": false
+        }
+    ]
+}
