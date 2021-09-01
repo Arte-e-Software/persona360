@@ -1,0 +1,39 @@
+{
+    "name": "Aes",
+    "namespace": [
+        "idAes",
+        "client",
+        "cadDate",
+        "isActive"
+    ],
+    "values": false,
+    "fields": [
+        {
+            "name": "client",
+            "type": "String",
+            "length": "500",
+            "null": false,
+            "default": false,
+            "searchable": false,
+            "form": false
+        },
+        {
+            "name": "cadDate",
+            "type": "Date",
+            "length": "",
+            "null": false,
+            "default": "Date()",
+            "searchable": false,
+            "form": false
+        },
+        {
+            "name": "isActive",
+            "type": "Boolean",
+            "length": "",
+            "null": false,
+            "default": "1",
+            "searchable": false,
+            "form": false
+        }
+    ]
+}

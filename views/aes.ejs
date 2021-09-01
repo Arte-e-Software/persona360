@@ -1,0 +1,22 @@
+<% // server return %>
+    <!doctype html>
+    <html lang="pt-br">
+    <%-include ./blocks/head.ejs %>
+
+        <body>
+            <%-include ./blocks/nav.ejs %>
+                <main class="flex">
+                    <div class="container" id="main-aes">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" type="button"
+                                onclick="request('/api', { entity: 'aes', module: 'create', params: { client: document.baseURI }}, helper, false)">
+                                Create
+                            </button>
+                        </div>
+                    </div>
+                </main>
+                <%-include ./blocks/javascript.ejs %>
+        </body>
+
+    </html>
+    <% // end server return %>

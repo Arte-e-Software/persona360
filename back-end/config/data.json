@@ -1,0 +1,7 @@
+{
+    "timestamp": "new Date()",
+    "handshake": "true||false",
+    "method": "method",
+    "payload": "payload",
+    "error": false
+}
