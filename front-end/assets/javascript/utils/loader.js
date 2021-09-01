@@ -4,7 +4,7 @@
         
         btn.addEventListener('click', () => {
 
-            request('/api', { entity: 'aes', module: 'create', params: { client: document.baseURI } }, helper, false)
+            request('/api', { "entity": 'aes', "module": 'create', "params": { "client": document.baseURI } }, helper, false)
 
         })
 
