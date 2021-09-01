@@ -5,7 +5,14 @@ const express = require('express')
 
 module.exports = router.all('/api', (req, res) => {
 
-  let error = reqError(req.method, req.body);
+  /**
+   * 
+   * Na versão mutitenant o tenantDB será o nome do tenant e virá na req
+   * 
+   */
+  const tenantDB = 'aes'
+
+  let error = reqError(req.method, req.body)
 
   if (error) {
 
@@ -21,11 +28,11 @@ module.exports = router.all('/api', (req, res) => {
 
     try {
 
-      return require(controller)(payload, res)
+      return require(controller)(tenantDB, payload, res)
 
     } catch {
 
-      return res.status(500).send(`Erro de <strong>API</strong> em api/${file.split('../')[1]}`)
+      return res.status(500).send({ "err": `Erro de <strong>API</strong> em api/${file.split('../')[1]}` })
 
     }
 

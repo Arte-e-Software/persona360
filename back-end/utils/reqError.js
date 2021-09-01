@@ -16,7 +16,7 @@ module.exports = (method, payload) => {
 
     if (errorFound) {
 
-        reqError = `Verifique: <strong>${reqError}</strong>`
+        reqError = { "err": `Verifique: <strong>${reqError}</strong>` }
 
     } else {
 
@@ -32,14 +32,14 @@ module.exports = (method, payload) => {
                     "delete": [`id${entity.name}`, `idPessoa`],
                     "search": [`name`, `isActive`]
                 }
-                , paramsError =[]
+                , paramsError = []
                 ;
 
             for (let param in reqParams[payload.module]) { !params[reqParams[payload.module][param]] ? paramsError.push(reqParams[payload.module][param]) : () => { }; }
-            paramsError.length > 0 ? reqError = `Parâmetros obrigatórios omitidos:<p>${paramsError.join('<br>')}</p> para a entidade <strong>${entity.name.toUpperCase()}</strong>` : () => { };
+            paramsError.length > 0 ? reqError = { "err": `Parâmetros obrigatórios omitidos:<p>${paramsError.join('<br>')}</p> para a entidade <strong>${entity.name.toUpperCase()}</strong>` } : () => { };
 
-        } catch { reqError = `Entidade <strong>${payload.entity.toUpperCase()}</strong> não localizada ou corrompida` }
-    
+        } catch { reqError = { "err": `Entidade <strong>${payload.entity.toUpperCase()}</strong> não localizada ou corrompida` } }
+
     }
 
     return reqError
