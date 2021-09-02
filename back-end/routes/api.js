@@ -23,19 +23,10 @@ module.exports = router.all('/api', (req, res) => {
     let payload = req.body
       , entity = payload.entity
       , module = payload.module
-      , controller = `../entities/${entity}/controllers/${module}`
+      , controller = require(`../entities/${entity}/controllers/${module}`)
       ;
-
-    try {
-
-      return require(controller)(tenantDB, payload, res)
-
-    } catch {
-
-      return res.status(500).send(`Erro de <strong>API</strong> em /api`)
-
-    }
+    
+      controller(tenantDB, payload, res)
 
   }
-
 })
