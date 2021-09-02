@@ -14,7 +14,7 @@ var createError = require('http-errors')
 require('dotenv').config({ path: process.env.NODE_ENV === 'dev' ? '.dev.env' : '.env' })
 
 // Config middlewares
-if(process.env.NODE_ENV !== 'dev') { app.use(helmet()) }
+//if(process.env.NODE_ENV !== 'dev') { app.use(helmet()) }
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
