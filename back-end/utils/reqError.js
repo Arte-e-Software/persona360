@@ -3,7 +3,7 @@ module.exports = (method, payload) => {
     let methods = ['GET', 'POST']
         , modules = ['create', 'read', 'update', 'delete', 'search']
         , error = [false, false, false, false] //  method, entity, module, params
-        , reqError = false
+        , msg = ''
         ;
 
     error[0] = ['method', methods.indexOf(method) < 0]
@@ -12,11 +12,11 @@ module.exports = (method, payload) => {
     error[3] = ['params', !payload.params]
 
     errorFound = error.map(err => { return err[1] }).reduce((e, err) => { if (err) { e = err } return e })
-    reqError = error.map(err => { if (err[1]) { return err[0].toUpperCase() } }).filter(err => { if (err) { return err } }).join(' e ')
+    msg = error.map(err => { if (err[1]) { return err[0].toUpperCase() } }).filter(err => { if (err) { return err } }).join(' e ')
 
     if (errorFound) {
 
-        reqError = { "err": `Verifique: <strong>${reqError}</strong>` }
+        msg = `Verifique <strong>${msg}</strong>`
 
     } else {
 
@@ -36,12 +36,12 @@ module.exports = (method, payload) => {
                 ;
 
             for (let param in reqParams[payload.module]) { !params[reqParams[payload.module][param]] ? paramsError.push(reqParams[payload.module][param]) : () => { }; }
-            paramsError.length > 0 ? reqError = { "err": `Parâmetros obrigatórios omitidos:<p>${paramsError.join('<br>')}</p> para a entidade <strong>${entity.name.toUpperCase()}</strong>` } : () => { };
+            paramsError.length > 0 ? msg = `Parâmetros obrigatórios omitidos <p>${paramsError.join('<br>')}</p> para a entidade <strong>${entity.name.toUpperCase()}</strong>` : () => { };
 
-        } catch { reqError = { "err": `Entidade <strong>${payload.entity.toUpperCase()}</strong> não localizada ou corrompida` } }
+        } catch { msg = `Entidade <strong>${payload.entity.toUpperCase()}</strong> não localizada ou corrompida` }
 
     }
 
-    return reqError
+    return msg
 
 };

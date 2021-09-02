@@ -32,7 +32,7 @@ module.exports = router.all('/api', (req, res) => {
 
     } catch {
 
-      return res.status(500).send({ "err": `Erro de <strong>API</strong> em api/${file.split('../')[1]}` })
+      return res.status(500).send(`Erro de <strong>API</strong> em api/${file.split('../')[1]}`)
 
     }
 
