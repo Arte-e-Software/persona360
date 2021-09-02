@@ -11,6 +11,3 @@
     }
 
 })(document.getElementById('btnCreate'));
-    
-    
-

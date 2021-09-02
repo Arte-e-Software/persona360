@@ -14,15 +14,14 @@ module.exports = async (db, query, res) => {
   }).catch(err => {
 
     sql.close()
-    res.status(500).send({ "err": err })
+    res.status(500).send(err)
 
   })
 
   sql.on('error', err => {
 
     sql.close()
-    res.status(500).send({ "err": err })
+    res.status(500).send(err)
 
   })
-
 }
