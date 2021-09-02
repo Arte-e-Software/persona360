@@ -1,6 +1,7 @@
+const { response } = require('express');
 const sql = require('mssql');
 
-module.exports = async (db, query, res) => {
+module.exports = (db, query, res) => {
 
   sql.connect(db).then(() => {
 
@@ -9,7 +10,7 @@ module.exports = async (db, query, res) => {
   }).then(result => {
 
     sql.close()
-    typeof (res) === 'object' ? res.status(200).send(result) : res(result);
+    res.status(200).send(result)
 
   }).catch(err => {
 
@@ -20,7 +21,6 @@ module.exports = async (db, query, res) => {
 
   sql.on('error', err => {
 
-    sql.close()
     res.status(500).send(err)
 
   })

@@ -2,7 +2,13 @@ function request(url, payload, callback) {
 
     axios.post(url, payload)
         .then(response => { callback(responseJsonParse(response.data), payload) })
-        .catch(err => { alert('Erro', `${err.response.data} - <small>Detalhes no console</small>`, 'danger'); err = JSON.stringify(err); console.log(err) })
+        .catch(err => {
+            
+            err = err.response.data
+            console.log(err)
+            alert('Erro', `${err} - <small>Detalhes no console</small>`, 'danger')
+
+        })
 
 }
 
