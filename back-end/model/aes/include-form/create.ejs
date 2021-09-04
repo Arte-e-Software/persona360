@@ -1,0 +1,41 @@
+<button class="btn btn-primary btn-lg" type="button" id="btnCreate">
+    Create
+</button>
+<script>
+
+    document.onload((btn) => {
+
+        if (btn) {
+
+            btn.addEventListener('click', () => {
+
+                let req = {
+
+                    url: '/api',
+                    payload: { 
+                        "entity": "aes", 
+                        "module": "create", 
+                        "params": { "client": document.baseURI } 
+                    },
+                    callback: helper
+
+                }
+
+                request(req)
+
+            })
+
+            function helper(response, payload) {
+
+                console.log(response)
+                console.log(payload)
+                alert('Sucesso', response, 'success')
+
+
+            }
+
+        }
+
+    })(document.getElementById('btnCreate'));
+
+</script>

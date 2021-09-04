@@ -1,5 +1,11 @@
+<% 
+entities = payload.entities
+entities = entities.map(entity => { return entity.name })
+%> 
+<meta name="env" content="<%=env%>">
+<meta name="entities" content="<%=entities%>">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="Pedro Silva">
-<meta name="generator" content="aes. 1.3">
+<meta name="generator" content="Persona360 1.0">

@@ -1,12 +1,9 @@
-<head>
-  <%-include meta.ejs %>
-    <%-include tenant.ejs %>
-      <%-include seo.ejs %>
-        <%-include share.ejs %>
-          <title>
-            <%=title%>
-          </title>
-          <%-include style.ejs %>
-
+<head><%-include meta.ejs %>
+<%-include tenant.ejs %>
+<%-include seo.ejs %>
+<%-include share.ejs %>
+<title><%=title%></title>
+<%-include style.ejs %>
+<script>var meta = document.getElementsByTagName('meta')</script>
+<script src="assets/javascript/utils/alert.js"></script>
 </head>
-<%-include alert.ejs %>

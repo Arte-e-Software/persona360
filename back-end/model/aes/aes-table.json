@@ -1,0 +1,29 @@
+[
+  {
+    "name": "aes",
+    "id": 405576483,
+    "xtype": "U ",
+    "uid": 8,
+    "info": 0,
+    "status": 0,
+    "base_schema_ver": 0,
+    "replinfo": 0,
+    "parent_obj": 0,
+    "crdate": "2021-08-30T09:25:59.717",
+    "ftcatid": 0,
+    "schema_ver": 0,
+    "stats_schema_ver": 0,
+    "type": "U ",
+    "userstat": 1,
+    "sysstat": 3,
+    "indexdel": 0,
+    "refdate": "2021-08-30T09:25:59.717",
+    "version": 0,
+    "deltrig": 0,
+    "instrig": 0,
+    "updtrig": 0,
+    "seltrig": 0,
+    "category": 0,
+    "cache": 0
+  }
+]
