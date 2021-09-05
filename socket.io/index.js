@@ -1,5 +1,4 @@
-const chat = require('./chat')
-    , call = require('./call')
+const call = require('./call')
     , socket = require('socket.io')
     ; 
 
@@ -9,7 +8,6 @@ module.exports = server => {
     let io = socket(server);
 
     // módulos clientes
-    chat(io);
     call(io);
 
 };

@@ -1,55 +1,19 @@
-module.exports = io => {
+const package = require('./package')
 
+function call(io) {
     io.on('connection', socket => {
-
-        let res = ''
-            , error = true
-
-        socket.on('call', data => {
-
-            // Nesse ponto do código eu faço um controller de chamadas
-            if (data.payload.caller === "http://localhost/adm") {
-
-                const controller = require('./controller');
-
-                res = 'Pedido enviado para o controller'
-                error = false
-
-                socket.emit('call', {
-
-                    timestamp: new Date(),
-                    handshake: true,
-                    res: res,
-                    payload: require('../back-end/config/config.json').entity,
-                    error: error
-
-                })
-
-                controller(socket, data)
-
+        socket.on('call', received => {
+            if (received) {
+                // desenvolver tratamento de segurança
+                if (received.method && received.payload && !received.error) {
+                    require('./api')(socket, received)
+                } else {
+                    socket.emit('call', package(undefined, 'pacote corrompido', true))
+                }
             } else {
-
-                res = 'A requisição foi rejeitada pelo servidor'
-                error = true
-
-                socket.emit('call', {
-
-                    timestamp: new Date(),
-                    handshake: true,
-                    res: res,
-                    error: error
-
-                })
+                socket.emit('call', package(undefined, 'pedido rejeitado pelo servidor', true))
             }
-
         })
-
-        socket.on('disconnect', () => {
-
-            socket.emit('a user left', { data: { msg: 'bye' } })
-
-        })
-
     })
-
 }
+module.exports = call

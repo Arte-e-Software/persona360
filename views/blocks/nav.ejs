@@ -1,13 +1,26 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow">
+<nav class="navbar navbar-expand-md navbar-primary fixed-top bg-white" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="assets/images/Persona360LogoTexto.svg" height="55rem"></a>
+        <a class="navbar-brand" href="/adm"><img src="assets/images/Persona360LogoTexto.svg" height="50rem"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navul"></ul>
-            <div class="d-flex" id="navavatar"></div>
+            <div class="navbar-nav me-auto mb-md-0" id="nav-adm">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="false"><i
+                            class="bi bi-ui-checks-grid"></i>&nbsp;&nbsp;Mesa</button>
+                    <button class="nav-link" id="nav-resources-tab" data-bs-toggle="tab" data-bs-target="#nav-resources"
+                        type="button" role="tab" aria-controls="nav-resources" aria-selected="false"><i
+                            class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos</button>
+                    <button class="nav-link" id="nav-calendar-tab" data-bs-toggle="tab" data-bs-target="#nav-calendar"
+                        type="button" role="tab" aria-controls="nav-calendar" aria-selected="false"><i class="bi bi-calendar2-check"></i>&nbsp;&nbsp;Calendário</button>
+                    <button class="nav-link" id="nav-config-tab" data-bs-toggle="tab" data-bs-target="#nav-config"
+                        type="button" role="tab" aria-controls="nav-config" aria-selected="false"><i
+                            class="bi bi-gear"></i>&nbsp;&nbsp;Configurações</button>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

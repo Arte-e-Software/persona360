@@ -1,0 +1,5 @@
+{
+    "entity": "STRING *nome da entidade em lowerCase*",
+    "module": "STRING *create read update delete search* ",
+    "params": "JSON *{ [param name]: ANY, [param name]: ANY ... }*"
+}
