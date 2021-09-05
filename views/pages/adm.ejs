@@ -7,8 +7,40 @@
       <%-include ../blocks/nav.ejs %>
         <main class="flex">
           <div class="container" id="main-adm">
-            <%-include ../blocks/alert.ejs %>
-            <%-include ../includes/adm-inc.ejs %>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container">
+                  <h4><i class="bi bi-ui-checks-grid"></i>&nbsp;&nbsp;Olá Pedro Silva</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <%-include ../includes/adm-home-inc.ejs %>
+              </div>
+              <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab">
+                <div class="container">
+                  <h4><i class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <%-include ../includes/resources-inc.ejs %>
+              </div>
+              <div class="tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
+                <div class="container">
+                  <h4><i class="bi bi-gear"></i>&nbsp;&nbsp;Configurações</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <%-include ../includes/config-inc.ejs %>
+              </div>
+              <div class="tab-pane fade" id="nav-calendar" role="tabpanel" aria-labelledby="nav-calendar-tab">
+                <div class="container">
+                  <h4><i class="bi bi-calendar2-check"></i>&nbsp;&nbsp;Calendário</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <%-include ../includes/calendar-inc.ejs %>
+              </div>
+            </div>
           </div>
         </main>
         <%-include ../blocks/javascript.ejs %>
