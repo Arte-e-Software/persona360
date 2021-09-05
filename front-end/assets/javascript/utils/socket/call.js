@@ -1,24 +1,28 @@
-function call(method, payload, controller) {
+function call(method, payload, callback) {
 
     // Abro a conexão com o servidor
     const socket = io()
+    let error = !true
 
     // Emito a chamada
-    socket.emit('call', outgoing(method, payload, false))
+    error = false
+    socket.emit('call',
+        package(method, payload, error)
+    )
 
     // Fico ouvindo o retorbo da chamada
-    socket.on('call', incoming => {
+    socket.on('call', received => {
 
         // Conexão estabelecida
-        if (incoming.handshake) {
+        if (received.handshake) {
 
-            // se erro lógico: controller lê call.error
-            controller.then(socket, incoming)
+            // se erro lógico: callback lê call.error
+            callback(socket, received)
 
-        } else {
+        } else { 
 
             // erro de conexão
-            controller.catch(socket, incoming)
+            alert('Erro', 'pedido rejeitado pelo servidor')
 
         }
 

@@ -1,8 +1,9 @@
 function alert(atencion, msg, type) {
-   
+    
+        console.log(msg)
+
         if(atencion === 'dev'){ type = 'secondary' }
         let alert = document.getElementById('alert')
-        msg = JSON.stringify(msg)
         alert.innerHTML = `
         <div class="alert alert-${type} alert-dismissible fade show" role="alert">
             <h4><strong>${atencion}</strong></h4>

@@ -32,7 +32,7 @@ app.set('views', path.join(__dirname, '.', 'views'))
 app.get('/', require('./back-end/routes/home'))
 app.get('/adm', require('./back-end/routes/adm'))
 
-// rotas - res.send json
+// rotas - res.send
 app.all('/api', require('./back-end/routes/api'))
 
 // Errors ******* ainda não trabalhei nisso

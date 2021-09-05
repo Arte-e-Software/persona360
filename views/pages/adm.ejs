@@ -1,12 +1,18 @@
-<!doctype html>
-<html lang="pt-br">
-<%-include ../blocks/head.ejs %>
-<body>
-<%-include ../blocks/nav.ejs %>
-<main class="flex">
-<%-include ../blocks/alert.ejs %>
-<div class="container" id="main-adm"><%-include ../includes/v1/adm-inc.ejs %></div>
-</main>
-<%-include ../blocks/javascript.ejs %>
-</body>
-</html>
+<% // flush %>
+  <!doctype html>
+  <html lang="pt-br">
+  <%-include ../blocks/head.ejs %>
+
+    <body>
+      <%-include ../blocks/nav.ejs %>
+        <main class="flex">
+          <div class="container" id="main-adm">
+            <%-include ../blocks/alert.ejs %>
+            <%-include ../includes/adm-inc.ejs %>
+          </div>
+        </main>
+        <%-include ../blocks/javascript.ejs %>
+    </body>
+
+  </html>
+  <% // flush /adm %>

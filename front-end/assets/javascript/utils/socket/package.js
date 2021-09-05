@@ -1,4 +1,4 @@
-function outgoing(method, payload, error) {
+function package(method, payload, error) {
     return {
         "timestamp": new Date(),
         "handshake": true,
@@ -7,5 +7,3 @@ function outgoing(method, payload, error) {
         "error": error
     }
 }
-
-module.exports = outgoing

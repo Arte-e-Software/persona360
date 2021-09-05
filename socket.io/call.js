@@ -1,25 +1,19 @@
-const outgoing = require('./outgoing')
-const controller = require('./controller')
+const package = require('./package')
 
-module.exports = io => {
-
+function call(io) {
     io.on('connection', socket => {
-
-        socket.on('call', incoming => {
-
-            if (incoming.method === 'post') { // desenvolver tratamento de segurança
-
-                socket.emit('call',
-                    outgoing('post', 'Pedido enviado para o controller', false)
-                )
-
+        socket.on('call', received => {
+            if (received) {
+                // desenvolver tratamento de segurança
+                if (received.method && received.payload && !received.error) {
+                    require('./api')(socket, received)
+                } else {
+                    socket.emit('call', package(undefined, 'pacote corrompido', true))
+                }
             } else {
-
-                socket.emit('call',
-                    outgoing('post', 'Pedido rejeitado pelo servidor', true)
-                )
+                socket.emit('call', package(undefined, 'pedido rejeitado pelo servidor', true))
             }
-        }
-        )
+        })
     })
 }
+module.exports = call
