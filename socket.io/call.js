@@ -19,15 +19,8 @@ function call(io) {
 
                             // tem que melhorar MUITO isso
                             let queryToParse = received.payload
-                                , error = queryToParse.toUpperCase().substring(0,6) != 'SELECT'
-
-                            if (error) {
-
-                                socket.emit('call', package('sql', `query recusada ${queryToParse}`, true))
-
-                            } else {
-
-                                let forbidden = [
+                                , error = queryToParse.toUpperCase().substring(0, 6) != 'SELECT'
+                                , forbidden = [
 
                                     'drop',
                                     'create',
@@ -39,42 +32,42 @@ function call(io) {
 
                                 ]
 
-                                error = forbidden.indexOf(queryToParse) > 0
+                            error = forbidden.indexOf(queryToParse) > 0
 
-                                if (!error) {
+                            if (error) {
 
-                                    let parsedQuery = queryToParse
+                                socket.emit('call', package('sql', `query recusada ${queryToParse}`, true))
 
-                                    const conn = require('../back-end/database/mssql/conn')
-                                    const sql = require('mssql')
+                            } else {
 
-                                    let query = parsedQuery
-                                        , db = conn['aes'] // em desenvolvimento, virá do tenant
+                                socket.emit('call', package('sql', 'Aguarde retorno do servidor', false))
 
-                                    sql.connect(db).then(() => { return sql.query(query) })
-                                        .then(result => {
+                                let parsedQuery = queryToParse
 
-                                            sql.close();
-                                            socket.emit('call', package('sql', result, false))
+                                const conn = require('../back-end/database/mssql/conn')
+                                const sql = require('mssql')
 
-                                        })
-                                        .catch(err => {
+                                let query = parsedQuery
+                                    , db = conn['aes'] // em desenvolvimento, virá do tenant
 
-                                            sql.close();
-                                            socket.emit('call', package('sql', err, true))
+                                sql.connect(db).then(() => { return sql.query(query) })
+                                    .then(result => {
 
-                                        })
-                                    sql.on('error', err => {
+                                        sql.close();
+                                        socket.emit('call', package('sql', result, false))
 
+                                    })
+                                    .catch(err => {
+
+                                        sql.close();
                                         socket.emit('call', package('sql', err, true))
 
                                     })
+                                sql.on('error', err => {
 
-                                } else {
+                                    socket.emit('call', package('sql', err, true))
 
-                                    socket.emit('call', package('sql', `query recusada`, true))
-
-                                }
+                                })
 
                             }
                             break;

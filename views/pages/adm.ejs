@@ -55,6 +55,7 @@
                         class="bi bi-play-btn"></i></button>
                   </form>
                 </div>
+                <div class="container mt-3" id="sql-return"></div>
               </div>
             </div>
           </div>
@@ -76,9 +77,32 @@
 
             function sqlReturn(socket, received) {
 
-              let payload = received.payload
-              console.log(payload)
-              
+              let method = received.method
+              , payload = received.payload
+              , error = received.error
+
+              if(error){
+
+                alert('Erro', payload, 'danger')
+
+              } else {
+
+                if(payload === 'Aguarde retorno do servidor') {
+
+                  document.getElementById('runsql').innerHTML = payload
+                  document.getElementById('runsql').disabled = true
+
+                } else {
+
+                  payload = JSON.stringify(payload.recordset)
+                  document.getElementById('sql-return').innerHTML = `<code>${payload}</code>`
+                  document.getElementById('runsql').innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
+                  document.getElementById('runsql').disabled = false
+
+                }
+
+              }
+
             }
 
           </script>
