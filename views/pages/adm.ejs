@@ -49,8 +49,8 @@
                 <div class="container form-group">
                   <form class="form-group">
                     <label for="text-area-query">Query</label>
-                    <textarea class="form-control font-monospace border-white bg-dark text-success"
-                      id="text-area-query"></textarea>
+                    <textarea class="form-control font-monospace border rounded bg-light"
+                      id="text-area-query" style="height: 16rem;">SELECT * FROM SYSOBJECTS WHERE XTYPE = 'U'</textarea>
                     <button class="form-control btn btn-sm btn-outline-success mt-2" id="runsql">Rodar <i
                         class="bi bi-play-btn"></i></button>
                   </form>
@@ -94,7 +94,8 @@
 
                 } else {
 
-                  payload = JSON.stringify(payload.recordset)
+                  let recordset = payload = JSON.stringify(payload.recordset)
+                  let columns = Object.keys(recordset[0])
                   document.getElementById('sql-return').innerHTML = `<code>${payload}</code>`
                   document.getElementById('runsql').innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
                   document.getElementById('runsql').disabled = false
