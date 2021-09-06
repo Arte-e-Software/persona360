@@ -24,14 +24,6 @@
                 <div class="container container-alert"></div>
                 <%-include ../includes/resources-inc.ejs %>
               </div>
-              <div class="tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
-                <div class="container">
-                  <h4><i class="bi bi-gear"></i>&nbsp;&nbsp;Configurações</h4>
-                </div>
-                <hr>
-                <div class="container container-alert"></div>
-                <%-include ../includes/config-inc.ejs %>
-              </div>
               <div class="tab-pane fade" id="nav-calendar" role="tabpanel" aria-labelledby="nav-calendar-tab">
                 <div class="container">
                   <h4><i class="bi bi-calendar2-check"></i>&nbsp;&nbsp;Calendário</h4>
@@ -40,10 +32,56 @@
                 <div class="container container-alert"></div>
                 <%-include ../includes/calendar-inc.ejs %>
               </div>
+              <div class="tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
+                <div class="container">
+                  <h4><i class="bi bi-gear"></i>&nbsp;&nbsp;Configurações</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <%-include ../includes/config-inc.ejs %>
+              </div>
+              <div class="tab-pane fade" id="nav-terminal" role="tabpanel" aria-labelledby="nav-terminal-tab">
+                <div class="container">
+                  <h4><i class="bi bi-terminal"></i>&nbsp;&nbsp;Sql Server</h4>
+                </div>
+                <hr>
+                <div class="container container-alert"></div>
+                <div class="container form-group">
+                  <form class="form-group">
+                    <label for="text-area-query">Query</label>
+                    <textarea class="form-control font-monospace border-white bg-dark text-success"
+                      id="text-area-query"></textarea>
+                    <button class="form-control btn btn-sm btn-outline-success mt-2" id="runsql">Rodar <i
+                        class="bi bi-play-btn"></i></button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </main>
         <%-include ../blocks/javascript.ejs %>
+          <script>
+
+            document.onload = ((runsql) => {
+
+              runsql.addEventListener('click', event => {
+
+                event.preventDefault()
+                call('sql', document.getElementById('text-area-query').value, sqlReturn)
+                return
+
+              })
+
+            })(document.getElementById('runsql'))
+
+            function sqlReturn(socket, received) {
+
+              let payload = received.payload
+              console.log(payload)
+              
+            }
+
+          </script>
     </body>
 
   </html>
