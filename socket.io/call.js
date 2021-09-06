@@ -43,10 +43,12 @@ function call(io) {
 
                                 if (!error) {
 
+                                    let parsedQuery = queryToParse
+
                                     const conn = require('../back-end/database/mssql/conn')
                                     const sql = require('mssql')
 
-                                    let query = received.payload
+                                    let query = parsedQuery
                                         , db = conn['aes'] // em desenvolvimento, virá do tenant
 
                                     sql.connect(db).then(() => { return sql.query(query) })
