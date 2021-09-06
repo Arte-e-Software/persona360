@@ -23,7 +23,7 @@
                                 <%=entities[entity].name.toUpperCase()%>
                             </td>
                             <td class="td-<%=entities[entity].name%> td-json">
-                                <a href="javascript: call('post', { 'resource': 'database', 'workflow': 'mssql', 'object': 'table', 'module': 'create', 'entity': '<%=entities[entity].name%>' }, (retorno) => { alert('Retorno', retorno, 'info') })"
+                                <a href="javascript: call('api', { 'resource': 'database', 'workflow': 'mssql', 'object': 'table', 'module': 'create', 'entity': '<%=entities[entity].name%>' }, (retorno) => { alert('Retorno', retorno, 'info') })"
                                     id="a-<%=entities[entity].name%>">/config/entities/<%=entities[entity].json%>
                                         </a>
                             </td>
