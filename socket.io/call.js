@@ -11,6 +11,7 @@ function call(io) {
                 if (received.method && received.payload && !received.error) {
 
                     switch (received.method) {
+                        
                         case 'api':
                             require('./api')(socket, received)
                             break;
