@@ -7,7 +7,14 @@ document.onload = (() => {
     runsql.addEventListener('click', event => {
 
         event.preventDefault()
-        call('sql', query.value, sqlReturn)
+
+        let arrTextAreaValue = query.value.split('=>')
+        let thisQuery = arrTextAreaValue[0]
+        let thisFormat = arrTextAreaValue[1]
+        
+        if (!thisFormat) { thisFormat = 'table' }
+
+        call('sql', { "query": thisQuery, "format": thisFormat }, sqlReturn)
         return
 
     })
@@ -22,64 +29,35 @@ function sqlReturn(socket, received) {
             , payload = received.payload
             , error = received.error
             , err = payload
-
+        
         if (error) {
 
-            if (payload.code) {
-
-                err = {
-                    "code": payload.code,
-                    "lineNumber": payload.lineNumber,
-                    "number": payload.number,
-                    "event": payload.originalError.event,
-                    "message": payload.originalError.message,
-                    "serverName": payload.originalError.serverName
-                }
-            }
+            if (payload.code) { err = payload.originalError.info.message }
 
             alert('Erro', err, 'danger')
+            console.log('Erro', payload)
+
+            sqlreturn.innerHTML = ''
+            runsql.className = 'form-control btn btn-lg btn-success mt-2'
+            runsql.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
+            runsql.disabled = false
 
         } else {
 
             if (payload === 'Aguarde retorno do servidor') {
 
+                sqlreturn.innerHTML = `
+                <div class="d-flex align-items-center text-secondary">
+                    <strong>Processando...</strong>
+                    <div class="spinner-border spinner-border-sm ms-auto" role="status" aria-hidden="true"></div>
+                </div>`
                 runsql.className = 'form-control btn btn-lg btn-outline-success mt-2'
                 runsql.innerHTML = payload
                 runsql.disabled = true
 
             } else {
 
-
-                let recorset = payload.recordsets[0]
-                    , firstRow = Object.entries(recorset[0])
-                    , rows = Object.entries(recorset)
-                    , head = firstRow.map(row => { return row[0] })
-                    , body = rows.map(row => { return row[1] })
-                    , thead = head.map(row => { return `<th>${row[0]}</th>` })
-                    , tbody = body.map(row => { return `<td>${row[1]}</td>` })
-                    
-                rowsAffected = body.length
-
-                sqlreturn.innerHTML = `
-<div>
-<p>
-rowsAffected: ${rowsAffected}
-</div>
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-${thead}
-</tr>
-</thead>
-<tbody>
-<tr>
-${tbody}
-</tr>
-</tbody
-</table>
-</div>
-            `
+                sqlreturn.innerHTML = payload
                 runsql.className = 'form-control btn btn-lg btn-success mt-2'
                 runsql.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
                 runsql.disabled = false
