@@ -2,7 +2,7 @@ const package = require('./package')
 
 function api(socket, received) {
 
-    let method = received.method
+    let resource = received.resource
         , payload = received.payload
         , resource = payload.resource
         , workflow = payload.workflow

@@ -8,9 +8,10 @@ function call(io) {
             if (received) {
 
                 // desenvolver tratamento de segurança
-                if (received.method && received.payload && !received.error) {
+                if (received.resource && received.payload && !received.error) {
 
-                    switch (received.method) {
+                    switch (received.resource) {
+                        
                         case 'api':
                             require('./api')(socket, received)
                             break;
@@ -73,19 +74,19 @@ function call(io) {
                             break;
 
                         default:
-                            socket.emit('call', package(received.method, `método desconhecido: ${received.method}`, true))
+                            socket.emit('call', package(received.resource, `método desconhecido: ${received.resource}`, true))
                             break;
                     }
 
                 } else {
 
-                    socket.emit('call', package(undefined, 'pacote corrompido', true))
+                    socket.emit('call', package(undefined, `pacote corrompido ${received}`, true))
 
                 }
 
             } else {
 
-                socket.emit('call', package(undefined, 'pedido rejeitado pelo servidor', true))
+                socket.emit('call', package(undefined, `pedido rejeitado pelo servidor ${received}`, true))
 
             }
 

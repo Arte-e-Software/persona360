@@ -1,0 +1,24 @@
+<div class="nav flex-column tab-pane fade" id="v-pills-sql" role="tabpanel" aria-labelledby="v-pills-sql-tab">
+    <div class="mt-2">
+        <h6><i class="bi bi-terminal"></i>&nbsp;&nbsp;Sql</h6>
+        <hr>
+    </div>
+    <div class="container-alert"></div>
+    <div class="form-group">
+        <form class="form-group">
+            <label for="text-area-query"><small> Os campos devem ser únicos.</small></label>
+            <div class="font-monospace text-secondary" style="font-size: 0.8rem;">
+                <p>Exemplos:<br>
+                    SELECT ID, NAME, EMAIL FROM PESSOAS WHERE NAME = 'PEDRO SILVA'<br>
+                    SELECT ID, NAME, EMAIL FROM PESSOAS WHERE NAME LIKE '%pedro%' ORDER BY NAME
+                </p>
+            </div>
+
+            <textarea class="form-control font-monospace border rounded bg-light" id="text-area-query"
+                style="height: 16rem;"></textarea>
+            <button class="form-control btn btn-lg btn-success mt-2" id="runsql">Rodar <i
+                    class="bi bi-play-btn"></i></button>
+        </form>
+    </div>
+    <div class="container mt-3" id="sql-return"></div>
+</div>
