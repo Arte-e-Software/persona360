@@ -1,92 +1,44 @@
 const package = require('./package')
 
 function call(io) {
+    
     io.on('connection', socket => {
 
         socket.on('call', received => {
 
             if (received) {
 
-                // desenvolver tratamento de segurança
+                // #issue: desenvolver tratamentos de segurança
+                // #issue: autenticação
                 if (received.resource && received.payload && !received.error) {
 
                     switch (received.resource) {
-                        
+
                         case 'api':
                             require('./api')(socket, received)
                             break;
 
                         case 'sql':
-
-                            // tem que melhorar MUITO isso
-                            let queryToParse = received.payload
-                                , error = queryToParse.toUpperCase().substring(0, 6) != 'SELECT'
-                                , forbidden = [
-
-                                    'drop',
-                                    'create',
-                                    'exec',
-                                    'update',
-                                    'delete',
-                                    'insert',
-                                    'sp_'
-
-                                ]
-
-                            error = forbidden.indexOf(queryToParse) > 0
-
-                            if (error) {
-
-                                socket.emit('call', package('sql', `query recusada ${queryToParse}`, true))
-
-                            } else {
-
-                                socket.emit('call', package('sql', 'Aguarde retorno do servidor', false))
-
-                                let parsedQuery = queryToParse
-
-                                const conn = require('../back-end/database/mssql/conn')
-                                const sql = require('mssql')
-
-                                let query = parsedQuery
-                                    , db = conn['aes'] // em desenvolvimento, virá do tenant
-
-                                sql.connect(db).then(() => { return sql.query(query) })
-                                    .then(result => {
-
-                                        sql.close();
-                                        socket.emit('call', package('sql', result, false))
-
-                                    })
-                                    .catch(err => {
-
-                                        sql.close();
-                                        socket.emit('call', package('sql', err, true))
-
-                                    })
-                                sql.on('error', err => {
-
-                                    socket.emit('call', package('sql', err, true))
-
-                                })
-
-                            }
+                            require('./sql')(socket, received.payload)
                             break;
 
                         default:
-                            socket.emit('call', package(received.resource, `método desconhecido: ${received.resource}`, true))
+                            let err = `método desconhecido: ${received.resource}`
+                            socket.emit('call', package('sql', err, true))
                             break;
                     }
 
                 } else {
 
-                    socket.emit('call', package(undefined, `pacote corrompido ${received}`, true))
+                    let err = `pacote corrompido ${received}`
+                    socket.emit('call', package(undefined, err, true))
 
                 }
 
             } else {
 
-                socket.emit('call', package(undefined, `pedido rejeitado pelo servidor ${received}`, true))
+                let err = `pedido rejeitado pelo servidor ${received}`
+                socket.emit('call', package(undefined, err, true))
 
             }
 
