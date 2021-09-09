@@ -1,0 +1,28 @@
+<div class="flex tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
+    <h4><i class="bi bi-nut"></i>&nbsp;&nbsp;Ferramentas</h4>
+    <hr>
+    <div class="d-flex align-items-start text-left">
+
+        <div class="nav flex-column nav-pills me-3" style="width: 9rem !important;" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+
+            <div class="nav-link text-left" id="v-pills-dev-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dev"
+                type="button" role="tab" aria-controls="v-pills-dev" aria-selected="false"><i
+                    class="bi bi-code-square"></i>&nbsp;&nbsp;Dev</div>
+
+            <div class="nav-link text-left" id="v-pills-sql-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sql"
+                type="button" role="tab" aria-controls="v-pills-sql" aria-selected="false"><i
+                    class="bi bi-terminal"></i>&nbsp;&nbsp;Sql</div>
+
+        </div>
+
+        <div class="nav flex-column tab-content container" style="padding-right: 0px !important;" id="v-pills-tabContent">
+
+            <%-include ./dev-inc.ejs %>
+            <%-include ./sql-inc.ejs %>
+
+        </div>
+
+    </div>
+
+</div>

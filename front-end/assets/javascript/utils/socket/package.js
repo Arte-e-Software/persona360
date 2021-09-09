@@ -1,8 +1,8 @@
-function package(method, payload, error) {
+function package(resource, payload, error) {
     return {
         "timestamp": new Date(),
         "handshake": true,
-        "method": method,
+        "resource": resource,
         "payload": payload,
         "error": error
     }

@@ -2,7 +2,7 @@ function alert(attention, msg, type) {
 
     attention === 'dev' || type === 'danger' ? console.log(msg) : false
 
-    let alert = document.getElementsByClassName('container container-alert')
+    let alert = document.getElementsByClassName('container-alert')
 
     for (let i in alert) {
         alert[i].innerHTML = `

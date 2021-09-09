@@ -1,4 +1,4 @@
-function call(method, payload, callback) {
+function call(resource, payload, callback) {
 
     // Abro a conexão com o servidor
     const socket = io()
@@ -7,7 +7,7 @@ function call(method, payload, callback) {
     // Emito a chamada
     error = false
     socket.emit('call',
-        package(method, payload, error)
+        package(resource, payload, error)
     )
 
     // Fico ouvindo o retorbo da chamada
