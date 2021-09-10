@@ -1,6 +1,8 @@
-<div class="flex tab-pane fade" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
-    <h4><i class="bi bi-nut"></i>&nbsp;&nbsp;Ferramentas</h4>
-    <hr>
+<div class="flex tab-pane" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
+    <div class="alert alert-info alert-dismissible show" role="alert">
+        <strong><i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas</strong><small> : área requer conhecimento em <strong>tecnologia da informação</strong></small>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="d-flex align-items-start text-left">
 
         <div class="nav flex-column nav-pills me-3" style="width: 9rem !important;" id="v-pills-tab" role="tablist"
@@ -16,10 +18,11 @@
 
         </div>
 
-        <div class="nav flex-column tab-content container" style="padding-right: 0px !important;" id="v-pills-tabContent">
+        <div class="nav flex-column tab-content container" style="padding-right: 0px !important;"
+            id="v-pills-tabContent">
 
             <%-include ./dev-inc.ejs %>
-            <%-include ./sql-inc.ejs %>
+                <%-include ./sql-inc.ejs %>
 
         </div>
 

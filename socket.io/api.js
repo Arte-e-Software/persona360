@@ -2,6 +2,8 @@ const package = require('./package')
 
 function api(socket, received) {
 
+    /*
+
     let resource = received.resource
         , payload = received.payload
         , resource = payload.resource
@@ -21,6 +23,7 @@ function api(socket, received) {
         socket.emit('call', package(method, err, true))
 
     }
+    */
 
 }
 module.exports = api

@@ -44,20 +44,19 @@ module.exports = (socket, payload) => {
 
             })
             .catch(err => {
-
-                console.log('catch', err)
-
+              
                 sql.close();
 
                 let element = payload.element
                     , btn = payload.btn
+                    , status = JSON.stringify(err.originalError.info)
 
                 payload = {
                     "query": parsedQuery,
                     "format": format,
                     "element": element,
                     "btn": btn,
-                    "status": err
+                    "status": status
                 }
                 socket.emit('call', package('sql', payload, true))
 

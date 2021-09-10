@@ -14,16 +14,18 @@ function alert(attention, msg, type) {
         </div>`
     }
 
-    let dissmiss = document.getElementsByClassName('btn-close')
-        , btn
-    
-    for (i = 0; i < dissmiss.length; i++) {
+    (() => {
 
-        btn = dissmiss[i]
-        btn.addEventListener('click', () => {
+        let dissmiss = document.getElementsByClassName('btn-close')
+            , btn
 
-            for (let i in alert) { alert[i].innerHTML = '' }
+        for (i = 0; i < dissmiss.length; i++) {
 
-        })
-    }
+            btn = dissmiss[i]
+            btn.addEventListener('click', () => { for (let i in alert) { alert[i].innerHTML = '' } })
+
+        }
+
+    })()
+
 }
