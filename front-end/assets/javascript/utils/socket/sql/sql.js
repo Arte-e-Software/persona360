@@ -1,76 +1,81 @@
-const runsql = document.getElementById('runsql')
-    , sqlreturn = document.getElementById('sql-return')
-    , query = document.getElementById('text-area-query')
-
 document.onload = (() => {
 
-    runsql.addEventListener('click', event => {
+    SQL('runsql', 'text-area-query', 'sql-return', 'waiting')
+
+})()
+
+function SQL(btn, input, element, status) {
+
+    btn = document.getElementById(btn)
+    input = document.getElementById(input)
+
+    btn.addEventListener('click', event => {
 
         event.preventDefault()
 
-        let arrTextAreaValue = query.value.split('=>')
-        let thisQuery = arrTextAreaValue[0]
-        let thisFormat = arrTextAreaValue[1]
-        
-        if (!thisFormat) { thisFormat = 'table' }
+        let arrowinput = input.value.split('=>')
+            , query = arrowinput[0]
+            , format = arrowinput[1]
 
-        call('sql', { "query": thisQuery, "format": thisFormat }, sqlReturn)
+        if (!format) { format = 'table' }
+
+        let payload = {
+
+            "query": query,
+            "format": format,
+            "element": element,
+            "btn": btn.id,
+            "status": status
+
+        }
+
+        call('sql', payload, callback)
         return
 
     })
 
-})()
+}
 
-function sqlReturn(socket, received) {
+function callbak(package) { // #issue: como enviar esse função como parâmetro para a SQL()?
 
-    if (received.resource === 'sql') {
+    let payload = package.payload
+        , error = package.error
+        , err = payload
+        , btn = document.getElementById(payload.btn)
+        , element = document.getElementById(payload.element)
 
-        let resource = received.resource
-            , payload = received.payload
-            , error = received.error
-            , err = payload
+    if (error) {
+
+        err = payload.status //.originalError.info.message
         
-        if (error) {
+        alert('Erro', err, 'danger')
+        console.log('Sql error', payload.status)
 
-            if (payload.code) { err = payload.originalError.info.message }
+        element.innerHTML = ''
+        btn.className = 'form-control btn btn-lg btn-success mt-2'
+        btn.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
+        btn.disabled = false
 
-            alert('Erro', err, 'danger')
-            console.log('Erro', payload)
+    } else {
 
-            sqlreturn.innerHTML = ''
-            runsql.className = 'form-control btn btn-lg btn-success mt-2'
-            runsql.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
-            runsql.disabled = false
+        if (payload.status === 'waiting') {
 
-        } else {
-
-            if (payload === 'Aguarde retorno do servidor') {
-
-                sqlreturn.innerHTML = `
+            element.innerHTML = `
                 <div class="d-flex align-items-center text-secondary">
                     <strong>Processando...</strong>
                     <div class="spinner-border spinner-border-sm ms-auto" role="status" aria-hidden="true"></div>
                 </div>`
-                runsql.className = 'form-control btn btn-lg btn-outline-success mt-2'
-                runsql.innerHTML = payload
-                runsql.disabled = true
+            btn.className = 'form-control btn btn-lg btn-outline-success mt-2'
+            btn.innerHTML = 'Aguarde o retorno do servidor'
+            btn.disabled = true
 
-            } else {
+        } else {
 
-                sqlreturn.innerHTML = payload
-                runsql.className = 'form-control btn btn-lg btn-success mt-2'
-                runsql.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
-                runsql.disabled = false
+            element.innerHTML = payload.status
+            btn.className = 'form-control btn btn-lg btn-success mt-2'
+            btn.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
+            btn.disabled = false
 
-            }
         }
-
-    } else {
-
-        err = `Resource inválido: ${received.resource}`
-        alert('Erro', err, 'danger')
-
     }
-
 }
-

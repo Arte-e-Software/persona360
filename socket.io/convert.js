@@ -15,10 +15,10 @@ function convert(recordset) {
                     return `<div class="border border-secondary rounded p-2"><code>${JSON.stringify(recordset)}</code>`
 
                 case 'csv':
-                // #issue: quebrar as linhas
+                // #issue: quebrar as linhas \n não funcionou
                 // #issue: funcionalidade de copy past
                     let csv = `
-                    ${rs.header.join('\n')}
+                    ${rs.header.join('\n')} 
 
                     ${rs.body.join('\n')}
                     `

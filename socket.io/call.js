@@ -10,35 +10,46 @@ function call(io) {
 
                 // #issue: desenvolver tratamentos de segurança
                 // #issue: autenticação
-                if (received.resource && received.payload && !received.error) {
+                if (received.resource && received.payload) {
 
-                    switch (received.resource) {
+                    let resource = received.resource
+                        , payload = received.payload
+
+                        // para efeito de documentação e depuração
+                        , query = payload.query
+                        , format = payload.format
+                        , status = payload.status
+                        , element = payload.element
+                        , btn = payload.btn
+                    
+                    switch (resource) {
 
                         case 'api':
                             require('./api')(socket, received)
                             break;
 
                         case 'sql':
-                            require('./sql')(socket, received.payload)
+                        
+                            require('./sql')(socket, payload)
                             break;
 
                         default:
-                            let err = `método desconhecido: ${received.resource}`
-                            socket.emit('call', package('sql', err, true))
+                            payload.status = `Recurso invállido: ${resource}`
+                            socket.emit('call', package('sql', payload, true))
                             break;
                     }
 
                 } else {
 
-                    let err = `pacote corrompido ${received}`
-                    socket.emit('call', package(undefined, err, true))
+                    payload.status = `pacote corrompido ${received}`
+                    socket.emit('call', package(undefined, payload, true))
 
                 }
 
             } else {
 
-                let err = `pedido rejeitado pelo servidor ${received}`
-                socket.emit('call', package(undefined, err, true))
+                payload.status = `package(${received}) chegou vazio ao servidor`
+                socket.emit('call', package(undefined, payload, true))
 
             }
 
