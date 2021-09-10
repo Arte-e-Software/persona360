@@ -29,7 +29,7 @@ function SQL(btn, input, element, status) {
 
         }
 
-        call('sql', payload, callback)
+        call('sql', payload, callbak)
         return
 
     })
