@@ -13,7 +13,7 @@
             </div>
             <div class="flex-column mt-3">
                 <div class="alert alert-warning alert-dismissible show" role="alert">
-                    <spam class="spinner-grow spinner-grow-sm text-danger" role="status"></spam> entidades não construídas, clique no .json para informações
+                    <spam class="spinner-grow spinner-grow-sm text-danger" role="status"></spam> entidades não construídas, clique na entidade para informações
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <div class="table table-responsive">
@@ -30,12 +30,11 @@
 
                                 <tr class="tr-<%=entities[entity].name%>">
                                     <td class="td-<%=entities[entity].name%> td-name">
-                                        <i class="bi bi-box"></i>&nbsp;&nbsp;<%=entities[entity].name.toUpperCase()%>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#build-entity" data-persona360-entity="<%=entities[entity].name%>"
+                                            class="btn btn-sm btn-outline-secondary entity-name entity-<%=entities[entity].name%>" id="a-<%=entities[entity].name%>"><i class="bi bi-box"></i>&nbsp;&nbsp;<%=entities[entity].name.toUpperCase()%></a>
                                     </td>
                                     <td class="td-<%=entities[entity].name%> td-json">
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#build-entity" data-bs-whatever="<%=entities[entity].name%>" class="entity-json entity-<%=entities[entity].name%>" id="a-<%=entities[entity].name%>">/config/entities/
-                                            <%=entities[entity].json%>
-                                        </a>
+                                        /config/entities/<%=entities[entity].json%>
                                     </td>
                                     <td class="td-<%=entities[entity].name%> td-crdate">
                                         <div class="text-center">
@@ -55,28 +54,63 @@
 
                 </div>
                 
-                <div class="modal" id="build-entity" tabindex="-1" aria-labelledby="build-entityLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                <div class="modal" id="build-entity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="build-entityLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="build-entityLabel">New message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-header text-white bg-primary">
+                                <spam class="fw-light"><i class="bi bi-box"></i>&nbsp;&nbsp;Entidade <spam class="modal-title fw-bolder" id="build-entityLabel"></spam></spam>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-namespace-tab" data-bs-toggle="tab" data-bs-target="#nav-namespace" type="button"
+                                            role="tab" aria-controls="nav-namespace" aria-selected="true"><i class="bi bi-info-circle"></i>&nbsp;&nbsp;Identificação</button>
+                                        <button class="nav-link" id="nav-fields-tab" data-bs-toggle="tab" data-bs-target="#nav-fields" type="button"
+                                            role="tab" aria-controls="nav-fields" aria-selected="false"><i class="bi bi-card-list"></i>&nbsp;&nbsp;Campos</button>
+                                        <button class="nav-link" id="nav-form-tab" data-bs-toggle="tab" data-bs-target="#nav-form" type="button"
+                                            role="tab" aria-controls="nav-form" aria-selected="false"><i class="bi bi-ui-checks"></i>&nbsp;&nbsp;Formulário</button>
+                                            <button class="nav-link" id="nav-build-tab" data-bs-toggle="tab" data-bs-target="#nav-build" type="button" role="tab"
+                                                aria-controls="nav-build" aria-selected="false"><i class="bi bi-play-circle"></i>&nbsp;&nbsp;Construir
+                                                    <div class="spinner-grow spinner-grow-sm text-danger" role="status"></div>
+                                                </button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label">Message:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
+                                </nav>
+                                <div class="tab-content mt-3" id="nav-tabContent">
+                                    <div class="tab-pane show active" id="nav-namespace" role="tabpanel" aria-labelledby="nav-namespace-tab">
+
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="entity-name" class="col-form-label fw-bolder">Name&nbsp;&nbsp;<spam class="fw-light text-danger"><small><i class="bi bi-exclamation-circle"></i>&nbsp;nome único em todo sistema</small></spam></label>
+                                                <input type="text" class="form-control" id="entity-name" disabled>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="namespace-text" class="col-form-label fw-bolder">Namespace&nbsp;&nbsp;<spam class="fw-light text-danger"><small><i class="bi bi-exclamation-circle"></i>&nbsp;nomes das campos separados por virgulas, exemplo: email, celular, genero</small></spam></label>
+                                                <textarea class="form-control" id="namespace-text" disabled></textarea>
+                                            </div>
+                                        </form>
+
                                     </div>
-                                </form>
+
+                                    <div class="tab-pane" id="nav-fields" role="tabpanel" aria-labelledby="nav-fields-tab">
+
+                                        <p>Campos</p>
+
+                                    </div>
+                                    <div class="tab-pane" id="nav-form" role="tabpanel" aria-labelledby="nav-form-tab">
+
+                                        <p>Formulário</p>
+
+                                    </div>
+                                    <div class="tab-pane" id="nav-build" role="tabpanel" aria-labelledby="nav-build-tab">
+                                    
+                                        <p>Construir</p>
+                                    
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Send message</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>&nbsp;&nbsp;Fechar</button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +123,7 @@
                             // Button that triggered the modal
                             var button = event.relatedTarget
                             // Extract info from data-bs-* attributes
-                            var recipient = button.getAttribute('data-bs-whatever')
+                            var entity = button.getAttribute('data-persona360-entity')
                             // If necessary, you could initiate an AJAX request here
                             // and then do the updating in a callback.
                             //
@@ -97,8 +131,8 @@
                             var modalTitle = buildEntity.querySelector('.modal-title')
                             var modalBodyInput = buildEntity.querySelector('.modal-body input')
 
-                            modalTitle.textContent = 'New message to ' + recipient
-                            modalBodyInput.value = recipient
+                            modalTitle.textContent = entity.toUpperCase()
+                            modalBodyInput.value = entity
                         })
 
                 </script>
