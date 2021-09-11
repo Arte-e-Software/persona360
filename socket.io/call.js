@@ -19,9 +19,11 @@ function call(io) {
                         , query = payload.query
                         , format = payload.format
                         , status = payload.status
-                        , element = payload.element
+                        , target = payload.target
                         , btn = payload.btn
                     
+                    // #issue: gostaria de carregar a função no swtich e chamá-la depois
+                    // não deu certo de primeira deixei pra depois
                     switch (resource) {
 
                         case 'api':
@@ -29,8 +31,15 @@ function call(io) {
                             break;
 
                         case 'sql':
-                        
                             require('./sql')(socket, payload)
+                            break;
+                        
+                        case 'file':
+                            require('./file')(socket, payload)
+                            break;
+                        
+                        case 'function':
+                            require('./function')(socket, payload)
                             break;
 
                         default:

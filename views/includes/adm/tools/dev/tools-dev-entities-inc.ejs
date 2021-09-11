@@ -1,0 +1,30 @@
+<div class="tab-pane show active mt-3" id="entities" role="tabpanel" aria-labelledby="entities-tab">
+    <p>Representam pessoas, produtos e demais <strong>entidades</strong> identificadas em seu <strong>modelo de
+            negócio</strong></p>
+    <% if(err){ let error=payload.err; // flush %>
+        <script> alert('Erro', '<%=error%>', 'danger')</script>
+        <% } else { // flush %>
+            <div class="flex-column mt-3">
+                <div class="alert alert-warning alert-dismissible show" role="alert">
+                    <spam class="spinner-grow spinner-grow-sm text-danger" role="status"></spam> entidades não
+                    construídas, clique na entidade para informações
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div>
+                    <button class="btn btn-success btn-entity mr-2" id="btn-entity-create"><i
+                            class="bi bi-box"></i>&nbsp;&nbsp;Criar
+                        Entidade</button>
+                    <% entities=payload.entities; for(let entity in entities){ // flush %>
+
+                        <button class="btn btn-outline-secondary mr-2 btn-entity"
+                            id="btn-entity-<%=entities[entity].name%>">
+                            <i class="bi bi-box"></i>&nbsp;&nbsp;<%=entities[entity].name.toUpperCase()%>
+                                &nbsp;&nbsp;<div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                </div>
+                        </button>
+
+                        <% }; }; // flush %>
+                </div>
+            </div>
+</div>
+<% // flush views/includes/entities-inc.ejs into views/includes/dev-inc.ejs %>

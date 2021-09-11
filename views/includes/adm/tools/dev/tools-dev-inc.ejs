@@ -1,6 +1,6 @@
 <div class="nav flex-column tab-pane mb-5" id="v-pills-dev" role="tabpanel" aria-labelledby="v-pills-dev-tab">
     <div class="alert alert-warning alert-dismissible show" role="alert">
-        <strong><i class="bi bi-code-square"></i>&nbsp;&nbsp;Dev</strong> <small>área restrita a <strong>desenvolvedores</strong></small>
+        <strong><i class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Dev</strong> <small> : requer permissão [<strong>dev</strong>]</small>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -18,11 +18,8 @@
     </ul>
     
     <div class="tab-content" id="tab-tools">
-        <%-include ./entities-inc.ejs %>
-        <%-include ./der-inc.ejs %>
+        <%-include ./tools-dev-entities-inc.ejs %>
+        <%-include ./tools-dev-der-inc.ejs %>
     </div>
 
 </div>
-
-
-

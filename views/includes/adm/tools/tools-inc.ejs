@@ -1,6 +1,6 @@
 <div class="flex tab-pane" id="nav-config" role="tabpanel" aria-labelledby="nav-config-tab">
-    <div class="alert alert-info alert-dismissible show" role="alert">
-        <strong><i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas</strong><small> : área requer conhecimento em <strong>tecnologia da informação</strong></small>
+    <div class="alert alert-warning alert-dismissible show" role="alert">
+        <strong><i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas</strong><small> : requer permissão [<strong>gestor</strong>]</small>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <div class="d-flex align-items-start text-left">
@@ -10,19 +10,18 @@
 
             <div class="nav-link text-left" id="v-pills-dev-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dev"
                 type="button" role="tab" aria-controls="v-pills-dev" aria-selected="false"><i
-                    class="bi bi-code-square"></i>&nbsp;&nbsp;Dev</div>
+                    class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Dev</div>
 
             <div class="nav-link text-left" id="v-pills-sql-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sql"
                 type="button" role="tab" aria-controls="v-pills-sql" aria-selected="false"><i
-                    class="bi bi-terminal"></i>&nbsp;&nbsp;Sql</div>
+                    class="bi bi-server"></i>&nbsp;&nbsp;Sql</div>
 
         </div>
 
-        <div class="nav flex-column tab-content container" style="padding-right: 0px !important;"
-            id="v-pills-tabContent">
+        <div class="nav flex-column tab-content container" style="padding-right: 0px !important;" id="v-pills-tabContent">
 
-            <%-include ./dev-inc.ejs %>
-                <%-include ./sql-inc.ejs %>
+            <%-include ./dev/tools-dev-inc.ejs %>
+            <%-include ./sql/tools-sql-inc.ejs %>
 
         </div>
 
