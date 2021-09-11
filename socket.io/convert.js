@@ -1,5 +1,3 @@
-const { map } = require("mssql")
-
 function convert(recordset) {
 
     rs = Recordset(recordset)
@@ -12,17 +10,13 @@ function convert(recordset) {
 
                 case 'json':
                     // #issue: funcionalidade de copy past
-                    return `<div class="border border-secondary rounded p-2"><code>${JSON.stringify(recordset)}</code>`
+                    return `<div class="p-2">${JSON.stringify(recordset)}</div>`
 
                 case 'csv':
-                // #issue: quebrar as linhas \n não funcionou
-                // #issue: funcionalidade de copy past
-                    let csv = `
-                    ${rs.header.join('\n')} 
-
-                    ${rs.body.join('\n')}
-                    `
-                    return `<div class="border border-secondary rounded p-2"><code>${csv}</code>`
+                    // #issue: quebrar as linhas \n não funcionou
+                    // #issue: funcionalidade de copy past
+                    let csv = `${rs.header.join('\n')}${rs.body.join('\n')}`
+                    return `<div class="p-2">${csv}</div>`
 
                 case 'table':
 
@@ -31,9 +25,15 @@ function convert(recordset) {
                         , tHeader = `<tr>${header.join('')}</tr>`
                         , tBody = body.map(tr => { return `<tr>${tr.map(td => { return `<td>${td}</td>` }).join('')}</tr>` }).join('')
                     
+                    let howmany = number => {
+                        let plural
+                        number === 1 ? plural = '' : plural = 's'
+                        return `${number} registro${plural}`
+                    }
+                    
                     // #issue: paginar
                     return `
-                    
+                    <div class="border-bottom mb-1 pb-3">Retorno: ${howmany(rs.rowcount)}</div>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
                         <thead>
@@ -78,7 +78,7 @@ function convert(recordset) {
             , header = Header.map(th => { return th })
             , body = Body.map(td => { return td })
 
-        return { "header": header, "body": body }
+        return { "header": header, "body": body, "rowcount": body.length }
 
     }
 

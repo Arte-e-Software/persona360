@@ -19,7 +19,7 @@ module.exports = (socket, payload) => {
         socket.emit('call', package('sql', payload, false))
 
         let parsedQuery = queryToParse
-            , element = payload.element
+            , target = payload.target
             , btn = payload.btn
 
         const conn = require('../back-end/database/mssql/conn')
@@ -35,7 +35,7 @@ module.exports = (socket, payload) => {
                     , payload = {
                         "query": parsedQuery,
                         "format": format,
-                        "element": element,
+                        "target": target,
                         "btn": btn,
                         "status": convert(recordset).to(format)
                     }
@@ -47,14 +47,14 @@ module.exports = (socket, payload) => {
               
                 sql.close();
 
-                let element = payload.element
+                let target = payload.target
                     , btn = payload.btn
                     , status = JSON.stringify(err.originalError.info)
 
                 payload = {
                     "query": parsedQuery,
                     "format": format,
-                    "element": element,
+                    "target": target,
                     "btn": btn,
                     "status": status
                 }
@@ -65,13 +65,13 @@ module.exports = (socket, payload) => {
 
             console.log('sql.on', err)
 
-            let element = payload.element
+            let target = payload.target
                 , btn = payload.btn
 
             payload = {
                 "query": queryToParse,
                 "format": format,
-                "element": element,
+                "target": target,
                 "btn": btn,
                 "status": err
             }
