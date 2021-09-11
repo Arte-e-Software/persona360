@@ -10,14 +10,17 @@ module.exports = (socket, payload) => {
 
     if (err) {
 
-        let err = `query recusada ${queryToParse}`
-        socket.emit('call', package('sql', err, true))
+        payload.status = `query recusada ${queryToParse}`
+        socket.emit('call', package('sql', payload, true))
 
     } else {
 
-        socket.emit('call', package('sql', 'Aguarde retorno do servidor', false))
+        // feedback para o cliente, reenvio o payload com o status: waiting
+        socket.emit('call', package('sql', payload, false))
 
         let parsedQuery = queryToParse
+            , element = payload.element
+            , btn = payload.btn
 
         const conn = require('../back-end/database/mssql/conn')
         const sql = require('mssql')
@@ -29,20 +32,50 @@ module.exports = (socket, payload) => {
 
                 sql.close();
                 let recordset = result.recordset
-                    , payload = convert(recordset).to(format)
+                    , payload = {
+                        "query": parsedQuery,
+                        "format": format,
+                        "element": element,
+                        "btn": btn,
+                        "status": convert(recordset).to(format)
+                    }
 
                 socket.emit('call', package('sql', payload, false))
 
             })
             .catch(err => {
-
+              
                 sql.close();
-                socket.emit('call', package('sql', err, true))
+
+                let element = payload.element
+                    , btn = payload.btn
+                    , status = JSON.stringify(err.originalError.info)
+
+                payload = {
+                    "query": parsedQuery,
+                    "format": format,
+                    "element": element,
+                    "btn": btn,
+                    "status": status
+                }
+                socket.emit('call', package('sql', payload, true))
 
             })
         sql.on('error', err => {
 
-            socket.emit('call', package('sql', err, true))
+            console.log('sql.on', err)
+
+            let element = payload.element
+                , btn = payload.btn
+
+            payload = {
+                "query": queryToParse,
+                "format": format,
+                "element": element,
+                "btn": btn,
+                "status": err
+            }
+            socket.emit('call', package('sql', payload, true))
 
         })
 

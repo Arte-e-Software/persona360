@@ -5,9 +5,8 @@ function call(resource, payload, callback) {
     let error = !true
 
     // Emito a chamada
-    error = false
     socket.emit('call',
-        package(resource, payload, error)
+        package(resource, payload)
     )
 
     // Fico ouvindo o retorbo da chamada
@@ -16,8 +15,8 @@ function call(resource, payload, callback) {
         // Conexão estabelecida
         if (received.handshake) {
 
-            // se erro lógico: callback lê call.error
-            callback(socket, received)
+            // se erro lógico: tratado no callback
+            callback(received)
 
         } else { 
 
