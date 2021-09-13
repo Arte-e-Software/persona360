@@ -24,13 +24,15 @@ function convert(recordset) {
                         , body = rs.body.map(td => { return td })
                         , tHeader = `<tr>${header.join('')}</tr>`
                         , tBody = body.map(tr => { return `<tr>${tr.map(td => { return `<td>${td}</td>` }).join('')}</tr>` }).join('')
-                    
+
                     let howmany = number => {
+                        
                         let plural
                         number === 1 ? plural = '' : plural = 's'
                         return `${number} registro${plural}`
+
                     }
-                    
+
                     // #issue: paginar
                     return `
                     <div class="border-bottom mb-1 pb-3">Retorno: ${howmany(rs.rowcount)}</div>
