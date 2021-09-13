@@ -1,5 +1,4 @@
 function package(resource, payload, error) {
-
     return {
         "timestamp": new Date(),
         "handshake": true,
@@ -7,5 +6,5 @@ function package(resource, payload, error) {
         "payload": payload,
         "error": error
     }
-    
 }
+module.exports = package

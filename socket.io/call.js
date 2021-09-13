@@ -6,58 +6,71 @@ function call(io) {
 
         socket.on('call', received => {
 
+            console.log('Call at ' + new Date() )
+            
             if (received) {
 
+                
                 // #issue: desenvolver tratamentos de segurança
                 // #issue: autenticação
                 if (received.resource && received.payload) {
 
-                    let resource = received.resource
-                        , payload = received.payload
-
-                        // para efeito de documentação e depuração
-                        , query = payload.query
-                        , format = payload.format
-                        , status = payload.status
-                        , target = payload.target
-                        , btn = payload.btn
                     
-                    // #issue: gostaria de carregar a função no swtich e chamá-la depois
-                    // não deu certo de primeira deixei pra depois
-                    switch (resource) {
+                    let resource = received.resource // requisição: api, sql, file, serverfunction
+                        , payload = received.payload // pacote com os dados em trânsito
 
-                        case 'api':
-                            require('./api')(socket, received)
-                            break;
+                        // payload transporta:
 
-                        case 'sql':
-                            require('./sql')(socket, payload)
-                            break;
+                        // para o servidor sql
+                        , query = payload.query
+
+                        // formato de arquivo, entrada ou saída
+                        , format = payload.format
+
+                        // objeto que recebe o pacote de retorno no cliente
+                        , target = payload.target
+
+                        // botão que disparou a chamada no cliente
+                        , btn = payload.btn
+
+                        // para o servidor de arquivos recebe nome, retorna arquivo
+                        , file = payload.file
+
+                        // para rodar funções do servidor no lado do cliente
+                        , serverfunction = payload.serverfunction
+
+                        // parâmetros das funções do servidor
+                        , serverfunctionparams = payload.serverfunctionparams
+
+                        // resultado das chamadas, exceto no caso de file
+                        , status = payload.status
+                    
+                    try {
+
+                        require(`./${resource}`)(socket, payload)
+
+                    } catch (err) {
                         
-                        case 'file':
-                            require('./file')(socket, payload)
-                            break;
-                        
-                        case 'function':
-                            require('./function')(socket, payload)
-                            break;
+                        payload.status = `erro: ${resource} ${err}`
 
-                        default:
-                            payload.status = `Recurso invállido: ${resource}`
-                            socket.emit('call', package('sql', payload, true))
-                            break;
+                        socket.emit('call', package(resource, payload, true))
+                        
                     }
 
                 } else {
 
-                    payload.status = `pacote corrompido ${received}`
+                    let err = `pacote corrompido ${received}`
+                        , payload = { "status": err }
+                    
                     socket.emit('call', package(undefined, payload, true))
 
                 }
 
             } else {
 
-                payload.status = `package(${received}) chegou vazio ao servidor`
+                let err = `package(${received}) vazio`
+                    , payload = { "status": err }
+                
                 socket.emit('call', package(undefined, payload, true))
 
             }

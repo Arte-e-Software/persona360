@@ -1,16 +1,22 @@
 document.onload = (() => {
 
     let status = 'waiting'
-    SQL('sql-server-btn-run', 'sql-server-input', 'sql-server-target', status)
+    sql('sql-server-btn-run', 'sql-server-input', 'sql-server-target', status)
 
 })()
 
-function SQL(btn, input, target, status) {
+function sql(btn, input, target, status) {
 
     btn = document.getElementById(btn)
     input = document.getElementById(input)
     target = document.getElementById(target)
     tab = document.getElementById(target.id.replace('target', 'tab'))
+
+    input.addEventListener('dblclick', (event) => {
+        event.preventDefault()
+        input.value = ''
+        target.innerHTML = ''
+    })
 
     btn.addEventListener('click', event => {
 
@@ -31,7 +37,7 @@ function SQL(btn, input, target, status) {
                             <div class="spinner-border spinner-border-sm ms-auto" role="status" aria-hidden="true"></div>
                         </div>`
         
-        btn.className = 'form-control btn btn-lg btn-outline-success mt-2'
+        btn.className = 'form-control btn btn-outline-success mt-2'
         btn.innerHTML = 'Aguarde o retorno do servidor'
         btn.disabled = true
 
@@ -67,7 +73,7 @@ function SQL(btn, input, target, status) {
 
                 tab.innerHTML = `<i class="bi bi-files"></i>&nbsp;&nbsp;Retorno`
                 target.innerHTML = ''
-                btn.className = 'form-control btn btn-lg btn-success mt-2'
+                btn.className = 'form-control btn btn-success mt-2'
                 btn.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
                 btn.disabled = false
 
@@ -87,7 +93,7 @@ function SQL(btn, input, target, status) {
                         <div class="spinner-border spinner-border-sm ms-auto" role="status" aria-hidden="true"></div>
                     </div>`
 
-                    btn.className = 'form-control btn btn-lg btn-outline-success mt-2'
+                    btn.className = 'form-control btn btn-outline-success mt-2'
                     btn.innerHTML = 'Aguarde o retorno do servidor'
                     btn.disabled = true
 
@@ -95,13 +101,13 @@ function SQL(btn, input, target, status) {
 
                     tab.innerHTML = `<i class="bi bi-files"></i></spam>&nbsp;&nbsp;Retorno`
                     target.innerHTML = payload.status
-                    btn.className = 'form-control btn btn-lg btn-success mt-2'
+                    btn.className = 'form-control btn btn-success mt-2'
                     btn.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`
                     btn.disabled = false
 
                 }
             }
         }) 
-        return
+        return true
     })
 }

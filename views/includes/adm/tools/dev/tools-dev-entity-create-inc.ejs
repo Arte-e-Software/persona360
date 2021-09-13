@@ -1,0 +1,59 @@
+<div class="flex-column mt-3" id="entity-div-form" style="display: none;">
+    <div class="alert alert-warning alert-dismissible show" role="alert">
+        <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Entidades</strong><small> : requer permissão
+            [<strong>entity-create</strong>]</small>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <form class="form-group" id="entity-form">
+        <div class="entity-input-name">
+            <label for="entity-name" class="label">Nome</label>
+            <input type="text" class="form-control" id="entity-name">
+        </div>
+        <div class="entity-input-namespace" style="display: none;">
+            <label for="entity-namespace" class="label">Namespace <small>nomes dos campos separadas por
+                    virgulas</small></label>
+            <textarea class="text-area" style="height: 10rem;" id="entity-namespace"></textarea>
+        </div>
+        <div class="entity-input-fields" style="display: none;">
+            <label for="entity-fields" class="label">Campos</label>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th>Campo</th>
+                        <th>Tipo</th>
+                        <th>Tamanho</th>
+                        <th>Aceita null</th>
+                        <th>Valor inicial</th>
+                        <th>Permite pesquisa</th>
+                    </thead>
+                    <tbody id="entity-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="entity-input-form" style="display: none;">
+            <label for="entity-name" class="label">Campos</label>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th>Label</th>
+                        <th>Tipo</th>
+                        <th>Valor Inicial</th>
+                        <th>Obrigatório</th>
+                        <th>Placeholder</th>
+                        <th>Formatador</th>
+                    </thead>
+                    <tbody id="entity-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+
+    (() => {
+
+        
+
+    })()
+
+</script>

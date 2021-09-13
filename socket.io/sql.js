@@ -28,6 +28,7 @@ module.exports = (socket, payload) => {
         let db = conn['aes'] // #issue: em desenvolvimento, virá do tenant
 
         sql.connect(db).then(() => { return sql.query(parsedQuery) })
+            
             .then(result => {
 
                 sql.close();
@@ -43,13 +44,14 @@ module.exports = (socket, payload) => {
                 socket.emit('call', package('sql', payload, false))
 
             })
+
             .catch(err => {
               
                 sql.close();
 
                 let target = payload.target
                     , btn = payload.btn
-                    , status = JSON.stringify(err.originalError.info)
+                , status = JSON.stringify(err.originalError.info)
 
                 payload = {
                     "query": parsedQuery,
@@ -61,6 +63,7 @@ module.exports = (socket, payload) => {
                 socket.emit('call', package('sql', payload, true))
 
             })
+        
         sql.on('error', err => {
 
             console.log('sql.on', err)

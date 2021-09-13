@@ -9,7 +9,7 @@ function alert(attention, msg, type) {
         <div class="alert alert-${type} alert-dismissible fade show" role="alert">
             <h4><strong>${attention}</strong></h4>
             <hr>
-            <p>${msg}</p>
+            <p class="text-wrap text-break">${msg}</p>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>`
     }
@@ -27,5 +27,11 @@ function alert(attention, msg, type) {
         }
 
     })()
+
+    setTimeout(() => {
+
+        for (let i in alert) { alert[i].innerHTML = '' }
+
+    }, 6000);
 
 }
