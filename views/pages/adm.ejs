@@ -9,19 +9,57 @@
           <div class="container-flex" id="main-adm">
             <div class="tab-content px-4" id="nav-tabContent">
               <%-include ../includes/adm/desktop/desktop-inc.ejs %>
-              <%-include ../includes/adm/apps/apps-inc.ejs %>
-              <%-include ../includes/adm/governance/governance-inc.ejs %>
-              <%-include ../includes/adm/tools/tools-inc.ejs %>
+                <%-include ../includes/adm/apps/apps-inc.ejs %>
+                  <%-include ../includes/adm/governance/governance-inc.ejs %>
+                    <%-include ../includes/adm/tools/tools-inc.ejs %>
             </div>
           </div>
         </main>
         <%-include ../blocks/javascript.ejs %>
     </body>
+    <script>
+
+      (() => {
+
+        let checkbox = document.getElementById('checkbox-dismiss-all-alerts')
+          , dismissible = document.getElementsByClassName('alert-dismissible')
+          , tag = document.getElementById('checkbox-dismiss-all-alerts-tag')
+          , dismiss = false
+
+        checkbox.addEventListener('click', event => {
+
+          dismiss = checkbox.checked
+
+          if (!dismiss) {
+
+            for (i = 0; i < dismissible.length; i++) {
+
+              dismissible[i].style.display = 'none'
+              tag.className = 'text-secondary'
+
+            }
+
+          } else {
+
+            for (i = 0; i < dismissible.length; i++) {
+
+              dismissible[i].style.display = 'block'
+              tag.className = 'text-primary'
+
+            }
+
+          }
+
+        })
+
+      })()
+
+    </script>
 
   </html>
   <% // flush /adm %>
 
-<!--
+    <!--
 Persona360
 **********
 Sistema orientado a EVENTOS inspirado no Diagrama de Ishikawa organizado pelo pensamento Ikigai
