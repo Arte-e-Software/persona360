@@ -1,64 +1,64 @@
 <div class="flex-column mt-3" id="entity-div" style="display: none;">
     <div class="alert alert-warning alert-dismissible show" role="alert">
         <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Entidades</strong><small> : requer permissão
-            [<strong>entity-create</strong>]</small>
+            [<strong>tools-dev-entity-create</strong>]</small>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <div id="entity-div-form">
-        <form class="form-group" id="entity-div-form-group">
+    <div id="entity-div-create">
+        <form class="form-group">
             <div class="mb-4" id="entity-input-name">
                 <label for="entity-input-text-name" class="label text-secondary"><i
                         class="bi bi-box"></i>&nbsp;Nome</label>
-                <input type="text" class="form-control" id="entity-name" value="Pessoa"
+                <input type="text" class="form-control" id="entity-name" value=""
                     placeholder="// #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado">
             </div>
             <div class="mb-4 " style="display: none;" id="entity-input-namespace">
                 <label for="entity-namespace" class="label text-secondary"><i class="bi bi-tags"></i>&nbsp;Namespace
-                    <small>nomes dos campos separadas por
+                    <small>nomes dos campos separados por
                         virgulas</small></label>
                 <textarea class="form-control" style="height: 5rem;" id="entity-namespace"
-                    placeholder="// #issue: analisar o namespace de todo sistema">
-pessoaId, nome, email, celular, senha, crdate, isactive
-                </textarea>
+                    placeholder="// #issue: analisar o namespace de todo sistema"></textarea>
             </div>
             <div class="mb-4" style="display: none;" id="entity-input-fields">
                 <label for="entity-fields" class="label text-secondary"><i class="bi bi-server"></i>&nbsp;Campos</label>
                 <div class="table-responsive border-top">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-hover">
                         <thead>
-                            <th>Campo</th>
-                            <th>Tipo</th>
-                            <th>Tamanho</th>
-                            <th>Aceita null</th>
-                            <th>Valor inicial</th>
-                            <th>Permite pesquisa</th>
-                            <th>Sensibilidade&nbsp;<i class="bi bi-shield-lock"></i></th>
+                            <th class="text-left">Nome</th>
+                            <th class="text-center" style="width: 8rem;">Proteção&nbsp;<i class="bi bi-shield-lock"></i>
+                            </th>
+                            <th class="text-center" style="width: 8rem;">Tipo</th>
+                            <th class="text-center" style="width: 8rem;">Tamanho</th>
+                            <th class="text-center">Valor inicial</th>
+                            <th class="text-left" style="width: 2.5rem;">Null</th>
+                            <th class="text-left fw-bold" style="width: 2.5rem;"><i class="bi bi-search"></i></th>
                         </thead>
                         <tbody id="entity-fields-tbody"></tbody>
                     </table>
                 </div>
             </div>
-            <div class="mb-4 entity-input-form" style="display: none;" id="entity-input-fields-form">
-                <label for="entity-name" class="label text-secondary"><i
-                        class="bi bi-ui-checks"></i>&nbsp;Formulário</label>
-                <div class="table-responsive border-top">
+            <div class="mb-4 entity-input-form" style="display: none;" id="entity-div-fields-form">
+                <label for="entity-name" class="label text-secondary">
+                    <input class="form-check-input" type="checkbox" id="entity-checkbox-form">&nbsp;Formulário</label>
+                <div class="table-responsive border-top" id="entity-div-table-fields-form" style="display: none;">
                     <table class="table table-striped table-hover">
                         <thead>
-                            <th>Campo</th>
-                            <th>Label</th>
-                            <th>Tipo</th>
-                            <th>Valor Inicial</th>
-                            <th>Obrigatório</th>
-                            <th>Placeholder</th>
-                            <th>Formatador</th>
+                            <th class="text-left">Id</th>
+                            <th class="text-center">Tipo</th>
+                            <th class="text-center">Label</th>
+                            <th class="text-center">Valor Inicial</th>
+                            <th class="text-center">Obrigatório</th>
+                            <th class="text-center">Placeholder</th>
+                            <th class="text-center">Formatador</th>
                             <!-- #issue: implantar para ser AAA -->
                             <!-- https://ceweb.br/cartilhas/cartilha-w3cbr-acessibilidade-web-fasciculo-IV/ -->
-                            <th>wcag&nbsp;<i class="bi bi-emoji-smile"></i></th>
+                            <th class="text-center">wcag&nbsp;<i class="bi bi-emoji-smile"></i></th>
                         </thead>
                         <tbody id="entity-fields-form-tbody"></tbody>
                     </table>
                     <div class="d-grid gap-2" id="entity-btn-create" style="display: none;">
-                        <button class="btn btn-success" type="button"><i class="bi bi-box"></i>&nbsp;&nbsp;Criar entidade</button>
+                        <button class="btn btn-success" type="button"><i class="bi bi-box"></i>&nbsp;&nbsp;Criar
+                            entidade</button>
                     </div>
                 </div>
             </div>
@@ -75,32 +75,34 @@ pessoaId, nome, email, celular, senha, crdate, isactive
             event.preventDefault()
 
             let div = document.getElementById('entity-div')
-                , divForm = document.getElementById('entity-div-form')
-                , formGroup = document.getElementById('entity-div-form-group')
                 , inputName = document.getElementById('entity-input-name')
                 , name = document.getElementById('entity-name')
+                , nameIsValid = false
+                , enter = false
                 , inputNamespace = document.getElementById('entity-input-namespace')
                 , namespace = document.getElementById('entity-namespace')
+                , namespaceIsValid = false
                 , fields = document.getElementById('entity-input-fields')
-                , form = document.getElementById('entity-input-fields-form')
                 , tbodyFields = document.getElementById('entity-fields-tbody')
-                , tbodyForm = document.getElementById('entity-fields-form-tbody')
-                , btnCreate = document.getElementById('entity-btn-create')
                 , tbodyFieldsHtml = ''
+                , checkboxForm = document.getElementById('entity-checkbox-form')
+                , divFieldsForm = document.getElementById('entity-div-fields-form')
+                , showForm = false
+                , form = document.getElementById('entity-div-table-fields-form')
+                , tbodyForm = document.getElementById('entity-fields-form-tbody')
                 , tbodyFormHtml = ''
-                , enter
-                , nameIsValid
-                , namespaceIsValid
+                , btnCreate = document.getElementById('entity-btn-create')
 
             div.style.display = 'block'
             name.focus()
             inputName.style.display = 'block'
             name.addEventListener('keypress', (event) => {
 
-                event.preventDefault()
                 enter = event.charCode === 13
 
                 if (enter) {
+
+                    event.preventDefault()
 
                     // #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado
                     nameIsValid = name.value.length >= 3
@@ -111,10 +113,11 @@ pessoaId, nome, email, celular, senha, crdate, isactive
                         namespace.focus()
                         namespace.addEventListener('keypress', (event) => {
 
-                            event.preventDefault()
                             enter = event.charCode === 13
 
                             if (enter) {
+
+                                event.preventDefault()
 
                                 // #issue: analisar o namespace de todo sistema
                                 namespaceIsValid = namespace.value.length >= 3
@@ -122,19 +125,28 @@ pessoaId, nome, email, celular, senha, crdate, isactive
                                 if (namespaceIsValid) {
 
                                     fields.style.display = 'block'
-                                    form.style.display = 'block'
+                                    divFieldsForm.style.display = 'block'
+
+                                    checkboxForm.addEventListener('click', (event) => {
+
+                                        showForm = checkboxForm.checked
+                                        if (showForm) {
+
+                                            form.style.display = 'block'
+
+                                        } else {
+
+                                            form.style.display = 'none'
+
+                                        }
+
+                                    })
 
                                     try {
 
                                         arrNamespace = namespace.value.split(',')
-
-                                        for (i = 0; i < arrNamespace.length; i++) {
-                                            tbodyFieldsHtml += `<tr><td>${arrNamespace[i].trim().toLowerCase()}</td><td colspan="6" class="text-center"><i class="bi bi-gear"></i> : trazer as possibilidade</td></tr>`
-                                            tbodyFormHtml += `<tr><td>${arrNamespace[i].trim().toLowerCase()}</td><td colspan="7" class="text-center"><i class="bi bi-gear"></i> : trazer as possibilidade</td></tr>`
-                                        }
-
-                                        tbodyFields.innerHTML = tbodyFieldsHtml
-                                        tbodyForm.innerHTML = tbodyFormHtml
+                                        tbodyFields.innerHTML = helperTbody(name, arrNamespace, tbodyFieldsHtml, tbodyFormHtml, 'tbodyFields')
+                                        tbodyForm.innerHTML = helperTbody(name, arrNamespace, tbodyFormHtml, tbodyFormHtml, 'tbodyForm')
                                         btnCreate.style.display = 'block'
 
                                     } catch (err) {
@@ -142,14 +154,123 @@ pessoaId, nome, email, celular, senha, crdate, isactive
                                         alert('Erro', erro, 'danger')
 
                                     }
+
+                                } else {
+
+                                    tbodyFields.innerHTML = ''
+                                    tbodyForm.innerHTML = ''
+                                    fields.style.display = 'none'
+                                    divFieldsForm.style.display = 'none'
+                                    namespace.value = ''
+                                    inputNamespace.style.display = 'none'
+                                    name.focus()
+
                                 }
                             }
                         })
+
+                    } else {
+
+                        name.value = ''
+                        div.style.display = 'none'
+
                     }
                 }
             }
             )
         })
+
+        function helperTbody(name, arrNamespace, tbodyFieldsHtml, tbodyFormHtml, whichTbody) {
+
+            switch (whichTbody) {
+
+                case 'tbodyFields':
+                    for (i = 0; i < arrNamespace.length; i++) {
+
+                        tbodyFieldsHtml += `<tr>
+                                                <td>
+                                                    <input class="form-control" type="text" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-name-input" entityfieldformtype="text" value="${arrNamespace[i].trim().toLowerCase()}">
+                                                </td>
+                                                <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-confidentiality">
+                                                    <div class="form-check-inline mx-0 px-0 pb-2 pt-0">
+                                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                                        <label class="btn mx-o px-0 text-secondary" for="inlineCheckbox1"><i class="bi bi-shield-slash"></i></label>
+                                                    </div>
+                                                    <div class="form-check-inline mx-0 px-0 pb-2 pt-0">
+                                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                                        <label class="btn mx-o px-0 text-secondary" for="inlineCheckbox2"><i class="bi bi-shield"></i></label>
+                                                    </div>
+                                                    <div class="form-check-inline mx-0 px-0 pb-2 pt-0">
+                                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                                        <label class="btn mx-o px-0 text-secondary" for="inlineCheckbox3"><i class="bi bi-shield-shaded"></i></label>
+                                                    </div>
+                                                    <div class="form-check-inline mx-0 px-0 pb-2 pt-0">
+                                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                                        <label class="btn mx-o px-0 text-secondary" for="inlineCheckbox3"><i class="bi bi-shield-lock-fill"></i></label>
+                                                    </div>
+                                                    <div class="form-check-inline mx-0 px-0 pb-2 pt-0">
+                                                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                                                        <label class="btn mx-o px-0 text-secondary" for="inlineCheckbox3"><i class="bi bi-shield-fill-exclamation"></i></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-type" entityfieldformtype="select">
+                                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Tipo">
+                                                <datalist id="datalistOptions">
+                                                <option value="string">
+                                                <option value="number">
+                                                <option value="date">
+                                                <option value="boolean">
+                                                </datalist>
+                                                </td>
+                                                <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-length" entityfieldformtype="number">
+                                                    <input type="number" class="form-control" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-length-input" value=""> </td>
+                                                <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-default-" entityfieldformtype="text">
+                                                    <input class="form-control" type="text" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-default-input" entityfieldformtype="text">
+                                                </td>
+                                                <td class="text-left mr-o pr-0">
+                                                    <div class="form-check form-switch pr-0 mr-0 align-middle">
+                                                        <input class="form-check-input" type="checkbox" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-nullable=input" entityfieldformtype="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-searcheble">
+                                                    <div class="form-check form-switch pr-0 mr-0 align-middle">
+                                                        <input class="form-check-input" type="checkbox" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-searcheble=input" entityfieldformtype="checkbox">
+                                                    </div>
+                                                </td>
+                                            </tr>`
+
+                    }
+                    return tbodyFieldsHtml
+                    break
+
+                case 'tbodyForm':
+                    for (i = 0; i < arrNamespace.length; i++) {
+
+                        tbodyFormHtml += `<tr>
+                                            <td>${arrNamespace[i].trim().toLowerCase()}</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-type">type</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-label">label</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-value">value</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-required">
+                                                <input class="form-check-input" type="checkbox" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-required" checked>
+                                            </td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-placeholder">placeholder</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-formatter">formatter</td>
+                                            <td class="text-center" id="entity-${name}-field-${arrNamespace[i].trim().toLowerCase()}-form-wcag">wcag</td>
+                                        </tr>`
+
+                    }
+
+                    return tbodyFormHtml
+                    break
+
+                default:
+                    return alert('Erro', 'whichTbody diferente de tbodyFields ou tbodyForm', 'danger')
+                    break
+
+            }
+
+        }
 
     })()
 
