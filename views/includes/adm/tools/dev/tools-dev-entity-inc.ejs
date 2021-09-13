@@ -12,8 +12,8 @@
     <% if(err){ let error=payload.err; // flush %>
         <script> alert('Erro', '<%=error%>', 'danger')</script>
         <% } else { // flush %>
-            <div class="flex-column mt-3" id="div-entity-btn">
-                <span class="btn btn-success mr-2 mb-2 entity-btn-create">
+            <div class="flex-column mt-3" id="entity-div-add">
+                <span class="btn btn-success mr-2 mb-2" id="entity-btn-add">
                     <i class="bi bi-box"></i>&nbsp;&nbsp;<i class="bi bi-plus-square-dotted"></i>
                 </span>
                 <% entities=payload.entities; for(let entity in entities){ // flush %>
@@ -25,5 +25,4 @@
             <%-include ./tools-dev-entity-create-inc.ejs %>
             
 </div>
-<% // flush views/includes/adm/tools/dev/tools-dev-entities-inc.ejs into views/includes/adm/tools/dev/tools-dev-inc.ejs
-    %>
+<% // flush views/includes/adm/tools/dev/tools-dev-entities-inc.ejs into views/includes/adm/tools/dev/tools-dev-inc.ejs %>
