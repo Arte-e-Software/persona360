@@ -1,9 +1,14 @@
-<head><%-include meta.ejs %>
+<head>
+<%-include meta.ejs %>
 <%-include tenant.ejs %>
 <%-include seo.ejs %>
 <%-include share.ejs %>
-<title><%=title%></title>
+<title>
+<%=title%>
+</title>
 <%-include style.ejs %>
-<script>var meta = document.getElementsByTagName('meta')</script>
+<script>function getty(e){by=t=>{switch (t){case 'id': return document.getElementById(e); break;case 'name': return document.getElementsByName(e);break;case 'tag':return document.getElementsByTagName(el);break;default:return}}}</script>
+<script>var meta = getty('meta').by('tag')</script>
+<script>console.log(meta)</script>
 <script src="assets/javascript/app/alert.js"></script>
 </head>
