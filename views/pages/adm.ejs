@@ -23,7 +23,6 @@
 
         let checkbox = document.getElementById('checkbox-dismiss-all-alerts')
           , dismissible = document.getElementsByClassName('alert-dismissible')
-          , tag = document.getElementById('checkbox-dismiss-all-alerts-tag')
           , dismiss = false
 
         checkbox.addEventListener('click', event => {
@@ -35,7 +34,6 @@
             for (i = 0; i < dismissible.length; i++) {
 
               dismissible[i].style.display = 'none'
-              tag.className = 'text-secondary'
 
             }
 
@@ -44,7 +42,6 @@
             for (i = 0; i < dismissible.length; i++) {
 
               dismissible[i].style.display = 'block'
-              tag.className = 'text-primary'
 
             }
 
