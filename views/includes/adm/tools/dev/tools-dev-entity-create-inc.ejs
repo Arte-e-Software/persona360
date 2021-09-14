@@ -6,23 +6,24 @@
     </div>
     <div id="entity-div-create">
         <form class="form-group">
-            <div class="mb-4" id="entity-input-name">
+            <div class="mb-4" id="entity-div-input-name">
                 <label for="entity-input-text-name" class="label mb-1 text-secondary"><i
                         class="bi bi-box"></i>&nbsp;Nome</label>
-                <input type="text" class="form-control" id="entity-name" value="pessoa"
+                <input type="text" class="form-control" id="entity-input-name" value="pessoa"
                     placeholder="// #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado">
             </div>
-            <div class="mb-4 " style="display: none;" id="entity-input-namespace">
+            <div class="mb-4 " style="display: none;" id="entity-div-input-namespace">
                 <label for="entity-namespace" class="label mb-1 text-secondary"><i
                         class="bi bi-tags"></i>&nbsp;Namespace
                     <small>nomes dos campos separados por
                         virgulas. <span class="text-danger"> Os campos id, crdate e isctive são criados pelo
                             sistema</span>.</small></label>
-                <textarea class="form-control" style="height: 5rem;" id="entity-namespace"
+                <textarea class="form-control" style="height: 5rem;" id="entity-input-namespace"
                     placeholder="// #issue: analisar o namespace de todo sistema">
 nome, email, celular, senha</textarea>
             </div>
-            <div class="mb-4" style="display: none;" id="entity-input-fields">
+
+            <div class="mb-4" style="display: none;" id="entity-div-input-fields">
                 <label for="entity-fields" class="label mb-1 text-secondary"><i
                         class="bi bi-server"></i>&nbsp;Campos</label>
                 <div class="table-responsive border-top">
@@ -41,29 +42,31 @@ nome, email, celular, senha</textarea>
                     </table>
                 </div>
             </div>
-            <div class="mb-4 entity-input-form" style="display: none;" id="entity-div-fields-form">
-                <label for="entity-name" class="label mb-1 text-secondary">
-                    <input class="form-check-input" type="checkbox" id="entity-checkbox-form">&nbsp;Formulário</label>
-                <div class="table-responsive border-top" id="entity-div-table-fields-form" style="display: none;">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <th class="text-left">Id</th>
-                            <th class="text-center">Tipo</th>
-                            <th class="text-center">Label</th>
-                            <th class="text-center">Valor Inicial</th>
-                            <th class="text-center">Obrigatório</th>
-                            <th class="text-center">Placeholder</th>
-                            <th class="text-center">Formatador</th>
-                            <!-- #issue: implantar para ser AAA -->
-                            <!-- https://ceweb.br/cartilhas/cartilha-w3cbr-acessibilidade-web-fasciculo-IV/ -->
-                            <th class="text-center">wcag&nbsp;<i class="bi bi-emoji-smile"></i></th>
-                        </thead>
-                        <tbody id="entity-fields-form-tbody"></tbody>
-                    </table>
-                    <div class="d-grid gap-2" id="entity-btn-create" style="display: none;">
-                        <button class="btn btn-success" type="button"><i class="bi bi-box"></i>&nbsp;&nbsp;Criar
-                            entidade</button>
-                    </div>
+
+            <div class="mb-1 text-secondary">
+                <label for="entity-name" class="label">
+                    <input class="form-check-input" type="checkbox" id="entity-toggle-form">&nbsp;Formulário</label>
+            </div>
+
+            <div class="table-responsive border-top" id="entity-div-input-fields-form" style="display: none;">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th class="text-left">Id</th>
+                        <th class="text-center">Tipo</th>
+                        <th class="text-center">Label</th>
+                        <th class="text-center">Valor Inicial</th>
+                        <th class="text-center">Obrigatório</th>
+                        <th class="text-center">Placeholder</th>
+                        <th class="text-center">Formatador</th>
+                        <!-- #issue: implantar para ser AAA -->
+                        <!-- https://ceweb.br/cartilhas/cartilha-w3cbr-acessibilidade-web-fasciculo-IV/ -->
+                        <th class="text-center">wcag&nbsp;<i class="bi bi-emoji-smile"></i></th>
+                    </thead>
+                    <tbody id="entity-fields-form-tbody"></tbody>
+                </table>
+                <div class="d-grid gap-2" id="entity-btn-create" style="display: none;">
+                    <button class="btn btn-success" type="button"><i class="bi bi-box"></i>&nbsp;&nbsp;Criar
+                        entidade</button>
                 </div>
             </div>
         </form>
@@ -73,84 +76,92 @@ nome, email, celular, senha</textarea>
 
     (() => {
 
-        let btn = document.getElementById('entity-btn-add')
-        btn.addEventListener('click', (event) => {
+        document.getElementById('entity-btn-add').addEventListener('click', (event) => {
 
             event.preventDefault()
 
-            // elementos do dom 
-            let div = document.getElementById('entity-div')
-                , inputName = document.getElementById('entity-input-name')
-                , name = document.getElementById('entity-name')
-                , inputNamespace = document.getElementById('entity-input-namespace')
-                , namespace = document.getElementById('entity-namespace')
-                , fields = document.getElementById('entity-input-fields')
-                , tbodyFields = document.getElementById('entity-fields-tbody')
-                , checkboxForm = document.getElementById('entity-checkbox-form')
-                , divFieldsForm = document.getElementById('entity-div-fields-form')
-                , form = document.getElementById('entity-div-table-fields-form')
-                , tbodyForm = document.getElementById('entity-fields-form-tbody')
-                , btnCreate = document.getElementById('entity-btn-create')
+            // this namespace
+            let dom = {
 
-                // listners, testers e helpers
-                , enter = false
+                "div": {
+                    "main": document.getElementById('entity-div'),
+                    "create": document.getElementById('entity-div-create'),
+                    "input": {
+                        "name": document.getElementById('entity-div-input-name'),
+                        "namespace": document.getElementById('entity-div-input-namespace'),
+                        "fields": document.getElementById('entity-div-input-fields'),
+                        "fieldsForm": document.getElementById('entity-div-input-fields-form'),
+                    }
+                },
+
+                "input": {
+                    "name": document.getElementById('entity-input-name'),
+                    "namespace": document.getElementById('entity-input-namespace'),
+                    "tBodyFields": document.getElementById('entity-fields-tbody'),
+                    "tBodyForm": document.getElementById('entity-fields-form-tbody')
+                },
+
+                listens: {
+                    toggleForm: document.getElementById('entity-toggle-form'),
+                    btnCreate: document.getElementById('entity-btn-create'),
+                }
+
+            }
+                , div = dom.div
+                , input = dom.input
+                , listens = dom.listens
+                , enterPressed = false
                 , nameIsValid = false
                 , namespaceIsValid = false
-                , tbodyFieldsHtml = ''
-                , tbodyFormHtml = ''
-                , selectFieldPrivacy
-                , selectFieldType
-                , inputFieldLength
-                , fieldNullable
-                , fieldSearcheable
-                , showForm = false
+                , showFieldsForm = false
 
-            div.style.display = 'block'
-            name.focus()
-            inputName.style.display = 'block'
-            name.addEventListener('keypress', (event) => {
+            div.main.style.display = 'block'
+            div.create.style.display = 'block'
+            div.input.name.style.display = 'block'
+            input.name.focus()
+            input.name.addEventListener('keypress', (event) => {
 
-                enter = event.charCode === 13
+                enterPressed = event.charCode === 13
 
-                if (enter) {
+                if (enterPressed) {
 
                     event.preventDefault()
+                    enterPressed = false
 
                     // #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado
-                    nameIsValid = name.value.length >= 3
-
                     // #issue: não sei usar regex em 202109140107
+                    nameIsValid = input.name.value.length > 3
 
                     if (nameIsValid) {
 
-                        inputNamespace.style.display = 'block'
-                        namespace.focus()
-                        namespace.addEventListener('keypress', (event) => {
+                        div.input.namespace.style.display = 'block'
+                        input.namespace.focus()
+                        input.namespace.addEventListener('keypress', (event) => {
 
-                            enter = event.charCode === 13
+                            enterPressed = event.charCode === 13
 
-                            if (enter) {
+                            if (enterPressed) {
 
                                 event.preventDefault()
+                                enterPressed = false
 
-                                // #issue: analisar o namespace de todo sistema
-                                namespaceIsValid = namespace.value.length >= 3
+                                // #issue: não sei usar regex em 202109140107
+                                namespaceIsValid = input.namespace.value.length >= 3
 
                                 if (namespaceIsValid) {
 
-                                    fields.style.display = 'block'
-                                    divFieldsForm.style.display = 'block'
+                                    div.input.fields.style.display = 'block'
+                                    listens.toggleForm.addEventListener('click', (event) => {
 
-                                    checkboxForm.addEventListener('click', (event) => {
+                                        showFieldsForm = listens.toggleForm.checked
 
-                                        showForm = checkboxForm.checked
-                                        if (showForm) {
+                                        if (showFieldsForm) {
 
-                                            form.style.display = 'block'
+                                            div.input.fieldsForm.style.display = 'block'
 
                                         } else {
 
-                                            form.style.display = 'none'
+                                            div.input.fieldsForm.style.display = 'none'
 
                                         }
 
@@ -158,11 +169,12 @@ nome, email, celular, senha</textarea>
 
                                     try {
 
-                                        arrNamespace = namespace.value.split(',')
-                                        let fieldname, fieldprivacy
-                                        tbodyFields.innerHTML = helperTbody(arrNamespace, tbodyFieldsHtml, tbodyFormHtml, 'tbodyFields')
-                                        tbodyForm.innerHTML = helperTbody(arrNamespace, tbodyFieldsHtml, tbodyFormHtml, 'tbodyForm')
-                                        btnCreate.style.display = 'block'
+                                        let namespaceValue = input.namespace.value
+                                            , arrNamespace = namespaceValue.split(',')
+
+                                        input.tBodyFields.innerHTML = helperTbody(arrNamespace, 'fields')
+                                        input.tBodyForm.innerHTML = helperTbody(arrNamespace, 'fieldsForm')
+                                        listens.btnCreate.style.display = 'block'
 
                                     } catch (err) {
 
@@ -172,13 +184,14 @@ nome, email, celular, senha</textarea>
 
                                 } else {
 
-                                    tbodyFields.innerHTML = ''
-                                    tbodyForm.innerHTML = ''
-                                    fields.style.display = 'none'
-                                    divFieldsForm.style.display = 'none'
-                                    namespace.value = ''
-                                    inputNamespace.style.display = 'none'
-                                    name.focus()
+                                    div.input.fields.innerHTML = ''
+                                    div.input.fieldsForm.innerHTML = ''
+                                    input.namespace.value = ''
+                                    div.input.namespace.style.display = 'none'
+                                    div.input.fields.style.display = 'none'
+                                    div.input.fieldsForm.style.display = 'none'
+
+                                    input.name.focus()
 
                                 }
                             }
@@ -186,8 +199,9 @@ nome, email, celular, senha</textarea>
 
                     } else {
 
-                        name.value = ''
-                        div.style.display = 'none'
+                        input.name.value = ''
+                        div.input.name.style.display = 'none'
+                        div.main.style.display = 'none'
 
                     }
                 }
@@ -195,13 +209,15 @@ nome, email, celular, senha</textarea>
             )
         })
 
-        function helperTbody(arrNamespace, tbodyFieldsHtml, tbodyFormHtml, whichTbody) {
+        function helperTbody(arrNamespace, whichTbody) {
 
-            let fieldname
+            let fieldname = ''
+                , tbodyFieldsHtml = ''
+                , tbodyFormHtml = ''
 
             switch (whichTbody) {
 
-                case 'tbodyFields':
+                case 'fields':
 
                     for (i = 0; i < arrNamespace.length; i++) {
 
@@ -248,7 +264,7 @@ nome, email, celular, senha</textarea>
                     return tbodyFieldsHtml
                     break
 
-                case 'tbodyForm':
+                case 'fieldsForm':
                     for (i = 0; i < arrNamespace.length; i++) {
 
                         tbodyFormHtml += `<tr>
