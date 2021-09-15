@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, '.', 'views'))
 
 // rotas - res.render
 app.get('/', require('./back-end/routes/home'))
-app.get('/adm', require('./back-end/routes/adm'))
+app.get('/framework', require('./back-end/routes/framework'))
 
 // rotas - res.send
 app.all('/api', require('./back-end/routes/api'))
