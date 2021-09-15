@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="137.8 77 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="140" y="79.6" width="115.3" height="115.3" style="stroke-width: 5px; stroke: rgb(255, 221, 0);" rx="8.9" ry="8.9"/>
+  <g transform="matrix(0.880922, 0, 0, 0.880922, 23.731569, 16.540754)" style="">
+    <title>logo</title>
+    <g transform="matrix(2.507467, 0, 0, 2.507467, -118.478371, -31.631121)" style="">
+      <title>pessoa</title>
+      <circle style="fill: none; fill-opacity: 1; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; paint-order: markers stroke; stroke-width: 4px; stroke: rgb(255, 221, 0);" id="circle-3" cx="126.3" cy="63.9" r="13.9">
+        <title>cabeça</title>
+      </circle>
+      <path style="fill: none; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; stroke-linecap: round; stroke-width: 4px; stroke: rgb(255, 221, 0);" d="M 107.6 87.8 C 120 82 134.5 82 144.9 87.8" id="path-7">
+        <title>corpo</title>
+      </path>
+    </g>
+    <g transform="matrix(2.46683, 0, 0, 2.46683, -74.352585, 12.531172)" style="">
+      <title>360</title>
+      <path id="path-8" style="color: rgb(0, 0, 0); font: medium sans-serif; font-feature-settings: normal; font-variation-settings: normal; text-indent: 0px; text-align: start; text-decoration: none solid rgb(0, 0, 0); letter-spacing: normal; word-spacing: normal; text-transform: none; writing-mode: lr-tb; direction: ltr; text-orientation: mixed; dominant-baseline: auto; baseline-shift: baseline; text-anchor: start; white-space: normal; shape-margin: 0px; inline-size: 0px; clip-rule: nonzero; display: inline; overflow: visible; opacity: 1; isolation: auto; mix-blend-mode: normal; color-interpolation: srgb; color-interpolation-filters: linearrgb; vector-effect: none; fill-opacity: 1; fill-rule: nonzero; stroke-linecap: butt; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1; paint-order: markers stroke; color-rendering: auto; image-rendering: auto; shape-rendering: auto; text-rendering: auto; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke-width: 3.10818px;" d="M 110.1 32.7 L 104.5 37.1 L 104.5 45 C 105.7 44.3 107.3 43.8 109 43.8 C 114.4 43.8 118.6 48 118.6 53.7 C 118.6 59.2 120.3 40.4 114.1 38.7 L 121.1 32.7 L 110.1 32.7 Z">
+        <title>6</title>
+      </path>
+      <path id="path-1" style="color: rgb(0, 0, 0); font: medium sans-serif; font-feature-settings: normal; font-variation-settings: normal; text-indent: 0px; text-align: start; text-decoration: none solid rgb(0, 0, 0); letter-spacing: normal; word-spacing: normal; text-transform: none; writing-mode: lr-tb; direction: ltr; text-orientation: mixed; dominant-baseline: auto; baseline-shift: baseline; text-anchor: start; white-space: normal; shape-margin: 0px; inline-size: 0px; clip-rule: nonzero; display: inline; overflow: visible; opacity: 1; isolation: auto; mix-blend-mode: normal; color-interpolation: srgb; color-interpolation-filters: linearrgb; vector-effect: none; fill-opacity: 1; fill-rule: nonzero; stroke-linecap: butt; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1; paint-order: markers stroke; color-rendering: auto; image-rendering: auto; shape-rendering: auto; text-rendering: auto; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke-width: 3.10818px; fill: rgb(255, 221, 0);" d="M 111.3 33.5 L 107.6 36.3 L 107.6 41.5 C 108.4 41 109.4 40.7 110.5 40.7 C 114 40.7 116.9 43.5 116.9 47.1 C 116.9 50.7 114 53.6 110.5 53.6 C 109.4 53.6 108.4 53.3 107.6 53 L 107.6 57.2 C 108.5 57.5 109.4 57.6 110.5 57.6 C 116.2 57.6 121 53 121 47.1 C 121 42.6 117.9 38.5 113.9 37.3 L 118.4 33.5 Z">
+        <title>6</title>
+      </path>
+      <g transform="matrix(1.126144, 0, 0, 1, -14.460719, 0.416973)" style="">
+        <title>3</title>
+        <rect style="fill-opacity: 1; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; paint-order: markers stroke; stroke-width: 1.03606px;" id="rect-1" width="20.1" height="4.6" x="100.1" y="28.4" rx="1.6" ry="1.7">
+          <title>3</title>
+        </rect>
+        <rect style="fill-opacity: 1; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; paint-order: markers stroke; stroke-width: 1.03606px; fill: rgb(255, 221, 0);" id="rect-3" width="18.7" height="4.6" x="101.6" y="27.3" rx="1.5" ry="1.7">
+          <title>3</title>
+        </rect>
+      </g>
+      <path id="path-9" style="color: rgb(0, 0, 0); font: medium sans-serif; font-feature-settings: normal; font-variation-settings: normal; text-indent: 0px; text-align: start; text-decoration: none solid rgb(0, 0, 0); letter-spacing: normal; word-spacing: normal; text-transform: none; writing-mode: lr-tb; direction: ltr; text-orientation: mixed; dominant-baseline: auto; baseline-shift: baseline; text-anchor: start; white-space: normal; shape-margin: 0px; inline-size: 0px; clip-rule: nonzero; display: inline; overflow: visible; opacity: 1; isolation: auto; mix-blend-mode: normal; color-interpolation: srgb; color-interpolation-filters: linearrgb; vector-effect: none; fill-opacity: 1; fill-rule: nonzero; stroke: none; stroke-width: 3.77953; stroke-linecap: butt; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1; paint-order: markers stroke; color-rendering: auto; image-rendering: auto; shape-rendering: auto; text-rendering: auto; stop-color: rgb(0, 0, 0); stop-opacity: 1; fill: rgb(255, 221, 0);" d="M 106.2 37.4 L 105.2 38.1 C 102.1 39.9 100 43.3 100 47.2 C 100 51.4 102.6 55.1 106.2 56.7 L 106.2 52 C 104.9 50.8 104 49.1 104 47.2 C 104 45.2 104.9 43.5 106.2 42.4 Z">
+        <title>0</title>
+      </path>
+    </g>
+  </g>
+</svg>
