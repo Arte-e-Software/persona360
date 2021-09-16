@@ -67,7 +67,7 @@
                 if (nameIsValid) {
 
                     dom.div.input.name.className = 'mb-1'
-                    dom.div.input.name.innerHTML = `<span class="text-success fw-bold"><i class="bi bi-box-seam"></i>&nbsp;Nome</label> : <strong>${dom.input.name.value}</strong></span>`
+                    dom.div.input.name.innerHTML = `<span class="text-success fw-bold"><i class="bi bi-box-seam"></i>&nbsp;NOME</label> : <strong>${dom.input.name.value}</strong></span>`
 
                     dom.div.input.namespace.style.display = 'block'
                     dom.input.namespace.focus()
@@ -86,7 +86,7 @@
 
                             if (namespaceIsValid) {
 
-                                dom.div.input.namespace.innerHTML = `<span class="text-success fw-bold"><i class="bi bi-box-seam"></i>&nbsp;Nomespace</label> : <strong>${dom.input.namespace.value}</strong></span>`
+                                dom.div.input.namespace.innerHTML = `<span class="text-success fw-bold"><i class="bi bi-box-seam"></i>&nbsp;NAMESPACE</label> : <strong>${dom.input.namespace.value}</strong></span>`
                                 dom.div.input.fields.style.display = 'block'
 
                                 try {
