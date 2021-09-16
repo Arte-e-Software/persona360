@@ -1,60 +1,70 @@
 <!doctype html>
 <html lang="pt-br">
-  <%-include ./blocks/head.ejs %>
-  <body>
-    
-<div class="col-lg-8 mx-auto p-3 py-md-2">
-  <header class="d-flex align-items-center p-2 mb-5 border-bottom">
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-      <img src="assets/images/Persona360Logo.svg" height="120">
-    </a>
-  </header>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Heroes · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+ body{
+   background-image: url('assets/images/bg.svg');         
+  overflow: hidden;
+           padding: 0;
+           margin: 0;
+           background-repeat: no-repeat;
+           background-size: cover;
+                       width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+            align-items: center;
+       }
+
+  </style>
+
+</head>
+
+<body>
 
   <main>
-    <h1>Muito prazer, <strong>Persona360</strong>.</h1>
-    <p class="fs-5 col-md-8">Educação não é produto. Quando um estudante e uma escola estabelecem um relacionamento, é para a vida inteira. Captação de alunos não é venda. É <strong>CONQUISTA</strong> Quem sua escola está conquistando?</p>
-
-    <div class="mb-5">
-      <a href="/conhecer/"><button type="button" class="btn btn-lg btn-primary">
-        Conheça o Persona360
-      </button></a>
-      &nbsp;
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalChat"><button type="button" class="btn btn-lg btn-primary">
-        Chat
-      </button></a>
-    </div>
-
-    <hr class="col-3 col-md-2 mb-5">
-
-    <div class="row g-5">
-      <div class="col-md-6">
-        <h2>Comece sem custo.</h2>
-        <p>O Persona360 é um SaaS, software como serviço. Sem instalação. Você cadastra seus cursos e conteúdos na nuvem e os utiliza em seu site por meio da nossa api. Com alguns cliques sua landing page está pronta e recebendo inscrições.</p>
-        <ul class="icon-list">
-          <li><a href="/framework" rel="noopener" target="_blank">Persona360 Starter Page</a></li>
-          <li><a href="#" rel="noopener" target="_blank">Persona360 ao vivo</a></li>
-          <li><a href="#" rel="noopener" target="_blank">Painel de Controle</a></li>
-          <li class="text-muted">Persona360 Estágios (em breve)</li>
-        </ul>
-      </div>
-
-      <div class="col-md-6">
-        <h2>Viva a experiência.</h2>
-        <p>Toda e qualquer relação passa por três momentos: <strong>CONHECER</strong>, <strong>CONQUISTAR</strong> e <strong>CONVIVER</strong>. Simples, o Persona360 entrega todos os benefícios da automação de marketing numa abordagem baseada em convivência.</p>
-        <ul class="icon-list">
-          <li><a href="#">Qual o propósito da sua escola?</a></li>
-          <li><a href="#">Sistema semântico: o que isso quer dizer?</a></li>
-          <li><a href="#">Todo verbo é um evento. Será?</a></li>
-          <li><a href="#">Vamos debater?</a></li>
-        </ul>
+   
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="assets/images/balao-aes-color.svg" class="d-block mx-lg-auto img-fluid" loading="lazy">
+        </div>
+        <div class="col-lg-6 shadow p-5 border-light rounded">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Estamos quase lá.</h1>
+          <p class="lead">
+          Estamos construindo um framework simples, prático, divertido e <strong>gratuito</strong> para dar uma força para quem quer começar a desenvolver sistemas web hoje mesmo. Venha a bordo!
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="mailto: aes.tec.br@gmail.com" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Me avise!</a>
+          </div>
+        </div>
       </div>
     </div>
-    <%-include ./blocks/chat.ejs %>
+  
+  </div>
+    
+
   </main>
-  <footer class="pt-5 my-5 text-muted border-top">
-    Desenvolvido por <img src="assets/images/arte-e-software.png" height="50" > &copy; 2021
-  </footer>
-</div>
-   <%-include ./blocks/javascript.ejs %>
-  </body>
+
+
+  <script src="assets/vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
 </html>
