@@ -1,6 +1,6 @@
 <div class="flex-column mt-3" id="entity-div" style="display: none;">
     <div class="alert alert-warning alert-dismissible show" role="alert">
-        <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Entidades</strong><small> : requer permissão
+        <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Criar Entidade</strong><small> : requer permissão
             [<strong>tools-dev-entity-create</strong>]</small>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -79,6 +79,7 @@ nome, email, celular, senha</textarea>
                     <tbody id="entity-fields-form-tbody"></tbody>
                 </table>
             </div>
+
         </form>
     </div>
 
@@ -157,8 +158,45 @@ nome, email, celular, senha</textarea>
                                         let namespaceValue = dom.input.namespace.value
                                             , arrNamespace = namespaceValue.split(',')
 
-                                        input.tBodyFields.innerHTML = helperTbody(arrNamespace)
-                                        
+                                        dom.input.tBodyFields.innerHTML = helperTbody(arrNamespace)
+
+                                        let selectPrivacy = document.getElementsByClassName('select-privacy')
+                                            , selectType = document.getElementsByClassName('select-type')
+                                            , inputLength = document.getElementsByClassName('input-length')
+                                            , inputNullable = document.getElementsByClassName('input-nullable')
+                                            , inputSearceable = document.getElementsByClassName('input-searcheable')
+                                            , values = []
+
+                                        for (field = 0; field < arrNamespace.length; field++) {
+
+                                            selectType[field].addEventListener('change', event => {
+
+                                                event.preventDefault()
+                                                console.log(event)
+
+                                            })
+
+                                            inputLength[field].addEventListener('change', event => {
+
+                                                event.preventDefault()
+                                                console.log(event)
+
+                                            })
+
+                                            values.push({
+                                                field: arrNamespace[field],
+                                                value: 
+                                                {
+                                                    selectPrivacy: selectPrivacy[field].options[selectPrivacy[field].selectedIndex].value,
+                                                    selectType: selectType[field].options[selectType[field].selectedIndex].value,
+                                                    inputLength: inputLength[field].value,
+                                                    inputNullable: inputNullable[field].value,
+                                                    inputSearceable: inputSearceable[field].value
+                                                }
+                                            })
+                                        }
+
+                                        validatedValues(values)
 
                                     } catch (err) {
 
@@ -224,22 +262,28 @@ nome, email, celular, senha</textarea>
                                             </select>
                                         </td>
                                         <td class="text-center" entityfieldformtype="number">
-                                        <input type="number" class="form-control" id="field-${fieldname}-length" value="" readonly>
+                                        <input type="number" class="form-control input-length" id="field-${fieldname}-length" value="" readonly>
                                         </td>
                                         <td class="text-left mr-o pr-0">
                                             <div class="form-check form-switch pr-0 mr-0 align-middle">
-                                                <input class="form-check-input" type="checkbox" id="field-${fieldname}-nullable=input" entityfieldformtype="checkbox">
+                                                <input class="form-check-input input-nullable" type="checkbox" id="field-${fieldname}-nullable=input" entityfieldformtype="checkbox">
                                             </div>
                                         </td>
                                         <td class="text-center" id="field-${fieldname}-searcheble">
                                             <div class="form-check form-switch pr-0 mr-0 align-middle">
-                                                <input class="form-check-input" type="checkbox" id="field-${fieldname}-searcheble=input" entityfieldformtype="checkbox">
+                                                <input class="form-check-input input-searcheable" type="checkbox" id="field-${fieldname}-searcheble=input" entityfieldformtype="checkbox">
                                             </div>
                                         </td>
                                     </tr>`)
             }
 
             return tbodyFieldsHtml.join('')
+        }
+
+        function validatedValues(values) {
+
+            console.log(values)
+            
         }
 
     })()

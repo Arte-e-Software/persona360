@@ -13,11 +13,11 @@
         <script> alert('Erro', '<%=error%>', 'danger')</script>
         <% } else { // flush %>
             <div class="flex-column mt-3" id="entity-div-add">
-                <span class="btn btn-sm btn-outline-success mr-2 mb-2" id="entity-btn-add">
-                    <i class="bi bi-plus-square"></i>&nbsp;Criar
+                <span class="btn btn-success mr-2 mb-2" id="entity-btn-add">
+                    <i class="bi bi-plus-square"></i>&nbsp;Configurar nova
                 </span>
                 <% entities=payload.entities; for(let entity in entities){ // flush %>
-                    <span class="btn btn-sm btn-outline-success mr-2 mb-2 entity-btn-<%=entities[entity].name%>">
+                    <span class="btn btn-outline-success mr-2 mb-2 entity-btn-<%=entities[entity].name%>">
                         <i class="bi bi-box"></i>&nbsp;&nbsp;<%=entities[entity].name%>
                     </span>
                     <% }; }; // flush %>
