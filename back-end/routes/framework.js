@@ -10,7 +10,7 @@ module.exports = router.get('/framework', (req, res) => {
 
     try {
 
-        entities = require('../../config/entities')
+        entities = require('../../config/entities')  // questionável em 15/09/2021
         payload = { "entities": entities, "err": false }
         res.render('pages/framework', { "env": env, "title": 'aes/framework', "payload": payload, "err": false }) // em desenvolvimento, 'aes/framework' virá do handlerTenant
 
