@@ -12,7 +12,7 @@ window.onload = () => {
       input: document.getElementById('input-text-entity-name'),
       listen: 'keypress',
       allow: allowedChars,
-      enter: handler
+      enter: handlerEntityCreate
     },
 
     namespace: {
@@ -20,7 +20,7 @@ window.onload = () => {
       input: document.getElementById('input-textarea-entity-namespace'),
       listen: 'keypress',
       allow: allowedChars,
-      enter: handler
+      enter: handlerEntityCreate
     },
 
     fields: {
@@ -31,57 +31,64 @@ window.onload = () => {
 
     table: {
       name: document.getElementById('table-name')
+    },
+
+    button: {
+      restart: document.getElementById('btn-entity-create-restart'),
+      create: document.getElementById('btn-entity-create')
     }
 
   }
 
-  let name = entity.name
-    , namespace = entity.namespace
-    , fields = entity.fields
-    , table = entity.table
+  document.getElementById('entity-create-tab').addEventListener('click', event => {
 
-  // #issue: não consigo colocar foco no campo name 
-  document.getElementById('input-text-entity-name').focus()
+    entity.name.input.focus()
+
+  })
+
+  // #nota: inicindo a interface do entity-create
+  entity.name.input.value = ''
+  entity.name.input.className = 'form-control is-invalid'
+  entity.name.input.readOnly = false
+
+  entity.namespace.input.value = ''
+  entity.namespace.input.className = 'form-control is-invalid'
+  entity.namespace.input.readOnly = false
+
+  entity.fields.config.innerHTML = ''
 
   // #issue: poderia ter um orquestrador global
   // #issue: poderia vir de um config.json
-  listenEnter(name)
-  listenEnter(namespace)
+  listenEnter(entity, entity.name)
+  listenEnter(entity, entity.namespace)
+  entity.button.create.disabled = true
 
-  function handler(element) {
+  entity.button.restart.addEventListener('click', event => {
 
-    let value = element.input.value
+    event.preventDefault()
 
-    if (element.input.id === name.input.id) {
+    entity.name.input.value = ''
+    entity.name.input.className = 'form-control is-invalid'
+    entity.name.input.readOnly = false
 
-      name.input.className = 'form-control is-valid'
-      name.input.setAttribute('readonly', true)
-      table.name = name.input.value
-      namespace.input.focus()
+    entity.namespace.input.value = ''
+    entity.namespace.input.className = 'form-control is-invalid'
+    entity.namespace.input.readOnly = false
 
-    }
+    entity.table.name.innerHTML = ''
 
-    if (element.input.id === namespace.input.id) {
+    entity.fields.config.innerHTML = ''
 
-      namespace.input.className = 'form-control is-valid'
-      namespace.input.setAttribute('readonly', true)
+    entity.name.input.focus()
 
-      fields.config.innerHTML = helperConfig(value.split(','))
+  })
 
-      const entity = {
-        name: name.input.value,
-        namespace: value.split(','), // = namespace
-        fields: {
-          privacy: document.getElementsByClassName('select-privacy'),
-          type: document.getElementsByClassName('select-type'),
-          length: document.getElementsByClassName('input-length'),
-          nullable: document.getElementsByClassName('checkbox-nullable'),
-          searchable: document.getElementsByClassName('checkbox-searchable')
-        }
-      }
+  entity.button.create.addEventListener('click', event => {
 
-      listenChange(entity)
+    event.preventDefault()
 
-    }
-  }
+    alert('Entity', entity, 'success')
+
+  })
+
 }

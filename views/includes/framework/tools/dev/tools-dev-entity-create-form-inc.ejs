@@ -23,7 +23,7 @@
 
         <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
         <input type="text" minlength="3" maxlength="50" class="form-control is-invalid" id="input-text-entity-name"
-          placeholder="Informe um nome único para a entidade" value="" />
+          placeholder="Informe um nome único para a entidade" autocomplete="off" autofocus value="" />
       </div>
     </div>
 
@@ -47,7 +47,8 @@
         <label for="input-textarea-entity-namespace" class="label mb-1 text-primary"><i
             class="bi bi-tags"></i>&nbsp;Propriedades</label>
         <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem"
-          id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas"></textarea>
+          id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas"
+          autocomplete="off"></textarea>
       </div>
     </div>
 
@@ -70,13 +71,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <div id="alert-entity-fields" class="alert alert-primary alert-dismissible show" role="alert">
-        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela <span class="text-success"
-            id="table-name"></span></strong> : configure nos campos sua privacidade, tipo,
+        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela</strong> : configure nos campos sua privacidade, tipo,
         tamanho, opcional e busca <i class="bi bi-search"></i>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <div>
-        <label for="table-responsive" class="label mb-1 text-primary"><i class="bi bi-server"></i>&nbsp;Tabela</label>
+        <label for="table-responsive" class="label mb-1 text-primary"><i
+            class="bi bi-server"></i>&nbsp;Tabela</label>&nbsp;&nbsp;<span class="text-success h6"
+          id="table-name"></span>
         <div class="table-responsive border-top">
           <table class="table table-hover">
             <thead>
@@ -93,9 +95,9 @@
           </table>
         </div>
       </div>
-      <div id="buttons" style="display: none;">
-        <button class="btn btn-outline-secondary " id="btn-entity-create-exit ">Sair</button>
-        <button class="btn btn-success " id="btn-create ">Criar</button>
+      <div>
+        <button class="btn btn-outline-secondary" id="btn-entity-create-restart">Reiniciar</button>
+        <button class="btn btn-success" id="btn-entity-create">Criar</button>
       </div>
     </div>
     <div style="height: 5rem ">&nbsp;</div>
@@ -105,4 +107,5 @@
 <script src="assets/javascript/tools/utils/helperConfig.js "></script>
 <script src="assets/javascript/tools/utils/handlerListen.js "></script>
 <script src="assets/javascript/tools/utils/listenChange.js "></script>
+<script src="assets/javascript/tools/utils/handlerEntityCreate.js "></script>
 <script src="assets/javascript/tools/utils/entityCreate.js "></script>
