@@ -1,25 +1,55 @@
-<div class="nav flex-column tab-pane mb-5" id="v-pills-dev" role="tabpanel" aria-labelledby="v-pills-dev-tab">
-    <div class="alert alert-warning alert-dismissible show" role="alert">
-        <strong><i class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Dev</strong> <small> : requer permissão [<strong>tools-dev</strong>]</small>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+<div
+  class="nav flex-column tab-pane mb-5"
+  id="v-pills-dev"
+  role="tabpanel"
+  aria-labelledby="v-pills-dev-tab"
+>
+  <div class="alert alert-warning alert-dismissible show" role="alert">
+    <strong><i class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Dev</strong>
+    <small> : requer permissão [<strong>tools-dev</strong>]</small>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
 
-    <div class="container-alert"></div>
-    
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="entities-tab" data-bs-toggle="tab" data-bs-target="#entities"
-                type="button" role="tab" aria-controls="entities" aria-selected="true"><i class="bi bi-box"></i>&nbsp;&nbsp;Entidades</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="der-tab" data-bs-toggle="tab" data-bs-target="#der" type="button"
-                role="tab" aria-controls="der" aria-selected="false"><i class="bi bi-bounding-box"></i>&nbsp;&nbsp;Relacionamentos</button>
-        </li>
-    </ul>
-    
-    <div class="tab-content" id="tab-tools">
-        <%-include ./tools-dev-entity-inc.ejs %>
-        <%-include ./tools-dev-der-inc.ejs %>
-    </div>
+  <div class="container-alert"></div>
 
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="entity-manager-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#entity-manager"
+        type="button"
+        role="tab"
+        aria-controls="entity-manager"
+        aria-selected="false"
+      >
+        <i class="bi bi-bounding-box"></i>&nbsp;&nbsp;Gerenciar entidades
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="entity-create-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#entity-create"
+        type="button"
+        role="tab"
+        aria-controls="entity-create"
+        aria-selected="false"
+      >
+        <i class="bi bi-box"></i>&nbsp;&nbsp;Criar entidade
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="tab-tools">
+    <%-include ./tools-dev-entity-create-inc.ejs %> <%-include
+    ./tools-dev-entity-manager-inc.ejs %>
+  </div>
 </div>
