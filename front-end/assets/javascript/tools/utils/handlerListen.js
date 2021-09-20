@@ -45,8 +45,6 @@ function handlerListen(entity, change) {
 
   // #pareiaqui
 
-  newvalueIsValid ? document.getElementById('buttons').style.display = 'block' : false
-
   return entity
 
 }

@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="my-3 border border-light-grey p-3 rounded" id="field-table``">
+    <div class="my-3 border border-light-grey p-3 rounded" id="entity-fields">
       <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
         <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabelas</strong> : as entidades e suas propriedades são
         armazenadas em tabelas. Em sua configuração, são estabelecidas regras a fim de garantir a consistência dos dados
@@ -69,8 +69,9 @@
           <i class="bi bi-search"></i></span>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      <div id="alert-entity-table" class="alert alert-primary alert-dismissible show" role="alert">
-        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela</strong> : configure nos campos sua privacidade, tipo,
+      <div id="alert-entity-fields" class="alert alert-primary alert-dismissible show" role="alert">
+        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela <span class="text-success"
+            id="table-name"></span></strong> : configure nos campos sua privacidade, tipo,
         tamanho, opcional e busca <i class="bi bi-search"></i>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
@@ -88,7 +89,7 @@
                 <i class="bi bi-search"></i>
               </th>
             </thead>
-            <tbody id="tbody-fields"></tbody>
+            <tbody id="fields-config"></tbody>
           </table>
         </div>
       </div>

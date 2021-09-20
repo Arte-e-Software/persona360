@@ -1,19 +1,19 @@
 function listenChange(entity) {
 
-  const config = entity.config
-    , fields = entity.fields
+  const fields = entity.fields
+    , namespace = entity.namespace
 
-  let listeners = []
-    , privacy = config.privacy
-    , type = config.type
-    , length = config.length
-    , nullable = config.nullable
-    , searchable = config.searchable
+  let field = []
+    , privacy = fields.privacy
+    , type = fields.type
+    , length = fields.length
+    , nullable = fields.nullable
+    , searchable = fields.searchable
     , change
 
   privacy[0].focus()
 
-  for (index = 0; index < fields.length; index++) {
+  for (index = 0; index < namespace.length; index++) {
 
     try {
 
@@ -58,9 +58,9 @@ function listenChange(entity) {
 
       })
 
-      listeners.push({
-        field: fields[index],
-        values: {
+      field.push({
+        name: namespace[index],
+        config: {
           privacy: privacy[index].options[privacy[index].selectedIndex].value,
           type: type[index].options[type[index].selectedIndex].value,
           length: length[index].value,
@@ -70,11 +70,11 @@ function listenChange(entity) {
       })
 
       document.getElementById('buttons').style.display = 'block'
-        *
-        handlerListen(entity, change)
+
+      handlerListen(entity, change)
 
     } catch (err) {
-      9
+
       return
 
     }
