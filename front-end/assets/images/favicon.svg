@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="Agrupar_1" data-name="Agrupar 1" width="800px" height="800px" viewBox="-11.8 -61.3 1209 1223.3" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #0074ff;
+      }
+
+      .cls-5 {
+        fill: red;
+      }
+
+      .cls-6 {
+        fill: #ffea00;
+      }
+    </style>
+  </defs>
+  <g transform="matrix(1.719625, -0.613234, 0.79751, 1.633728, -221.322067, 623.287048)" style="">
+    <title>logo aes balão color</title>
+    <path id="path-1" data-name="Forma 8" class="cls-1" d="M 344.3 203.2 C 346.9 204.2 216.1 97.6 188.2 23.3 C 179.9 1.1 142.5 -96.3 333.2 -111.7 C 523.9 -127.1 615.2 -95.7 615.2 -95.7 C 615.2 -95.7 780.8 -76.8 762.2 29.3 C 746.2 120.8 542 207.7 486.2 229.9 C 490.7 239.8 493.5 250.9 494 262.9 C 496.4 315.9 455.1 365.7 401.7 374 C 348.4 382.4 303.2 346.2 300.8 293.2 C 299.2 258.4 316.5 225.1 343.6 203.9 C 343.8 203.6 344.1 203.4 344.3 203.2 Z" style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); paint-order: fill; stroke-width: 85.3434px;">
+      <title>ccontorno</title>
+    </path>
+    <path id="Forma_8" data-name="Forma 8" class="cls-1" d="M 344.3 203.2 C 346.9 204.2 216.1 97.6 188.2 23.3 C 179.9 1.1 142.5 -96.3 333.2 -111.7 C 523.9 -127.1 615.2 -95.7 615.2 -95.7 C 615.2 -95.7 780.8 -76.8 762.2 29.3 C 746.2 120.8 542 207.7 486.2 229.9 C 490.7 239.8 493.5 250.9 494 262.9 C 496.4 315.9 455.1 365.7 401.7 374 C 348.4 382.4 303.2 346.2 300.8 293.2 C 299.2 258.4 316.5 225.1 343.6 203.9 C 343.8 203.6 344.1 203.4 344.3 203.2 Z" style="paint-order: stroke; stroke-width: 3.75423px; fill: rgb(255, 255, 255);">
+      <title>ccontorno</title>
+    </path>
+    <g style="" transform="matrix(1, 0, 0, 1, -493.377472, -155.36171)">
+      <title>balão</title>
+      <path id="Forma_5" data-name="Forma 5" class="cls-4" d="M 723.9 176.8 C 757.2 237.6 863.5 331.1 863.5 331.1 L 815 208 C 790.5 155.5 799 87 799 87 C 683.5 104.3 710.5 152.4 723.9 176.8 Z" style="fill-opacity: 0.8; fill: rgb(255, 0, 0); stroke-width: 3.75423px;">
+        <title>vermelho</title>
+      </path>
+      <path id="Forma_6" data-name="Forma 6" class="cls-5" d="M 909 334 C 966.8 202.8 1035 87 1035 87 C 1035 87 922.3 71.1 856 81 C 789.7 90.9 909 334 909 334 Z" style="fill: rgb(255, 187, 0); stroke-width: 3.75423px;">
+        <title>amareloho</title>
+      </path>
+      <path id="Forma_7" data-name="Forma 7" class="cls-6" d="M 944 357 C 944 357 1046.4 101.4 1084 95 C 1113.1 99.3 1227.1 107.2 1219 176 C 1210 251.7 944 357 944 357 Z" style="fill: rgb(0, 26, 255); stroke-width: 3.75423px;">
+        <title>azul</title>
+      </path>
+    </g>
+    <circle style="" transform="matrix(2.71847, 1.020403, -1.32703, 2.8614, -1394.608154, -1927.1427)" cx="881.60791015625" cy="457.69647216796875" r="20.330448851355584"/>
+  </g>
+</svg>

@@ -1,11 +1,13 @@
 <head>
-<%-include meta.ejs %>
-<%-include tenant.ejs %>
-<%-include seo.ejs %>
-<%-include share.ejs %>
-<title>
-<%=title%>
-</title>
-<%-include ./style.ejs %>
-<script src="assets/javascript/app/alert.js"></script>
+  <%-include meta.ejs %>
+    <%-include tenant.ejs %>
+      <%-include seo.ejs %>
+        <%-include share.ejs %>
+          <title>
+            <%=title%>
+          </title>
+          <%-include ./style.ejs %>
+            <script src="assets/javascript/app/alert.js"></script>
+            <script src="assets/javascript/tools/utils/sanitizeInput.js"></script>
+            <script src="assets/javascript/tools/utils/listenEnter.js"></script>
 </head>
