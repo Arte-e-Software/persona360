@@ -9,7 +9,7 @@
   --bs-blue: #084298;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
+  --bs-pink: #21e428;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffb028;
@@ -239,7 +239,7 @@ pre code {
 
 code {
   font-size: 0.875em;
-  color: #d63384;
+  color: #21e428;
   word-wrap: break-word;
 }
 a > code {
@@ -2036,7 +2036,7 @@ progress {
 }
 
 .table-warning {
-  --bs-table-bg: #fff583;
+  --bs-table-bg: #faeda5;
   --bs-table-striped-bg: #f2e7c3;
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #e6dbb9;
@@ -2530,7 +2530,7 @@ textarea.form-control-lg {
   }
 }
 .form-range::-webkit-slider-thumb:active {
-  background-color: #b6d4fe;
+  background-color: #eeeeee;
 }
 .form-range::-webkit-slider-runnable-track {
   width: 100%;
@@ -2559,7 +2559,7 @@ textarea.form-control-lg {
   }
 }
 .form-range::-moz-range-thumb:active {
-  background-color: #b6d4fe;
+  background-color: #eeeeee;
 }
 .form-range::-moz-range-track {
   width: 100%;
@@ -4675,7 +4675,7 @@ textarea.form-control-lg {
 .alert-primary {
   color: #084298;
   background-color: #eaeff7;
-  border-color: #b6d4fe;
+  border-color: #eeeeee;
 }
 .alert-primary .alert-link {
   color: #06357a;
@@ -4710,8 +4710,8 @@ textarea.form-control-lg {
 
 .alert-warning {
   color: #084298;
-  background-color: #fff583;
-  border-color: #b6d4fe;
+  background-color: #faeda5;
+  border-color: #eeeeee;
 }
 .alert-warning .alert-link {
   color: #523e02;
@@ -5077,7 +5077,7 @@ textarea.form-control-lg {
 
 .list-group-item-warning {
   color: #084298;
-  background-color: #fff583;
+  background-color: #faeda5;
 }
 .list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
   color: #084298;

@@ -23,20 +23,25 @@ window.onload = () => {
       enter: handler
     },
 
-    table: {
+    fields: {
+      alert: document.getElementById('alert-entity-fields'),
+      name: document.getElementById('entity-fields'),
+      config: document.getElementById('fields-config')
+    },
 
-      alert: document.getElementById('alert-entity-table'),
-      tbody: document.getElementById('tbody-fields')
+    table: {
+      name: document.getElementById('table-name')
     }
 
   }
 
   let name = entity.name
     , namespace = entity.namespace
+    , fields = entity.fields
     , table = entity.table
 
   // #issue: não consigo colocar foco no campo name 
-  name.input.focus()
+  document.getElementById('input-text-entity-name').focus()
 
   // #issue: poderia ter um orquestrador global
   // #issue: poderia vir de um config.json
@@ -47,29 +52,26 @@ window.onload = () => {
 
     let value = element.input.value
 
-    if (element.input.id === 'input-text-entity-name') {
+    if (element.input.id === name.input.id) {
 
-      let entityName = document.getElementById('input-text-entity-name')
-        , entityNamespace = document.getElementById('input-textarea-entity-namespace')
-
-      entityName.className = 'form-control is-valid'
-      entityName.setAttribute('readonly', true)
-      entityNamespace.focus()
+      name.input.className = 'form-control is-valid'
+      name.input.setAttribute('readonly', true)
+      table.name = name.input.value
+      namespace.input.focus()
 
     }
 
-    if (element.input.id === 'input-textarea-entity-namespace') {
+    if (element.input.id === namespace.input.id) {
 
-      let entityNamespace = document.getElementById('input-textarea-entity-namespace')
-      entityNamespace.className = 'form-control is-valid'
-      entityNamespace.setAttribute('readonly', true)
+      namespace.input.className = 'form-control is-valid'
+      namespace.input.setAttribute('readonly', true)
 
-      table.tbody.innerHTML = helperConfig(value.split(','))
+      fields.config.innerHTML = helperConfig(value.split(','))
 
       const entity = {
         name: name.input.value,
-        fields: value.split(','), // = namespace
-        config: {
+        namespace: value.split(','), // = namespace
+        fields: {
           privacy: document.getElementsByClassName('select-privacy'),
           type: document.getElementsByClassName('select-type'),
           length: document.getElementsByClassName('input-length'),
