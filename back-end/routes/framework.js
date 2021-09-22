@@ -1,23 +1,25 @@
 const express = require('express')
 const router = express.Router()
-const env = require('dotenv')
 
 module.exports = router.get('/framework', (req, res) => {
 
-    let entities = {}
-        , payload = {}
-        , env = process.env.NODE_ENV
+    let entities = {},
+        payload = {},
+        env = process.env.NODE_ENV
 
     try {
 
-        entities = require('../../config/entities')  // questionável em 15/09/2021
+        // #issue: questionável em 15/09/2021 questionável em 22/09/2021
+        entities = require('../../config/entities')
         payload = { "entities": entities, "err": false }
-        res.render('pages/framework', { "env": env, "title": 'aes/framework', "payload": payload, "err": false }) // em desenvolvimento, 'aes/framework' virá do handlerTenant
+            // #issue: em desenvolvimento, 'aes/framework' virá do handlerTenant
+        res.render('pages/framework', { "env": env, "title": 'aes/framework', "payload": payload, "err": false })
 
-    } catch(err) {
+    } catch (err) {
 
         payload = { "entities": entities, "err": err }
-        res.render('pages/framework', { "env": env, "title": 'aes/framework', "payload": payload, "err": true }) // em desenvolvimento, 'aes/framework' virá do handlerTenant
+            // #issue: em desenvolvimento, 'aes/framework' virá do handlerTenant
+        res.render('pages/framework', { "env": env, "title": 'aes/framework', "payload": payload, "err": true })
 
     }
 
