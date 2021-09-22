@@ -63,8 +63,9 @@
             <div>
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-form-tab" data-bs-toggle="tab" data-bs-target="#nav-form" type="button" role="tab" aria-controls="nav-form" aria-selected="true"><i class="bi bi-ui-checks"></i>&nbsp;Formulário</label>&nbsp;&nbsp;</button>
-                        <button class="nav-link" id="nav-code-tab" data-bs-toggle="tab" data-bs-target="#nav-code" type="button" role="tab" aria-controls="nav-code" aria-selected="false"><i class="bi bi-code-square"></i>&nbsp;Código</button>
+                        <button class="nav-link active" id="nav-form-tab" data-bs-toggle="tab" data-bs-target="#nav-form" type="button" role="tab" aria-controls="nav-form" aria-selected="true"><i class="bi bi-ui-checks"></i>&nbsp;Form</label>&nbsp;&nbsp;</button>
+                        <button class="nav-link" id="nav-code-sql-tab" data-bs-toggle="tab" data-bs-target="#nav-code-sql" type="button" role="tab" aria-controls="nav-code-sql" aria-selected="false"><i class="bi bi-code-square"></i>&nbsp;Sql</button>
+                        <button class="nav-link" id="nav-code-entitysql-tab" data-bs-toggle="tab" data-bs-target="#nav-code-entitysql" type="button" role="tab" aria-controls="nav-code-entitysql" aria-selected="false"><i class="bi bi-code-square"></i>&nbsp;entitySql</button>
                     </div>
                 </nav>
                 <div class="tab-content">
@@ -87,17 +88,33 @@
                             </table>
                         </div>
                     </div>
-                    <div class="tab-pane" id="nav-code" role="tabpanel" aria-labelledby="nav-code-tab">
+                    <div class="tab-pane" id="nav-code-sql" role="tabpanel" aria-labelledby="nav-code-sql-tab">
                       <div class="table-responsive">
                         <table class="table table-hover">
                                 <thead>
                                   <tr>
-                                        <th class="text-left">Json</th>
+                                        <th class="text-left">Sql</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <td id="entity-json"></td>
+                                    <td id="entity-sql"></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="nav-code-entitysql" role="tabpanel" aria-labelledby="nav-code-entitysql-tab">
+                      <div class="table-responsive">
+                        <table class="table table-hover">
+                                <thead>
+                                  <tr>
+                                        <th class="text-left">Entity SQL</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td id="entity-entitysql"></td>
                                   </tr>
                                 </tbody>
                             </table>

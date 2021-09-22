@@ -100,7 +100,6 @@ const entity = form => {
     }
   }
 
-  // #issue: parei aqui
   if (entity) {
 
     let pretty = entity => {
@@ -143,7 +142,8 @@ const entity = form => {
     }
 
     // #issue: falta adicionar listen nas mudanças dos settings
-    form.json.innerHTML = pretty(entity)
+    form.entitysql.innerHTML = pretty(entity)
+    form.sql.innerHTML = 'parei aqui 22/09/2021 09:05'
 
   } else {
 
