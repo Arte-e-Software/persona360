@@ -1,39 +1,61 @@
-function draft(form) {
+const draft = form => {
 
-  let name = form.name.input.value
+    let entity
 
-  if (name) {
+    if (form.name.input.value) {
 
-    form.name.input.className = 'form-control is-valid'
-    form.table.name.innerHTML = form.name.input.value
-    form.namespace.input.focus()
+        form.name.input.className = 'form-control is-valid'
+        form.table.name.innerHTML = form.name.input.value
+        form.namespace.input.focus()
 
-    let fields = form.namespace.input.value
+        if (form.namespace.input.value) {
 
-    if (fields) {
+            form.namespace.input.className = 'form-control is-valid'
 
-      form.namespace.input.className = 'form-control is-valid'
+            let draft = {
 
-      let draft = {
+                "name": form.name.input.value,
+                "namespace": form.namespace.input.value.split(','),
+                "fields": {
+                    "settings": form.fields.settings,
+                    "privacy": document.getElementsByClassName('select-privacy'),
+                    "type": document.getElementsByClassName('select-type'),
+                    "length": document.getElementsByClassName('input-length'),
+                    "nullable": document.getElementsByClassName('checkbox-nullable'),
+                    "searchable": document.getElementsByClassName('checkbox-searchable')
+                },
+                "button": {
+                    "create": form.button.create
+                }
+            }
 
-        "name": form.name.input.value,
-        "namespace": form.namespace.input.value,
-        "settings": {
-          "arrPrivacy": document.getElementsByClassName('select-privacy'),
-          "arrType": document.getElementsByClassName('select-type'),
-          "arrLength": document.getElementsByClassName('input-length'),
-          "arrNullable": document.getElementsByClassName('checkbox-nullable'),
-          "arrSearchable": document.getElementsByClassName('checkbox-searchable')
-        },
-        "target": form.fields.settings,
-        "button": {
-          "create": form.button.create
+            entity = {
+                "name": draft.name,
+                "namespace": draft.namespace,
+                "fields": []
+            }
+
+            draft.fields.settings.innerHTML = settings(draft.namespace)
+            draft.fields.privacy[0].focus()
+
+            for (let field in draft.namespace) {
+
+                entity.fields.push({
+
+                    "name": draft.namespace[field],
+                    "settings": {
+                        "privacy": draft.fields.privacy[field].options[draft.fields.privacy[field].selectedIndex].value,
+                        "type": draft.fields.type[field].options[draft.fields.type[field].selectedIndex].value,
+                        "length": draft.fields.length[field].value,
+                        "nullable": draft.fields.nullable[field].value,
+                        "searchable": draft.fields.searchable[field].value
+                    }
+
+                })
+            }
         }
-
-      }
-
-      return finish(draft)
-
     }
-  }
+
+    return entity ? finish(form, entity) : false
+
 }

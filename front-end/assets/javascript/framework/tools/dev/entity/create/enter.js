@@ -1,27 +1,25 @@
-function enter(form, element) {
+const enter = (form, element) => {
 
-  form[element].input.addEventListener(form[element].trigger, (event) => {
+    form[element].input.addEventListener(form[element].trigger, (event) => {
 
-    // #issue: tratamento pronto para text e number, falta date e boolean
-    form[element].input.value = sanitize(form[element].filter, form[element].input).split(',')
+        // #issue: tratamento pronto para text e number, falta date e boolean
+        form[element].input.value = sanitize(form[element].filter, form[element].input).split(',')
 
-    // #issue: esse módulo se chama enter.js porque é disparado com a tecla enter
-    if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+        if (event.code === 'Enter' || event.code === 'NumpadEnter') {
 
-      event.preventDefault()
+            event.preventDefault()
 
-      let len = form[element].input.value.length
-        , min = form[element].input.getAttribute('minlength')
-        , max = form[element].input.getAttribute('maxlength')
+            let len = form[element].input.value.length,
+                min = form[element].input.getAttribute('minlength'),
+                max = form[element].input.getAttribute('maxlength')
 
-      erro = len < min || len > max
+            erro = len < min || len > max
 
-      if (!erro) {
+            if (!erro) {
 
-        return form[element].draft(form)
+                return draft(form)
 
-      }
-
-    }
-  })
+            }
+        }
+    })
 }
