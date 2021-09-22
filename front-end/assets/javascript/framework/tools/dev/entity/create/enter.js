@@ -15,9 +15,21 @@ const enter = (form, element) => {
 
             erro = len < min || len > max
 
-            if (!erro) {
+            if (erro) {
 
-                return draft(form)
+                if (len === 0) {
+
+                    form[element].input.focus()
+                    form[element].input.value = ''
+                    form[element].input.className = 'form-control is-invalid'
+                    form.fields.settings.innerHTML = ''
+                    form.button.create.setAttribute('disabled', true)
+
+                }
+
+            } else {
+
+                return entity(form)
 
             }
         }

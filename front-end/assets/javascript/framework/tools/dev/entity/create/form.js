@@ -26,10 +26,6 @@ window.onload = () => {
             settings: document.getElementById('fields-settings')
         },
 
-        table: {
-            name: document.getElementById('table-name')
-        },
-
         button: {
             restart: document.getElementById('btn-entity-create-restart'),
             create: document.getElementById('btn-entity-create')
@@ -61,5 +57,7 @@ window.onload = () => {
         form.button.create.setAttribute('disabled', true)
 
     })
+
+    return
 
 }
