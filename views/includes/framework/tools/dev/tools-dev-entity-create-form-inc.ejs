@@ -1,64 +1,50 @@
 <div class="flex-column mb-5">
-  <form class="form-group">
-
-    <div class="my-3 border border-light-grey p-3 rounded">
-      <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
-        <i class="bi bi-box"></i>&nbsp; <strong>Entidades são susbtantivos</strong> : uma entidade representa o sujeito
-        da frase e um importante ator nas regras do seu negócio.
-        <hr />
-        <i class="bi bi-info-circle"></i>&nbsp;Toda <strong>entidade</strong> é única no sistema. Uma pessoa é uma
-        entidade, assim como um curso, uma escola, um veículo, etc. Todo adjetivo que qualifique uma entidade, ou tudo
-        aquilo que caracteriza
-        cada entidade cadastrada, são suas <strong>Propriedades</strong>.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div id="alert-entity-name" class="alert alert-primary alert-dismissible show" role="alert">
-        <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Nome</strong> : <strong>único</strong> no banco de dados; até 50
-        caracteres entre letras, números e _
-        <button type="button" class="btn-close text" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div>
-        <label for="input-text-entity-name" class="label mb-1 text-primary"><i
+    <form class="form-group">
+        <div class="my-3 border border-light-grey p-3 rounded">
+            <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
+                <i class="bi bi-box"></i>&nbsp; <strong>Entidades são susbtantivos</strong> : uma entidade representa o sujeito da frase e um importante ator nas regras do seu negócio.
+                <hr />
+                <i class="bi bi-info-circle"></i>&nbsp;Toda <strong>entidade</strong> é única no sistema. Uma pessoa é uma entidade, assim como um curso, uma escola, um veículo, etc. Todo adjetivo que qualifique uma entidade, ou tudo aquilo que caracteriza
+                cada entidade cadastrada, são suas <strong>Propriedades</strong>.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div id="alert-entity-name" class="alert alert-primary alert-dismissible show" role="alert">
+                <strong><i class="bi bi-box"></i>&nbsp;&nbsp;Nome</strong> : <strong>único</strong> no banco de dados; até 50 caracteres entre letras, números e _
+                <button type="button" class="btn-close text" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div>
+                <label for="input-text-entity-name" class="label mb-1 text-primary"><i
             class="bi bi-box"></i>&nbsp;Entidade</label>
-
-        <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
-        <input type="text" minlength="3" maxlength="50" class="form-control is-invalid" id="input-text-entity-name"
-          placeholder="Informe um nome único para a entidade" autocomplete="off" />
-      </div>
-    </div>
-
-    <div class="my-3 border border-light-grey p-3 rounded">
-      <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
-        <i class="bi bi-tags"></i>&nbsp; <strong>Propriedades são adjetivos</strong> : uma propriedade é uma
-        característca, um dado, de cada entidade.
-        <hr />
-        <span class="text-secondary"><i class="bi bi-info-circle"></i>&nbsp;<strong>Propriedades</strong>, como os
+                <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
+                <input type="text" minlength="3" maxlength="50" class="form-control is-invalid" id="input-text-entity-name" placeholder="Informe um nome único para a entidade" autocomplete="off" />
+            </div>
+        </div>
+        <div class="my-3 border border-light-grey p-3 rounded">
+            <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
+                <i class="bi bi-tags"></i>&nbsp; <strong>Propriedades são adjetivos</strong> : uma propriedade é uma característca, um dado, de cada entidade.
+                <hr />
+                <span class="text-secondary"><i class="bi bi-info-circle"></i>&nbsp;<strong>Propriedades</strong>, como os
           adjetivos, qualificam as
           entidade. O nome de uma pessoa, seu e-mail, seu número de celular e sua senha são as propriedades de uma
           entidade pessoa.</span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div id="alert-entity-namespace" class="alert alert-primary alert-dismissible show" role="alert">
-        <strong><i class="bi bi-tags"></i>&nbsp;&nbsp;Propriedades</strong> : id[entidade], crdate e isactive são
-        criados em todas as tabelas por padrão
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div>
-        <label for="input-textarea-entity-namespace" class="label mb-1 text-primary"><i
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div id="alert-entity-namespace" class="alert alert-primary alert-dismissible show" role="alert">
+                <strong><i class="bi bi-tags"></i>&nbsp;&nbsp;Propriedades</strong> : id[entidade], crdate e isactive são criados em todas as tabelas por padrão
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div>
+                <label for="input-textarea-entity-namespace" class="label mb-1 text-primary"><i
             class="bi bi-tags"></i>&nbsp;Propriedades</label>
-        <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem"
-          id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas"
-          autocomplete="off"></textarea>
-      </div>
-    </div>
-
-    <div class="my-3 border border-light-grey p-3 rounded" id="entity-fields">
-      <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
-        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabelas</strong> : as entidades e suas propriedades são
-        armazenadas em tabelas. Em sua configuração, são estabelecidas regras a fim de garantir a consistência dos dados
-        e o correto funcionameto do sistema.
-        <hr />
-        <span class="text-secondary"><i class="bi bi-info-circle"></i>&nbsp;<strong>Privacidade</strong>: estabelece
+                <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem" id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas" autocomplete="off"></textarea>
+            </div>
+        </div>
+        <div class="my-3 border border-light-grey p-3 rounded">
+            <div class="alert alert-dismissible show" role="alert" style="border: 1px solid #eeeeee">
+                <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabelas</strong> : as entidades e suas propriedades são armazenadas em tabelas. Em sua configuração, são estabelecidas regras a fim de garantir a consistência dos dados e o correto funcionameto
+                do sistema.
+                <hr />
+                <span class="text-secondary"><i class="bi bi-info-circle"></i>&nbsp;<strong>Privacidade</strong>: estabelece
           conformidade com sua política
           de privacidade. <strong>Tipo: Número</strong> armazena números negativos, positivos, inteiros ou fracionados;
           <strong>Texto</strong> armazena um conjuto de caracteres com
@@ -68,40 +54,38 @@
           falso. <strong>Opcional</strong>. Por padrão todos os campos são obrigatórios, para torná-lo opcional, ligue o
           seletor. Toda tabela precisa ter ao menos um campo obrigatório que permita pesquisa
           <i class="bi bi-search"></i></span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div id="alert-entity-fields" class="alert alert-primary alert-dismissible show" role="alert">
-        <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela</strong> : configure nos campos sua privacidade, tipo,
-        tamanho, opcional e busca <i class="bi bi-search"></i>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <div>
-        <label for="table-responsive" class="label mb-1 text-primary"><i
-            class="bi bi-server"></i>&nbsp;Tabela</label>&nbsp;&nbsp;<span class="text-success h6"
-          id="table-name"></span>
-        <div class="table-responsive border-top">
-          <table class="table table-hover">
-            <thead>
-              <th class="text-left">Campo</th>
-              <th class="text-center" style="width: 12rem">Privacidade&nbsp;<i class="bi bi-lock-fill"></i></th>
-              <th class="text-center" style="width: 12rem">Tipo</th>
-              <th class="text-center" style="width: 12rem">Tamanho</th>
-              <th class="text-left" style="width: 2.5rem">Opcional</th>
-              <th class="text-left fw-bold" style="width: 2.5rem">
-                <i class="bi bi-search"></i>
-              </th>
-            </thead>
-            <tbody id="fields-settings"></tbody>
-          </table>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div id="alert-entity-fields" class="alert alert-primary alert-dismissible show" role="alert">
+                <strong><i class="bi bi-server"></i>&nbsp;&nbsp;Tabela</strong> : configure nos campos sua privacidade, tipo, tamanho, opcional e busca <i class="bi bi-search"></i>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div>
+                <label for="table-responsive" class="label mb-1 text-primary"><i
+            class="bi bi-server"></i>&nbsp;Tabela</label>&nbsp;&nbsp;<span class="text-success h6" id="table-name"></span>
+                <div class="table-responsive border-top">
+                    <table class="table table-hover">
+                        <thead>
+                            <th class="text-left">Campo</th>
+                            <th class="text-center" style="width: 12rem">Privacidade&nbsp;<i class="bi bi-lock-fill"></i></th>
+                            <th class="text-center" style="width: 12rem">Tipo</th>
+                            <th class="text-center" style="width: 12rem">Tamanho</th>
+                            <th class="text-left" style="width: 2.5rem">Opcional</th>
+                            <th class="text-left fw-bold" style="width: 2.5rem">
+                                <i class="bi bi-search"></i>
+                            </th>
+                        </thead>
+                        <tbody id="fields-settings"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary" id="btn-entity-create-restart">Reiniciar</button>
+                <button class="btn btn-success" id="btn-entity-create">Criar</button>
+            </div>
         </div>
-      </div>
-      <div>
-        <button class="btn btn-outline-secondary" id="btn-entity-create-restart">Reiniciar</button>
-        <button class="btn btn-success" id="btn-entity-create">Criar</button>
-      </div>
-    </div>
-    <div style="height: 5rem ">&nbsp;</div>
-  </form>
+        <div style="height: 5rem ">&nbsp;</div>
+    </form>
 </div>
 <script src="assets/javascript/framework/tools/dev/entity/create/settings.js "></script>
 <script src="assets/javascript/framework/tools/dev/entity/create/finish.js "></script>
