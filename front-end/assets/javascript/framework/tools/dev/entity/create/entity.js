@@ -1,11 +1,10 @@
-const draft = form => {
+const entity = form => {
 
-    let entity
+    let entity = {}
 
     if (form.name.input.value) {
 
         form.name.input.className = 'form-control is-valid'
-        form.table.name.innerHTML = form.name.input.value
         form.namespace.input.focus()
 
         if (form.namespace.input.value) {
@@ -32,7 +31,7 @@ const draft = form => {
             entity = {
                 "name": draft.name,
                 "namespace": draft.namespace,
-                "fields": []
+                "fields": [{}]
             }
 
             draft.fields.settings.innerHTML = settings(draft.namespace)
@@ -56,6 +55,6 @@ const draft = form => {
         }
     }
 
-    return entity ? finish(form, entity) : false
+    return entity ? console.log(form, entity) : false
 
 }
