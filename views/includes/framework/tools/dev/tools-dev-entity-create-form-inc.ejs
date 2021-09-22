@@ -23,7 +23,7 @@
 
         <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
         <input type="text" minlength="3" maxlength="50" class="form-control is-invalid" id="input-text-entity-name"
-          placeholder="Informe um nome único para a entidade" autocomplete="off" autofocus value="" />
+          placeholder="Informe um nome único para a entidade" autocomplete="off" />
       </div>
     </div>
 
@@ -91,7 +91,7 @@
                 <i class="bi bi-search"></i>
               </th>
             </thead>
-            <tbody id="fields-config"></tbody>
+            <tbody id="fields-settings"></tbody>
           </table>
         </div>
       </div>
@@ -103,9 +103,7 @@
     <div style="height: 5rem ">&nbsp;</div>
   </form>
 </div>
-<script src="assets/javascript/tools/utils/input.js "></script>
-<script src="assets/javascript/tools/utils/helperConfig.js "></script>
-<script src="assets/javascript/tools/utils/handlerListen.js "></script>
-<script src="assets/javascript/tools/utils/listenChange.js "></script>
-<script src="assets/javascript/tools/utils/handlerEntityCreate.js "></script>
-<script src="assets/javascript/tools/utils/entityCreate.js "></script>
+<script src="assets/javascript/framework/tools/dev/entity/create/settings.js "></script>
+<script src="assets/javascript/framework/tools/dev/entity/create/finish.js "></script>
+<script src="assets/javascript/framework/tools/dev/entity/create/draft.js "></script>
+<script src="assets/javascript/framework/tools/dev/entity/create/form.js "></script>

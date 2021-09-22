@@ -1,71 +1,72 @@
-<% // flush %>
-  <!doctype html>
-  <html lang="pt-br">
-  <%-include ../blocks/head.ejs %>
+<!doctype html>
+<html lang="pt-br">
+<%-include ../blocks/head.ejs %>
 
-    <body>
-      <%-include ../blocks/nav.ejs %>
-        <main class="flex">
-          <div class="container-flex" id="main-framework">
-            <div class="tab-content px-4" id="nav-tabContent">
-              <%-include ../includes/framework/desktop/desktop-inc.ejs %>
-                <%-include ../includes/framework/apps/apps-inc.ejs %>
-                  <%-include ../includes/framework/governance/governance-inc.ejs %>
-                    <%-include ../includes/framework/tools/tools-inc.ejs %>
-            </div>
+  <body>
+    <%-include ../blocks/nav.ejs %>
+      <main class="flex">
+        <div class="container-flex" id="main-framework">
+          <div class="tab-content px-4" id="nav-tabContent">
+            <%-include ../includes/framework/desktop/desktop-inc.ejs %>
+              <%-include ../includes/framework/apps/apps-inc.ejs %>
+                <%-include ../includes/framework/governance/governance-inc.ejs %>
+                  <%-include ../includes/framework/tools/tools-inc.ejs %>
           </div>
-        </main>
-        <%-include ../blocks/javascript.ejs %>
-    </body>
-    <script src="assets/javascript/tools/api/request.js"></script>
-    <script src="assets/javascript/tools/socket/package.js"></script>
-    <script src="assets/javascript/tools/socket/call.js"></script>
-    <script src="assets/javascript/tools/socket/sql.js"></script>
-    <script src="assets/javascript/tools/socket/file.js"></script>
-    <script src="assets/javascript/tools/socket/serverfunction.js"></script>
-    <script>
+        </div>
+      </main>
+      <%-include ../blocks/javascript.ejs %>
+  </body>
+  <script src="assets/javascript/tools/api/request.js"></script>
+  <script src="assets/javascript/tools/socket/package.js"></script>
+  <script src="assets/javascript/tools/socket/call.js"></script>
+  <script src="assets/javascript/tools/socket/sql.js"></script>
+  <script src="assets/javascript/tools/socket/file.js"></script>
+  <script src="assets/javascript/tools/socket/serverfunction.js"></script>
+  <script>
 
-      (() => {
+    (() => {
 
-        let checkbox = document.getElementById('checkbox-dismiss-all-alerts')
-          , dismissible = document.getElementsByClassName('alert-dismissible')
-          , dismiss = false
+      let checkbox = document.getElementById('checkbox-dismiss-all-alerts')
+        , dismissible = document.getElementsByClassName('alert-dismissible')
+        , dismiss = false
 
-        checkbox.addEventListener('click', event => {
+      checkbox.addEventListener('click', event => {
 
-          dismiss = checkbox.checked
+        dismiss = checkbox.checked
 
-          if (!dismiss) {
+        if (!dismiss) {
 
-            for (i = 0; i < dismissible.length; i++) {
+          for (i = 0; i < dismissible.length; i++) {
 
-              dismissible[i].style.display = 'none'
-
-            }
-
-          } else {
-
-            for (i = 0; i < dismissible.length; i++) {
-
-              dismissible[i].style.display = 'block'
-
-            }
+            dismissible[i].style.display = 'none'
 
           }
 
-        })
+        } else {
 
-      })()
+          for (i = 0; i < dismissible.length; i++) {
 
-    </script>
+            dismissible[i].style.display = 'block'
 
-  </html>
-  <% // flush /framework %>
+          }
 
-    <!--
-Persona360
-**********
-Sistema orientado a EVENTOS inspirado no Diagrama de Ishikawa organizado pelo pensamento Ikigai
+        }
+
+      })
+
+    })()
+
+  </script>
+
+</html>
+
+<!--
+Entity Structured Query Language
+*********************************
+
+aes.framework
+*************
+Framework orientado a EVENTOS inspirado no Diagrama de Ishikawa organizado pelo pensamento Ikigai
 
 Definições
 **********
