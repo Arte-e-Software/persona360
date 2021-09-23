@@ -1,39 +1,27 @@
 <div class="flex tab-pane" id="nav-tools" role="tabpanel" aria-labelledby="nav-tools-tab">
-	<div class="alert alert-warning alert-dismissible show" role="alert">
-		<strong><i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas</strong><small> : requer permissão [<strong>tools</strong>]</small>
-		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>
-	<div class="d-flex align-items-start text-left">
-		<div class="nav flex-column nav-pills me-3" style="width: 9rem !important" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-			<div
-				class="nav-link text-left"
-				id="v-pills-dev-tab"
-				data-bs-toggle="pill"
-				data-bs-target="#v-pills-dev"
-				type="button"
-				role="tab"
-				aria-controls="v-pills-dev"
-				aria-selected="false"
-			>
-				<i class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Dev
-			</div>
+  <div class="alert alert-warning alert-dismissible show" role="alert">
+    <strong><i class="bi bi-gear"></i>&nbsp;&nbsp;Ferramentas</strong><small> : requer permissão
+      [<strong>tools</strong>]</small>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="d-flex align-items-start text-left">
+    <div class="nav flex-column nav-pills me-3" style="width: 14.4rem !important" id="v-pills-tab" role="tablist"
+      aria-orientation="vertical">
+      <div class="nav-link text-left" id="v-pills-dev-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dev"
+        type="button" role="tab" aria-controls="v-pills-dev" aria-selected="false">
+        <i class="bi bi-file-earmark-code-fill"></i>&nbsp;&nbsp;Entidades
+      </div>
 
-			<div
-				class="nav-link text-left"
-				id="v-pills-sql-tab"
-				data-bs-toggle="pill"
-				data-bs-target="#v-pills-sql"
-				type="button"
-				role="tab"
-				aria-controls="v-pills-sql"
-				aria-selected="false"
-			>
-				<i class="bi bi-server"></i>&nbsp;&nbsp;Sql
-			</div>
-		</div>
+      <div class="nav-link text-left" id="v-pills-sql-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sql"
+        type="button" role="tab" aria-controls="v-pills-sql" aria-selected="false">
+        <i class="bi bi-server"></i>&nbsp;&nbsp;Base de Dados
+      </div>
+    </div>
 
-		<div class="nav flex-column tab-content container-fluid" style="padding-right: 0px !important" id="v-pills-tabContent">
-			<%-include ./dev/tools-dev-inc.ejs %> <%-include ./sql/tools-sql-inc.ejs %>
-		</div>
-	</div>
+    <div class="nav flex-column tab-content container-fluid" style="padding-right: 0px !important"
+      id="v-pills-tabContent">
+      <%-include ./dev/tools-dev-inc.ejs %>
+        <%-include ./sql/tools-sql-inc.ejs %>
+    </div>
+  </div>
 </div>
