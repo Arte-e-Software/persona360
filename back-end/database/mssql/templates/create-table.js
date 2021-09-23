@@ -1,6 +1,6 @@
-function create(name, columns) {
+const create = (name, columns) => {
 
-    return '\nexports.exports = `' + `
+  return `
         
     -- Cria uma tabela chamada '${name}'
 
@@ -9,7 +9,7 @@ function create(name, columns) {
 
     CREATE TABLE ${name}
     (
-    id${name} INT IDENTITY(1,1) NOT NULL PRIMARY KEY
+    id_${name} INT IDENTITY(1,1) NOT NULL PRIMARY KEY
     ,${columns});
     `+ '`\n'
 

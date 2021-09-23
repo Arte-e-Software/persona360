@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <%-include ../blocks/head.ejs %>
 
@@ -9,8 +9,7 @@
           <div class="tab-content px-4" id="nav-tabContent">
             <%-include ../includes/framework/desktop/desktop-inc.ejs %>
               <%-include ../includes/framework/apps/apps-inc.ejs %>
-                <%-include ../includes/framework/governance/governance-inc.ejs %>
-                  <%-include ../includes/framework/tools/tools-inc.ejs %>
+                <%-include ../includes/framework/tools/tools-inc.ejs %>
           </div>
         </div>
       </main>
@@ -23,39 +22,25 @@
   <script src="assets/javascript/tools/socket/file.js"></script>
   <script src="assets/javascript/tools/socket/serverfunction.js"></script>
   <script>
+    ; (() => {
+      let checkbox = document.getElementById("checkbox-dismiss-all-alerts"),
+        dismissible = document.getElementsByClassName("alert-dismissible"),
+        dismiss = false
 
-    (() => {
-
-      let checkbox = document.getElementById('checkbox-dismiss-all-alerts')
-        , dismissible = document.getElementsByClassName('alert-dismissible')
-        , dismiss = false
-
-      checkbox.addEventListener('click', event => {
-
+      checkbox.addEventListener("click", (event) => {
         dismiss = checkbox.checked
 
         if (!dismiss) {
-
           for (i = 0; i < dismissible.length; i++) {
-
-            dismissible[i].style.display = 'none'
-
+            dismissible[i].style.display = "none"
           }
-
         } else {
-
           for (i = 0; i < dismissible.length; i++) {
-
-            dismissible[i].style.display = 'block'
-
+            dismissible[i].style.display = "block"
           }
-
         }
-
       })
-
     })()
-
   </script>
 
 </html>

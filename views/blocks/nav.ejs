@@ -1,76 +1,32 @@
-<nav class="navbar navbar-expand-md fixed-top bg-white" style="margin-bottom: 0px !important; padding-bottom: 0px !important">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="/framework"><img src="assets/images/arte-e-software.svg" height="50rem" /></a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarCollapse"
-			aria-controls="navbarCollapse"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
-		>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<div class="navbar-nav me-auto mb-md-0" id="nav-framework">
-				<div class="nav nav-pills" id="nav-tab" role="tablist">
-					<button
-						class="nav-link active"
-						id="nav-desktop-tab"
-						data-bs-toggle="tab"
-						data-bs-target="#nav-desktop"
-						type="button"
-						role="tab"
-						aria-controls="nav-desktop"
-						aria-selected="false"
-					>
-						<i class="bi bi-ui-checks-grid"></i>&nbsp;&nbsp;Mesa
-					</button>
-					<button
-						class="nav-link"
-						id="nav-apps-tab"
-						data-bs-toggle="tab"
-						data-bs-target="#nav-apps"
-						type="button"
-						role="tab"
-						aria-controls="nav-apps"
-						aria-selected="false"
-					>
-						<i class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos
-					</button>
-					<button
-						class="nav-link"
-						id="nav-governance-tab"
-						data-bs-toggle="tab"
-						data-bs-target="#nav-governance"
-						type="button"
-						role="tab"
-						aria-controls="nav-config"
-						aria-selected="false"
-					>
-						<i class="bi bi-bank"></i>&nbsp;&nbsp;Governança
-					</button>
-					<button
-						class="nav-link"
-						id="nav-config-tab"
-						data-bs-toggle="tab"
-						data-bs-target="#nav-config"
-						type="button"
-						role="tab"
-						aria-controls="nav-config"
-						aria-selected="false"
-					>
-						<i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas
-					</button>
-
-					<div class="nav-link" type="button" role="tab">
-						<div class="form-check form-switch pr-0 mr-0 align-middle">
-							<input class="form-check-input" type="checkbox" id="checkbox-dismiss-all-alerts" entityfieldformtype="checkbox" checked />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<nav class="navbar navbar-expand-md fixed-top bg-white px-3 pt-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/framework"><img src="assets/images/arte-e-software-cubo.svg" width="200px"
+        height="40px" /></a>
+    <div class="container-fluid">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="nav-desktop-tab" data-bs-toggle="tab" data-bs-target="#nav-desktop"
+            type="button" role="tab" aria-controls="nav-desktop" aria-selected="true">
+            <i class="bi bi-ui-checks-grid"></i>&nbsp;&nbsp;Mesa
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="nav-apps-tab" data-bs-toggle="tab" data-bs-target="#nav-apps" type="button"
+            role="tab" aria-controls="nav-apps" aria-selected="false">
+            <i class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="nav-tools-tab" data-bs-toggle="tab" data-bs-target="#nav-tools" type="button"
+            role="tab" aria-controls="nav-tools" aria-selected="false">
+            <i class="bi bi-cpu"></i>&nbsp;&nbsp;Ferramentas
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="form-check form-switch align-middle text-warning">
+      <input class="form-check-input" type="checkbox" id="checkbox-dismiss-all-alerts" entityfieldformtype="checkbox"
+        checked /><i class="bi bi-bookmark-x-fill"></i>
+    </div>
+  </div>
 </nav>

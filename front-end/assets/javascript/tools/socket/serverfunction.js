@@ -1,17 +1,17 @@
-function serverfunction(serverfunction, serverfunctionparams) {
+const serverfunction = (serverfunction, serverfunctionparams) => {
 
-    let params = {
+  let params = {
 
-        "serverfunction": serverfunction,
-        "serverfunctionparams": serverfunctionparams
+    "serverfunction": serverfunction,
+    "serverfunctionparams": serverfunctionparams
 
-    }
+  }
 
-    call('function', params, (returned) => {
+  call('function', params, (returned) => {
 
-        let serverfunctionreturn = returned.payload.serverfunctionreturn
-        return serverfunctionreturn
+    let serverfunctionreturn = returned.payload.serverfunctionreturn
+    return serverfunctionreturn
 
-    })
+  })
 
 }
