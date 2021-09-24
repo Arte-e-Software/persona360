@@ -1,36 +1,15 @@
+module.exports = entity => {
 
-const columns = entity => {
+  let translate = {
+    js: ['String', 'Date', 'Boolean', 'Number'],
+    sql: ['VARCHAR', 'DATETIME', 'BIT', 'Float']
+  }
+    , columns = entity.fields.map(field => {
 
-  let fields = entity.fields
-
-    , translate = {
-      js: ['String', 'Date', 'Boolean', 'Number'],
-      sql: ['VARCHAR', 'DATETIME', 'BIT', 'Float']
-    }
-
-    , arrColumns = fields.map((field) => {
-
-      // vou precisar desses valores para gravar a entidade na table entity
-      let name = field.name
-        //, privacy = field.privacy
-        , type = translate.sql[translate.js.indexOf(field.type)]
-        , length = field.length
-        , nullable = field.nullnullable
-        //, searchable = field.searchable
-        , isForeingKey = name.substring(0, 3) === 'id_'
-
-      if (isForeingKey) { type = 'INT' }
-
-      if (length) { length = `(${length})` } else { length = '' }
-
-      if (nullable) { nullable = 'NULL' } else { nullable = 'NOT NULL' }
-
-      return `${field.name} [${type}]${length} ${nullable}\n`
+      return field
 
     })
 
-  return arrColumns
+  return columns
 
 }
-
-module.exports = columns
