@@ -1,38 +1,38 @@
 <div class="tab-pane" id="nav-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
-    <div class="alert alert-warning alert-dismissible show" role="alert">
-        <strong><i class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos</strong><small> : requer permissão
-            [<strong>apps</strong>]</small>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="container-alert alert-apps"></div>
-    <div class="container-apps">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#app-test">
-            <i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App
-        </button>
-    </div>
+  <div class="alert alert-secondary alert-dismissible show" role="alert">
+    <strong><i class="bi bi-grid"></i>&nbsp;&nbsp;Aplicativos</strong><small> : requer permissão
+      [<strong>apps</strong>]</small>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="container-alert alert-apps"></div>
+  <div class="container-apps">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#app-test">
+      <i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App
+    </button>
+  </div>
 </div>
 
 <div class="modal" id="app-test" tabindex="-1" aria-labelledby="app-testLabel" aria-modal="true" role="dialog"
-    style="display: none;">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title h4" id="app-testLabel"><i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-warning alert-dismissible show" role="alert">
-                    <strong><i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App</strong><small> : requer
-                        permissão
-                        [<strong>app-id</strong>]</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <code>app-code</code>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar App</button>
-            </div>
+  style="display: none;">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="app-testLabel"><i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-secondary alert-dismissible show" role="alert">
+          <strong><i class="bi bi-arrows-fullscreen"></i>&nbsp;&nbsp;App</strong><small> : requer
+            permissão
+            [<strong>app-id</strong>]</small>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        <code>app-code</code>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar App</button>
+      </div>
     </div>
+  </div>
 </div>
