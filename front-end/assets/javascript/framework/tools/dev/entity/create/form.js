@@ -39,7 +39,6 @@ window.onload = () => {
   enter(form, 'name')
   enter(form, 'namespace')
   form.button.create.setAttribute('disabled', true)
-  //form.button.config.setAttribute('disabled', true)
 
   form.tab.create.addEventListener('click', event => {
 
