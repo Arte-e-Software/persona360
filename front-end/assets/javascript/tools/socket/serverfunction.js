@@ -1,4 +1,4 @@
-const serverfunction = (serverfunction, serverfunctionparams) => {
+const serverfunction = (serverfunction, serverfunctionparams, res) => {
 
   let params = {
 
@@ -7,10 +7,10 @@ const serverfunction = (serverfunction, serverfunctionparams) => {
 
   }
 
-  call('function', params, (returned) => {
+  return call('function', params, (returned) => {
 
     let serverfunctionreturn = returned.payload.serverfunctionreturn
-    return serverfunctionreturn
+    return res(serverfunctionreturn)
 
   })
 

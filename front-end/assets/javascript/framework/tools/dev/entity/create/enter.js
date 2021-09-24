@@ -24,7 +24,7 @@ const enter = (form, element) => {
   form[element].input.addEventListener(trigger, (event) => {
 
     // #issue: tratamento pronto para text e number, falta date e boolean
-    form[element].input.setAttribute('value', sanitize(form[element].filter, form[element].input).split(','))
+    form[element].input.value = sanitize(form[element].filter, form[element].input).split(',')
     form[element].input.setAttribute('placeholder', `${form[element].input.value} || Enter para limpar`)
 
     if (event.code === 'Enter' || event.code === 'NumpadEnter') {
