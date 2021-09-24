@@ -7,9 +7,7 @@ module.exports = (socket, payload) => {
 
   try {
 
-    console.log('serverfunctionparams', serverfunctionparams)
-
-    let serverfunctionreturn = require(`./serverfunctions/${serverfunction}`)(serverfunctionparams)
+    let serverfunctionreturn = require(`${serverfunction}`)(serverfunctionparams)
       , payload = { "serverfunctionreturn": serverfunctionreturn }
 
     socket.emit('call', package('function', payload, false))

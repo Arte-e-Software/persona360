@@ -1,6 +1,10 @@
 const entity = form => {
 
-  let entity = {}
+  let entity = {
+    "name": form.name.input.value,
+    "namespace": form.namespace.input.value.split(',').map(name => { return name.trim() }),
+    "fields": []
+  }
 
   if (form.name.input.value) {
 
@@ -13,8 +17,6 @@ const entity = form => {
 
       let draft = {
 
-        "name": form.name.input.value,
-        "namespace": form.namespace.input.value.split(','),
         "fields": {
           "settings": form.fields.settings,
           "privacy": document.getElementsByClassName('select-privacy'),
@@ -22,26 +24,20 @@ const entity = form => {
           "length": document.getElementsByClassName('input-length'),
           "nullable": document.getElementsByClassName('checkbox-nullable'),
           "searchable": document.getElementsByClassName('checkbox-searchable')
-        },
-        "button": {
-          "create": form.button.create
         }
+
       }
 
-      entity = {
-        "name": draft.name,
-        "namespace": draft.namespace,
-        "fields": []
-      }
+      draft.fields.settings.innerHTML = settings(form.namespace.input.value.split(','))
+      //draft.fields.privacy[0].focus()
 
-      draft.fields.settings.innerHTML = settings(draft.namespace)
-      draft.fields.privacy[0].focus()
+      console.log(draft)
 
-      for (let field in draft.namespace) {
+      for (let field in entity.namespace) {
 
         entity.fields.push({
 
-          "name": draft.namespace[field],
+          "name": entity.namespace[field],
           "settings": {
             "privacy": draft.fields.privacy[field].options[draft.fields.privacy[field].selectedIndex].value,
             "type": draft.fields.type[field].options[draft.fields.type[field].selectedIndex].value,
@@ -56,7 +52,7 @@ const entity = form => {
 
       entity.namespace.push('crdate')
       entity.namespace.push('isactive')
-      entity.namespace.unshift(`id_${draft.name}`)
+      entity.namespace.unshift(`id_${entity.name}`)
 
       entity.fields.push({
 
@@ -102,12 +98,15 @@ const entity = form => {
 
   if (entity) {
 
+    form.button.create.setAttribute('disable', false)
     // #issue: falta adicionar listen nas mudanças dos settings
-    form.entitysql.innerHTML = pretty(entity)
-    form.sql.innerHTML = 'parei aqui 22/09/2021 09:05'
-    let columns = serverfunction('columns', entity)
+    form.entitysql.innerHTML = `<tr><td>${pretty(entity)}</td></tr>`
 
-    console.log('columns', columns)
+    serverfunction('../back-end/database/mssql/templates/create-table', entity, (res) => {
+
+      return form.sql.innerHTML = `<tr><td>${res.split(';').join(';<br>')}</td></tr>`
+
+    })
 
   } else {
 
@@ -115,6 +114,6 @@ const entity = form => {
 
   }
 
-  //return entity ? console.log(form, entity) : false
+  return
 
 }
