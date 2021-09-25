@@ -23,13 +23,16 @@
     <script src="assets/javascript/tools/socket/serverfunction.js"></script>
 
     <script>
-        window.onload(() => {
+        (() => {
 
             let checkbox = document.getElementById("checkbox-dismiss-all-alerts"),
                 dismissible = document.getElementsByClassName("alert-dismissible"),
                 dismiss = false
 
+            console.log('dismissible', dismissible)
+
             checkbox.addEventListener("click", (event) => {
+
                 dismiss = checkbox.checked
 
                 if (!dismiss) {
@@ -43,7 +46,7 @@
                 }
             })
 
-        })
+        })()
     </script>
 
 </html>
