@@ -15,6 +15,7 @@ function sql(btn, input, target, status) {
     input.addEventListener('dblclick', (event) => {
         event.preventDefault()
         input.value = ''
+        tab.innerHTML = ''
         target.innerHTML = ''
     })
 
@@ -62,16 +63,12 @@ function sql(btn, input, target, status) {
                 , target = document.getElementById(payload.target)
                 , tab = document.getElementById(target.id.replace('target', 'tab'))
 
-            tab.innerHTML = `<i class="bi bi-files"></i>&nbsp;&nbsp;Retorno`
-
             if (error) {
 
                 err = payload.status //.originalError.info.message
 
                 alert('Erro', err, 'danger')
                 console.log('Sql error', payload.status)
-
-                tab.innerHTML = `<i class="bi bi-files"></i>&nbsp;&nbsp;Retorno`
                 target.innerHTML = ''
                 btn.className = 'form-control btn btn-success mt-2'
                 btn.innerHTML = `Rodar <i class="bi bi-play-btn"></i>`

@@ -1,0 +1,27 @@
+<div class="tab-pane mt-3" id="sql-terminal" role="tabpanel" aria-labelledby="sql-terminal-tab">
+  
+  <div class="alert alert-warning alert-dismissible show" role="alert">
+
+    <strong><i class="bi bi-shield-shaded"></i>&nbsp;&nbsp;Sql</strong>
+    <small>: requer permissão [<strong>tools-sql</strong>]</small>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+  </div>
+  
+  <div class="form-group">
+    <form class="form-group">
+      <div class="text-secondary" style="font-size: 0.8rem;">
+        <label for="text-area-query" class="h6"><i class="bi bi-code-square"></i>&nbsp;Query</label>
+      </div>
+      <textarea class="form-control font-monospace border rounded" id="sql-server-input" style="height: 10rem;"
+        placeholder="select top [número] [campos] from [tabelas] [where [condição]] order by [campo [ordem], ...] => [formato]"></textarea>
+      <small>Somente o comando SELECT está habilidato</small>
+      <button class="form-control btn btn-success mt-3" id="sql-server-btn-run"><i
+          class="bi bi-server"></i>&nbsp;&nbsp;Executar query</button>
+    </form>
+  </div>
+</div>
+<div class="tab-pane" id="sql-server" role="tabpanel" aria-labelledby="sql-server-tab">
+  <div class="mt-3 text-wrap text-break" id="sql-server-target"></div>
+</div>
+<script src="assets/javascript/tools/socket/sql.js"></script>
