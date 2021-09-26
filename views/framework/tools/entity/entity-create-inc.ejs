@@ -1,14 +1,10 @@
 <div class="tab-pane mt-3" id="entity-create" role="tabpanel" aria-labelledby="entity-create-tab">
-
-    <div class="alert alert-warning alert-dismissible show" role="alert">
+    <div class="alert alert-warning show" role="alert">
         <strong><i class="bi bi-shield-shaded"></i>&nbsp;&nbsp;Criar entidade</strong>
         <small>: requer permissão [<strong>entity-create</strong>]</small>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-
     <div class="flex-column">
         <form class="form-group">
-
             <entity-name>
                 <hr>
                 <div id="alert-entity-name" class="alert alert-info show" role="alert">
@@ -27,24 +23,22 @@
                     </div>
                 </div>
             </entity-name>
-
             <entity-namespace>
                 <hr>
                 <div class="alert-container" id="entity-fields">
                     <div id="alert-entity-namespace" class="alert alert-info show" role="alert">
                         <i class="bi bi-info-circle"></i>&nbsp;Propriedades: id[entidade], crdate e isactive são criados
-                        em todas as tabelas por padrão 
+                        em todas as tabelas por padrão
                     </div>
                 </div>
                 <div class="input-field-entity mt-3 mb-1">
                     <label for="input-textarea-entity-namespace" class="label mb-1 text-secondary"><i
-                            class="bi bi-tags"></i>&nbsp;Propriedades</label>
+                            class="bi bi-ui-radios"></i>&nbsp;Propriedades</label>
                     <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem"
                         id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas"
                         autocomplete="off"></textarea>
                 </div>
             </entity-namespace>
-
             <entity-fields>
                 <hr>
                 <ul class="nav nav-tabs" id="nav-" role="tablist">
@@ -55,9 +49,8 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="nav-code-json-tab" data-bs-toggle="tab"
-                            data-bs-target="#nav-code-json" type="button" role="tab"
-                            aria-controls="nav-code-json" aria-selected="false"><i
-                                class="bi bi-code-square"></i></button>
+                            data-bs-target="#nav-code-json" type="button" role="tab" aria-controls="nav-code-json"
+                            aria-selected="false"><i class="bi bi-code-square"></i></button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="nav-code-sql-tab" data-bs-toggle="tab"
@@ -89,8 +82,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="tab-pane" id="nav-code-json" role="tabpanel"
-                        aria-labelledby="nav-code-json-tab">
+                    <div class="tab-pane" id="nav-code-json" role="tabpanel" aria-labelledby="nav-code-json-tab">
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
@@ -122,7 +114,6 @@
                     </div>
                 </div>
             </entity-fields>
-
         </form>
     </div>
 </div>

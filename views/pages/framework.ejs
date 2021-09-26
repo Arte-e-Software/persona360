@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <%-include ../blocks/head.ejs %>
-
     <script src="assets/javascript/framework/utils/alert.js"></script>
     <script src="assets/javascript/framework/tools/entity/create/sanitize.js"></script>
     <script src="assets/javascript/framework/tools/entity/create/enter.js"></script>
@@ -18,42 +17,46 @@
                 </div>
             </main>
             <%-include ../blocks/vendor.ejs %>
+                <%-include ../blocks/aes-help-dock.ejs %>
+                    <form><input type="hidden" id="context" value="desktop"></form>
     </body>
-
     <script src="assets/javascript/framework/utils/api/request.js"></script>
     <script src="assets/javascript/framework/utils/socket/package.js"></script>
     <script src="assets/javascript/framework/utils/socket/call.js"></script>
     <script src="assets/javascript/framework/utils/socket/file.js"></script>
     <script src="assets/javascript/framework/utils/socket/serverfunction.js"></script>
     <script src="assets/javascript/framework/tools/sql/sql.js"></script>
-
     <script>
+
         (() => {
+            document.getElementById('checkbox-show-all-warning-alerts').addEventListener('change', event => { toggleAlert(event) })
+            document.getElementById('checkbox-show-all-info-alerts').addEventListener('change', event => { toggleAlert(event) })
+            document.getElementById('a-aes-help').addEventListener('click', event => {
 
-            let checkbox = document.getElementById("checkbox-dismiss-all-alerts"),
-                dismissible = document.getElementsByClassName("alert-dismissible"),
-                dismiss = false
+                let context = document.getElementById('context').value
 
-            checkbox.addEventListener("click", (event) => {
+                console.log(context)
 
-                dismiss = checkbox.checked
 
-                if (!dismiss) {
-                    for (i = 0; i < dismissible.length; i++) {
-                        dismissible[i].style.display = "none"
-                    }
-                } else {
-                    for (i = 0; i < dismissible.length; i++) {
-                        dismissible[i].style.display = "block"
-                    }
-                }
             })
-
         })()
+
+        function toggleAlert(event) {
+            let type = event.target.id.split('-')[3],
+                alert = document.getElementsByClassName(`alert-${type}`),
+                icon = document.getElementById(`icon-checkbox-show-all-${type}-alerts`)
+            if (event.target.checked) {
+                for (i = 0; i < alert.length; i++) { alert[i].style.display = 'block' }
+                icon.className = `form-check form-switch text-${type} mx-2`
+            } else {
+                for (i = 0; i < alert.length; i++) { alert[i].style.display = 'none' }
+                icon.className = 'form-check form-switch text-secondary mx-2'
+            }
+        }
+
     </script>
 
 </html>
-
 <!--
 Entity Structured Query Language
 *********************************

@@ -10,7 +10,7 @@ function alert(attention, msg, type) {
             <h4><strong>${attention}</strong></h4>
             <hr>
             <p class="text-wrap text-break">${msg}</p>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            
         </div>`
     }
 
