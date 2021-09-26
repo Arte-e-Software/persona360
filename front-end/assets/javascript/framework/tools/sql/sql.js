@@ -1,6 +1,11 @@
 document.onload = (() => {
 
     let status = 'waiting'
+    document.getElementById('sql-terminal-tab').addEventListener('click', event => {
+
+        document.getElementById('sql-server-input').focus()
+
+    })
     sql('sql-server-btn-run', 'sql-server-input', 'sql-server-target', status)
 
 })()
