@@ -2,6 +2,10 @@
 <html lang="pt-br">
 <%-include ../blocks/head.ejs %>
 
+    <script src="assets/javascript/framework/utils/alert.js"></script>
+    <script src="assets/javascript/framework/tools/entity/create/sanitize.js"></script>
+    <script src="assets/javascript/framework/tools/entity/create/enter.js"></script>
+
     <body>
         <%-include ../blocks/nav.ejs %>
             <main class="flex">
@@ -9,18 +13,19 @@
                     <div class="tab-content px-4" id="nav-tabContent">
                         <%-include ../framework/desktop/desktop-inc.ejs %>
                             <%-include ../framework/apps/apps-inc.ejs %>
-                            <%-include ../framework/tools/nav-tools-inc.ejs %>
+                                <%-include ../framework/tools/nav-tools-inc.ejs %>
                     </div>
                 </div>
             </main>
-            <%-include ../blocks/javascript.ejs %>
+            <%-include ../blocks/vendor.ejs %>
     </body>
-    <script src="assets/javascript/tools/api/request.js"></script>
-    <script src="assets/javascript/tools/socket/package.js"></script>
-    <script src="assets/javascript/tools/socket/call.js"></script>
-    <script src="assets/javascript/tools/socket/sql.js"></script>
-    <script src="assets/javascript/tools/socket/file.js"></script>
-    <script src="assets/javascript/tools/socket/serverfunction.js"></script>
+
+    <script src="assets/javascript/framework/utils/api/request.js"></script>
+    <script src="assets/javascript/framework/utils/socket/package.js"></script>
+    <script src="assets/javascript/framework/utils/socket/call.js"></script>
+    <script src="assets/javascript/framework/utils/socket/file.js"></script>
+    <script src="assets/javascript/framework/utils/socket/serverfunction.js"></script>
+    <script src="assets/javascript/framework/tools/sql/sql.js"></script>
 
     <script>
         (() => {
@@ -28,8 +33,6 @@
             let checkbox = document.getElementById("checkbox-dismiss-all-alerts"),
                 dismissible = document.getElementsByClassName("alert-dismissible"),
                 dismiss = false
-
-            console.log('dismissible', dismissible)
 
             checkbox.addEventListener("click", (event) => {
 
