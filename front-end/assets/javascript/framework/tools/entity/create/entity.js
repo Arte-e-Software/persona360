@@ -23,6 +23,7 @@ const entity = form => {
                     "type": document.getElementsByClassName('select-type'),
                     "length": document.getElementsByClassName('input-length'),
                     "nullable": document.getElementsByClassName('checkbox-nullable'),
+                    "hash": document.getElementsByClassName('checkbox-hash'),
                     "searchable": document.getElementsByClassName('checkbox-searchable')
                 }
 
@@ -30,8 +31,6 @@ const entity = form => {
 
             draft.fields.settings.innerHTML = settings(form.namespace.input.value.split(','))
             draft.fields.privacy[0].focus()
-
-            console.log(draft)
 
             for (let field in entity.namespace) {
 
@@ -42,8 +41,9 @@ const entity = form => {
                         "privacy": draft.fields.privacy[field].options[draft.fields.privacy[field].selectedIndex].value,
                         "type": draft.fields.type[field].options[draft.fields.type[field].selectedIndex].value,
                         "length": draft.fields.length[field].value,
-                        "nullable": draft.fields.nullable[field].value,
-                        "searchable": draft.fields.searchable[field].value
+                        "nullable": draft.fields.nullable[field].checked,
+                        "hash": draft.fields.hash[field].checked,
+                        "searchable": draft.fields.searchable[field].checked
                     }
 
                 })
@@ -62,6 +62,7 @@ const entity = form => {
                     "type": 'date',
                     "length": '',
                     "nullable": false,
+                    "hash": false,
                     "searchable": true
                 }
 
@@ -75,6 +76,7 @@ const entity = form => {
                     "type": 'boolean',
                     "length": '',
                     "nullable": false,
+                    "hash": false,
                     "searchable": true
                 }
 
@@ -88,6 +90,7 @@ const entity = form => {
                     "type": 'number',
                     "length": '',
                     "nullable": false,
+                    "hash": false,
                     "searchable": true
                 }
 
@@ -98,15 +101,58 @@ const entity = form => {
 
     if (entity) {
 
-        form.button.create.setAttribute('disable', false)
-            // #issue: falta adicionar listen nas mudanças dos settings
-        form.entitysql.innerHTML = `<tr><td>${pretty(entity)}</td></tr>`
+        form.json.innerHTML = `<tr><td>${pretty(entity)}</td></tr>`
 
-        serverfunction('../back-end/database/mssql/templates/create-table', entity, (res) => {
+        let change = { setting: '', value: '' }
 
-            return form.sql.innerHTML = `<tr><td>${res.split(';').join(';<br>')}</td></tr>`
+        for (let i = 1; i < entity.fields.length - 2; i++) {
 
-        })
+            document.getElementById(`field-${entity.fields[i].name}-type`).addEventListener('change', event => {
+
+                event.code === 'Enter' || 'NumpadEnter' ? event.preventDefault() : false
+                change.setting = event.target.id
+                change.value = event.target.options[event.target.selectedIndex].value
+                console.log(change)
+
+            })
+
+            document.getElementById(`field-${entity.fields[i].name}-length`).addEventListener('keypress', event => {
+
+                change.setting = event.target.id
+                change.value = event.target.value
+                console.log(change)
+
+            })
+
+            document.getElementById(`field-${entity.fields[i].name}-nullable`).addEventListener('change', event => {
+
+                event.code === 'Enter' || 'NumpadEnter' ? event.preventDefault() : false
+                change.setting = event.target.id
+                change.value = event.target.checked
+                console.log(change)
+
+
+            })
+
+            document.getElementById(`field-${entity.fields[i].name}-hash`).addEventListener('change', event => {
+
+                event.code === 'Enter' || 'NumpadEnter' ? event.preventDefault() : false
+                change.setting = event.target.id
+                change.value = event.target.checked
+                console.log(change)
+
+            })
+
+            document.getElementById(`field-${entity.fields[i].name}-searchable`).addEventListener('change', event => {
+
+                event.code === 'Enter' || 'NumpadEnter' ? event.preventDefault() : false
+                change.setting = event.target.id
+                change.value = event.target.checked
+                console.log(change)
+
+            })
+
+        }
 
     } else {
 

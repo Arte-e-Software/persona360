@@ -35,7 +35,7 @@ app.get('/framework', require('./back-end/routes/framework'))
 // rotas - res.send
 app.all('/api', require('./back-end/routes/api'))
 
-// Errors ******* ainda não trabalhei nisso
+// #issue: desenvolver o tratamento de errp http
 app.use((req, res, next) => { next(createError(404)) })
 app.use((err, req, res) => {
 

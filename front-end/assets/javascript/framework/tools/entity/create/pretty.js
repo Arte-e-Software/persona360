@@ -14,6 +14,7 @@ const pretty = entity => {
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type": "${entity.fields[field].settings.type}"</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"length": "${entity.fields[field].settings.length}"</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"nullable": "${entity.fields[field].settings.nullable}"</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hash": "${entity.fields[field].settings.hash}"</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"searchable": "${entity.fields[field].settings.searchable}"</li>
                   </ul>
                 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>

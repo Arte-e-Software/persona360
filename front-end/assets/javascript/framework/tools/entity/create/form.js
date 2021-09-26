@@ -30,7 +30,7 @@ window.onload = () => {
     },
 
     sql: document.getElementById('entity-sql'),
-    entitysql: document.getElementById('entity-entitysql')
+    json: document.getElementById('entity-json')
 
   }
 
@@ -56,7 +56,7 @@ window.onload = () => {
     form.namespace.input.value = ''
     form.fields.settings.innerHTML = ''
     form.sql.innerHTML = ''
-    form.entitysql.innerHTML = ''
+    form.json.innerHTML = ''
     form.name.input.className = 'form-control is-invalid'
     form.namespace.input.className = 'form-control is-invalid'
     form.button.create.setAttribute('disabled', true)

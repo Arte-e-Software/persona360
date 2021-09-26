@@ -29,7 +29,6 @@ const columns = entity => {
 
     })
 
-  console.log(arrColumns)
   return arrColumns
 
 }

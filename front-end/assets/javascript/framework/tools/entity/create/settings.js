@@ -33,6 +33,11 @@ const settings = namespace => {
                                     <input class="form-check-input is-valid checkbox-nullable" type="checkbox" id="field-${namespace[field].toLowerCase().trim()}-nullable">
                                 </div>
                             </td>
+                            <td class="text-center" id="field-${namespace[field].toLowerCase().trim()}-hash">
+                                <div class="form-check form-switch pr-0 mr-0 align-middle">
+                                    <input class="form-check-input is-valid checkbox-hash" type="checkbox" id="field-${namespace[field].toLowerCase().trim()}-hash">
+                                </div>
+                            </td>
                             <td class="text-center" id="field-${namespace[field].toLowerCase().trim()}-searcheble">
                                 <div class="form-check form-switch pr-0 mr-0 align-middle">
                                     <input class="form-check-input is-valid checkbox-searchable" type="checkbox" id="field-${namespace[field].toLowerCase().trim()}-searchable" checked>
