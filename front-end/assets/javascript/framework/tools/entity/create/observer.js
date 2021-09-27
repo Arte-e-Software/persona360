@@ -1,13 +1,15 @@
-const observer = entity => {
+const observer = (entity, form) => {
+
+    form.json.innerHTML = pretty(entity)
+    form.sql.innerHTML = JSON.stringify(entity)    
 
     let change = (entity, id, value) => {
 
         let field = id.split('-')[1],
             setting = id.split('-')[2]
 
-        console.log(entity)
-        console.log(field, setting, value)
-        // #issue: parei aqui
+            form.json.innerHTML = pretty(entity)
+            form.sql.innerHTML = JSON.stringify(entity)  
 
     }
     for (let i = 1; i < entity.fields.length - 2; i++) {

@@ -1,3 +1,40 @@
+class Entity {
+
+    constructor(name, namespace, fields){
+
+        this.name = name;
+        this.namespace = namespace;
+        this.fields = fields;
+
+    }
+
+}
+
+class Fields {
+
+    constructor(name, settings){
+
+        this.name = name;
+        this.settings = settings;
+
+    }
+}
+
+class Settings {
+
+    constructor(privacy, type, length, hash, nullable, searchable){
+
+        this.privacy = privacy;
+        this.type = type;
+        this.length = length;
+        this.hash = hash;
+        this.nullable = nullable;
+        this.searchable = searchable;
+
+    }
+
+}
+
 const settings = namespace => {
 
     let settings = []

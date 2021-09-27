@@ -53,7 +53,7 @@ const enter = (form, element) => {
 
       } else {
 
-        return entity(form)
+        return draft(form)
 
       }
 

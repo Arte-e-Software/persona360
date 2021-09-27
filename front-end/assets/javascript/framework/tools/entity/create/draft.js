@@ -1,4 +1,4 @@
-const entity = form => {
+const draft = form => {
 
     let entity = {
         "name": form.name.input.value,
@@ -101,7 +101,7 @@ const entity = form => {
 
     if (entity) {
 
-       return observer(entity)
+       return observer(entity, form)
 
     } else {
 
