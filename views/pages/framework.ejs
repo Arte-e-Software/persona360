@@ -44,10 +44,10 @@
                 icon = document.getElementById(`icon-checkbox-show-all-${type}-alerts`)
             if (event.target.checked) {
                 for (i = 0; i < alert.length; i++) { alert[i].style.display = 'block' }
-                icon.className = `form-check form-switch text-${type} mx-2`
+                icon.className = `form-check form-switch text-${type}`
             } else {
                 for (i = 0; i < alert.length; i++) { alert[i].style.display = 'none' }
-                icon.className = 'form-check form-switch text-secondary mx-2'
+                icon.className = 'form-check form-switch text-secondary'
             }
         }
 
