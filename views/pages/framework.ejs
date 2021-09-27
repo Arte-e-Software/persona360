@@ -6,7 +6,7 @@
     <script src="assets/javascript/framework/tools/entity/create/enter.js"></script>
 
     <body>
-        <%-include ../blocks/nav.ejs %>
+        <%-include ../blocks/dock.ejs %>
             <main class="flex">
                 <div class="container-flex" id="main-framework">
                     <div class="tab-content px-4" id="nav-tabContent">
@@ -29,13 +29,13 @@
     <script>
 
         (() => {
+
             document.getElementById('checkbox-show-all-warning-alerts').addEventListener('change', event => { toggleAlert(event) })
             document.getElementById('checkbox-show-all-info-alerts').addEventListener('change', event => { toggleAlert(event) })
             document.getElementById('a-aes-help').addEventListener('click', event => {
-
                 let context = document.getElementById('context').value
-
             })
+
         })()
 
         function toggleAlert(event) {

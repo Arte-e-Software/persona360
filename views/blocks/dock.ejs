@@ -1,0 +1,59 @@
+<nav class="nav p-2" style="background-color: black; border-top: 1px solid #ff9500;">
+    <div class="container-fluid">
+        <a data-bs-toggle="offcanvas" href="#aes-help-dock" role="button" aria-controls="aes-help-dock"
+            id="a-aes-help"><img src="assets/images/arte-e-software-cubo-branco.svg" height="30rem"></a>
+    </div>
+</nav>
+<nav class="navbar navbar-expand fixed-bottom bg-transparente">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id="nav-bar" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active dock" id="nav-desktop-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-desktop" type="button" role="tab" aria-controls="nav-desktop"
+                        aria-selected="true">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link dock" id="nav-apps-tab" data-bs-toggle="tab" data-bs-target="#nav-apps"
+                        type="button" role="tab" aria-controls="nav-apps" aria-selected="false">
+                        <i class="bi bi-grid"></i>
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link dock" id="nav-tools-tab" data-bs-toggle="tab" data-bs-target="#nav-tools"
+                        type="button" role="tab" aria-controls="nav-tools" aria-selected="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="favicon.svg" height="25rem;">
+            </button>
+            <ul class="dropdown-menu bg-transparent border-0 mb-2">
+                <li>
+                    <div class="form-check form-switch text-warning">
+                        <label class="form-check-label" for="checkbox-show-all-warning-alerts"><i
+                                class="bi bi-shield-shaded"></i></label>
+                        <input class="form-check-input" type="checkbox" id="checkbox-show-all-warning-alerts" checked>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-check form-switch  text-info">
+                        <label class="form-check-label" for="checkbox-show-all-info-alerts"><i
+                                class="bi bi-info-circle"></i></label>
+                        <input class="form-check-input" type="checkbox" id="checkbox-show-all-info-alerts" checked>
+                    </div>
+                </li>
+                <li><a class="btn btn-success" href="/framework"><i class="bi bi-arrow-clockwise"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
