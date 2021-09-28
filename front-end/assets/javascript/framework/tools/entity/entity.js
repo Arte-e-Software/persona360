@@ -1,27 +1,13 @@
-class Entity {
-    constructor(name, namespace) {
-        this.name = name;
-        this.namespace = namespace;
-        this.fields = name => {
-            this.name = name;
-            this.settings = (privacy, type, length, hash, nullable, searchable) => {
-                this.privacy = privacy;
-                this.type = type;
-                this.length = length;
-                this.hash = hash;
-                this.nullable = nullable;
-                this.searchable = searchable;
-            }
-        }
+let Entity = (name, namespace, fields) => {
+    return {
+        name: name,
+        namespace: namespace,
+        fields: fields
     }
-};
-
+}
 const settings = namespace => {
-
     let settings = []
-
     for (let field in namespace) {
-
         settings.push(`<tr>
                             <td>
                                 <input class="form-control is-valid" type="text" id="field-${namespace[field].toLowerCase().trim()}-name-input" value="${namespace[field].toLowerCase().trim()}" readonly>
@@ -63,6 +49,5 @@ const settings = namespace => {
                             </td>
                         </tr>`)
     }
-
     return settings.join('')
 }

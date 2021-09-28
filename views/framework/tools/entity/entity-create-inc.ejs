@@ -12,14 +12,13 @@
                     <i class="bi bi-info-circle"></i>&nbsp;Nome: <strong>único</strong> no banco de dados; até 50
                     caracteres entre letras, números e _
                 </div>
-
                 <div class="input-field-entity mt-3 mb-1">
                     <div>
                         <label for="input-text-entity-name" class="label mb-1 text-secondary"><i
                                 class="bi bi-box"></i>&nbsp;Entidade</label>
                         <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
                         <input type="text" minlength="3" maxlength="50" class="form-control is-invalid"
-                            id="input-text-entity-name" placeholder="Informe um nome único para a entidade"
+                            id="input-text-entity-name" placeholder="Informe um nome único para a entidade e tecle Enter"
                             autocomplete="off" />
                     </div>
                 </div>
@@ -36,7 +35,7 @@
                     <label for="input-textarea-entity-namespace" class="label mb-1 text-secondary"><i
                             class="bi bi-ui-radios"></i>&nbsp;Propriedades</label>
                     <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem"
-                        id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas"
+                        id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas, e tecle Enter"
                         autocomplete="off"></textarea>
                 </div>
             </entity-namespace>
@@ -52,11 +51,6 @@
                         <button class="nav-link" id="nav-code-json-tab" data-bs-toggle="tab"
                             data-bs-target="#nav-code-json" type="button" role="tab" aria-controls="nav-code-json"
                             aria-selected="false"><i class="bi bi-code-square"></i></button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="nav-code-sql-tab" data-bs-toggle="tab"
-                            data-bs-target="#nav-code-sql" type="button" role="tab" aria-controls="nav-code-sql"
-                            aria-selected="false"><i class="bi bi-server"></i></button>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -88,22 +82,10 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th class="text-left">Json</th>
+                                        <th class="text-left">JSON</th>
                                     </tr>
                                 </thead>
                                 <tbody id="entity-json"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="nav-code-sql" role="tabpanel" aria-labelledby="nav-code-sql-tab">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th class="text-left">Sql</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="entity-sql"></tbody>
                             </table>
                         </div>
                     </div>
@@ -119,9 +101,8 @@
     </div>
     </div>
 </div>
-
-<script src="assets/javascript/framework/tools/entity/entity-class.js "></script>
-<script src="assets/javascript/framework/tools/entity/create/observer.js "></script>
-<script src="assets/javascript/framework/tools/entity/create/pretty.js "></script>
-<script src="assets/javascript/framework/tools/entity/create/draft.js "></script>
 <script src="assets/javascript/framework/tools/entity/create/form.js "></script>
+<script src="assets/javascript/framework/tools/entity/entity.js "></script>
+<script src="assets/javascript/framework/tools/entity/create/fields.js "></script>
+<script src="assets/javascript/framework/tools/entity/create/pretty.js "></script>
+<script src="assets/javascript/framework/tools/entity/create/observer.js "></script>

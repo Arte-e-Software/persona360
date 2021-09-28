@@ -1,22 +1,19 @@
-<nav class="nav p-2" style="background-color: #333333;" id="nav-dock-top">
+<nav class="nav bg-dark p-2" id="nav-dock-top">
     <div class="container-fluid">
-       <a class="mx-2" href="/">
-        <img src="assets/images/arte-e-software-cubo-branco.svg" height="30rem">
-    </a>
+        <a class="mx-2" href="/">
+            <img src="assets/images/arte-e-software-cubo-branco.svg" height="30rem">
+        </a>
     </div>
 </nav>
 <style>
-
-    .dock{
-        color: #333333;
+    .dock {
+        color: #eeeeee;
     }
-
 </style>
-<nav class="navbar navbar-expand fixed-bottom bg-transparente"  id="nav-dock-bottom">
+<nav class="navbar navbar-expand fixed-bottom bg-dark" id="nav-dock-bottom">
     <div class="container-fluid">
         <div class="container-fluid">
             <ul class="nav nav-tabs" id="nav-bar" role="tablist">
-                
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active dock" id="nav-desktop-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-desktop" type="button" role="tab" aria-controls="nav-desktop"
@@ -24,21 +21,18 @@
                         <i class="bi bi-person-circle"></i>
                     </button>
                 </li>
-
                 <li class="nav-item" role="presentation">
                     <button class="nav-link dock" id="nav-apps-tab" data-bs-toggle="tab" data-bs-target="#nav-apps"
                         type="button" role="tab" aria-controls="nav-apps" aria-selected="false">
                         <i class="bi bi-grid-fill"></i>
                     </button>
                 </li>
-
                 <li class="nav-item" role="presentation">
                     <button class="nav-link dock" id="nav-tools-tab" data-bs-toggle="tab" data-bs-target="#nav-tools"
                         type="button" role="tab" aria-controls="nav-tools" aria-selected="false">
                         <i class="bi bi-gear-fill"></i>
                     </button>
                 </li>
-
             </ul>
         </div>
         <div class="btn-group dropup">
@@ -46,7 +40,8 @@
                 aria-expanded="false">
                 <img src="favicon.svg" height="25rem;">
             </button>
-            <ul class="dropdown-menu mb-2" style="min-width: 4rem; text-align: center; padding: 6px; background-color: #888888; opacity: .95;">
+            <ul class="dropdown-menu mb-3 border-success"
+                style="min-width: 4rem; text-align: center; padding: 6px; background-color: #eeeeee;">
                 <li>
                     <div class="form-check form-switch text-warning" id="icon-checkbox-show-all-warning-alerts">
                         <label class="form-check-label" for="checkbox-show-all-warning-alerts"><i
@@ -61,9 +56,10 @@
                         <input class="form-check-input" type="checkbox" id="checkbox-show-all-info-alerts" checked>
                     </div>
                 </li>
-                <li><a class="btn btn-success my-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                    <i class="bi bi-info-circle-fill"></i>
-                </a></li>
+                <li><a class="btn btn-success my-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                        <i class="bi bi-info-circle-fill"></i>
+                    </a></li>
                 <li><a class="btn btn-warning my-1" href="/framework"><i class="bi bi-arrow-clockwise"></i></a></li>
             </ul>
         </div>
