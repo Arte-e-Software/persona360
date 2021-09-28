@@ -1,13 +1,11 @@
 const draft = form => {
 
-    let entity = {
-        "name": form.name.input.value,
-        "namespace": form.namespace.input.value.split(',').map(name => { return name.trim() }),
-        "fields": []
-    }
+    let entity = new Entity(form.name.input.value, form.namespace.input.value.split(',').map(name => { return name.trim() }))
+
+    console.log(entity)
 
     if (form.name.input.value) {
-
+        
         form.name.input.className = 'form-control is-valid'
         form.namespace.input.focus()
 
@@ -34,7 +32,9 @@ const draft = form => {
 
             for (let field in entity.namespace) {
 
-                entity.fields.push({
+                entity.fields.push(
+                    
+                    new {
 
                     "name": entity.namespace[field],
                     "settings": {

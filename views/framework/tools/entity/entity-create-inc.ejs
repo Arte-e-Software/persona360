@@ -4,8 +4,9 @@
         <small>: <i class="bi bi-key-fill"></i> [<strong>entity-create</strong>]</small>
     </div>
     <div class="flex-column">
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <form class="form-group">
-            <entity-name>
+            <entity-name id="tag-entity-name">
                 <hr>
                 <div id="alert-entity-name" class="alert alert-info show" role="alert">
                     <i class="bi bi-info-circle"></i>&nbsp;Nome: <strong>único</strong> no banco de dados; até 50
@@ -23,7 +24,7 @@
                     </div>
                 </div>
             </entity-name>
-            <entity-namespace>
+            <entity-namespace id="tag-entity-namespace">
                 <hr>
                 <div class="alert-container" id="entity-fields">
                     <div id="alert-entity-namespace" class="alert alert-info show" role="alert">
@@ -39,7 +40,7 @@
                         autocomplete="off"></textarea>
                 </div>
             </entity-namespace>
-            <entity-fields>
+            <entity-fields id="tag-entity-fields">
                 <hr>
                 <ul class="nav nav-tabs" id="nav-" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -115,6 +116,7 @@
                 </div>
             </entity-fields>
         </form>
+    </div>
     </div>
 </div>
 
