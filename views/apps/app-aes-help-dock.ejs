@@ -1,0 +1,87 @@
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <nav class="nav p-2" style="background-color: #035700; ">
+    <div class="container-fluid">
+      <a href="#nav-dock-tops" class="mx-2" href="#offcanvasExample" data-bs-dismiss="offcanvas" aria-label="Close">
+        <img src="assets/images/arte-e-software-cubo-branco.svg" height="30rem"></a>
+    </div>
+  </nav>
+  <div class="offcanvas-body">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Entidade
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-name">Entidade</a></p>
+            <p>Substantivo feminino. Aquilo que constitui a existência de algo real; essência.</p>
+            <p>Sintaxe: sujeito - pode assumir diferentes atitudes em relação ao que o verbo expressa, como ser agente, paciente ou ambos de forma simultânea</p>
+            <fonte>
+              <input type="hidden" class="entity-definition-pt-br" value="https://www.portugues.com.br/gramatica/atitudes-sujeito-relacao-ao-verbo.html">
+            </fonte>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Propriedades
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-namespace">Propriedades</a>
+            </p>
+            <p>Propriedade, no sentido filosófico, constitui uma categoria de atributos de entidades ontológicas, atributos que se distinguem uns dos outros na qualificação das entidades. Dada a complexidade da caracterização das noções, este é um assunto em que é plausível encontrar controvérsias entre filósofos mas, para o aes.framework são os ADJETIVOS ou ADJUNTOS, sintáticamente são as palavras que dão as características à entidade, como a cor de um carro, o email de uma pessoa, o nome de um curso, etc.</p>
+            <fonte>
+              <input type="hidden" class="entity-fields-definition-pt-br" value="https://pt.wikipedia.org/wiki/Propriedade_(filosofia)">
+            </fonte>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Configurações
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-fields">Configurações</a></p>
+            <p>As entidades, juntamente com as propriedades que as caracterizam, ficarm armazenados no banco de dados. Cada propriedade, na abstração de dados, é um campo (field em inglês), e cada campo, para ser armazenado corretamente, precisa que tenha essa configuração guardada em algum lugar para ser consultada sempre que necessário. No aes.framework as configurações dos campos ficam num arquivo .json com o nome da entidade, assim [entidade].json.</p>
+            <label>Configurações</label>
+            <ul>
+              <li>Privacidade: como aquele campo deve ser tratado em relação à LGPD:</li>
+              <ul>
+                <li>Pessoal: são aqueles dados que identificam a pessoa e pode colocá-la diante de algum risco capital.</li>
+                <li>Comercial: são aqueles dados que caracterizam empresas, produtos e transações entre eles e pessoas. Também incorrem em risco capital.</li>
+                <li>Sensível: dados como crença, orientação sexual, raça, dados relacionados a saúde. Além de riscos capitais, representam riscos morais.</li>
+                <li>Público: são dados acessíveis a todos os cidadãos por qualquer meio que seja. O resultado de uma eleição, o número de habitantes de uma cidade, a renda percapita de um bairro, etc.</li>
+                <li>Anonimizado: são dados utilizados na orquestração do sistema. Representram códigos, logs de acesso como contangem de cliques, acesso a páginas, etc.</li>
+              </ul>
+              <li>Tipo: um campo deve ter um tipo, que pode ser:</li>
+              <ul>
+                <li>Texto: tudo que puder ser armazeado utilizando todos os caracteres "imprimíveis" do teclado. No aes.framework, em casos especiais, você pode estabelecer um filtro para os caracteres válidos para o campo.</li>
+                <li>Número (Double-precision floating-point format): qualquer número de negativo ou positivo, de até 64bits, com precisão decimal.</li>
+                <li>Data: Ano, mês, dia, hora, minuto, segundo,  miléssimo de segundo e local</li>
+                <li>Booleano: 0 ou 1, sim ou não, certo ou errado, concordo ou não concordo, ou simplesmente verdadeiro ou falso.</li>
+              </ul>
+            <li>Tamanho: válido apenas para o tipo Texto. Pode variar de três caracteres até 5.000.</li>
+            <li>Null: em ciência de dados existe um valor fictício que é diferente de vazio ou nada, é o NULL. Quando um campo não é "nullable", na prática, significa que trata-se de um campo obrigatório. </li>
+            <li>Busca: campos com busca ativa sofrem ação das pesquisas, ou seja, quando formos pesquisar aquela entidade, esse será um dos campos utilizados para localizá-la. O retorno de uma busca sempre trará os campos "searchables" mais o id_[entidade] e o crdate (data de criação). Somente registros assinalados com isactive = 1 (true = verdadeiro) são pesquisáveis na maioria das situações.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

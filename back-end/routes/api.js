@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const handlerError = require('../controller/handlerError')
+const controllerError = require('../controller/controller-error')
 const conn = require('../database/mssql/conn')
 const sql = require('mssql')
 
 module.exports = router.all('/api', (req, res) => {
 
-  let error = handlerError(req.method, req.body)
+  let error = controllerError(req.method, req.body)
 
   if (error) {
 
@@ -18,7 +18,7 @@ module.exports = router.all('/api', (req, res) => {
       , entity = payload.entity
       , module = payload.module
       , params = payload.params
-      , db = conn['aes'] // em desenvolvimento, virá do tenant
+      , db = conn['aes'] // #issue: tenant
       , model = require(`../model/${entity}/${module}`)
       , query = model(params)
 

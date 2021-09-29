@@ -1,15 +1,14 @@
-const handlerTenant = require('./handlerTenant')
+const controllerError = require('./controller-tenant')
 
 module.exports = (method, payload) => {
 
-    let tenantAllowed = handlerTenant() // em desenvolvimento
+    let tenantAllowed = controllerTenant() // #issue: tenant
 
     if (tenantAllowed) {
-        
-        
+
         let methods = ['GET', 'POST']
             , modules = ['create', 'read', 'update', 'delete', 'search']
-            , error = [false, false, false, false] //  method, entity, module, params
+            , error = [false, false, false, false] //  #nota: method, entity, module, params
             , errorMsg = ''
             ;
 
@@ -30,13 +29,13 @@ module.exports = (method, payload) => {
             try {
 
                 let params = payload.params
-                    , entity = require(`../config/entities/${payload.entity.toLowerCase()}.json`)
+                    , entity = require(`../model/entity/index/${payload.entity.toLowerCase()}.json`)
                     , fields = entity.fields
                     , reqParams = {
-                        "create": fields.map(field => { if (!field.null && !field.default) { return field.name } }).filter(name => { if (name) { return name } }),
-                        "read": [`id${entity.name}`],
-                        "update": [`id${entity.name}`, `idPessoa`],
-                        "delete": [`id${entity.name}`, `idPessoa`],
+                        "create": fields.map(field => { if (!field.nullable) { return field.name } }).filter(name => { if (name) { return name } }),
+                        "read": [`id_${entity.name}`],
+                        "update": [`id_${entity.name}`, `id_pessoa`],
+                        "delete": [`id_${entity.name}`, `id_pessoa`],
                         "search": [`name`, `isActive`]
                     }
                     , paramsError = []
