@@ -4,7 +4,6 @@
         <small>: <i class="bi bi-key-fill"></i> [<strong>entity-create</strong>]</small>
     </div>
     <div class="flex-column">
-        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <form class="form-group">
             <entity-name id="tag-entity-name">
                 <hr>
@@ -18,8 +17,9 @@
                                 class="bi bi-box"></i>&nbsp;Entidade</label>
                         <!-- #issue: pesquisar no banco entidade com mesmo nome a partir do terceiro caracter digitado -->
                         <input type="text" minlength="3" maxlength="50" class="form-control is-invalid"
-                            id="input-text-entity-name" placeholder="Informe um nome único para a entidade e tecle Enter"
-                            autocomplete="off" />
+                            id="input-text-entity-name"
+                            placeholder="Informe um nome único para a entidade e tecle Enter" autocomplete="off"
+                            value="pessoa" />
                     </div>
                 </div>
             </entity-name>
@@ -27,7 +27,8 @@
                 <hr>
                 <div class="alert-container" id="entity-fields">
                     <div id="alert-entity-namespace" class="alert alert-info show" role="alert">
-                        <i class="bi bi-info-circle"></i>&nbsp;Propriedades: id[entidade], crdate e isactive são criados
+                        <i class="bi bi-info-circle"></i>&nbsp;Propriedades: id[entidade], crdate e isactive são
+                        criados
                         em todas as tabelas por padrão
                     </div>
                 </div>
@@ -35,8 +36,9 @@
                     <label for="input-textarea-entity-namespace" class="label mb-1 text-secondary"><i
                             class="bi bi-ui-radios"></i>&nbsp;Propriedades</label>
                     <textarea minlength="3" maxlength="500" class="form-control is-invalid" style="height: 5rem"
-                        id="input-textarea-entity-namespace" placeholder="Informe nomes únicos, separados por vírgulas, e tecle Enter"
-                        autocomplete="off"></textarea>
+                        id="input-textarea-entity-namespace"
+                        placeholder="Informe nomes únicos, separados por vírgulas, e tecle Enter"
+                        autocomplete="off">nome, email, celular, senha</textarea>
                 </div>
             </entity-namespace>
             <entity-fields id="tag-entity-fields">
@@ -92,15 +94,114 @@
                     <div>
                         <button class="btn btn-outline-secondary" id="btn-entity-create-config"><i
                                 class="bi bi-box"></i>&nbsp;&nbsp;Limpar</button>
-                        <button class="btn btn-success" id="btn-entity-create" disabled>Criar&nbsp;&nbsp;<i
-                                class="bi bi-box"></i></button>
+                        <button class="btn btn-success" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvas-app-create-entity" aria-controls="offcanvas-app-create-entity"
+                            id="btn-entity-create" disabled>Criar&nbsp;&nbsp;<i class="bi bi-box"></i></button>
                     </div>
                 </div>
             </entity-fields>
         </form>
     </div>
+</div>
+<div class="offcanvas offcanvas-bottom text-ligth fw-bold bg-dark" tabindex="-1"
+    id="offcanvas-app-create-entity" aria-labelledby="offcanvas-app-create-entityLabel">
+    <div class="d-flex">
+        <h5 class="offcanvas-title" id="offcanvas-app-create-entityLabel"><img src="favicon.svg"></h5>
+        <div class="d-flex">
+            <a href="#dock" data-bs-dismiss="offcanvas" aria-label="Close">
+                <div class="btn-group dropdown">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="favicon.svg" height="25rem;">
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-fluid" >
+            <card class="bg-dark text-info border-0"
+                style="font-family: 'Courier New', Courier, monospace;">
+aes.framework % /Users/Github/framework_<br>
+workflow:<br>
+try { mkdir ˜/back-end/model/index } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/index } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity] } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/backup } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/cruds } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/detail } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/log } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/sql } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { mkdir ˜/back-end/model/entity/[entity]/teste } catch (err) { return err }<br>
+<br>
+mkdir return true
+call(feedback-client)<br>
+<br>
+<br>
+try { create-file ˜/back-end/model/index/[entity.json]; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { create-file ˜/back-end/model/[entity]/cruds/createe.js } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { create-file ˜/back-end/model/[entity]/cruds/delete.js; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { create-file ˜/back-end/model/[entity]/cruds/read.js; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { create-file ˜/back-end/model/[entity]/cruds/search.js; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try { create-file ˜/back-end/model/[entity]/cruds/update.js; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-backup.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-delete-log.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-detail-delete-log.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-detail-update-log.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-detail.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-read-log.sql; next() } catch (err) { return err }<br>
+call(feedback-client)<br>
+try ( create-file ˜/back-end/model/entity/[entity]/sql/create-table-pessoa-update-log.sql; next() } catch (err) { return err }<br>
+<br>
+create-file return true
+call(feedback-client)<br>
+<br>
+try { populate via api }
+<br>
+call(feedback-client)<br>
+try populate via call
+<br>
+call(feedback-client)<br>
+call(feedback-client)<br>
+Build concluido com sucesso em []ms<br>
+Clique na nova aba Entidades, encontre a entidade recém criada, abra-a, confira a documentação da api, os dados de teste, crie outras entidades.
+
+
+
+
+
+
+
+</card>
+
+        </div>
     </div>
 </div>
+
+
 <script src="assets/javascript/framework/tools/entity/create/form.js "></script>
 <script src="assets/javascript/framework/tools/entity/entity.js "></script>
 <script src="assets/javascript/framework/tools/entity/create/fields.js "></script>

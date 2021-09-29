@@ -14,9 +14,9 @@ const settings = namespace => {
                             </td>
                             <td class="text-center">
                                 <select class="form-select select-privacy is-valid" aria-label="lgpd" id="field-${namespace[field].toLowerCase().trim()}-privacy">
-                                    <option value="pessoal">Pessoal</option>
+                                    <option value="pessoal" selected>Pessoal</option>
                                     <option value="comercial">Comercial</option>
-                                    <option value="sensivel" selected>Sensível</option>
+                                    <option value="sensivel">Sensível</option>
                                     <option value="publico">Público</option>
                                     <option value="anomatizado">Anonimizado</option>
                                 </select>
@@ -30,7 +30,7 @@ const settings = namespace => {
                                 </select>
                             </td>
                             <td class="text-center">
-                            <input type="number" class="form-control is-valid input-length" id="field-${namespace[field].toLowerCase().trim()}-length" value="50">
+                            <input type="number" class="form-control is-valid input-length" id="field-${namespace[field].toLowerCase().trim()}-length" value="200">
                             </td>
                             <td class="text-left mr-o pr-0">
                                 <div class="form-check form-switch pr-0 mr-0 align-middle">
