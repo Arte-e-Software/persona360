@@ -1,12 +1,16 @@
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample"
-  aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end" style="width: 672px;" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1"
+  id="offcanvas-app-aes-help-dock" aria-labelledby="offcanvas-app-aes-help-dockLabel">
   <nav class="nav p-2" style="background-color: #035700; ">
     <div class="container-fluid">
-      <a href="#nav-dock-tops" class="mx-2" href="#offcanvasExample" data-bs-dismiss="offcanvas" aria-label="Close">
+      <a href="#nav-dock-tops" class="mx-2" href="#offcanvas-app-aes-help-dock" data-bs-dismiss="offcanvas"
+        aria-label="Close">
         <img src="assets/images/arte-e-software-cubo-branco.svg" height="30rem"></a>
     </div>
   </nav>
   <div class="offcanvas-body">
+    <video width="640" height="480" controls>
+      <source src="aes-framework.mp4" type="video/mp4">
+    </video>
     <div class="accordion accordion-flush" id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
@@ -18,11 +22,14 @@
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
           data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <p><a class="list-group-item list-group-item-action" href="#tag-entity-name"><i class="bi bi-box"></i>&nbsp;&nbsp;Entidade</a></p>
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-name"><i
+                  class="bi bi-box"></i>&nbsp;&nbsp;Entidade</a></p>
             <p>Substantivo feminino. Aquilo que constitui a existência de algo real; essência.</p>
-            <p>Sintaxe: sujeito - pode assumir diferentes atitudes em relação ao que o verbo expressa, como ser agente, paciente ou ambos de forma simultânea</p>
+            <p>Sintaxe: sujeito - pode assumir diferentes atitudes em relação ao que o verbo expressa, como ser agente,
+              paciente ou ambos de forma simultânea</p>
             <fonte>
-              <input type="hidden" class="entity-definition-pt-br" value="https://www.portugues.com.br/gramatica/atitudes-sujeito-relacao-ao-verbo.html">
+              <input type="hidden" class="entity-definition-pt-br"
+                value="https://www.portugues.com.br/gramatica/atitudes-sujeito-relacao-ao-verbo.html">
             </fonte>
           </div>
         </div>
@@ -37,11 +44,17 @@
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
           data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <p><a class="list-group-item list-group-item-action" href="#tag-entity-namespace"><i class="bi bi-ui-radios"></i>&nbsp;&nbsp;Propriedades</a>
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-namespace"><i
+                  class="bi bi-ui-radios"></i>&nbsp;&nbsp;Propriedades</a>
             </p>
-            <p>Propriedade, no sentido filosófico, constitui uma categoria de atributos de entidades ontológicas, atributos que se distinguem uns dos outros na qualificação das entidades. Dada a complexidade da caracterização das noções, este é um assunto em que é plausível encontrar controvérsias entre filósofos mas, para o aes.framework, normalmente são adjetivos, pois são as palavras que dão as características à entidade, como a cor de um carro, o email de uma pessoa, o nome de um curso, etc.</p>
+            <p>Propriedade, no sentido filosófico, constitui uma categoria de atributos de entidades ontológicas,
+              atributos que se distinguem uns dos outros na qualificação das entidades. Dada a complexidade da
+              caracterização das noções, este é um assunto em que é plausível encontrar controvérsias entre filósofos
+              mas, para o aes.framework, normalmente são adjetivos, pois são as palavras que dão as características à
+              entidade, como a cor de um carro, o email de uma pessoa, o nome de um curso, etc.</p>
             <fonte>
-              <input type="hidden" class="entity-fields-definition-pt-br" value="https://pt.wikipedia.org/wiki/Propriedade_(filosofia)">
+              <input type="hidden" class="entity-fields-definition-pt-br"
+                value="https://pt.wikipedia.org/wiki/Propriedade_(filosofia)">
             </fonte>
           </div>
         </div>
@@ -56,50 +69,85 @@
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
           data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <p><a class="list-group-item list-group-item-action" href="#tag-entity-fields"><i class="bi bi-ui-radios"></i>&nbsp;&nbsp;Configurações das propriedas</a></p>
-            <p>As entidades, juntamente com as propriedades que as caracterizam, ficarm armazenados no banco de dados. Cada propriedade, na abstração de dados, é um campo (field em inglês), e cada campo, para ser armazenado corretamente, precisa que tenha essa configuração guardada em algum lugar para ser consultada sempre que necessário. No aes.framework as configurações dos campos ficam num arquivo .json com o nome da entidade, assim [entidade].json.</p>
+            <p><a class="list-group-item list-group-item-action" href="#tag-entity-fields"><i
+                  class="bi bi-ui-radios"></i>&nbsp;&nbsp;Configurações das propriedas</a></p>
+            <p>As entidades, juntamente com as propriedades que as caracterizam, ficarm armazenados no banco de dados.
+              Cada propriedade, na abstração de dados, é um campo (field em inglês), e cada campo, para ser armazenado
+              corretamente, precisa que tenha essa configuração guardada em algum lugar para ser consultada sempre que
+              necessário. No aes.framework as configurações dos campos ficam num arquivo .json com o nome da entidade,
+              assim [entidade].json.</p>
             <label>Configurações</label>
             <ul>
-              <li>Privacidade: como aquele campo deve ser tratado em relação à LGPD:</li>
+              <li><span class="text-info fw-bolder">Privacidade</span>: como aquele campo deve ser tratado em relação à
+                LGPD:</li>
               <ul>
-                <li>Pessoal: são aqueles dados que identificam a pessoa e pode colocá-la diante de algum risco capital.</li>
-                <li>Comercial: são aqueles dados que caracterizam empresas, produtos e transações entre eles e pessoas. Também incorrem em risco capital.</li>
-                <li>Sensível: dados como crença, orientação sexual, raça, dados relacionados a saúde. Além de riscos capitais, representam riscos morais.</li>
-                <li>Público: são dados acessíveis a todos os cidadãos por qualquer meio que seja. O resultado de uma eleição, o número de habitantes de uma cidade, a renda percapita de um bairro, etc.</li>
-                <li>Anonimizado: são dados utilizados na orquestração do sistema. Representram códigos, logs de acesso como contangem de cliques, acesso a páginas, etc.</li>
+                <li><span class="fw-bold">Pessoal</span>: são aqueles dados que identificam a pessoa e pode colocá-la
+                  diante de algum risco capital.</li>
+                <li><span class="fw-bold">Comercial</span>: são aqueles dados que caracterizam empresas, produtos e
+                  transações entre eles e pessoas. Também incorrem em risco capital.</li>
+                <li><span class="fw-bold">Sensível</span>: dados como crença, orientação sexual, raça, dados
+                  relacionados a saúde. Além de riscos capitais, representam riscos morais.</li>
+                <li><span class="fw-bold">Público:</span> são dados acessíveis a todos os cidadãos por qualquer meio que
+                  seja. O resultado de uma eleição, o número de habitantes de uma cidade, a renda percapita de um
+                  bairro, etc.</li>
+                <li><span class="fw-bold">Anonimizado</span>: são dados utilizados na orquestração do sistema.
+                  Representram códigos, logs de acesso como contangem de cliques, acesso a páginas, etc.</li>
               </ul>
-              <li>Tipo: um campo deve ter um tipo, que pode ser:</li>
+              <li><span class="text-info fw-bolder">Tipo</span>: um campo deve ter um tipo, que pode ser:</li>
               <ul>
-                <li>Texto: tudo que puder ser armazeado utilizando todos os caracteres "imprimíveis" do teclado. No aes.framework, em casos especiais, você pode estabelecer um filtro para os caracteres válidos para o campo.</li>
-                <li>Número (Double-precision floating-point format*): qualquer número, com precisão dupla, negativo ou positivo, de até 64bits, ou de -4,294,967,295.99 a +4,294,967,295.99.</li>
-                <li>Data: Ano, mês, dia, hora, minuto, segundo,  miléssimo de segundo e local</li>
-                <li>Booleano: 0 ou 1, sim ou não, certo ou errado, concordo ou não concordo, ou simplesmente verdadeiro ou falso.</li>
+                <li><span class="fw-bold">Texto</span>: tudo que puder ser armazeado utilizando todos os caracteres
+                  "imprimíveis" do teclado. No aes.framework, em casos especiais, você pode estabelecer um filtro para
+                  os caracteres válidos para o campo.</li>
+                <li><span class="fw-bold">Número</span> (Double-precision floating-point format*): qualquer número, com
+                  precisão dupla, negativo ou positivo, de até 64bits, ou de -4,294,967,295.99 a +4,294,967,295.99.</li>
+                <li><span class="fw-bold">Data</span>: Ano, mês, dia, hora, minuto, segundo, miléssimo de segundo e
+                  local</li>
+                <li><span class="fw-bold">Booleano</span>: 0 ou 1, sim ou não, certo ou errado, concordo ou não
+                  concordo, ou simplesmente verdadeiro ou falso.</li>
               </ul>
-            <li>Tamanho: válido apenas para o tipo Texto. Pode variar de três caracteres até 5.000.</li>
-            <li>Null: em ciência de dados existe um valor fictício que é diferente de vazio ou nada, é o NULL. Quando um campo não é "nullable", na prática, significa que trata-se de um campo obrigatório. </li>
-            <li>Busca: campos com busca ativa sofrem ação das pesquisas, ou seja, quando formos pesquisar aquela entidade, esse será um dos campos utilizados para localizá-la. O retorno de uma busca sempre trará os campos "searchables" mais o id_[entidade] e o crdate (data de criação). Somente registros assinalados com isactive = 1 (true = verdadeiro) são pesquisáveis na maioria das situações.</li>
+              <li><span class="text-info fw-bolder">Tamanho</span>: válido apenas para o tipo Texto. Pode variar de três
+                caracteres até 5.000.</li>
+              <li><span class="text-info fw-bolder">Null</span>: em ciência de dados existe um valor fictício que é
+                diferente de vazio ou nada, é o NULL. Quando um campo não é "nullable", na prática, significa que
+                trata-se de um campo obrigatório. </li>
+              <li><span class="text-info fw-bolder">Hash</span>: é um tipo de criptografia de mão única, ou seja, uma
+                vez criptogafado "não dá mais para descriptografar". O aes.framework usa o padrão SHA256. Resumindo
+                funciona assim: um campo configurado hash será gravado de forma codificada e não poderá ser lido, apenas
+                comparado; para senhas isso é muito bom. Você conhece sua senha, a famosa 123mudar. Essa, por acaso, o
+                hash dela é <code>ae3784314f375645157903c0ce188a2b0bef88b5e9476f4c72513c1015f0b875</code>. Só você e o
+                mundo hacker sabe desse segredo.</li>
+              <li><span class="text-info fw-bolder">Busca</span>: campos com busca ativa sofrem ação das pesquisas, ou
+                seja, quando formos pesquisar aquela entidade, esse será um dos campos utilizados para localizá-la. O
+                retorno de uma busca sempre trará os campos "searchables" mais o id_[entidade] e o crdate (data de
+                criação). Somente registros assinalados com isactive = 1 (true = verdadeiro) são pesquisáveis na maioria
+                das situações.</li>
             </ul>
             <p>
+              <lead class="fw-light" style="font-size: .9rem;">
+                *Para números inteiros de ponto flutuante (darei minha resposta em termos de precisão dupla IEEE), todo
+                número inteiro entre 1 e 2 ^ 53 é exatamente representável. Além de 2 ^ 53, números inteiros que são
+                exatamente representáveis ​​são espaçados, aumentando a potência de dois. Por exemplo:</lead>
+            <ul>
+              <li>Todo segundo número inteiro entre 2 ^ 53 + 2 e 2 ^ 54 pode ser representado exatamente.</li>
+              <li>Todo quarto número inteiro entre 2 ^ 54 + 4 e 2 ^ 55 pode ser representado exatamente.</li>
+              <li>Cada oitavo inteiro entre 2 ^ 55 + 8 e 2 ^ 56 pode ser representado exatamente.</li>
+              <li>Todo 16º inteiro entre 2 ^ 56 + 16 e 2 ^ 57 pode ser representado exatamente.</li>
+              <li>Todo 32º inteiro entre 2 ^ 57 + 32 e 2 ^ 58 pode ser representado exatamente.</li>
+              <li>Todo 64º inteiro entre 2 ^ 58 + 64 e 2 ^ 59 pode ser representado exatamente.</li>
+              <li>Cada 128º número inteiro entre 2 ^ 59 + 128 e 2 ^ 60 pode ser representado exatamente.</li>
+              <li>Cada 256º número inteiro entre 2 ^ 60 + 256 e 2 ^ 61 pode ser representado exatamente.</li>
+              <li>Cada 512º número inteiro entre 2 ^ 61 + 512 e 2 ^ 62 pode ser representado exatamente.</li>
+            </ul>
+            <p>*Os números inteiros que não são exatamente representáveis ​​são arredondados para o número inteiro
+              representável mais próximo; portanto, o pior caso é 1/2 do espaçamento entre números inteiros
+              representáveis.</p>
+            <p>
               <lead>
-                Para números inteiros de ponto flutuante (darei minha resposta em termos de precisão dupla IEEE), todo número inteiro entre 1 e 2 ^ 53 é exatamente representável. Além de 2 ^ 53, números inteiros que são exatamente representáveis ​​são espaçados, aumentando a potência de dois. Por exemplo:</lead>
-<ul>
-  <li>Todo segundo número inteiro entre 2 ^ 53 + 2 e 2 ^ 54 pode ser representado exatamente.</li>
-  <li>Todo quarto número inteiro entre 2 ^ 54 + 4 e 2 ^ 55 pode ser representado exatamente.</li>
-  <li>Cada oitavo inteiro entre 2 ^ 55 + 8 e 2 ^ 56 pode ser representado exatamente.</li>
-  <li>Todo 16º inteiro entre 2 ^ 56 + 16 e 2 ^ 57 pode ser representado exatamente.</li>
-  <li>Todo 32º inteiro entre 2 ^ 57 + 32 e 2 ^ 58 pode ser representado exatamente.</li>
-  <li>Todo 64º inteiro entre 2 ^ 58 + 64 e 2 ^ 59 pode ser representado exatamente.</li>
-  <li>Cada 128º número inteiro entre 2 ^ 59 + 128 e 2 ^ 60 pode ser representado exatamente.</li>
-  <li>Cada 256º número inteiro entre 2 ^ 60 + 256 e 2 ^ 61 pode ser representado exatamente.</li>
-  <li>Cada 512º número inteiro entre 2 ^ 61 + 512 e 2 ^ 62 pode ser representado exatamente.</li>
-</ul>
-<p>*Os números inteiros que não são exatamente representáveis ​​são arredondados para o número inteiro representável mais próximo; portanto, o pior caso é 1/2 do espaçamento entre números inteiros representáveis.</p>
-<p>
-  <lead>
-    fonte: https://www.ti-enxame.com/pt/floating-point/qual-intervalo-de-numeros-pode-ser-representado-em-sistemas-ieee-754-de-16-32-e-64-bits/957509836/
-  </lead>
-</p>
+                fonte:
+                https://www.ti-enxame.com/pt/floating-point/qual-intervalo-de-numeros-pode-ser-representado-em-sistemas-ieee-754-de-16-32-e-64-bits/957509836/
               </lead>
+            </p>
+            </lead>
             </p>
           </div>
         </div>
