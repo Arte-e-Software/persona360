@@ -26,7 +26,6 @@ window.onload = () => {
   }
   enter(form, 'name')
   enter(form, 'namespace')
-  form.button.create.setAttribute('disabled', true)
   form.tab.create.addEventListener('click', event => {
     event.preventDefault()
     form.name.input.focus()

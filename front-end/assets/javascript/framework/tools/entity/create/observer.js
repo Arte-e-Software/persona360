@@ -1,10 +1,7 @@
 const observer = (entity, json) => {
-    
     let change = (entity, event, index) => {
-
         let setting = event.target.id.split('-')[2],
             newValue
-
         switch (setting) {
             case 'privacy':
                 newValue = event.target.options[event.target.selectedIndex].value
@@ -28,10 +25,9 @@ const observer = (entity, json) => {
                 newValue = undefined
                 break;
         }
-
         entity.fields[index].settings[setting] = newValue
         json.innerHTML = pretty(entity)
-
+        return entity
     }
     for (let i = 1; i < entity.fields.length - 2; i++) {
         document.getElementById(`field-${entity.fields[i].name}-privacy`).addEventListener('change', event => {

@@ -69,9 +69,17 @@ const fields = form => {
             })
         }
     }
-    if (entity) {
+    if (entity.fields.length > 0) {
         form.json.innerHTML = pretty(entity)
+        form.button.create.disabled = false
         observer(entity, form.json)
+        form.button.create.addEventListener('click', event => {
+
+            // #issue: parado aqui
+            event.preventDefault()
+            console.log(entity)
+
+        })
     } else {
         return
     }

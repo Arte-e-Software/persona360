@@ -19,7 +19,7 @@ const pretty = entity => {
       )
     }
     return `
-<textarea id="entity-${entity.name}-json" class="form-control bg-light text-dark" style="height: 17rem;">
+<textarea id="entity-${entity.name}-json" class="form-control bg-light text-dark" style="height: 17rem;" readonly>
 {
 ${_}"name": "${entity.name}",
 ${_}"namespace": "${entity.namespace}",
