@@ -71,7 +71,7 @@ const fields = form => {
     }
     if (entity) {
         form.json.innerHTML = pretty(entity)
-        return observer(entity)
+        observer(entity, form.json)
     } else {
         return
     }
