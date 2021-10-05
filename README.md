@@ -1,5 +1,3 @@
-![Image of persons360](https://persona360.com.br/img/Persona360Logo.svg)
-
 How I think:
 
 > Pedro Silva, 2021-08-31 17:25 
