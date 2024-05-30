@@ -1,10 +1,10 @@
 const express = require('express')
-    ,router = express.Router();
-    ;
+  , router = express.Router();
+;
 
 router.get('/', (req, res) => {
-  
-  res.render('pages/home', { title: 'Persona360 :)' });
+
+  res.render('pages/framework', { title: 'Persona360 :)' });
 
 });
 

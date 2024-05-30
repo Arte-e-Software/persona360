@@ -1,12 +1,12 @@
 <head>
-  <%-include meta.ejs %>
-    <%-include tenant.ejs %>
-      <%-include seo.ejs %>
-        <%-include share.ejs %>
+  <%-include ("meta.ejs") %>
+    <%-include ("tenant.ejs") %>
+      <%-include ("seo.ejs") %>
+        <%-include ("share.ejs") %>
           <title>
             <%=title%>
           </title>
-          <%-include ./style.ejs %>
+          <%-include ("./style.ejs") %>
             <script src="assets/javascript/framework/utils/alert.js"></script>
             <script src="assets/javascript/framework/tools/dev/entity/create/sanitize.js"></script>
             <script src="assets/javascript/framework/tools/dev/entity/create/enter.js"></script>
